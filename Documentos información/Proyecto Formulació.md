@@ -1,4 +1,4 @@
-# FORMULACIÓN
+# Proyecto: "Formulació"
 
 ### Objetivos del proyecto:
 
@@ -24,26 +24,7 @@
 
   ​		Se trata de un juego para un jugador el cual consistirá en que el programa le mostrará al usuario siete elementos. El programa se asegurándose de que entre estos siete elementos por lo menos exista una combinación posible de Óxidos o Hidruros o Sales. Cada uno de los elementos tendrá asignado una puntuación y al combinar los elementos se sumarán los puntos. La suma de estos puntos sera la puntuación que obtendrá el jugador en esa ronda. El número de rondas se determinara por el jugador al comenzar la partida.
 
----
-
-## REGISTRO
-
-## Noviembre
-
-**Martes 3 Informática**
-
-- Aprender a usar el hash Map
-
-**Martes 3 Casa**
-
-- Aprender a acceder a los datos de un JSON desde un scriot de Java Srcript
-
-**Miércoles 4**
-
-- Creación del repositorio en [GitHub](https://github.com/JavierRibaldelRio/Formulacio) https://github.com/JavierRibaldelRio/Formulacio . 
-- Ordenación de carpetas
 
 
 
-
-Javier Ribal del Río 3ºB Nº22 Informática				
+​																														Javier Ribal del Río 3ºB Nº22 Informática				

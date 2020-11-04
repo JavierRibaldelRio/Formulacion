@@ -1,0 +1,2 @@
+https://stackoverrun.com/es/q/5379642 -
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Map
