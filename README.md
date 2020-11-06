@@ -43,6 +43,10 @@
 - Creación del repositorio en [GitHub](https://github.com/JavierRibaldelRio/Formulacio) https://github.com/JavierRibaldelRio/Formulacio . 
 - Ordenación de carpetas
 
+**Viernes 6 Casa & Informática**
+
+- Rellenar la hoja de cálculo de los elementos
+
 
 
 
