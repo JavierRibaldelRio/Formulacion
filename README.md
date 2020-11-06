@@ -46,6 +46,8 @@
 **Viernes 6 Casa & Informática**
 
 - Rellenar la hoja de cálculo de los elementos
+- Acceder a los datos del json
+- Crear funcion que transformalas valencias de número o texto a matriz de numeros
 
 
 

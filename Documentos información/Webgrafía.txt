@@ -1,3 +1,6 @@
 https://stackoverrun.com/es/q/5379642 -
 https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Map
 https://pdfmall.com/es/excel-to-json
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/split
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/typeof
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/from
