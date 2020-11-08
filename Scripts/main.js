@@ -1,11 +1,7 @@
 //Para coger los datos de el json
 var jsonDatosElementos = JSON.parse(jsonElementos);
 
-console.log(convertirArrayValencias(jsonDatosElementos[0].v));
-
-console.log(convertirArrayValencias(jsonDatosElementos[1].v));
-
-
+var hidrogeno = new Elemento(jsonDatosElementos[1].a, jsonDatosElementos[0].nombre)
 
 //Convertir en array numerico el string de las valencias
 function convertirArrayValencias(texto) {

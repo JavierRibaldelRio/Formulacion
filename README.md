@@ -47,7 +47,13 @@
 
 - Rellenar la hoja de cálculo de los elementos
 - Acceder a los datos del json
-- Crear funcion que transformalas valencias de número o texto a matriz de numeros
+- Crear funcion que transforma las valencias de número o texto a matriz de numeros
+
+
+
+**Domingo 8**
+
+- He creado la clase de elementos en un archivo separado
 
 
 
