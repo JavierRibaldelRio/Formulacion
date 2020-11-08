@@ -1,13 +1,13 @@
 function Elemento(a, nombre, sq, v, repeticion) {
 
-    this.a = a;
+    this.a = a; //Numero Massico
 
-    this.nombre = nombre;
+    this.nombre = nombre; //Nombre del elemento
 
-    this.sq = sq;
+    this.sq = sq; //Simbolo quimico 
 
-    this.v = v;
+    this.v = v; //Valencias
 
-    this.repeticion = repeticion;
+    this.repeticion = repeticion; //Repetición del compusto en el juego
 
 }

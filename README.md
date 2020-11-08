@@ -54,6 +54,7 @@
 **Domingo 8**
 
 - He creado la clase de elementos en un archivo separado
+- He hecho una función que mete todos los objetos en una matriz
 
 
 

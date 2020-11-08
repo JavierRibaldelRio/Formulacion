@@ -1,8 +1,11 @@
 //Para coger los datos de el json
 var jsonDatosElementos = JSON.parse(jsonElementos);
 
-var hidrogeno = new Elemento(jsonDatosElementos[1].a, jsonDatosElementos[0].nombre)
+var hidrogeno = new Elemento(jsonDatosElementos[0].a, jsonDatosElementos[0].nombre, jsonDatosElementos[0].sq, convertirArrayValencias(jsonDatosElementos[0].v), jsonDatosElementos[0].repeticion);
 
+
+
+//Funciones
 //Convertir en array numerico el string de las valencias
 function convertirArrayValencias(texto) {
 
@@ -26,5 +29,27 @@ function convertirArrayValencias(texto) {
 
         return arrayTexto;
     }
+
+}
+
+//Convertir todos los elementos en clases
+function pasarJsonAClases() {
+
+    var arrayContenedorObjetos = [];
+
+    for (var i = 0; i < jsonDatosElementos.length; i++) {
+
+        var nuevoElemento = new Elemento(jsonDatosElementos[i].a,
+            jsonDatosElementos[i].nombre,
+            jsonDatosElementos[i].sq,
+            convertirArrayValencias(jsonDatosElementos[i].v),
+            jsonDatosElementos[i].repeticion);
+
+        arrayContenedorObjetos.push(nuevoElemento);
+
+
+    }
+
+    return arrayContenedorObjetos;
 
 }
