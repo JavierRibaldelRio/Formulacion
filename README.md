@@ -1,4 +1,4 @@
-# FORMULACIÓN
+FORMULACIÓN
 
 ### Objetivos del proyecto:
 
@@ -55,6 +55,15 @@
 
 - He creado la clase de elementos en un archivo separado
 - He hecho una función que mete todos los objetos en una matriz
+
+
+
+**Viernes 13 Casa & Informática**
+
+- He añadido a la columna los puntos de cada carta
+- He hecho una función que me crea una matriz con una casilla por cada repetición de cada elmento
+- Me he dado cuenta de que había un error en la Hoja de cálculo y lo he corregido
+- Hecho una función para sacar números aleatorios
 
 
 

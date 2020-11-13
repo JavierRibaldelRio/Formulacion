@@ -1,8 +1,9 @@
 //Para coger los datos de el json
 var jsonDatosElementos = JSON.parse(jsonElementos);
 
-var hidrogeno = new Elemento(jsonDatosElementos[0].a, jsonDatosElementos[0].nombre, jsonDatosElementos[0].sq, convertirArrayValencias(jsonDatosElementos[0].v), jsonDatosElementos[0].repeticion);
+var elementos = pasarJsonAClases();
 
+var arrayAleatorios = crearArrayAleatorios();
 
 
 //Funciones
@@ -35,15 +36,22 @@ function convertirArrayValencias(texto) {
 //Convertir todos los elementos en clases
 function pasarJsonAClases() {
 
-    var arrayContenedorObjetos = [];
+    var arrayContenedorObjetos = []; //Donde se guardaran las clases
 
     for (var i = 0; i < jsonDatosElementos.length; i++) {
 
-        var nuevoElemento = new Elemento(jsonDatosElementos[i].a,
-            jsonDatosElementos[i].nombre,
-            jsonDatosElementos[i].sq,
-            convertirArrayValencias(jsonDatosElementos[i].v),
-            jsonDatosElementos[i].repeticion);
+        var nuevoElemento =
+
+            new Elemento(
+
+                jsonDatosElementos[i].a,
+                jsonDatosElementos[i].nombre,
+                jsonDatosElementos[i].sq,
+                convertirArrayValencias(jsonDatosElementos[i].v),
+                jsonDatosElementos[i].repeticion,
+                jsonDatosElementos[i].puntos
+
+            );
 
         arrayContenedorObjetos.push(nuevoElemento);
 
@@ -52,4 +60,35 @@ function pasarJsonAClases() {
 
     return arrayContenedorObjetos;
 
+}
+
+//Preparar números aleatorios, 
+function crearArrayAleatorios(){
+
+    var array = [];//Definir el Array
+
+    //Guardar tantas veces en numero como repeticones haya
+    for(var i = 0; i < elementos.length; i++){
+
+        for(var j = 0; j < elementos[i].repeticion;j++){
+
+            array.push(elementos[i].a);    //Guardar
+
+        }
+    }
+
+    return array;
+}
+
+//Crear Aleatorio
+function random(min, max){
+
+    return Math.floor((Math.random()* (max - min  +1)) + min);
+
+}
+
+function sacarAleatorios(arrayElementos){
+
+
+    
 }
