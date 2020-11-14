@@ -1,10 +1,11 @@
 //Para coger los datos de el json
+var numeroElementosACoger = 8;
+
 var jsonDatosElementos = JSON.parse(jsonElementos);
 
-var elementos = pasarJsonAClases();
+var arrayClases = pasarJsonAClases();
 
-var arrayAleatorios = crearArrayAleatorios();
-
+var elementosDisponibles = sacarAleatorios(crearArrayAleatorios(arrayClases));
 
 //Funciones
 //Convertir en array numerico el string de las valencias
@@ -63,14 +64,14 @@ function pasarJsonAClases() {
 }
 
 //Preparar números aleatorios, 
-function crearArrayAleatorios(){
+function crearArrayAleatorios(elementos) {
 
     var array = [];//Definir el Array
 
     //Guardar tantas veces en numero como repeticones haya
-    for(var i = 0; i < elementos.length; i++){
+    for (var i = 0; i < elementos.length; i++) {
 
-        for(var j = 0; j < elementos[i].repeticion;j++){
+        for (var j = 0; j < elementos[i].repeticion; j++) {
 
             array.push(elementos[i].a);    //Guardar
 
@@ -81,14 +82,35 @@ function crearArrayAleatorios(){
 }
 
 //Crear Aleatorio
-function random(min, max){
+function random(min, max) {
 
-    return Math.floor((Math.random()* (max - min  +1)) + min);
+    return Math.floor((Math.random() * (max - min + 1)) + min);
+
+}
+//Devuelve un array de aleatorios
+function sacarAleatorios(arrayElementos) {
+
+    var arrayNumeros = [];
+
+    for (var i = 0; i < numeroElementosACoger; i++) {
+
+        arrayNumeros.push(arrayElementos[random(0, arrayElementos.length)]);
+
+    }
+
+    return arrayNumeros;
 
 }
 
-function sacarAleatorios(arrayElementos){
 
+function crearArrayObjetosDisponibles(arrayRandom){
 
-    
+    var objetosDisponibles = [];
+
+    for (var i = 0; i < arrayRandom.length;i++){
+
+        
+
+    }
+
 }

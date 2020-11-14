@@ -47,7 +47,7 @@
 
 - Rellenar la hoja de cálculo de los elementos
 - Acceder a los datos del json
-- Crear funcion que transforma las valencias de número o texto a matriz de numeros
+- Crear función que transforma las valencias de número o texto a matriz de números
 
 
 
@@ -61,9 +61,14 @@
 **Viernes 13 Casa & Informática**
 
 - He añadido a la columna los puntos de cada carta
-- He hecho una función que me crea una matriz con una casilla por cada repetición de cada elmento
+- He hecho una función que me crea una matriz con una casilla por cada repetición de cada elemento
 - Me he dado cuenta de que había un error en la Hoja de cálculo y lo he corregido
 - Hecho una función para sacar números aleatorios
+
+**Sabado 14**
+
+- He añdido una función que saca 8 numeros aleatorios correspondientes con los numeros atomicos
+
 
 
 
