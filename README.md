@@ -70,6 +70,9 @@
 - He añdido una función que saca 8 numeros aleatorios correspondientes con los numeros atomicos
 
 
+**Lunes 16**
+- Una función que devuelve una matriz con objetos disponibles en esta ronda utilizando como número aleatorio la casilla de la matriz
+
 
 
 

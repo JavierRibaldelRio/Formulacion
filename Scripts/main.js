@@ -1,11 +1,11 @@
 //Para coger los datos de el json
-var numeroElementosACoger = 8;
-
 var jsonDatosElementos = JSON.parse(jsonElementos);
 
-var arrayClases = pasarJsonAClases();
+var numeroElementosACoger = 8; //Numero de clases por rondas
 
-var elementosDisponibles = sacarAleatorios(crearArrayAleatorios(arrayClases));
+var arrayClases = pasarJsonAClases(); //Array que contiene todas las clases
+
+var elementosDisponibles =crearArrayObjetosDisponibles(sacarAleatorios(crearArrayAleatorios(arrayClases)),arrayClases);
 
 //Funciones
 //Convertir en array numerico el string de las valencias
@@ -73,7 +73,7 @@ function crearArrayAleatorios(elementos) {
 
         for (var j = 0; j < elementos[i].repeticion; j++) {
 
-            array.push(elementos[i].a);    //Guardar
+            array.push(i);    //Guardar
 
         }
     }
@@ -87,7 +87,7 @@ function random(min, max) {
     return Math.floor((Math.random() * (max - min + 1)) + min);
 
 }
-//Devuelve un array de aleatorios
+//Devuelve un array de el numero de aleatorios pedidos
 function sacarAleatorios(arrayElementos) {
 
     var arrayNumeros = [];
@@ -102,15 +102,24 @@ function sacarAleatorios(arrayElementos) {
 
 }
 
+//Devuelve un array de los objuetos que te han tocado
+function crearArrayObjetosDisponibles(arrayElementosNumerico,arrayClases){
 
-function crearArrayObjetosDisponibles(arrayRandom){
+    function comparar (a,b){return a -b}
+    
+    var arrayVuelta = [arrayElementosNumerico.length];
 
-    var objetosDisponibles = [];
+    for(var i = 0; i < arrayElementosNumerico.length;i++){
 
-    for (var i = 0; i < arrayRandom.length;i++){
-
-        
+        arrayVuelta[i] = arrayClases[arrayElementosNumerico[i]];
 
     }
 
+    return arrayVuelta.sort();
+
+
 }
+
+
+
+
