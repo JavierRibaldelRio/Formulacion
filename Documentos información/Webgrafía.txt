@@ -5,3 +5,5 @@ https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales
 https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/typeof
 https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/from
 https://desarrolloweb.com/articulos/763.php
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/sort
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/const

@@ -5,7 +5,15 @@ var numeroElementosACoger = 8; //Numero de clases por rondas
 
 var arrayClases = pasarJsonAClases(); //Array que contiene todas las clases
 
-var elementosDisponibles =crearArrayObjetosDisponibles(sacarAleatorios(crearArrayAleatorios(arrayClases)),arrayClases);
+/**
+ * El array aleatorios tiene una casilla por el numero de repeticiones
+ * de cada elemento, por ejemplo si el oxigeno se repite 43 veces tienen
+ * que haber 43 casillas con el numero de la casilla en el array de Clases
+ */
+var arrayAleatorios = crearArrayAleatorios(arrayClases);    
+
+var elementosDisponibles = crearArrayObjetosDisponibles(sacarAleatorios(arrayAleatorios), arrayClases);
+
 
 //Funciones
 //Convertir en array numerico el string de las valencias
@@ -103,13 +111,16 @@ function sacarAleatorios(arrayElementos) {
 }
 
 //Devuelve un array de los objuetos que te han tocado
-function crearArrayObjetosDisponibles(arrayElementosNumerico,arrayClases){
+function crearArrayObjetosDisponibles(arrayElementosNumerico, arrayClases) {
 
-    function comparar (a,b){return a -b}
-    
+   //Ordenar
+    arrayElementosNumerico = arrayElementosNumerico.sort(comparar);
+
+    //Craear un array con el tamaño de Elementos Numericos
     var arrayVuelta = [arrayElementosNumerico.length];
 
-    for(var i = 0; i < arrayElementosNumerico.length;i++){
+    //Pasar las clases al array
+    for (var i = 0; i < arrayElementosNumerico.length; i++) {
 
         arrayVuelta[i] = arrayClases[arrayElementosNumerico[i]];
 
@@ -117,9 +128,9 @@ function crearArrayObjetosDisponibles(arrayElementosNumerico,arrayClases){
 
     return arrayVuelta.sort();
 
+    function comparar(a, b) {
+        return a - b;
+    }
 
 }
-
-
-
 
