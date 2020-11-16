@@ -1,4 +1,4 @@
-function Elemento(a, nombre, sq, v, repeticion, puntos, comparar) {
+function Elemento(a, nombre, sq, v, repeticion, puntos) {
 
     this.a = a; //Numero Massico
 
