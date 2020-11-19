@@ -79,7 +79,7 @@
 
 - He añadido un script en R *lenguaje de programación* que me transforma la hojá de calculo a Json
 - He añadido a la hoja de cálculo el grupo, era necesario para diferenciar los ácidos y por lo tanto he editado el constructor
-- He creado una función que dice el número de elementos que haly en la matriz
+- He creado una función que dice el número de elementos que hay en la matriz
 - He empezado a crear la función que reconoce el texto
 
 
