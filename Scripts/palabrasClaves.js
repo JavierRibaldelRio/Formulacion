@@ -1,15 +1,17 @@
 const hidruro = "hidruro";
 
-var prefijos = [7]
+var prefijos = [7];
 
-prefijos[2] = "Di";
+prefijos[1] = "mono";
 
-prefijos[3] = "Tri";
+prefijos[2] = "di";
 
-prefijos[4] = "Tetra";
+prefijos[3] = "tri";
 
-prefijos[5] = "Penta";  
+prefijos[4] = "tetra";
 
-prefijos[6] = "Hexa";
+prefijos[5] = "penta";  
 
-prefijos[7] = "?";  //Preguntar Román
+prefijos[6] = "hexa";
+
+prefijos[7] = "?";  //Preguntar Román o Laura

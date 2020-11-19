@@ -1,4 +1,4 @@
-function Elemento(a, nombre, sq, v, repeticion, puntos) {
+function Elemento(a, nombre, sq, v, repeticion, puntos, grupo) {
 
     this.a = a; //Numero Massico
 
@@ -11,5 +11,7 @@ function Elemento(a, nombre, sq, v, repeticion, puntos) {
     this.repeticion = repeticion; //Repetición del compusto en el juego
 
     this.puntos = puntos; //Puntos de cada carta
+
+    this.grupo = grupo;     //Columna en la tabla periódica
 
 }
