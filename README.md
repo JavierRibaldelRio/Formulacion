@@ -3,7 +3,7 @@
 ### Objetivos del proyecto:
 
 - [ ] Fomentar el aprendizaje de la formulación
-- [ ] Aprender la escritura correcta en **Valenciano** de los compuestos
+- [ ] Aprender la escritura correcta en **Español** de los compuestos
 
 
 
