@@ -14,4 +14,4 @@ prefijos[5] = "penta";
 
 prefijos[6] = "hexa";
 
-prefijos[7] = "?";  //Preguntar Román o Laura
+prefijos[7] = "hepta";  //Preguntar Román o Laura
