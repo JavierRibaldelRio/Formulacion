@@ -23,29 +23,18 @@ function comprovarCompuesto(elementos, compuesto) {
                 
                 console.log("1")
 
-            } else if (compuesto.startsWith(prefijos[2])) {
+            } else {
+                
+                for(var i = 2; 2 < 7; i++){
+                   
+                     if (compuesto.startsWith(prefijos[i])) {
 
-                console.log("2")
-
-            } else if (compuesto.startsWith(prefijos[3])) {
-
-                console.log("3")
-
-            } else if (compuesto.startsWith(prefijos[4])) {
-
-                console.log("4")
-
-            } else if (compuesto.startsWith(prefijos[5])) {
-
-                console.log("5")
-
-            } else if (compuesto.startsWith(prefijos[6])) {
-
-                console.log("6")
-
-            } else if (compuesto.startsWith(prefijos[7])) {
-
-                console.log("7")
+                    console.log(i);
+                }
+                
+            }
+                
+                
 
             } 
             
