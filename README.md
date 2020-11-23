@@ -90,5 +90,17 @@
 
 
 
+**Lunes 23**
+
+
+
+- He continuado con la función de identificar compuesto
+
+
+
+
+
+
+
 
 Javier Ribal del Río 3ºB Nº22 Informática				
