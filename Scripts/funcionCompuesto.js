@@ -175,6 +175,17 @@ function comprovarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
 
     if(posibleTexto(primeraPalabra) && posibleTexto(segundaPalabra) && posibleNumero(prefijoPrimeraPalabra) && posibleNumero(prefijoSegundaPalabra)){
 
+        if(prefijoPrimeraPalabra + prefijoSegundaPalabra <= numeroDePrefijos){           
+                      
+            
+            
+        }
+        
+        else{
+              
+            alert(errorCompuesto);
+            
+        }
         
 
 
@@ -184,7 +195,15 @@ function comprovarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
 
 
     }
-
+    
+     //Comprovar si hay tan
+    function comprovar(mapa,compuestoAComprovar,prefijo){
+     
+        mapa.forEach(function(valor,key){
+            
+        });
+        
+    }
     //Comueva si es un texto
     function posibleTexto(text){
 
@@ -210,12 +229,11 @@ function comprovarSiHayHidrogeno(mapaElementos){
     //Mirar si el hidrogeno se encuentra en el mapa de los elementos
     mapaElementos.forEach(function(value,key){
 
-        const nombreElemento = key.nombre.toLocaleLowerCase(); //Para hacer Minusculas
+        const sqElemento = key.sq.toLocaleLowerCase(); //Para hacer Minusculas
 
-        if(nombreElemento === "hidrógeno"){
+        if(sqElemento === "h"){
 
             return true;
-
         }
     });
 
