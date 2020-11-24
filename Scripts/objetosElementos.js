@@ -1,6 +1,6 @@
-function Elemento(a, nombre, sq, v, repeticion, puntos, grupo) {
+function Elemento(z, nombre, sq, v, repeticion, puntos, grupo) {
 
-    this.a = a; //Numero Massico
+    this.z = z; //Numero Massico
 
     this.nombre = nombre; //Nombre del elemento
 
