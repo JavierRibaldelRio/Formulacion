@@ -55,7 +55,7 @@ function pasarJsonAClases() {
             //constructor
             new Elemento(
 
-                jsonDatosElementos[i].a,
+                jsonDatosElementos[i].z,
                 jsonDatosElementos[i].nombre,
                 jsonDatosElementos[i].sq,
                 convertirArrayValencias(jsonDatosElementos[i].v),
