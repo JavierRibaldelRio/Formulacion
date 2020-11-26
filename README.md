@@ -96,6 +96,16 @@
 
 - He continuado con la función de identificar compuesto
 
+**Martes**
+
+- He sustituido la a por la z
+
+**Jueves 26**
+
+- He continuado con la función de identificar compuesto
+
+
+
 
 
 
