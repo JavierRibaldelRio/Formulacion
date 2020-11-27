@@ -197,15 +197,27 @@ function comprovarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
         if (prefijoPrimeraPalabra + prefijoSegundaPalabra <= numeroDePrefijos) {
 
             if (comprovarSiEstanLosCompuestos(primeraPalabra, prefijoPrimeraPalabra, mapa) && comprovarSiEstanLosCompuestos(segundaPalabra, prefijoSegundaPalabra, mapa)) {
-
-
+                
+                
+                var mapaCompuesto = crearMapaCompuesto();
+                
+                
+                //Función que estrae los datos necesarios
+                function comprovarNeutro(){
+                 
+                    var 
+                    
+                }
+                
                 function crearMapaCompuesto() {
 
                     var mapaCompuesto = new Map();
 
                     mapa.forEach(function (valor, key) {
 
-                        anadir(primeraPalabra, pre)
+                        anadir(primeraPalabra, prefijoPrimeraPalabra);
+                        
+                        anadir(segundaPalabra, prefijoSegundaPalabra);
 
                         function anadir(palabra, numero) {
 
