@@ -19,17 +19,26 @@ function comprovarCompuesto(elementos, compuesto) {
         //Comprueba si es un hidruro
         if (compuesto.includes(hidruro) && comprovarSiHayHidrogeno(mapElementos)) {
 
-            console.log("Incluye hidruro");
+            // console.log("Incluye hidruro");
 
             var hidruroIncorrecto = true;   //para comprovar si hay que avisar al usuario de un error
 
             //Si lo es comprueba cuantas meleculas tiene de hidruro
             if (compuesto.startsWith(hidruro) || compuesto.startsWith(prefijos[1] + hidruro)) {
 
-                console.log("mono");
+                // console.log("mono");
 
-                ejecucionHidruro(1);
+                const resultado = ejecucionHidruro(1);
 
+                if (false === resultado) {
+
+                    return false;
+
+                } else if (resultado) {
+
+                    return true;
+
+                }
             } else {
 
 
@@ -37,7 +46,18 @@ function comprovarCompuesto(elementos, compuesto) {
 
                     if (compuesto.startsWith(prefijos[i] + hidruro)) {
 
-                        ejecucionHidruro(i);
+                        const resultado = ejecucionHidruro(i);
+
+                        if (false === resultado) {
+
+                            return false;
+
+                        } else if (resultado) {
+
+                            return true;
+
+                        }
+
 
                         i = numeroDePrefijos; //Para que no lo comprueve más el For
                     }
@@ -54,19 +74,31 @@ function comprovarCompuesto(elementos, compuesto) {
 
                 hidruroIncorrecto = false;  // Para marcar que no ahí error
 
-                var salida = averiguarCompuesto(compuesto, mapElementos, numero);
+                var sal = averiguarCompuesto(compuesto, mapElementos, numero);
 
-                if (salida === -1) {
+                // console.log(sal)
+
+                if (true === sal) {
+
+
+                    return true;
+
+
+                } else {
 
                     alert(errorCompuesto);
 
+                    return false;
+
                 }
+
             }
 
         }
 
         alert(errorCompuesto);
 
+        return false;
 
     }
 
@@ -106,11 +138,13 @@ function comprovarCompuesto(elementos, compuesto) {
 
     function averiguarCompuesto(texto, mapa, prefijoHidrogeno) {
 
+        var devolver = false;
+
         texto = texto.trim()    //Para quitar leos espacios a pricipio de palabra
 
         var textoSeparado = texto.split(" ");   //Para separar las palabras en meterlas en un array invididual
 
-        console.log(textoSeparado);
+        // console.log(textoSeparado);
 
         var elemento = textoSeparado[2];
 
@@ -123,7 +157,7 @@ function comprovarCompuesto(elementos, compuesto) {
 
                 var numeroPrefijo;  //Prefijo del 2º Elemnto
 
-                console.log("iguales");
+                // console.log("iguales");
 
                 var prefijoMultipicador = elemento.split(nombre)[0]; //Sacar el prefijo
 
@@ -139,7 +173,7 @@ function comprovarCompuesto(elementos, compuesto) {
 
                 }
 
-                console.log(numeroPrefijo);
+                // console.log(numeroPrefijo);
 
                 if (numeroPrefijo == -1) {
 
@@ -147,20 +181,18 @@ function comprovarCompuesto(elementos, compuesto) {
 
                 }
 
+                //Dice si es posible combinar el 
+                const resultado = comprovarSiPuedeGenerarCompuestos("hidrógeno", prefijoHidrogeno, nombre, numeroPrefijo, mapa);
 
-
-                if (-1 === comprovarSiPuedeGenerarCompuestos("hidrógeno", prefijoHidrogeno, nombre, numeroPrefijo, mapa)) {
-
-                    return -1;
-
+                if ( true === resultado) {
+                    devolver = true;
                 }
-
 
             }
 
         });
 
-        console.log(elemento);
+        return devolver;
 
     }
 
@@ -197,38 +229,101 @@ function comprovarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
         if (prefijoPrimeraPalabra + prefijoSegundaPalabra <= numeroDePrefijos) {
 
             if (comprovarSiEstanLosCompuestos(primeraPalabra, prefijoPrimeraPalabra, mapa) && comprovarSiEstanLosCompuestos(segundaPalabra, prefijoSegundaPalabra, mapa)) {
-                
-                
-                var mapaCompuesto = crearMapaCompuesto();
-                
-                
-                //Función que estrae los datos necesarios
-                function comprovarNeutro(){
-                 
-                    var 
-                    
-                }
-                
-                function crearMapaCompuesto() {
 
-                    var mapaCompuesto = new Map();
+
+                var arrayCompuesto = crearArrayCompuesto();
+
+                const devolver = neutro();
+
+                return devolver;
+
+
+                //funcion que dice si da neutro
+
+                function neutro() {
+
+                    var valencias1, valencias2;
+
+                    valencias1 = operar(arrayCompuesto[0].v, prefijoPrimeraPalabra);
+
+                    valencias2 = operar(arrayCompuesto[1].v, prefijoSegundaPalabra);
+
+                    if (sumar(valencias1, valencias2)) {
+
+                        return true;
+
+                    } else {
+
+                        return -1;
+
+                    }
+
+                    function sumar(array1, array2) {
+
+                        for (var i = 0; i < array1.length; i++) {
+
+                            for (var j = 0; j < array2.length; j++) {
+
+                                if ((array1[i] + array2[j]) === 0) {
+
+                                    return true;
+
+                                }
+
+                            }
+
+                        }
+
+                        return false;
+                    }
+
+                    //Multiplica las valencias por el numero de repeticiones del elmetneo
+                    function operar(valencias, repeticiones) {
+
+                        var arrayVuelta = [];
+
+                        for (var i = 0; i < valencias.length; i++) {
+
+                            arrayVuelta.push(valencias[i] * repeticiones);
+
+                        }
+
+                        return arrayVuelta;
+
+                    }
+                }
+
+                //Función que estrae los datos necesarios
+                function crearArrayCompuesto() {
+
+                    var arrayCompuesto = [];
 
                     mapa.forEach(function (valor, key) {
 
-                        anadir(primeraPalabra, prefijoPrimeraPalabra);
+                        anadir(primeraPalabra,key);
+
+
                         
-                        anadir(segundaPalabra, prefijoSegundaPalabra);
-
-                        function anadir(palabra, numero) {
-
-                            if (key.nombre.toLocaleLowerCase() === palabra){
-
-                                mapaCompuesto.set(key,numero);
-
-                            }
-                        }
                     });
 
+                    mapa.forEach(function (valor, key) {
+
+
+                        anadir(segundaPalabra,key);
+
+                        
+                    });
+
+                    function anadir(palabra,key) {
+
+                        if (key.nombre.toLocaleLowerCase() === palabra) {
+
+                            arrayCompuesto.push(key);
+
+                        }
+                    }
+
+                    return arrayCompuesto;
                 }
 
             }
@@ -286,9 +381,6 @@ function comprovarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
 
 
     }
-
-
-
 
 }
 

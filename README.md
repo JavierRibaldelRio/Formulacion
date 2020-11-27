@@ -104,6 +104,10 @@
 
 - He continuado con la función de identificar compuesto
 
+**Viernes 27**
+
+- He acabado la función de comprobar compuesto
+
 
 
 
