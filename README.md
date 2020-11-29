@@ -108,6 +108,11 @@
 
 - He acabado la función de comprobar compuesto
 
+**Domingo 29**
+
+- He añadido React
+- He instalado el servidor
+
 
 
 
