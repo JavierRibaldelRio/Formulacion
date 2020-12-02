@@ -111,7 +111,21 @@
 **Domingo 29**
 
 - He añadido React
-- He instalado el servidor
+- He instalado el servidor *solo afecta a mi ordenador*
+
+
+
+**Lunes 30**
+
+- He creado el componente de React de tarjeta elmento
+- He creado la hoja de estilos
+- He creado el diseño de la tabla
+
+### DICIEMBRE
+
+**Miércoles 4**
+
+- He corregido un error
 
 
 

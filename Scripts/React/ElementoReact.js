@@ -18,16 +18,59 @@ class ElementoReact extends React.Component {
         return (
             <div>
 
-                <table>
+                <table border="black">
 
                     <tbody>
 
-                    <tr>
+                        {/*Número Atomico*/}
+                        <tr>
 
-                    <td>
-                    lkjhkh</td>
+                            <td colSpan="2">
+                                22
+                            </td>
 
-                    </tr></tbody>   
+                        </tr>
+
+                        <tr>
+
+
+                            {/* Contenedor de Valencias */}
+                            <td>
+
+                                -1
+
+                            </td>
+
+                            {/* Simbolo Químico */}
+
+                            <td>
+                                Ag
+                            </td>
+
+
+                        </tr>
+
+                        <tr>
+
+                            {/* Puntos */}
+
+                            <td>adf</td>
+
+                            {/*Grupo*/}
+
+                            <td>12</td>
+
+                        </tr>
+
+                        <tr>
+
+                            {/*Nombre del Elemento*/}
+
+                            <td colSpan="2">Plata</td>
+
+                        </tr>
+
+                    </tbody>
 
                 </table>
 

@@ -6,6 +6,7 @@ ReactDOM.render(
     <ElementoReact></ElementoReact>
 
   </div>,
-  document.getElementById('container'))
-  ;
+  document.getElementById('container')
+  
+  );
 
