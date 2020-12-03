@@ -1,7 +1,7 @@
 //Para coger los datos de el json
 var jsonDatosElementos = JSON.parse(jsonElementos);
 
-var numeroElementosACoger = 8; //Numero de clases por rondas
+var numeroElementosACoger = 8; //Numero de clases que vas a coger por rondas
 
 var arrayClases = pasarJsonAClases(); //Array que contiene todas las clases
 
@@ -13,64 +13,73 @@ var arrayClases = pasarJsonAClases(); //Array que contiene todas las clases
  */
 var arrayAleatorios = crearArrayAleatorios(arrayClases);
 
-var elementosDisponibles = crearArrayObjetosDisponibles(sacarAleatorios(arrayAleatorios), arrayClases);
+var elementosDisponibles = crearArrayObjetosDisponibles(sacarAleatorios(arrayAleatorios), arrayClases); //Elementos ue te han tocado
 
 
 //Funciones
-//Convertir en array numerico el string de las valencias
+//Convertir en array numerico el string de las valencias ya que del json vienen en forma de texto
 function convertirArrayValencias(texto) {
 
     //Mirar si el input es un numero o otra cosa
     if (typeof texto === "number") {
+        
+        //Si es número es decir que solo hay un numero ya que si hubiera más de un número estaría separado por una coma y sería un texto
 
-        return Array.from([texto]); //Convertir el numero en array
+        return Array.from([texto]);
 
-    } else {
+    } 
+    //Si no es un numero ejectura esto
+    else
+    
+    {    
 
-        var coma = ","; //Almacena el elemento que partira el array
-        //Crea un array  cada casilla se corresponde un trozo del string
+        const coma = ","; //Almacena el elemento que partira el array
+        
+        //Crea un array que cada casilla se corresponde un trozo del string partido| se parte cada vez que encuentre una coma
         var arrayTexto = texto.split(coma);
 
         //Transforma las casilleas en numero
-        for (var i = 0; i < arrayTexto.length; i++) {
+        for (var i = 0; i < arrayTexto.length; i++) {   //Coge la lonjitud del array y ejecuta el bucle a cada casilla del array
 
-            arrayTexto[i] = Number(arrayTexto[i]);
+            arrayTexto[i] = Number(arrayTexto[i]);  //Hace que los textos pases a ser números, ya que los números negativos sonalmacenados en forma de textos y los numeros positivos son akmacenados en forma de número
 
         }
 
-        return arrayTexto;
+        return arrayTexto;      // Devuelve el  array con el texto ya transformado en una array
     }
 
 }
 
-//Convertir todos los elementos en clases
+//Convertir todos los elementos del json en clases de ojetos
 function pasarJsonAClases() {
 
     var arrayContenedorObjetos = []; //Donde se guardaran las clases
-
-    for (var i = 0; i < jsonDatosElementos.length; i++) {
-
+    
+    // Se ejecuta una vez por cada elemento del json, cada vez que se haga la varible i que hrá función de contador sera aumentada automáticamente "+1"
+    for (var i = 0; i < jsonDatosElementos.length/*coger la lonjitud del json*/; i++) {
+        
+        //Almacena en una variable en nuevo objeto que va a crear de forma temporal
         var nuevoElemento =
 
             //constructor
             new Elemento(
 
-                jsonDatosElementos[i].z,
-                jsonDatosElementos[i].nombre,
-                jsonDatosElementos[i].sq,
-                convertirArrayValencias(jsonDatosElementos[i].v),
-                jsonDatosElementos[i].repeticion,
-                jsonDatosElementos[i].puntos,
-                jsonDatosElementos[i].grupo
+                jsonDatosElementos[i].z,                                //Coge del elemento i la z y se la pasa al objeto
+                jsonDatosElementos[i].nombre,                           //Coge del elemento i el nomabre y se la pasa al objeto
+                jsonDatosElementos[i].sq,                               //Coge del elemento i el simbolo químco y se la pasa al objeto
+                convertirArrayValencias(jsonDatosElementos[i].v),       //Coge del elemento i la el  texto de las valencias y los combierte en una array de numeros
+                jsonDatosElementos[i].repeticion,                       //Coge del elemento i la repetición y se la pasa al objeto
+                jsonDatosElementos[i].puntos,                           //Coge del elemento i los grupos y se la pasa al objeto
+                jsonDatosElementos[i].grupo                             //Coge del elemento i el grupo y se la pasa al objeto
 
             );
 
-        arrayContenedorObjetos.push(nuevoElemento);
+        arrayContenedorObjetos.push(nuevoElemento);     //Añade a el array el nuebo objeto que se a creado
 
 
     }
 
-    return arrayContenedorObjetos;
+    return arrayContenedorObjetos;          //Devuelve el array que contiene todos los objetos
 
 }
 
