@@ -1,5 +1,8 @@
+//Definir el objeto de elemento
 function Elemento(z, nombre, sq, v, repeticion, puntos, grupo) {
-
+    
+    //Constructor
+    
     this.z = z; //Numero Massico
 
     this.nombre = nombre; //Nombre del elemento
@@ -8,7 +11,7 @@ function Elemento(z, nombre, sq, v, repeticion, puntos, grupo) {
 
     this.v = v; //Valencias
 
-    this.repeticion = repeticion; //Repetición del compusto en el juego
+    this.repeticion = repeticion; //Repetición del elemento en el juego en el juego
 
     this.puntos = puntos; //Puntos de cada carta
 
