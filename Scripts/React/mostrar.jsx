@@ -3,7 +3,8 @@ ReactDOM.render(
 
     <p>Javier Ribal del Río</p>
 
-    <ElementoReact></ElementoReact>
+    <Banca></Banca>
+
 
   </div>,
   document.getElementById('container')

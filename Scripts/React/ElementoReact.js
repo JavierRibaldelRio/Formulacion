@@ -7,7 +7,6 @@ class ElementoReact extends React.Component {
 
         super(props);
 
-
     }
 
     //funcion de devolver
@@ -18,15 +17,19 @@ class ElementoReact extends React.Component {
         return (
             <div>
 
-                <table border="black">
+                <table className="Tabla_Elementos" >
 
                     <tbody>
 
                         {/*Número Atomico*/}
-                        <tr>
+                        <tr className="Numero_Atomico">
 
-                            <td colSpan="2">
-                                22
+                            <td>
+                                {this.props.z}
+                            </td>
+
+                            <td rowSpan="2" colSpan="3" className="Simbolo_Quimico">
+                                {this.props.sq}
                             </td>
 
                         </tr>
@@ -35,38 +38,35 @@ class ElementoReact extends React.Component {
 
 
                             {/* Contenedor de Valencias */}
-                            <td>
+                            <td className="Valencias">
 
-                                -1
-
+                                {this.props.valencias}
                             </td>
-
-                            {/* Simbolo Químico */}
-
-                            <td>
-                                Ag
-                            </td>
-
-
                         </tr>
 
                         <tr>
 
                             {/* Puntos */}
 
-                            <td>adf</td>
 
-                            {/*Grupo*/}
 
-                            <td>12</td>
+                            <td className="Puntos">Puntos:</td>
 
+                            <td className="Puntos">{this.props.puntos}</td>
+
+                        </tr>
+
+                        <tr>
+                            <td className="Grupos">Grupo: </td>
+
+                            <td className="Grupos">{this.props.grupo}</td>
                         </tr>
 
                         <tr>
 
                             {/*Nombre del Elemento*/}
 
-                            <td colSpan="2">Plata</td>
+                            <td colSpan="4" className="Nombre">{this.props.nombre}</td>
 
                         </tr>
 
