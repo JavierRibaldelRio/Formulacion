@@ -7,21 +7,28 @@ class ElementoReact extends React.Component {
 
         super(props);
 
+        this.state = { valencias: this.props.v };
+
     }
 
     //funcion de devolver
 
     render() {
 
+        
+        for(var i = 0; i < this.state.valencias.length; i++){
+
+            this.state.valencias = this.state.valencias.toString().replace(","," ");
+
+        }
         //Lo que devuelve
         return (
-            <div>
 
                 <table className="Tabla_Elementos" >
 
                     <tbody>
 
-                        {/*Número Atomico*/}
+                        {/*Número Atómico*/}
                         <tr className="Numero_Atomico">
 
                             <td>
@@ -40,7 +47,7 @@ class ElementoReact extends React.Component {
                             {/* Contenedor de Valencias */}
                             <td className="Valencias">
 
-                                {this.props.valencias}
+                                {this.state.valencias}
                             </td>
                         </tr>
 
@@ -74,7 +81,6 @@ class ElementoReact extends React.Component {
 
                 </table>
 
-            </div>
 
         );
 
