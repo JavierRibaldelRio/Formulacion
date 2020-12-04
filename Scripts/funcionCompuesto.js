@@ -1,11 +1,13 @@
 //Funcion que comprueva si es posible crear este compuesto
 function comprovarCompuesto(elementos, compuesto) {
 
+    //Error que sacara por pantalla
     const errorCompuesto = "Este compuesto no se puede crear";
 
     //Cromprovar si compuesto no es un texto
     if (typeof compuesto != "string") {
 
+        //Error
         alert("Por favor inserte un valor valido.");
 
     }
@@ -14,7 +16,7 @@ function comprovarCompuesto(elementos, compuesto) {
 
         compuesto = compuesto.toLocaleLowerCase();  //Pasa a minusculas
 
-        const mapElementos = crearMap();
+        const mapElementos = crearMap();    //Crear el mapa de les elementos
 
         //Comprueba si es un hidruro
         if (compuesto.includes(hidruro) && comprovarSiHayHidrogeno(mapElementos)) {
@@ -28,38 +30,47 @@ function comprovarCompuesto(elementos, compuesto) {
 
                 // console.log("mono");
 
-                const resultado = ejecucionHidruro(1);
+                const resultado = ejecucionHidruro(1);  //Lo que se ha de ejecutar en caso de que sea un hidrudo
 
+                //Si es falso devuelves resultado
                 if (false === resultado) {
 
                     return false;
 
-                } else if (resultado) {
+                }
+
+                //Si no es falso y es verdadero devuelves true
+                else if (resultado) {
 
                     return true;
 
                 }
             } else {
 
-
+                //Se ejecuta una vez por cada prefijo
                 for (var i = 2; i < numeroDePrefijos; i++) {
 
+                    //Comprueba con que prefijos coinciden con el prefijo
                     if (compuesto.startsWith(prefijos[i] + hidruro)) {
 
-                        const resultado = ejecucionHidruro(i);
+                        const resultado = ejecucionHidruro(i);  //Lo que se ha de ejecutar en caso de que sea un hidrudo
 
+                        //Si es falso devuelves resultado
                         if (false === resultado) {
 
                             return false;
 
-                        } else if (resultado) {
+                        }
+
+                        //Si no es falso y es verdadero devuelves true
+                        else if (resultado) {
 
                             return true;
 
                         }
 
 
-                        i = numeroDePrefijos; //Para que no lo comprueve más el For
+                        i = numeroDePrefijos; //Para que no lo comprueve más el for, de esa forma se deja de comprobar si el prefijo es el mismi
                     }
 
                 }
@@ -70,6 +81,8 @@ function comprovarCompuesto(elementos, compuesto) {
 
             }
 
+
+            //Lo que se tiene que ejecutar si es un hidruro
             function ejecucionHidruro(numero) {
 
                 hidruroIncorrecto = false;  // Para marcar que no ahí error
@@ -86,7 +99,7 @@ function comprovarCompuesto(elementos, compuesto) {
 
                 } else {
 
-                    alert(errorCompuesto);
+                    alert(errorCompuesto);  //Error
 
                     return false;
 
@@ -96,7 +109,7 @@ function comprovarCompuesto(elementos, compuesto) {
 
         }
 
-        alert(errorCompuesto);
+        alert(errorCompuesto);  //Error
 
         return false;
 
@@ -107,38 +120,39 @@ function comprovarCompuesto(elementos, compuesto) {
 
     //Devuelve un mapa <objeto|Nº de repeticiones de ese objeto>
     function crearMap() {
+
         var mapaElementos = new Map();  //Map donde se almacenan el numero de repeticiones de cada elmento
 
+        //Se ejecuta una vez por el número de elementos que hay que coger
         for (var i = 0; i < numeroElementosACoger; i++) {
 
             var elementoOriginal = elementos[i]; //Almacena el elemento origianl
 
-            var k = j = i;
+            var contador = 1;   //Cuenta cuantas veces se repite un elemento
 
-            var contador = 1;
-
+            //si es igual al número 
             if (i < numeroElementosACoger - 1) {
 
-                while (j < numeroElementosACoger - 1 && elementoOriginal.sq == elementos[1 + j].sq) {
+                //repetira esto hasta que el elemento cambie
+                while (i < numeroElementosACoger - 1 && elementoOriginal.sq == elementos[1 + i].sq) {
 
-                    i++;
+                    i++;    
 
-                    k++;
-                    j = k;
                     contador++;
 
                 }
+
             }
-            mapaElementos.set(elementoOriginal, contador);
+            mapaElementos.set(elementoOriginal, contador);  //Añade al mapa
 
         }
 
-        return mapaElementos;
+        return mapaElementos;   //Retorna el mapa
     }
 
     function averiguarCompuesto(texto, mapa, prefijoHidrogeno) {
 
-        var devolver = false;
+        var devolver = false;   //Almacena lo que se va ha devolver
 
         texto = texto.trim()    //Para quitar leos espacios a pricipio de palabra
 
@@ -146,13 +160,15 @@ function comprovarCompuesto(elementos, compuesto) {
 
         // console.log(textoSeparado);
 
-        var elemento = textoSeparado[2];
+        var elemento = textoSeparado[2];    //coger el tercer trozo de el array de palabras torceadas
 
+        //Se ejecuta por cada casilla del mapa
         mapa.forEach(function (valor, key) {
 
             //Almacena el nombre del segundo compuesto
             const nombre = key.nombre/*Coger la propiedad*/.toLocaleLowerCase();    //Para pasar a minusculas
 
+            //Si acaba con nombre
             if (elemento.endsWith(nombre)) {
 
                 var numeroPrefijo;  //Prefijo del 2º Elemnto
@@ -161,13 +177,15 @@ function comprovarCompuesto(elementos, compuesto) {
 
                 var prefijoMultipicador = elemento.split(nombre)[0]; //Sacar el prefijo
 
-                //Para asegurarse de que es mono
-
+                //Si no hay particula quiere decir que es 1(mono)
                 if (prefijoMultipicador === "") {
 
                     numeroPrefijo = 1;      //Ya que si no hay nada es mono
 
-                } else {
+                } 
+
+                //Para encontrar el prefijo               
+                else {
 
                     numeroPrefijo = encontrarPrefijo(prefijoMultipicador);
 
@@ -175,16 +193,17 @@ function comprovarCompuesto(elementos, compuesto) {
 
                 // console.log(numeroPrefijo);
 
+                //Si número de prefijo es -1 [ERROR]
                 if (numeroPrefijo == -1) {
 
                     return -1;
 
                 }
 
-                //Dice si es posible combinar el 
+                //Dice si es posible combinar los introducidios, sumar y comprovar valencias
                 const resultado = comprovarSiPuedeGenerarCompuestos("hidrógeno", prefijoHidrogeno, nombre, numeroPrefijo, mapa);
 
-                if ( true === resultado) {
+                if (true === resultado) {
                     devolver = true;
                 }
 
@@ -192,7 +211,7 @@ function comprovarCompuesto(elementos, compuesto) {
 
         });
 
-        return devolver;
+        return devolver; 
 
     }
 
@@ -200,17 +219,16 @@ function comprovarCompuesto(elementos, compuesto) {
 
 }
 
+//Devuelve que prefijo a sido a utilizado, por lo tanto el número
 function encontrarPrefijo(particula) {
 
-    var particula;
-
+    //Se repirte una vez por el número de prefijos que haya
     for (var i = 1; i < numeroDePrefijos; i++) {
 
+        //Si la particula es la misma que el prefijo
         if (particula == prefijos[i]) {
 
-            particula = i;
-
-            return particula;
+            return i;   //Devuelve el número de la particula
 
         }
 
@@ -223,31 +241,35 @@ function encontrarPrefijo(particula) {
 /*Hidrogeno*/   /*1*/                   /*Litio*/       /*1*/
 function comprovarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra, segundaPalabra, prefijoSegundaPalabra, mapa) {
 
-
+    //Mirar si tiene los formatos correctos (2 textos y 2 números)
     if (posibleTexto(primeraPalabra) && posibleTexto(segundaPalabra) && posibleNumero(prefijoPrimeraPalabra) && posibleNumero(prefijoSegundaPalabra)) {
 
+        //Se asegura de que la suma de los dos prefijos es menor que al número total de prefijos
         if (prefijoPrimeraPalabra + prefijoSegundaPalabra <= numeroDePrefijos) {
 
+            //Se asegura de que los compuestos estan
             if (comprovarSiEstanLosCompuestos(primeraPalabra, prefijoPrimeraPalabra, mapa) && comprovarSiEstanLosCompuestos(segundaPalabra, prefijoSegundaPalabra, mapa)) {
 
+                var arrayCompuesto = crearArrayCompuesto(); //Crea un array corresponde al compuesto
 
-                var arrayCompuesto = crearArrayCompuesto();
-
-                const devolver = neutro();
+                //Devolver el valor de neutro
+                const devolver = neutro();  
 
                 return devolver;
 
 
-                //funcion que dice si da neutro
+                //funcion que dice si da neutro (0) o estable
 
                 function neutro() {
 
                     var valencias1, valencias2;
 
+                    //Crea el array de valencias sumadas de cada elemento
                     valencias1 = operar(arrayCompuesto[0].v, prefijoPrimeraPalabra);
 
                     valencias2 = operar(arrayCompuesto[1].v, prefijoSegundaPalabra);
 
+                    //Comprueva si la suma de los arrays de valencias es neutro
                     if (sumar(valencias1, valencias2)) {
 
                         return true;
@@ -258,12 +280,17 @@ function comprovarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
 
                     }
 
+                    //Suma todas las casillas de todos los arrays
+
                     function sumar(array1, array2) {
 
+                        //Coge la casilla indicada del array
                         for (var i = 0; i < array1.length; i++) {
-
+                            
+                            //Coge la casilla indicada del 2º array
                             for (var j = 0; j < array2.length; j++) {
 
+                                //Si la suma de los arrays es o deveulve true por que es neutro
                                 if ((array1[i] + array2[j]) === 0) {
 
                                     return true;
@@ -274,21 +301,24 @@ function comprovarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
 
                         }
 
+                        //Si no devuelve true devulve false
                         return false;
                     }
 
                     //Multiplica las valencias por el numero de repeticiones del elmetneo
                     function operar(valencias, repeticiones) {
 
-                        var arrayVuelta = [];
+                        var arrayVuelta = [];   //El array que devolveras
 
+                        // Se ejecuta una ve por cada casilla del array
                         for (var i = 0; i < valencias.length; i++) {
 
+                            //Multiplica la casilla de la valencia por las repeticiones y la añade al array
                             arrayVuelta.push(valencias[i] * repeticiones);
 
                         }
 
-                        return arrayVuelta;
+                        return arrayVuelta;     //Multiplica el array
 
                     }
                 }
@@ -296,34 +326,38 @@ function comprovarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
                 //Función que estrae los datos necesarios
                 function crearArrayCompuesto() {
 
-                    var arrayCompuesto = [];
+                    var arrayCompuesto = [];    //Crea el a el array
+
+                    //Se ejecuta una vez por cada elemento del array
+                    mapa.forEach(function (valor, key) {
+
+                        anadir(primeraPalabra, key);
+
+
+
+                    });
+
+                    //Se ejecuta una vez por cada elemento del array
 
                     mapa.forEach(function (valor, key) {
 
-                        anadir(primeraPalabra,key);
+
+                        anadir(segundaPalabra, key);
 
 
-                        
                     });
 
-                    mapa.forEach(function (valor, key) {
-
-
-                        anadir(segundaPalabra,key);
-
-                        
-                    });
-
-                    function anadir(palabra,key) {
-
+                    //Añade el elemento al array
+                    function anadir(palabra, key) {
+                        //Si es igual lo añade
                         if (key.nombre.toLocaleLowerCase() === palabra) {
 
-                            arrayCompuesto.push(key);
+                            arrayCompuesto.push(key);   //Añade al array la palabra
 
                         }
                     }
 
-                    return arrayCompuesto;
+                    return arrayCompuesto;  // Devuelve el array
                 }
 
             }
@@ -331,11 +365,12 @@ function comprovarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
 
         }
 
+        //Error
         else {
             return -1;
         }
 
-
+    //Error    
     } else {
 
         return -1;
@@ -388,19 +423,21 @@ function comprovarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
 
 function comprovarSiHayHidrogeno(mapaElementos) {
 
-    var devolver = false;
+    var devolver = false;   //Lo que se devolvera
 
     //Mirar si el hidrogeno se encuentra en el mapa de los elementos
     mapaElementos.forEach(function (value, key) {
 
-        const sqElemento = key.sq; //Para hacer Minusculas
+        const sqElemento = key.sq; //Coge de la clave
 
+        //Si el sq es igual a la del hidrógeno
         if (sqElemento === "H") {
 
-            devolver = true;
+            devolver = true;    //Cambia la devolución a true
+
         }
     });
 
-    return devolver;
+    return devolver;    //Devuelve
 
 }

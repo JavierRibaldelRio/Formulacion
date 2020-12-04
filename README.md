@@ -19,6 +19,8 @@
   - Librerías
     - Bootstrap
     - Jquery
+  - Framework
+    - React
   
 - ##### Funcionamiento
 
@@ -92,8 +94,6 @@
 
 **Lunes 23**
 
-
-
 - He continuado con la función de identificar compuesto
 
 **Martes**
@@ -121,11 +121,26 @@
 - He creado la hoja de estilos
 - He creado el diseño de la tabla
 
+
+
 ### DICIEMBRE
 
-**Miércoles 4**
+**Miércoles 2**
 
 - He corregido un error
+
+**Jueves 3**
+
+- He acabado de crear los componentes
+- He creado y he acabado de crear el componente banca
+
+**Viernes 4**
+
+- He comentado Scripts
+
+
+
+
 
 
 
