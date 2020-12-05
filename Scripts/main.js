@@ -68,7 +68,8 @@ function pasarJsonAClases() {
                 convertirArrayValencias(jsonDatosElementos[i].v),       //Coge del elemento i la el  texto de las valencias y los combierte en una array de numeros
                 jsonDatosElementos[i].repeticion,                       //Coge del elemento i la repetición y se la pasa al objeto
                 jsonDatosElementos[i].puntos,                           //Coge del elemento i los grupos y se la pasa al objeto
-                jsonDatosElementos[i].grupo                             //Coge del elemento i el grupo y se la pasa al objeto
+                jsonDatosElementos[i].grupo,                            //Coge del elemento i el grupo y se la pasa al objeto
+                jsonDatosElementos[i].Tipo                             
 
             );
 

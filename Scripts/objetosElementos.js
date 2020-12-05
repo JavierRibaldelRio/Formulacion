@@ -1,5 +1,5 @@
 //Definir el objeto de elemento
-function Elemento(z, nombre, sq, v, repeticion, puntos, grupo) {
+function Elemento(z, nombre, sq, v, repeticion, puntos, grupo, tipo) {
     
     //Constructor
     
@@ -16,5 +16,7 @@ function Elemento(z, nombre, sq, v, repeticion, puntos, grupo) {
     this.puntos = puntos; //Puntos de cada carta
 
     this.grupo = grupo;     //Columna en la tabla periódica
+
+    this.tipo = tipo;   //El tipo de color...
 
 }
