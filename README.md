@@ -138,7 +138,9 @@
 
 - He comentado Scripts
 
-
+**Sábado 5**
+- He comentado
+- He dado formato a las tarjetas añadiendoles una tipografia
 
 
 

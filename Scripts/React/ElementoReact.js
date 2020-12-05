@@ -7,6 +7,7 @@ class ElementoReact extends React.Component {
 
         super(props);
 
+        //Coge las valencias
         this.state = { valencias: this.props.v };
 
     }
@@ -15,71 +16,73 @@ class ElementoReact extends React.Component {
 
     render() {
 
-        
-        for(var i = 0; i < this.state.valencias.length; i++){
+        //Se ejecuta una vez por cada valencia
+        for (var i = 0; i < this.state.valencias.length; i++) {
 
-            this.state.valencias = this.state.valencias.toString().replace(","," ");
+            //Remplaza las comas por en espacio
+            this.state.valencias = this.state.valencias.toString().replace(",", " ");
 
         }
+
         //Lo que devuelve
         return (
 
-                <table className="Tabla_Elementos" >
+            //Crea la tabla
+            <table className="Tabla_Elementos" >
 
-                    <tbody>
+                <tbody>
 
+                    <tr className="Numero_Atomico">
                         {/*Número Atómico*/}
-                        <tr className="Numero_Atomico">
 
-                            <td>
-                                {this.props.z}
-                            </td>
+                        <td>
+                            {this.props.z}
+                        </td>
 
-                            <td rowSpan="2" colSpan="3" className="Simbolo_Quimico">
-                                {this.props.sq}
-                            </td>
+                        {/* Simbolo Químico */}
+                        <td rowSpan="2" colSpan="3" className="Simbolo_Quimico">
+                            {this.props.sq}
+                        </td>
 
-                        </tr>
+                    </tr>
 
-                        <tr>
-
-
-                            {/* Contenedor de Valencias */}
-                            <td className="Valencias">
-
-                                {this.state.valencias}
-                            </td>
-                        </tr>
-
-                        <tr>
-
-                            {/* Puntos */}
+                    <tr>
 
 
+                        {/* Contenedor de Valencias */}
+                        <td className="Valencias">
 
-                            <td className="Puntos">Puntos:</td>
+                            {this.state.valencias}
+                        </td>
+                    </tr>
 
-                            <td className="Puntos">{this.props.puntos}</td>
+                    <tr>
 
-                        </tr>
+                        {/* Puntos */}
 
-                        <tr>
-                            <td className="Grupos">Grupo: </td>
+                        <td className="Texto_dentro_de_tabla">Puntos:</td>
 
-                            <td className="Grupos">{this.props.grupo}</td>
-                        </tr>
+                        <td className="Puntos">{this.props.puntos}</td>
 
-                        <tr>
+                    </tr>
+{/* Grupo */}
+                    <tr>
+                        <td className="Texto_dentro_de_tabla">Grupo: </td>
 
-                            {/*Nombre del Elemento*/}
+                        <td className="Grupos">{this.props.grupo}</td>
+                    </tr>
 
-                            <td colSpan="4" className="Nombre">{this.props.nombre}</td>
+                    <tr>
 
-                        </tr>
+                        {/*Nombre del Elemento*/}
 
-                    </tbody>
+                        <td colSpan="4" className="Nombre Texto_dentro_de_tabla">{this.props.nombre}</td>
 
-                </table>
+                    </tr>
+
+                </tbody>
+
+            </table>
 
 
         );
