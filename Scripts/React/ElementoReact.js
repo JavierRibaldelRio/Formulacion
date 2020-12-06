@@ -28,11 +28,11 @@ class ElementoReact extends React.Component {
         return (
 
             //Crea la tabla
-            <table className="Tabla_Elementos" >
+            <table className={"Tabla_Elementos " +  this.props.tipo} >
 
                 <tbody>
 
-                    <tr className="Numero_Atomico">
+                    <tr className="Numero_Atomico" >
                         {/*Número Atómico*/}
 
                         <td>
@@ -65,11 +65,11 @@ class ElementoReact extends React.Component {
                         <td className="Puntos">{this.props.puntos}</td>
 
                     </tr>
-{/* Grupo */}
+                    {/* Grupo */}
                     <tr>
                         <td className="Texto_dentro_de_tabla">Grupo: </td>
 
-                        <td className="Grupos">{this.props.grupo}</td>
+                        <td className="Grupo">{this.props.grupo}</td>
                     </tr>
 
                     <tr>
