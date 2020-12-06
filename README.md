@@ -19,6 +19,8 @@
   - Librerías
     - Bootstrap
     - Jquery
+  - Framework
+    - React
   
 - ##### Funcionamiento
 
@@ -92,8 +94,6 @@
 
 **Lunes 23**
 
-
-
 - He continuado con la función de identificar compuesto
 
 **Martes**
@@ -107,6 +107,46 @@
 **Viernes 27**
 
 - He acabado la función de comprobar compuesto
+
+**Domingo 29**
+
+- He añadido React
+- He instalado el servidor *solo afecta a mi ordenador*
+
+
+
+**Lunes 30**
+
+- He creado el componente de React de tarjeta elmento
+- He creado la hoja de estilos
+- He creado el diseño de la tabla
+
+
+
+### DICIEMBRE
+
+**Miércoles 2**
+
+- He corregido un error
+
+**Jueves 3**
+
+- He acabado de crear los componentes
+- He creado y he acabado de crear el componente banca
+
+**Viernes 4**
+
+- He comentado Scripts
+
+**Sábado 5**
+- He comentado
+- He dado formato a las tarjetas añadiendoles una tipografia
+
+**Domingo 6**
+- He crado una rama de color de formato
+- He optimizado el codigo de React
+
+
 
 
 
