@@ -17,17 +17,10 @@ class Banca extends React.Component {
                 {/* Pasa las propiedades a los elementos que crean las tarjetas */}
 
                 <ElementoReact
-                    z={elementosDisponibles[0].z}
-                    nombre={elementosDisponibles[0].nombre}
-                    v={elementosDisponibles[0].v}
-                    sq={elementosDisponibles[0].sq}
-                    puntos={elementosDisponibles[0].puntos}
-                    grupo={elementosDisponibles[0].grupo} 
-                    tipo={elementosDisponibles[0].tipo}
-
+                    objeto={elementosDisponibles[0]}
                 ></ElementoReact>
 
-                <ElementoReact
+                {/* <ElementoReact
                     z={elementosDisponibles[1].z}
                     nombre={elementosDisponibles[1].nombre}
                     v={elementosDisponibles[1].v}
@@ -95,7 +88,7 @@ class Banca extends React.Component {
                     puntos={elementosDisponibles[3 + 4].puntos}
                     grupo={elementosDisponibles[3 + 4].grupo}
                     tipo={elementosDisponibles[7].tipo}
-                ></ElementoReact>
+                ></ElementoReact> */}
 
 
 

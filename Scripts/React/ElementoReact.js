@@ -7,8 +7,8 @@ class ElementoReact extends React.Component {
 
         super(props);
 
-        //Coge las valencias
-        this.state = { valencias: this.props.v };
+        //Coge las valencias del objeto
+        this.state = { z: this.props.objeto.z, puntos: this.props.objeto.puntos,valencias: this.props.objeto.v };
 
     }
 
