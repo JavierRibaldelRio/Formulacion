@@ -145,6 +145,7 @@
 **Domingo 6**
 - He crado una rama de color de formato
 - He optimizado el codigo de React
+- He dado formato al cuerpo
 
 
 

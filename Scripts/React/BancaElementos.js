@@ -12,7 +12,7 @@ class Banca extends React.Component {
 
         return (
 
-            <div>
+            <div className="banca">
 
                 {/* Pasa las propiedades a los elementos que crean las tarjetas */}
 

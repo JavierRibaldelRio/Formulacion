@@ -1,3 +1,11 @@
+/*Etiquetas*/
+body{
+
+    background-color: rgb(96, 195, 235);
+
+}
+
+/*Clases*/
 .Numero_Atomico{
 
     text-align: left;   /*Alineación*/ 
@@ -137,4 +145,15 @@
 
     color: purple;
 
+}
+
+.banca{
+
+    text-align: center;
+
+    background-color: whitesmoke;
+
+    padding: 10;
+
+    margin: 5;
 }

@@ -7,11 +7,10 @@ ReactDOM.render(
     {/* Crea el objeto banca */}
     <Banca></Banca>
 
-
   </div>,
 
   // Donde será creado el documento
   document.getElementById('container')
-  
-  );
+
+);
 
