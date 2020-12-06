@@ -24,3 +24,5 @@ j <- toJSON(x = d, method = 'C', )
 
 write(x = j, file = 'elementos.json')
 
+print("Se ha ejecutdo correctamente")
+

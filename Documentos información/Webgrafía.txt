@@ -7,3 +7,8 @@ https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales
 https://desarrolloweb.com/articulos/763.php
 https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/sort
 https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/const
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/replace
+https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-replace-call
+https://blog.trescomatres.com/2015/09/css-evitar-salto-de-linea-despues-de-etiquetas-h1-h2-h3/
+https://developer.mozilla.org/es/docs/Web/CSS/display
+https://desarrolloweb.com/articulos/modelo-tabla-css-propiedad-display-explicaciones-ejemplos.html
