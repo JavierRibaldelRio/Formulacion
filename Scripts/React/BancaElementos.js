@@ -22,7 +22,9 @@ class Banca extends React.Component {
                     v={elementosDisponibles[0].v}
                     sq={elementosDisponibles[0].sq}
                     puntos={elementosDisponibles[0].puntos}
-                    grupo={elementosDisponibles[0].grupo}
+                    grupo={elementosDisponibles[0].grupo} 
+                    tipo={elementosDisponibles[0].tipo}
+
                 ></ElementoReact>
 
                 <ElementoReact
@@ -32,6 +34,7 @@ class Banca extends React.Component {
                     sq={elementosDisponibles[1].sq}
                     puntos={elementosDisponibles[1].puntos}
                     grupo={elementosDisponibles[1].grupo}
+                    tipo={elementosDisponibles[1].tipo}
                 ></ElementoReact>
 
                 <ElementoReact
@@ -41,6 +44,7 @@ class Banca extends React.Component {
                     sq={elementosDisponibles[2].sq}
                     puntos={elementosDisponibles[2].puntos}
                     grupo={elementosDisponibles[2].grupo}
+                    tipo={elementosDisponibles[2].tipo}
                 ></ElementoReact>
 
                 <ElementoReact
@@ -50,6 +54,7 @@ class Banca extends React.Component {
                     sq={elementosDisponibles[3].sq}
                     puntos={elementosDisponibles[3].puntos}
                     grupo={elementosDisponibles[3].grupo}
+                    tipo={elementosDisponibles[3].tipo}
                 ></ElementoReact>
 
                 <ElementoReact
@@ -59,6 +64,7 @@ class Banca extends React.Component {
                     sq={elementosDisponibles[1 + 3].sq}
                     puntos={elementosDisponibles[1 + 3].puntos}
                     grupo={elementosDisponibles[1 + 3].grupo}
+                    tipo={elementosDisponibles[4].tipo}
                 ></ElementoReact>
 
                 <ElementoReact
@@ -68,6 +74,7 @@ class Banca extends React.Component {
                     sq={elementosDisponibles[3 + 2].sq}
                     puntos={elementosDisponibles[3 + 2].puntos}
                     grupo={elementosDisponibles[3 + 2].grupo}
+                    tipo={elementosDisponibles[5].tipo}
                 ></ElementoReact>
 
                 <ElementoReact
@@ -77,6 +84,7 @@ class Banca extends React.Component {
                     sq={elementosDisponibles[3 + 3].sq}
                     puntos={elementosDisponibles[3 + 3].puntos}
                     grupo={elementosDisponibles[3 + 3].grupo}
+                    tipo={elementosDisponibles[6].tipo}
                 ></ElementoReact>
 
                 <ElementoReact
@@ -86,6 +94,7 @@ class Banca extends React.Component {
                     sq={elementosDisponibles[3 + 4].sq}
                     puntos={elementosDisponibles[3 + 4].puntos}
                     grupo={elementosDisponibles[3 + 4].grupo}
+                    tipo={elementosDisponibles[7].tipo}
                 ></ElementoReact>
 
 

@@ -142,6 +142,9 @@
 - He comentado
 - He dado formato a las tarjetas añadiendoles una tipografia
 
+**Domingo 6**
+- He crado una rama de color de formato
+
 
 
 

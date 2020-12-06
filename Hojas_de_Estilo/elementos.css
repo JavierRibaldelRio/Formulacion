@@ -61,7 +61,7 @@
 
 .Grupo{
 
-    text-align: right;
+    text-align: left;
 
     margin: 1;
 
@@ -86,4 +86,55 @@
     
 }
 
+.Grupo1{
 
+    background-color: yellow;
+
+    color: purple;
+}
+
+.Grupo2{
+
+    background-color: orangered;
+
+}
+
+.Metal_Trancision{
+
+    background-color: greenyellow;
+
+}
+
+.Grupo13{
+
+    background-color: #F7C0E4;
+
+}
+
+.Grupo14{
+
+    background-color:#dbcd97;
+
+}
+
+.Grupo15{
+
+    background-color: slateblue;
+
+    color: greenyellow;
+
+}
+
+.Grupo16{
+
+    background-color: red;
+
+}
+
+.Grupo17{
+
+    background-color: #4ce682;
+
+    color: purple;
+
+}
