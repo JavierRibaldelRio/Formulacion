@@ -8,7 +8,7 @@ class ElementoReact extends React.Component {
         super(props);
 
         //Coge las valencias del objeto
-        this.state = { z: this.props.objeto.z, puntos: this.props.objeto.puntos,valencias: this.props.objeto.v };
+        this.state = {valencias: this.props.objeto.v };
 
     }
 
@@ -28,7 +28,7 @@ class ElementoReact extends React.Component {
         return (
 
             //Crea la tabla
-            <table className={"Tabla_Elementos " +  this.props.tipo} >
+            <table className={"Tabla_Elementos " +  this.props.objeto.tipo} >
 
                 <tbody>
 
@@ -36,12 +36,12 @@ class ElementoReact extends React.Component {
                         {/*Número Atómico*/}
 
                         <td>
-                            {this.props.z}
+                            {this.props.objeto.z}
                         </td>
 
                         {/* Simbolo Químico */}
                         <td rowSpan="2" colSpan="3" className="Simbolo_Quimico">
-                            {this.props.sq}
+                            {this.props.objeto.sq}
                         </td>
 
                     </tr>
@@ -62,21 +62,21 @@ class ElementoReact extends React.Component {
 
                         <td className="Texto_dentro_de_tabla">Puntos:</td>
 
-                        <td className="Puntos">{this.props.puntos}</td>
+                        <td className="Puntos">{this.props.objeto.puntos}</td>
 
                     </tr>
                     {/* Grupo */}
                     <tr>
                         <td className="Texto_dentro_de_tabla">Grupo: </td>
 
-                        <td className="Grupo">{this.props.grupo}</td>
+                        <td className="Grupo">{this.props.objeto.grupo}</td>
                     </tr>
 
                     <tr>
 
                         {/*Nombre del Elemento*/}
 
-                        <td colSpan="4" className="Nombre Texto_dentro_de_tabla">{this.props.nombre}</td>
+                        <td colSpan="4" className="Nombre Texto_dentro_de_tabla">{this.props.objeto.nombre}</td>
 
                     </tr>
 
