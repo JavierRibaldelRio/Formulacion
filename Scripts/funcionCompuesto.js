@@ -10,6 +10,8 @@ function comprovarCompuesto(elementos, compuesto) {
         //Error
         alert("Por favor inserte un valor valido.");
 
+        console.log(typeof compuesto);
+
     }
     //si es un string
     else {
@@ -42,9 +44,10 @@ function comprovarCompuesto(elementos, compuesto) {
                 //Si no es falso y es verdadero devuelves true
                 else if (resultado) {
 
-                    return true;
+                    return resultado;
 
                 }
+
             } else {
 
                 //Se ejecuta una vez por cada prefijo
@@ -65,10 +68,9 @@ function comprovarCompuesto(elementos, compuesto) {
                         //Si no es falso y es verdadero devuelves true
                         else if (resultado) {
 
-                            return true;
+                            return resultado;
 
                         }
-
 
                         i = numeroDePrefijos; //Para que no lo comprueve más el for, de esa forma se deja de comprobar si el prefijo es el mismi
                     }
@@ -91,10 +93,10 @@ function comprovarCompuesto(elementos, compuesto) {
 
                 // console.log(sal)
 
-                if (true === sal) {
+                if (typeof sal === "number") {
 
 
-                    return true;
+                    return sal;
 
 
                 } else {
@@ -136,7 +138,7 @@ function comprovarCompuesto(elementos, compuesto) {
                 //repetira esto hasta que el elemento cambie
                 while (i < numeroElementosACoger - 1 && elementoOriginal.sq == elementos[1 + i].sq) {
 
-                    i++;    
+                    i++;
 
                     contador++;
 
@@ -182,7 +184,7 @@ function comprovarCompuesto(elementos, compuesto) {
 
                     numeroPrefijo = 1;      //Ya que si no hay nada es mono
 
-                } 
+                }
 
                 //Para encontrar el prefijo               
                 else {
@@ -201,17 +203,14 @@ function comprovarCompuesto(elementos, compuesto) {
                 }
 
                 //Dice si es posible combinar los introducidios, sumar y comprovar valencias
-                const resultado = comprovarSiPuedeGenerarCompuestos("hidrógeno", prefijoHidrogeno, nombre, numeroPrefijo, mapa);
+                devolver = comprovarSiPuedeGenerarCompuestos("hidrógeno", prefijoHidrogeno, nombre, numeroPrefijo, mapa);
 
-                if (true === resultado) {
-                    devolver = true;
-                }
 
             }
 
         });
 
-        return devolver; 
+        return devolver;
 
     }
 
@@ -250,13 +249,23 @@ function comprovarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
             //Se asegura de que los compuestos estan
             if (comprovarSiEstanLosCompuestos(primeraPalabra, prefijoPrimeraPalabra, mapa) && comprovarSiEstanLosCompuestos(segundaPalabra, prefijoSegundaPalabra, mapa)) {
 
+                var devol;
+
                 var arrayCompuesto = crearArrayCompuesto(); //Crea un array corresponde al compuesto
 
                 //Devolver el valor de neutro
-                const devolver = neutro();  
+                const devolver = neutro();
 
-                return devolver;
+                if (devolver) {
+                    devol = calcularPuntuacion(arrayCompuesto, prefijoPrimeraPalabra, prefijoSegundaPalabra);
 
+                }
+
+                else {
+                    devol = false
+                }
+
+                return devol;
 
                 //funcion que dice si da neutro (0) o estable
 
@@ -286,7 +295,7 @@ function comprovarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
 
                         //Coge la casilla indicada del array
                         for (var i = 0; i < array1.length; i++) {
-                            
+
                             //Coge la casilla indicada del 2º array
                             for (var j = 0; j < array2.length; j++) {
 
@@ -370,7 +379,7 @@ function comprovarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
             return -1;
         }
 
-    //Error    
+        //Error    
     } else {
 
         return -1;

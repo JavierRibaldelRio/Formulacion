@@ -53,7 +53,9 @@ class ElementoReact extends React.Component {
                         <td className="Valencias">
 
                             {this.state.valencias}
+
                         </td>
+
                     </tr>
 
                     <tr>

@@ -5,6 +5,8 @@ class Banca extends React.Component {
 
         super(props);
 
+        this.state = { arrayObjeto: elementosDisponibles }
+
 
     }
 
@@ -14,43 +16,43 @@ class Banca extends React.Component {
 
             <div className="banca">
 
-                {/* Pasa las propiedades a los elementos que crean las tarjetas */}
+                {/* pasa la casilla de la matriz de elementos que hay que coger */}
 
                 <ElementoReact
-                    objeto={elementosDisponibles[0]}
+                    objeto={this.state.arrayObjeto[0]}
                 ></ElementoReact>
 
                 <ElementoReact
-                  objeto={elementosDisponibles[1]}
+                    objeto={this.state.arrayObjeto[1]}
                 ></ElementoReact>
 
                 <ElementoReact
-                    objeto={elementosDisponibles[2]}
+                    objeto={this.state.arrayObjeto[2]}
                 ></ElementoReact>
 
                 <ElementoReact
-                    objeto={elementosDisponibles[3]}
+                    objeto={this.state.arrayObjeto[3]}
                 ></ElementoReact>
 
                 <ElementoReact
-                   objeto={elementosDisponibles[4]}
+                    objeto={this.state.arrayObjeto[4]}
                 ></ElementoReact>
 
                 <ElementoReact
-                    objeto={elementosDisponibles[5]}
+                    objeto={this.state.arrayObjeto[5]}
                 ></ElementoReact>
 
                 <ElementoReact
-                    objeto={elementosDisponibles[6]}
+                    objeto={this.state.arrayObjeto[6]}
                 ></ElementoReact>
 
                 <ElementoReact
-                    objeto={elementosDisponibles[7]}
+                    objeto={this.state.arrayObjeto[7]}
                 ></ElementoReact>
 
 
 
-            </div>
+            </div >
 
         )
 

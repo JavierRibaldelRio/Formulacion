@@ -147,6 +147,12 @@
 - He optimizado el codigo de React
 - He dado formato al cuerpo
 
+**Lunes 7 y Martes 8 (Inmaculada)**
+- He creado un componente de validar
+- He dado formato
+- He creado la función de sumar puntos
+- He buscado inforamación sobre pasar un función de un compontente padrea a hijo *react*
+
 
 
 

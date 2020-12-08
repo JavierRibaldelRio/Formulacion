@@ -12,3 +12,4 @@ https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-
 https://blog.trescomatres.com/2015/09/css-evitar-salto-de-linea-despues-de-etiquetas-h1-h2-h3/
 https://developer.mozilla.org/es/docs/Web/CSS/display
 https://desarrolloweb.com/articulos/modelo-tabla-css-propiedad-display-explicaciones-ejemplos.html
+https://es.stackoverflow.com/questions/81764/paso-de-variables-por-referencia-javascript

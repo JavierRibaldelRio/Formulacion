@@ -5,6 +5,8 @@ ReactDOM.render(
     <p>Javier Ribal del Río</p>
 
     {/* Crea el objeto banca */}
+
+    <Validacion></Validacion>
     <Banca></Banca>
 
   </div>,

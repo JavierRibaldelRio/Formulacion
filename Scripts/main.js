@@ -1,9 +1,11 @@
 //Para coger los datos de el json
 var jsonDatosElementos = JSON.parse(jsonElementos);
 
-var numeroElementosACoger = 8; //Numero de clases que vas a coger por rondas
+var numeroElementosACoger = 8; //Número de clases que vas a coger por rondas
 
 var arrayClases = pasarJsonAClases(); //Array que contiene todas las clases
+
+var puntos; //Almacena el número
 
 
 /**
