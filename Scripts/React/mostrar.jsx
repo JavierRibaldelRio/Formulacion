@@ -6,7 +6,6 @@ ReactDOM.render(
 
     {/* Crea el objeto banca */}
 
-    <Validacion></Validacion>
     <Banca></Banca>
 
   </div>,

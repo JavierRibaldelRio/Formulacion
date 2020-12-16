@@ -8,7 +8,7 @@ class ElementoReact extends React.Component {
         super(props);
 
         //Coge las valencias del objeto
-        this.state = {valencias: this.props.objeto.v };
+        this.state = { valencias: this.props.objeto.v };
 
     }
 
@@ -28,7 +28,7 @@ class ElementoReact extends React.Component {
         return (
 
             //Crea la tabla
-            <table className={"Tabla_Elementos " +  this.props.objeto.tipo} >
+            <table className={"Tabla_Elementos " + this.props.objeto.tipo} >
 
                 <tbody>
 

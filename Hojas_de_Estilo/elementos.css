@@ -36,8 +36,6 @@ body{
 
     font-family: Arial, Helvetica, sans-serif;
 
-
-
 }
 
 .Simbolo_Quimico{
@@ -164,16 +162,17 @@ body{
 
     padding: 10px;
 
-    background-color: white;
+    display: inline-table;   
+
+    margin: 1;   
+
+    background-color: white;    
 
 }
 
 .Entrada_Verificacion{
 
     border: solid black;
-
-
-
 }
 
 .validar_boton {
@@ -187,5 +186,11 @@ body{
 	font-weight:bold;
 	padding:13px 32px;
 	text-decoration:none;
+
+}
+
+.zona_puntos{
+
+    text-align: center;
 
 }

@@ -13,3 +13,5 @@ https://blog.trescomatres.com/2015/09/css-evitar-salto-de-linea-despues-de-etiqu
 https://developer.mozilla.org/es/docs/Web/CSS/display
 https://desarrolloweb.com/articulos/modelo-tabla-css-propiedad-display-explicaciones-ejemplos.html
 https://es.stackoverflow.com/questions/81764/paso-de-variables-por-referencia-javascript
+https://sodocumentation.net/es/reactjs/topic/6567/comunicacion-entre-componentes
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/splice

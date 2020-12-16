@@ -26,7 +26,10 @@ class Validacion extends React.Component {
 
         if (typeof salida === "number") {
 
-            alert("Has obtenido " + salida + " puntos.")
+            alert("Has obtenido " + salida + " puntos.");
+
+            //Actualiza el estado
+            this.props.funcionAlPulsar(salida);
 
         }
     }
@@ -36,7 +39,9 @@ class Validacion extends React.Component {
 
         return (
 
+            <div>
             <table className="Zona_Verificacion">
+
                 <tbody>
 
                     <tr>
@@ -67,9 +72,11 @@ class Validacion extends React.Component {
 
                     </tr>
 
-
                 </tbody>
             </table>
+
+            </div>
+
 
         )
 

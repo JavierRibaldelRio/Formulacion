@@ -256,7 +256,7 @@ function comprovarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
                 //Devolver el valor de neutro
                 const devolver = neutro();
 
-                if (devolver) {
+                if (devolver === true) {
                     devol = calcularPuntuacion(arrayCompuesto, prefijoPrimeraPalabra, prefijoSegundaPalabra);
 
                 }
