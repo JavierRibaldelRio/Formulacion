@@ -21,7 +21,7 @@ class Validacion extends React.Component {
     pasarDatosFuncionCompuesto() {
 
 
-        const salida = comprovarCompuesto(elementosDisponibles, this.state.text);
+        const salida = comprobarCompuesto(elementosDisponibles, this.state.text);
 
 
         if (typeof salida === "number") {

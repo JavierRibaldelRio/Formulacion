@@ -151,13 +151,14 @@
 - He creado un componente de validar
 - He dado formato
 - He creado la función de sumar puntos
-- He buscado inforamación sobre pasar un función de un compontente padrea a hijo *react*
+- He buscado información sobre pasar un función de un componente padrea a hijo *react*
 
+**He estado un tiempo sin programar porque hemos empezado el Audacity y por que estaba ensayando la exposición**
 
+**Jueves 16**
 
-
-
-
+- He expuesto el trabajo
+- He creado la rama para hacer correctamente los antígenos y los Halógenos
 
 
 

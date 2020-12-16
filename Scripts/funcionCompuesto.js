@@ -1,5 +1,5 @@
 //Funcion que comprueva si es posible crear este compuesto
-function comprovarCompuesto(elementos, compuesto) {
+function comprobarCompuesto(elementos, compuesto) {
 
     //Error que sacara por pantalla
     const errorCompuesto = "Este compuesto no se puede crear";
@@ -21,11 +21,11 @@ function comprovarCompuesto(elementos, compuesto) {
         const mapElementos = crearMap();    //Crear el mapa de les elementos
 
         //Comprueba si es un hidruro
-        if (compuesto.includes(hidruro) && comprovarSiHayHidrogeno(mapElementos)) {
+        if (compuesto.includes(hidruro) && comprobarSiHayHidrogeno(mapElementos)) {
 
             // console.log("Incluye hidruro");
 
-            var hidruroIncorrecto = true;   //para comprovar si hay que avisar al usuario de un error
+            var hidruroIncorrecto = true;   //para comprobar si hay que avisar al usuario de un error
 
             //Si lo es comprueba cuantas meleculas tiene de hidruro
             if (compuesto.startsWith(hidruro) || compuesto.startsWith(prefijos[1] + hidruro)) {
@@ -42,7 +42,7 @@ function comprovarCompuesto(elementos, compuesto) {
                 }
 
                 //Si no es falso y es verdadero devuelves true
-                else if (resultado) {
+                else if (resultado === true) {
 
                     return resultado;
 
@@ -66,7 +66,7 @@ function comprovarCompuesto(elementos, compuesto) {
                         }
 
                         //Si no es falso y es verdadero devuelves true
-                        else if (resultado) {
+                        else if (resultado === true) {
 
                             return resultado;
 
@@ -89,17 +89,17 @@ function comprovarCompuesto(elementos, compuesto) {
 
                 hidruroIncorrecto = false;  // Para marcar que no ahí error
 
-                var sal = averiguarCompuesto(compuesto, mapElementos, numero);
+                var sal = averiguarCompuestoHidruro(compuesto, mapElementos, numero);
 
                 // console.log(sal)
 
-                if (typeof sal === "number") {
+                if ( sal === "number") {
 
 
                     return sal;
 
 
-                } else {
+                } else{
 
                     alert(errorCompuesto);  //Error
 
@@ -110,6 +110,14 @@ function comprovarCompuesto(elementos, compuesto) {
             }
 
         }
+        //comprobar si abace en uro
+        else if (compuesto.endsWith(sufijo16Y17)) {
+
+            
+
+        }
+
+        //Codigo de los compuestos de hidruros y las columnas 16 y17 
 
         alert(errorCompuesto);  //Error
 
@@ -152,7 +160,7 @@ function comprovarCompuesto(elementos, compuesto) {
         return mapaElementos;   //Retorna el mapa
     }
 
-    function averiguarCompuesto(texto, mapa, prefijoHidrogeno) {
+    function averiguarCompuestoHidruro(texto, mapa, prefijoHidrogeno) {
 
         var devolver = false;   //Almacena lo que se va ha devolver
 
@@ -195,18 +203,23 @@ function comprovarCompuesto(elementos, compuesto) {
 
                 // console.log(numeroPrefijo);
 
-                //Si número de prefijo es -1 [ERROR]
-                if (numeroPrefijo == -1) {
+                //Si número de prefijo es -1 [ERROR] o es de un grupo de los anfigenos o Halogenos
+                if (numeroPrefijo === -1 ) {
 
-                    return -1;
+                    return false;
 
-                }
+                } 
+                //Devuelve -2
+                
 
-                //Dice si es posible combinar los introducidios, sumar y comprovar valencias
-                devolver = comprovarSiPuedeGenerarCompuestos("hidrógeno", prefijoHidrogeno, nombre, numeroPrefijo, mapa);
+                //Dice si es posible combinar los introducidios, sumar y comprobar valencias
+                devolver = comprobarSiPuedeGenerarCompuestos("hidrógeno", prefijoHidrogeno, nombre, numeroPrefijo, mapa);
 
 
-            }
+                //Función que comprueva si es del grupo de los Anfígenos o Halógenos, a es elemento
+                 
+
+            }   
 
         });
 
@@ -214,7 +227,7 @@ function comprovarCompuesto(elementos, compuesto) {
 
     }
 
-    //Funcion para comprovar que prefijo es
+    //Funcion para comprobar que prefijo es
 
 }
 
@@ -238,7 +251,7 @@ function encontrarPrefijo(particula) {
 }
 //Funcion para saber si el usuario tiene los elementos necesarios para poder crear el compuesto
 /*Hidrogeno*/   /*1*/                   /*Litio*/       /*1*/
-function comprovarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra, segundaPalabra, prefijoSegundaPalabra, mapa) {
+function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra, segundaPalabra, prefijoSegundaPalabra, mapa) {
 
     //Mirar si tiene los formatos correctos (2 textos y 2 números)
     if (posibleTexto(primeraPalabra) && posibleTexto(segundaPalabra) && posibleNumero(prefijoPrimeraPalabra) && posibleNumero(prefijoSegundaPalabra)) {
@@ -247,7 +260,7 @@ function comprovarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
         if (prefijoPrimeraPalabra + prefijoSegundaPalabra <= numeroDePrefijos) {
 
             //Se asegura de que los compuestos estan
-            if (comprovarSiEstanLosCompuestos(primeraPalabra, prefijoPrimeraPalabra, mapa) && comprovarSiEstanLosCompuestos(segundaPalabra, prefijoSegundaPalabra, mapa)) {
+            if (comprobarSiEstanLosCompuestos(primeraPalabra, prefijoPrimeraPalabra, mapa) && comprobarSiEstanLosCompuestos(segundaPalabra, prefijoSegundaPalabra, mapa)) {
 
                 var devol;
 
@@ -403,9 +416,9 @@ function comprovarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
 
     }
 
-    //funcion para comprovar si esta el elemento
+    //funcion para comprobar si esta el elemento
 
-    function comprovarSiEstanLosCompuestos(nombre, numero, map) {
+    function comprobarSiEstanLosCompuestos(nombre, numero, map) {
 
         var devolucion = false; //Variable que será devuelta
 
@@ -430,7 +443,7 @@ function comprovarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
 
 //funcion àra coomprovar si hay hidrogeno
 
-function comprovarSiHayHidrogeno(mapaElementos) {
+function comprobarSiHayHidrogeno(mapaElementos) {
 
     var devolver = false;   //Lo que se devolvera
 
