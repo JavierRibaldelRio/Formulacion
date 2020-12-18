@@ -77,10 +77,6 @@ function comprobarCompuesto(elementos, compuesto) {
 
                 }
 
-
-
-
-
             }
 
 
@@ -111,9 +107,9 @@ function comprobarCompuesto(elementos, compuesto) {
 
         }
         //comprobar si abace en uro
-        else if (compuesto.endsWith(sufijo16Y17)) {
+        else if (compuesto.trim("")[0].endsWith(sufijo16Y17) && compuesto.trim(" ")[2].endsWith("hidrógeno")) {
 
-            
+            console.log("AnfigenoHAlogeno");
 
         }
 
