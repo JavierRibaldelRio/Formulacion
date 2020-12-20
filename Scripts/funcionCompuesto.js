@@ -20,6 +20,8 @@ function comprobarCompuesto(elementos, compuesto) {
 
         const mapElementos = crearMap();    //Crear el mapa de les elementos
 
+        const compuestoPartido = compuesto.split(" ");
+
         //Comprueba si es un hidruro
         if (compuesto.includes(hidruro) && comprobarSiHayHidrogeno(mapElementos)) {
 
@@ -42,7 +44,7 @@ function comprobarCompuesto(elementos, compuesto) {
                 }
 
                 //Si no es falso y es verdadero devuelves true
-                else if (resultado === true) {
+                else if (typeof resultado === "number") {
 
                     return resultado;
 
@@ -66,7 +68,7 @@ function comprobarCompuesto(elementos, compuesto) {
                         }
 
                         //Si no es falso y es verdadero devuelves true
-                        else if (resultado === true) {
+                        else if ( typeof resultado === "number") {
 
                             return resultado;
 
@@ -89,7 +91,7 @@ function comprobarCompuesto(elementos, compuesto) {
 
                 // console.log(sal)
 
-                if ( sal === "number") {
+                if ( typeof sal === "number") {
 
 
                     return sal;
@@ -106,10 +108,30 @@ function comprobarCompuesto(elementos, compuesto) {
             }
 
         }
+        
         //comprobar si abace en uro
-        else if (compuesto.trim("")[0].endsWith(sufijo16Y17) && compuesto.trim(" ")[2].endsWith("hidrógeno")) {
+        else if (compuestoPartido[0].endsWith(sufijo16Y17) && compuestoPartido[2].endsWith("hidrógeno") && comprobarSiHayHidrogeno(mapElementos)) {
 
             console.log("AnfigenoHAlogeno");
+
+            //Preparar datos para la función de averiguar
+
+            //Coger la ultima palabra de el array, 
+            const prefijoTexto = compuestoPartido[2].split("hidrógeno");
+
+            var prefijo;
+
+            if(prefijoTexto[0] === ""){
+
+                prefijo = 1;
+
+            }else{
+
+                prefijo = encontrarPrefijo(prefijoTexto[0]);
+
+            }
+
+            return prefijo;
 
         }
 
@@ -211,10 +233,6 @@ function comprobarCompuesto(elementos, compuesto) {
                 //Dice si es posible combinar los introducidios, sumar y comprobar valencias
                 devolver = comprobarSiPuedeGenerarCompuestos("hidrógeno", prefijoHidrogeno, nombre, numeroPrefijo, mapa);
 
-
-                //Función que comprueva si es del grupo de los Anfígenos o Halógenos, a es elemento
-                 
-
             }   
 
         });
@@ -245,6 +263,7 @@ function encontrarPrefijo(particula) {
     return -1;
 
 }
+
 //Funcion para saber si el usuario tiene los elementos necesarios para poder crear el compuesto
 /*Hidrogeno*/   /*1*/                   /*Litio*/       /*1*/
 function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra, segundaPalabra, prefijoSegundaPalabra, mapa) {
@@ -351,17 +370,13 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
 
                         anadir(primeraPalabra, key);
 
-
-
                     });
 
                     //Se ejecuta una vez por cada elemento del array
 
                     mapa.forEach(function (valor, key) {
 
-
                         anadir(segundaPalabra, key);
-
 
                     });
 
@@ -380,7 +395,6 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
 
             }
 
-
         }
 
         //Error
@@ -392,7 +406,6 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
     } else {
 
         return -1;
-
 
     }
 
@@ -431,7 +444,6 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
         });
 
         return devolucion;
-
 
     }
 
