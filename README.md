@@ -168,5 +168,10 @@
 
 - He avanzado con la función de los compuestos
 
+**Martes 22 Informática**
+
+- He creado una función que sustituye las tildes
+
+
 
 Javier Ribal del Río 3ºB Nº22 Informática				

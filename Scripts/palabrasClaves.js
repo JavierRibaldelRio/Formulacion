@@ -25,3 +25,4 @@ const anfigenos = 17;   //Grupo de los anfígenos
 //Almacena el sufjo que se le añade a cada elemento 
 
 const sufijo16Y17 = "uro";  //Sin guión
+
