@@ -7,15 +7,11 @@ var arrayClases = pasarJsonAClases(); //Array que contiene todas las clases
 
 var puntos; //Almacena el número
 
+//Baraja
+var arrayAleatoriosSinBarajar = crearArrayAleatorios(arrayClases);
 
-/**
- * El array aleatorios tiene una casilla por el numero de repeticiones
- * de cada elemento, por ejemplo si el oxigeno se repite 43 veces tienen
- * que haber 43 casillas con el numero de la casilla en el array de Clases
- */
-var arrayAleatorios = crearArrayAleatorios(arrayClases);
-
-var elementosDisponibles = crearArrayObjetosDisponibles(sacarAleatorios(arrayAleatorios), arrayClases); //Elementos ue te han tocado
+//Baraj baraja
+var baraja = shuffle(arrayAleatoriosSinBarajar);
 
 
 //Funciones
@@ -84,7 +80,7 @@ function pasarJsonAClases() {
 
 }
 
-//Preparar números aleatorios a elejir, se añade tantas veces el elemento como repeticiones tenga
+//Crea la baraja, es decir; añade un objeto por cada repetición
 function crearArrayAleatorios(elementos) {
 
     var array = [];//Definir el Array que almacenra los numeros
@@ -95,7 +91,7 @@ function crearArrayAleatorios(elementos) {
         //Repetir tantas veces como numero de repeticiones tenga el elemento
         for (var j = 0; j < elementos[i].repeticion; j++) {
 
-            array.push(i);    //Guardar el numero del elemento en el array que almacena los números
+            array.push(elementos[i]);    //Guardar el objeto del elemento en el array que almacena los números
 
         }
     }
@@ -109,52 +105,3 @@ function random(min, max) {
     return Math.floor((Math.random() * (max - min + 1)) + min); //Devuelve el numero aleatorio
 
 }
-
-//Devuelve un array aleatorio en el cuan cada casilla corresponde al elemento que le ha tocado
-function sacarAleatorios(arrayElementos) {
-
-    var arrayNumeros = [];  //Crear el array
-
-    //Repetir una vez por tantos numeros haya que repetir
-    for (var i = 0; i < numeroElementosACoger; i++) {
-
-        arrayNumeros.push(arrayElementos[random(0, arrayElementos.length - 1 /* -1 por que se empieza a contar en 0*/)]);    //Añadir al array ek ekemento que te ha tocado
-
-    }
-
-    return arrayNumeros;    //Devolver el array que te ha tocado
-
-}
-
-//Devuelve un array de los objuetos que te han tocado
-function crearArrayObjetosDisponibles(arrayElementosNumerico, arrayClases) {
-
-    //Ordenar el array de numeros
-    arrayElementosNumerico = arrayElementosNumerico.sort(comparar); //La función es para que ordene bien
-
-    //Craear un array con el tamaño de Elementos Numericos que es el numero de elmentos que te van a tocar
-    var arrayVuelta = [arrayElementosNumerico.length];
-
-    //Se ejecuta una vez por cada casilla del array
-    for (var i = 0; i < arrayElementosNumerico.length; i++) {
-
-         
-        arrayVuelta[i] = arrayClases[arrayElementosNumerico[i]];
-
-    }
-
-    return arrayVuelta.sort();
-
-
-    /**
-     * 
-     * En la informática para oredenar cosas de numeros se ordena mal, ya que ordena por 
-     * cifras es decir; si tubiera que ordenar esto "2, 1, 100," el oren correcto sería:
-     * 1 < 2 < 100 pero, el programa haría 1 < 100 < 2, ya que el 100 va antes que el 2 si miras de derecha ha izquierda
-     */
-    function comparar(a, b) {
-        return a - b;
-    }
-
-}
-

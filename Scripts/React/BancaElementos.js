@@ -5,18 +5,14 @@ class Banca extends React.Component {
 
         super(props);
 
-        this.state = { arrayObjeto: elementosDisponibles, puntosTotales: 0 }
+        this.state = { arrayObjeto: baraja, puntosTotales: 0 }
 
 
     }
 
     actualizarEstado(a){
 
-
         this.setState({ arrayObjeto: elementosDisponibles, puntosTotales: Number(a) });
-
-        
-
 
     }
 
@@ -66,9 +62,7 @@ class Banca extends React.Component {
                         objeto={this.state.arrayObjeto[7]}
                     ></ElementoReact>
 
-
-
-                </div >
+                </div> 
             </div>
         )
 
