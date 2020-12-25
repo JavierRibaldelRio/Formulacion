@@ -151,16 +151,26 @@
 - He creado un componente de validar
 - He dado formato
 - He creado la función de sumar puntos
-- He buscado inforamación sobre pasar un función de un compontente padrea a hijo *react*
+- He buscado información sobre pasar un función de un componente padrea a hijo *react*
 
+**He estado un tiempo sin programar porque hemos empezado el Audacity y por que estaba ensayando la exposición**
 
+**Miercoles 16**
 
+- He expuesto el trabajo
+- He creado la rama para hacer correctamente los antígenos y los Halógenos
 
+**Viernes 18 Informática**
 
+- He intentado identificar el compuesto
 
+**Viernes 18 Casa**
 
+- He avanzado con la función de los compuestos
 
+**Martes 22 Informática**
 
+- He creado una función que sustituye las tildes
 
 
 
