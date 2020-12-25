@@ -26,3 +26,9 @@ const anfigenos = 17;   //Grupo de los anfígenos
 
 const sufijo16Y17 = "uro";  //Sin guión
 
+//Almacena el autentico nombre de azufre por sulfuro
+
+const sulfuro = "sulfuro";
+
+ 
+

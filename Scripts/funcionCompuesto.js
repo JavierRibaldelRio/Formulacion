@@ -68,7 +68,7 @@ function comprobarCompuesto(elementos, compuesto) {
                         }
 
                         //Si no es falso y es verdadero devuelves true
-                        else if ( typeof resultado === "number") {
+                        else if (typeof resultado === "number") {
 
                             return resultado;
 
@@ -91,13 +91,13 @@ function comprobarCompuesto(elementos, compuesto) {
 
                 // console.log(sal)
 
-                if ( typeof sal === "number") {
+                if (typeof sal === "number") {
 
 
                     return sal;
 
 
-                } else{
+                } else {
 
                     alert(errorCompuesto);  //Error
 
@@ -108,7 +108,7 @@ function comprobarCompuesto(elementos, compuesto) {
             }
 
         }
-        
+
         //comprobar si abace en uro
         else if (compuestoPartido[0].endsWith(sufijo16Y17) && compuestoPartido[2].endsWith("hidrógeno") && comprobarSiHayHidrogeno(mapElementos)) {
 
@@ -119,20 +119,35 @@ function comprobarCompuesto(elementos, compuesto) {
             //Coger la ultima palabra de el array, 
             const prefijoTexto = compuestoPartido[2].split("hidrógeno");
 
+            //Almacena el prefijo del hidrogeno
             var prefijo;
 
-            if(prefijoTexto[0] === ""){
+
+            //Si no hay nada es que es mono
+            if (prefijoTexto[0] === "") {
 
                 prefijo = 1;
 
-            }else{
+            }
+            //Si no es mono encuentra el prefijo
+            else {
 
                 prefijo = encontrarPrefijo(prefijoTexto[0]);
 
             }
 
-            return prefijo;
+            //Si el prefijo es -1 error
+            if (prefijo === -1) {
 
+                alert(errorCompuesto);
+
+                return false
+
+            }
+
+            const salida = averiguarHalogenosYAnfigenos(compuesto, mapElementos, prefijo);
+
+            return salida;
         }
 
         //Codigo de los compuestos de hidruros y las columnas 16 y17 
@@ -222,18 +237,18 @@ function comprobarCompuesto(elementos, compuesto) {
                 // console.log(numeroPrefijo);
 
                 //Si número de prefijo es -1 [ERROR] o es de un grupo de los anfigenos o Halogenos
-                if (numeroPrefijo === -1 ) {
+                if (numeroPrefijo === -1) {
 
                     return false;
 
-                } 
+                }
                 //Devuelve -2
-                
+
 
                 //Dice si es posible combinar los introducidios, sumar y comprobar valencias
                 devolver = comprobarSiPuedeGenerarCompuestos("hidrógeno", prefijoHidrogeno, nombre, numeroPrefijo, mapa);
 
-            }   
+            }
 
         });
 
@@ -252,7 +267,7 @@ function encontrarPrefijo(particula) {
     for (var i = 1; i < numeroDePrefijos; i++) {
 
         //Si la particula es la misma que el prefijo
-        if (particula == prefijos[i]) {
+        if (particula.startsWith(prefijos[i])) {
 
             return i;   //Devuelve el número de la particula
 
