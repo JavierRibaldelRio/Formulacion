@@ -145,7 +145,7 @@ function comprobarCompuesto(elementos, compuesto) {
 
             }
 
-            const salida = averiguarHalogenosYAnfigenos(compuesto, mapElementos, prefijo);
+            const salida = averiguarHalogenosYAnfigenos(compuesto, mapElementos, prefijo, elementos);
 
             return salida;
         }

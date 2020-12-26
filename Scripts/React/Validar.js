@@ -21,7 +21,7 @@ class Validacion extends React.Component {
     pasarDatosFuncionCompuesto() {
 
 
-        const salida = comprobarCompuesto(elementosDisponibles, this.state.text);
+        const salida = comprobarCompuesto(cartasDisponibles, this.state.text);
 
 
         if (typeof salida === "number") {
@@ -40,40 +40,40 @@ class Validacion extends React.Component {
         return (
 
             <div>
-            <table className="Zona_Verificacion">
+                <table className="Zona_Verificacion">
 
-                <tbody>
+                    <tbody>
 
-                    <tr>
+                        <tr>
 
-                        <td>
+                            <td>
 
-                            Inserte el compuesto:
-
-                        </td>
-
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <input onChange={this.cambiarTexto.bind(this)} />
+                                Inserte el compuesto:
 
                         </td>
 
-                    </tr>
+                        </tr>
 
-                    <tr>
+                        <tr>
+                            <td>
+                                <input onChange={this.cambiarTexto.bind(this)} />
 
-                        <td>
-                            {/*Boton */}
-                            <button className="myButton" onClick={this.pasarDatosFuncionCompuesto.bind(this)}>Validar</button>
+                            </td>
 
-                        </td>
+                        </tr>
 
-                    </tr>
+                        <tr>
 
-                </tbody>
-            </table>
+                            <td>
+                                {/*Boton */}
+                                <button className="myButton" onClick={this.pasarDatosFuncionCompuesto.bind(this)}>Validar</button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
 
             </div>
 

@@ -1,18 +1,28 @@
 //Para coger los datos de el json
 var jsonDatosElementos = JSON.parse(jsonElementos);
 
-var numeroElementosACoger = 8; //Número de clases que vas a coger por rondas
-
 var arrayClases = pasarJsonAClases(); //Array que contiene todas las clases
 
 var puntos; //Almacena el número
 
-//Baraja
-var arrayAleatoriosSinBarajar = crearArrayAleatorios(arrayClases);
+var numeroElementosACoger = 8;
 
-//Baraj baraja
-var baraja = shuffle(arrayAleatoriosSinBarajar);
+//Baraja baraja
+var baraja = shuffle(crearBarajaOrdenada(arrayClases));
 
+var cartasDisponibles = baraja.splice(0, numeroDeCartas);
+
+cartasDisponibles.sort(function (a, b) {
+    if (a.z > b.z) {
+        return 1;
+    }
+    else if (a.z > b.z) {
+        return -1;
+    }
+    else {
+        return 0;
+    }
+})
 
 //Funciones
 //Convertir en array numerico el string de las valencias ya que del json vienen en forma de texto
@@ -67,7 +77,7 @@ function pasarJsonAClases() {
                 jsonDatosElementos[i].repeticion,                       //Coge del elemento i la repetición y se la pasa al objeto
                 jsonDatosElementos[i].puntos,                           //Coge del elemento i los grupos y se la pasa al objeto
                 jsonDatosElementos[i].grupo,                            //Coge del elemento i el grupo y se la pasa al objeto
-                jsonDatosElementos[i].tipo                             
+                jsonDatosElementos[i].tipo
 
             );
 
@@ -81,7 +91,7 @@ function pasarJsonAClases() {
 }
 
 //Crea la baraja, es decir; añade un objeto por cada repetición
-function crearArrayAleatorios(elementos) {
+function crearBarajaOrdenada(elementos) {
 
     var array = [];//Definir el Array que almacenra los numeros
 

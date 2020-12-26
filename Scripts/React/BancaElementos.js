@@ -5,14 +5,14 @@ class Banca extends React.Component {
 
         super(props);
 
-        this.state = { arrayObjeto: baraja, puntosTotales: 0 }
+        this.state = { arrayObjeto: cartasDisponibles, puntosTotales: 0 }
 
 
     }
 
-    actualizarEstado(a){
+    actualizarEstado(a) {
 
-        this.setState({ arrayObjeto: elementosDisponibles, puntosTotales: Number(a) });
+        this.setState({ arrayObjeto: cartasDisponibles, puntosTotales: Number(a) });
 
     }
 
@@ -23,9 +23,9 @@ class Banca extends React.Component {
             <div>
 
                 <Validacion funcionAlPulsar={this.actualizarEstado.bind(this)}></Validacion>
-                
+
                 <Marcador puntuacion={this.state.puntosTotales}></Marcador>
-                
+
                 <div className="banca">
 
                     {/* pasa la casilla de la matriz de elementos que hay que coger */}
@@ -62,7 +62,7 @@ class Banca extends React.Component {
                         objeto={this.state.arrayObjeto[7]}
                     ></ElementoReact>
 
-                </div> 
+                </div>
             </div>
         )
 
