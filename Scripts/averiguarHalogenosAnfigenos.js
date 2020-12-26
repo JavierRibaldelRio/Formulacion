@@ -1,5 +1,5 @@
 //Función que comprueba si es un hidruro
-function averiguarHalogenosYAnfigenos(texto, mapa, prefijoHidrogeno) {
+function averiguarHalogenosYAnfigenos(texto, mapa, prefijoHidrogeno, elementosDisponibles) {
 
     //Array de cartas de todos los Halógenos y Anfígenos
     var cartasAnfigenoHalogenos = encontrarEnBancaAnfigenosYHalogenos();
@@ -35,13 +35,13 @@ function averiguarHalogenosYAnfigenos(texto, mapa, prefijoHidrogeno) {
         }
     }
 
-    if(elemento1 === undefined){
+    if (elemento1 === undefined) {
 
         return false;
 
     }
 
-    if (primerElemento.startsWith(elemento1.substr(0,2)) || elemento1 === "azufre") {
+    if (primerElemento.startsWith(elemento1.substr(0, 2)) || elemento1 === "azufre") {
 
         prefijoPrimerElemento = 1;
     }
@@ -51,13 +51,13 @@ function averiguarHalogenosYAnfigenos(texto, mapa, prefijoHidrogeno) {
     }
 
 
-    const salida = comprobarSiPuedeGenerarCompuestos(elemento1, prefijoPrimerElemento, "hidrógeno", prefijoHidrogeno,mapa);
+    const salida = comprobarSiPuedeGenerarCompuestos(elemento1, prefijoPrimerElemento, "hidrógeno", prefijoHidrogeno, mapa);
 
-    if(typeof salida === "number"){
+    if (typeof salida === "number") {
 
         return salida
 
-    }else{
+    } else {
         return false
     }
 

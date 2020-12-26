@@ -30,5 +30,4 @@ const sufijo16Y17 = "uro";  //Sin guión
 
 const sulfuro = "sulfuro";
 
- 
-
+const numeroDeCartas = 8;
