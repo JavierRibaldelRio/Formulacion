@@ -16,13 +16,13 @@ cartasDisponibles.sort(function (a, b) {
     if (a.z > b.z) {
         return 1;
     }
-    else if (a.z > b.z) {
+    else if (a.z < b.z) {
         return -1;
     }
     else {
         return 0;
     }
-})
+});
 
 //Funciones
 //Convertir en array numerico el string de las valencias ya que del json vienen en forma de texto
