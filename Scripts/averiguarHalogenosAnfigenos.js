@@ -58,7 +58,11 @@ function averiguarHalogenosYAnfigenos(texto, mapa, prefijoHidrogeno, elementosDi
         return salida
 
     } else {
+
+        alert("Este compuesto no se puede crear");
+
         return false
+
     }
 
     function encontrarEnBancaAnfigenosYHalogenos() {
@@ -78,6 +82,5 @@ function averiguarHalogenosYAnfigenos(texto, mapa, prefijoHidrogeno, elementosDi
         return arrayDeAnfigenosYHalogenos;
 
     }
-
 
 }
