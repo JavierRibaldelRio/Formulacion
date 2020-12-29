@@ -167,17 +167,17 @@ function comprobarCompuesto(elementos, compuesto) {
         var mapaElementos = new Map();  //Map donde se almacenan el numero de repeticiones de cada elmento
 
         //Se ejecuta una vez por el número de elementos que hay que coger
-        for (var i = 0; i < numeroElementosACoger; i++) {
+        for (var i = 0; i < elementos.length; i++) {
 
             var elementoOriginal = elementos[i]; //Almacena el elemento origianl
 
             var contador = 1;   //Cuenta cuantas veces se repite un elemento
 
             //si es igual al número 
-            if (i < numeroElementosACoger - 1) {
+            if (i < elementos.length - 1) {
 
                 //repetira esto hasta que el elemento cambie
-                while (i < numeroElementosACoger - 1 && elementoOriginal.sq == elementos[1 + i].sq) {
+                while (i < elementos.length - 1 && elementoOriginal.sq == elementos[1 + i].sq) {
 
                     i++;
 
@@ -205,6 +205,10 @@ function comprobarCompuesto(elementos, compuesto) {
 
         var elemento = textoSeparado[2];    //coger el tercer trozo de el array de palabras torceadas
 
+        var nombreSegundoElemento;
+
+        var numeroPrefijoSegundoElemento;
+
         //Se ejecuta por cada casilla del mapa
         mapa.forEach(function (valor, key) {
 
@@ -214,7 +218,7 @@ function comprobarCompuesto(elementos, compuesto) {
             //Si acaba con nombre
             if (elemento.endsWith(nombre)) {
 
-                var numeroPrefijo;  //Prefijo del 2º Elemnto
+                //Prefijo del 2º Elemnto
 
                 // console.log("iguales");
 
@@ -223,21 +227,21 @@ function comprobarCompuesto(elementos, compuesto) {
                 //Si no hay particula quiere decir que es 1(mono)
                 if (prefijoMultipicador === "") {
 
-                    numeroPrefijo = 1;      //Ya que si no hay nada es mono
+                    numeroPrefijoSegundoElemento = 1;      //Ya que si no hay nada es mono
 
                 }
 
                 //Para encontrar el prefijo               
                 else {
 
-                    numeroPrefijo = encontrarPrefijo(prefijoMultipicador);
+                    numeroPrefijoSegundoElemento = encontrarPrefijo(prefijoMultipicador);
 
                 }
 
-                // console.log(numeroPrefijo);
+                // console.log(numeroPrefijoSegundoElemento);
 
                 //Si número de prefijo es -1 [ERROR] o es de un grupo de los anfigenos o Halogenos
-                if (numeroPrefijo === -1) {
+                if (numeroPrefijoSegundoElemento === -1) {
 
                     return false;
 
@@ -246,11 +250,24 @@ function comprobarCompuesto(elementos, compuesto) {
 
 
                 //Dice si es posible combinar los introducidios, sumar y comprobar valencias
-                devolver = comprobarSiPuedeGenerarCompuestos("hidrógeno", prefijoHidrogeno, nombre, numeroPrefijo, mapa);
+                devolver = comprobarSiPuedeGenerarCompuestos("hidrógeno", prefijoHidrogeno, nombre, numeroPrefijoSegundoElemento, mapa);
 
             }
 
         });
+
+        //Si es un numero
+        if (typeof devolver === "number") {
+
+            //Creamos la matriz del compuesto
+
+            const elementosUsados = ["hidrógeno", nombreSegundoElemento];
+
+            const repeticionesElementosUsados = [prefijoHidrogeno, numeroPrefijoSegundoElemento];
+
+            const mapaCompuesto = crearMapaCompuesto(elementosUsados, repeticionesElementosUsados);
+
+        }
 
         return devolver;
 

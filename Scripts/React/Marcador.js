@@ -24,7 +24,6 @@ class Marcador extends React.Component {
 
                             <td>{this.props.puntuacion}</td>
 
-
                         </tr>
 
                     </tbody>

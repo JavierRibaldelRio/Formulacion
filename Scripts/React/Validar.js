@@ -20,8 +20,20 @@ class Validacion extends React.Component {
     //Ejecutar la función de pasarcompuesto
     pasarDatosFuncionCompuesto() {
 
+        const elementosDisponiblesOrdenados = this.props.elementosDisponibles.sort(function (a, b) {
+            if (a.z > b.z) {
+                return 1;
+            }
+            else if (a.z < b.z) {
+                return -1;
+            }
+            else {
+                return 0;
+            }
+        });
 
-        const salida = comprobarCompuesto(cartasDisponibles, this.state.text);
+
+        const salida = comprobarCompuesto(elementosDisponiblesOrdenados, this.state.text);
 
 
         if (typeof salida === "number") {

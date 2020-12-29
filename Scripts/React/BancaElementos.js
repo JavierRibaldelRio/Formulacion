@@ -5,15 +5,35 @@ class Banca extends React.Component {
 
         super(props);
 
-        this.state = { arrayObjeto: cartasDisponibles, puntosTotales: 0 }
+        this.state = { arrayObjeto: [...cartasDisponibles], puntosTotales: 0 }
 
 
     }
 
     actualizarEstado(a) {
 
-        this.setState({ arrayObjeto: cartasDisponibles, puntosTotales: Number(a) });
+        this.setState({ arrayObjeto: [...cartasDisponibles], puntosTotales: Number(a) });
 
+    }
+
+    //Función que añade el elemento robado a la clase
+    anyadirCartaRobado(elementoRobado) {
+
+        //Se utiliza concat en vez de push porqur push no se puede usar en react
+        this.setState({ arrayObjeto: this.state.arrayObjeto.concat(elementoRobado) });
+
+    }
+
+    devolverAlEstadoOriginal(e) {
+        if (e != undefined) {
+
+            //Añadir a la ultima casilla del array la carta añadida
+            baraja.push(e[0]);
+
+            //DEvolver la baraja al estado original
+
+            //////////////////////////////////////////////
+        }
     }
 
     render() {
@@ -22,7 +42,7 @@ class Banca extends React.Component {
 
             <div>
 
-                <Validacion funcionAlPulsar={this.actualizarEstado.bind(this)}></Validacion>
+                <Validacion funcionAlPulsar={this.actualizarEstado.bind(this)} elementosDisponibles={this.state.arrayObjeto}></Validacion>
 
                 <Marcador puntuacion={this.state.puntosTotales}></Marcador>
                 <table className="banca">
@@ -55,7 +75,7 @@ class Banca extends React.Component {
 
                                 <div className="banca">
 
-                                    <PilaRobar></PilaRobar>
+                                    <PilaRobar eliminarCartaRobada={this.devolverAlEstadoOriginal.bind(this)} anyadirAlEstadoCartaRobada={this.anyadirCartaRobado.bind(this)} ></PilaRobar>
 
                                 </div>
                             </td>

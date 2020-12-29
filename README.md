@@ -174,4 +174,17 @@
 
 
 
+**Martes 29**
+
+<u>**IMPORTANTE: Ha diferencia de otros lenguajes derivados de C como C++ C# o Java, al pasar un objeto(array,clase, función) se pasa como referencia, lo que en c++ se haria con & . Para evitarlo hay que hacer una copia previa. Para el array lo poudes hacer asi: **</u>
+
+> ```javascript
+> var arr1 = [1,2,3,4,5,6,7,8,9,];
+> 
+> var arr2 = [...arr1];	//Necesario estar usando node
+> 
+> ```
+
+
+
 Javier Ribal del Río 3ºB Nº22 Informática				

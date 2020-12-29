@@ -12,9 +12,13 @@ class ElementoReact extends React.Component {
 
     }
 
+
+
     //funcion de devolver
 
     render() {
+
+        this.state.valencias = this.props.objeto.v;
 
         //Se ejecuta una vez por cada valencia
         for (var i = 0; i < this.state.valencias.length; i++) {
