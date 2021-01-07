@@ -2,31 +2,21 @@ class PilaRobar extends React.Component {
 
     constructor(props) {
         super(props)
-        this.state = { cartaARobar: undefined, mazosRestantes: 3, contador: 0, cartaRobada: undefined };
+        this.state = { cartaARobar: undefined, mazosRestantes: 3, contador: 0 };
     }
 
     //Función que se ejecuta al robar
     robar() {
 
+
+
         console.log("fds")
         //Si hay más cartas en la banca
-        if (Number(this.state.contador) < baraja.length) {
+        if (this.state.contador < baraja.length) {
 
-            //Elimina la anterior
-            this.props.eliminarCartaRobada(this.state.cartaRobada);
+            this.setState({ cartaARobar: this.props.robarUnaCarta(this.state.cartaARobar) });
 
-
-            //Selecionar carta a Robar
-            this.setState({ cartaARobar: baraja[0] });
-
-            //Suma uno al contador
-            this.setState({ cartaRobada: baraja.splice(0, 1), contador: this.state.contador + 1 });
-
-            //Eliminar carta anterior
-
-            //Actualizar Baraja Posible
-
-            this.props.anyadirAlEstadoCartaRobada(this.state.cartaARobar);
+            this.setState({ contador: this.state.contador + 1 });
 
         }
         //Si no cambias el mazo
@@ -38,7 +28,9 @@ class PilaRobar extends React.Component {
     }
 
     render() {
-        if (this.state.cartaARobar === undefined) {
+
+
+        if (this.state.cartaARobar === undefined || cartaRobarUsada === true) {
 
             return (
                 <table>
@@ -77,8 +69,6 @@ class PilaRobar extends React.Component {
 
                         </tbody>
                     </table>
-
-
 
                 </div >
             )

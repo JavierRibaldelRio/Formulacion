@@ -48,6 +48,13 @@ function averiguarHalogenosYAnfigenos(texto, mapa, prefijoHidrogeno, elementosDi
 
     else {
         prefijoPrimerElemento = encontrarPrefijo(primerElemento.split(elemento1)[0]);
+
+
+    }
+    if (elemento1.grupo < 16) {
+
+        return false;
+
     }
 
 

@@ -147,6 +147,10 @@ function comprobarCompuesto(elementos, compuesto) {
 
             const salida = averiguarHalogenosYAnfigenos(compuesto, mapElementos, prefijo, elementos);
 
+            if (salida === false) {
+                alert("Este compuesto no se puede crear");
+
+            }
             return salida;
         }
 
@@ -241,13 +245,16 @@ function comprobarCompuesto(elementos, compuesto) {
                 // console.log(numeroPrefijoSegundoElemento);
 
                 //Si número de prefijo es -1 [ERROR] o es de un grupo de los anfigenos o Halogenos
-                if (numeroPrefijoSegundoElemento === -1) {
+                if (numeroPrefijoSegundoElemento === -1 || key.grupo > 15) {
 
                     return false;
 
                 }
                 //Devuelve -2
 
+                //Asigna a la variable del mapa
+
+                nombreSegundoElemento = nombre;
 
                 //Dice si es posible combinar los introducidios, sumar y comprobar valencias
                 devolver = comprobarSiPuedeGenerarCompuestos("hidrógeno", prefijoHidrogeno, nombre, numeroPrefijoSegundoElemento, mapa);
@@ -261,12 +268,13 @@ function comprobarCompuesto(elementos, compuesto) {
 
             //Creamos la matriz del compuesto
 
-            const elementosUsados = ["hidrógeno", nombreSegundoElemento];
+            const elementosUsados = ["hidrógeno", nombreSegundoElemento.toLocaleLowerCase()];
 
             const repeticionesElementosUsados = [prefijoHidrogeno, numeroPrefijoSegundoElemento];
 
             const mapaCompuesto = crearMapaCompuesto(elementosUsados, repeticionesElementosUsados);
 
+            deacartarCartasUsadas(mapaCompuesto, elementos);
         }
 
         return devolver;

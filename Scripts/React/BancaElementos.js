@@ -24,17 +24,45 @@ class Banca extends React.Component {
 
     }
 
-    devolverAlEstadoOriginal(e) {
-        if (e != undefined) {
+    devolverAlEstadoOriginal() {
 
-            //Añadir a la ultima casilla del array la carta añadida
-            baraja.push(e[0]);
+        //Devolver las cartas disponiles al estado original
+        this.setState({ arrayObjeto: [...cartasDisponibles] });
 
-            //DEvolver la baraja al estado original
-
-            //////////////////////////////////////////////
-        }
     }
+
+    robarCarta(cartaARobar) {
+
+        this.setState({ arrayObjeto: [...cartasDisponibles] });
+
+
+        //Almmacen la ultima carta Robada
+
+
+        if (cartaARobar != undefined) {
+
+            const ultimaCartaRobada = cartaARobar;
+
+            baraja.push(ultimaCartaRobada);
+        }
+
+        baraja.splice(0, 1);
+
+        this.setState({ arrayObjeto: [...cartasDisponibles] });
+
+        this.setState({ arrayObjeto: [...cartasDisponibles].concat(baraja[0]) });
+
+        cartaRobarUsada = false;
+
+        //Definimos cual es la carta robada
+
+        cartaRobada = baraja[0]
+
+        return baraja[0];
+    }
+
+
+
 
     render() {
 
@@ -75,7 +103,7 @@ class Banca extends React.Component {
 
                                 <div className="banca">
 
-                                    <PilaRobar eliminarCartaRobada={this.devolverAlEstadoOriginal.bind(this)} anyadirAlEstadoCartaRobada={this.anyadirCartaRobado.bind(this)} ></PilaRobar>
+                                    <PilaRobar robarUnaCarta={this.robarCarta.bind(this)} restaurar={this.devolverAlEstadoOriginal.bind(this)} anyadirAlEstadoCartaRobada={this.anyadirCartaRobado.bind(this)} ></PilaRobar>
 
                                 </div>
                             </td>
