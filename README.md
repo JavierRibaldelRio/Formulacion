@@ -185,6 +185,15 @@
 > 
 > ```
 
+## 2021
+
+## Diciembre
+
+**Viernes 8 Informática**
+
+- He comentado 
+- He corregido errores
+
 
 
 Javier Ribal del Río 3ºB Nº22 Informática				

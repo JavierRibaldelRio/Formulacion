@@ -5,6 +5,8 @@ function deacartarCartasUsadas(compuesto, elementosEnBanca) {
     var totalDeCartasUsadas;    //VAriable que almacena la suma de valores
 
     var arrayValores = [];   //Matriz que almacena todos los valores
+
+    //El valor es el numero de repeticiones y la clave el elemento
     compuesto.forEach(function (valor, clave) {
 
         arrayValores.push(valor);
@@ -15,11 +17,21 @@ function deacartarCartasUsadas(compuesto, elementosEnBanca) {
 
                 elementosEnBanca.splice(i, valor);
 
-                if (cartaRobada.nombre.toLocaleLowerCase() === clave && elementosEnBanca[i].nombre.toLocaleLowerCase() + 1 != clave) {
+                //Comprovar si carta robado no esta definida
 
-                    cartaRobarUsada = true;
+                if (cartaRobada != undefined) {
+
+                    if (elementosEnBanca[i + 1] === undefined) {
+                        cartaRobarUsada = true;
+
+                    }
+///////////////////////////////////////////////////////////////////////////////////////////
+                    //Si el nombre de la carta robada es igual a la clave   
+                    else if (cartaRobada.nombre.toLocaleLowerCase() === clave && elementosEnBanca[i + 1].nombre.toLocaleLowerCase() != clave) {
+                        cartaRobarUsada = true;
+
+                    }
                 }
-
                 //Evitar la repetición del bucle
 
                 i = 10;
