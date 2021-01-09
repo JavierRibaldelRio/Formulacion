@@ -2,29 +2,28 @@
 
 ### Objetivos del proyecto:
 
-- [ ] Fomentar el aprendizaje de la formulación
+- [ ] Fomentar el aprendizaje de la formulación de forma entretenida
 - [ ] Aprender la escritura correcta en **Español** de los compuestos
 
 
 
 ### Descripción del proyecto:
 
-- ##### Herramientas:
+#### Herramientas:
   
   - Utilizando los lenguajes de html y JavaScript, y css para los formatear el texto
   - Uso de la ID VScode (Visual Studio Code) para el desarollo
-  - Uso de Chrome o Chromium (depende de la situación) para ver la página web
+  - Uso de Chrome o Chromium o firefox (depende de la situación) para ver la página web
   - Uso de las herramientas de las Dev Tools  (visibles al presionar Ctrl + Mayus + i o con clic derecho inspeccionar)
   - Uso de GitHub para gestionar las versiones del proyecto y tener copiado en Internet todo el trabajo
-  - Librerías
-    - Bootstrap
-    - Jquery
+
   - Framework
     - React
+    - Node
   
-- ##### Funcionamiento
+- #### Funcionamiento
 
-  ​		Se trata de un juego para un jugador el cual consistirá en que el programa le mostrará al usuario siete elementos. El programa se asegurándose de que entre estos siete elementos por lo menos exista una combinación posible de Óxidos o Hidruros o Sales. Cada uno de los elementos tendrá asignado una puntuación y al combinar los elementos se sumarán los puntos. La suma de estos puntos sera la puntuación que obtendrá el jugador en esa ronda. El número de rondas se determinara por el jugador al comenzar la partida.
+  ​		Se trata de un juego para un jugador el cual consistirá en que el programa le mostrará al usuario hocho elementos. El programa se asegurándose de que entre estos siete elementos por lo menos exista una combinación posible de Óxidos o Hidruros o Sales. Cada uno de los elementos tendrá asignado una puntuación y al combinar los elementos se sumarán los puntos. La suma de estos puntos sera la puntuación que obtendrá el jugador en esa ronda. El número de rondas se determinara por el jugador al comenzar la partida. Se podrá robar, tipo solitario al robar una carta se tapara la anterior.
 
 ---
 
@@ -171,6 +170,45 @@
 **Martes 22 Informática**
 
 - He creado una función que sustituye las tildes
+
+
+
+**Martes 29**
+
+<u>IMPORTANTE: Ha diferencia de otros lenguajes derivados de C como C++ C# o Java, al pasar un objeto(array,clase o función) se pasa como referencia, lo que en c++ se haria con & . Para evitarlo hay que hacer una copia previa. Para el array lo poudes hacer asi: *</u>
+
+> ```javascript
+> var arr1 = [1,2,3,4,5,6,7,8,9,];
+> 
+> var arr2 = [...arr1];	//Necesario estar usando node
+> 
+> ```
+
+## 2021
+
+## Diciembre
+
+**Viernes 8 Informática**
+
+- He comentado 
+- He corregido errores
+
+**Casa**
+ - He corregido errores
+ - He añadido la eliminación de cartas a los anfígenos y halógenos
+
+ **Sabado 8 Casa**
+ - He intentado aprender a usar el debugger del VScode, sin resultado
+ - He rediseñado la interfaz
+   - He cambiado los colores
+   - He hecho más pequeña la foto de la carta a Robar
+   - He añadido un marcador que te indica el número de vueltas a la baraja que queda
+-   He acabado de hacer todo lo que respecta a robar:
+    - Eliminar las cartas al hacer un nuevo compuesto
+    - La baraj al acabar el numero de vueltas restantes ya no permite continuar
+
+  
+
 
 
 

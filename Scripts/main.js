@@ -1,3 +1,4 @@
+
 //Para coger los datos de el json
 var jsonDatosElementos = JSON.parse(jsonElementos);
 
@@ -12,6 +13,8 @@ var baraja = shuffle(crearBarajaOrdenada(arrayClases));
 
 var cartasDisponibles = baraja.splice(0, numeroDeCartas);
 
+var cartaRobada;
+
 cartasDisponibles.sort(function (a, b) {
     if (a.z > b.z) {
         return 1;
@@ -23,6 +26,8 @@ cartasDisponibles.sort(function (a, b) {
         return 0;
     }
 });
+
+var cartaRobarUsada = false
 
 //Funciones
 //Convertir en array numerico el string de las valencias ya que del json vienen en forma de texto

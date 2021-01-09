@@ -1,7 +1,9 @@
 /*Etiquetas*/
 body{
 
-    background-color: rgb(96, 195, 235);
+    /* background-color: rgb(96, 195, 235); */
+    background-color: rgb(48, 52, 58);
+
 
 }
 
@@ -89,7 +91,7 @@ body{
 
     margin: 1;
 
-    
+    /*Tamaño de la tabla*/
 }
 
 .Grupo1{
@@ -147,13 +149,17 @@ body{
 
 .banca{
 
-    text-align: center;
+    text-align: justify;
 
-    background-color: whitesmoke;
+    background-color: #16a085;
 
-    padding: 10;
+    padding: 0;
 
     margin: 5;
+
+
+
+    
 }
 
 .Zona_Verificacion{
@@ -193,4 +199,23 @@ body{
 
     text-align: center;
 
+}
+
+.izquierda{
+
+    text-align: left;
+
+}
+
+.Pila{
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+.Foto_Robar{
+    display:block;
+    background-color: black;
+    border: 5px solid white;
+    
 }

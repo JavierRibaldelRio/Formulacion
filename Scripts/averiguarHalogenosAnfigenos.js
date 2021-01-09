@@ -48,6 +48,13 @@ function averiguarHalogenosYAnfigenos(texto, mapa, prefijoHidrogeno, elementosDi
 
     else {
         prefijoPrimerElemento = encontrarPrefijo(primerElemento.split(elemento1)[0]);
+
+
+    }
+    if (elemento1.grupo < 16) {
+
+        return false;
+
     }
 
 
@@ -55,10 +62,22 @@ function averiguarHalogenosYAnfigenos(texto, mapa, prefijoHidrogeno, elementosDi
 
     if (typeof salida === "number") {
 
+        const elementosUsados = ["hidrógeno", elemento1];
+
+        const repeticionesElementosUsados = [prefijoHidrogeno, prefijoPrimerElemento];
+
+        const mapaCompuesto = crearMapaCompuesto(elementosUsados, repeticionesElementosUsados);
+
+        deacartarCartasUsadas(mapaCompuesto, elementosDisponibles);
+
         return salida
 
     } else {
+
+        alert("Este compuesto no se puede crear");
+
         return false
+
     }
 
     function encontrarEnBancaAnfigenosYHalogenos() {
@@ -78,6 +97,5 @@ function averiguarHalogenosYAnfigenos(texto, mapa, prefijoHidrogeno, elementosDi
         return arrayDeAnfigenosYHalogenos;
 
     }
-
 
 }

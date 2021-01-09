@@ -20,10 +20,9 @@ class Marcador extends React.Component {
 
                         <tr>
 
-                            <td>Puntos</td>
+                            <td>{this.props.texto}:</td>
 
                             <td>{this.props.puntuacion}</td>
-
 
                         </tr>
 

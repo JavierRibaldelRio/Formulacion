@@ -2,8 +2,6 @@
 ReactDOM.render(
   <div>
 
-    <p>Javier Ribal del Río</p>
-
     {/* Crea el objeto banca */}
 
     <Banca></Banca>
@@ -14,4 +12,3 @@ ReactDOM.render(
   document.getElementById('container')
 
 );
-
