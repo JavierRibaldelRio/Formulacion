@@ -25,7 +25,7 @@ function deacartarCartasUsadas(compuesto, elementosEnBanca) {
                         cartaRobarUsada = true;
 
                     }
-///////////////////////////////////////////////////////////////////////////////////////////
+
                     //Si el nombre de la carta robada es igual a la clave   
                     else if (cartaRobada.nombre.toLocaleLowerCase() === clave && elementosEnBanca[i + 1].nombre.toLocaleLowerCase() != clave) {
                         cartaRobarUsada = true;
@@ -52,9 +52,9 @@ function deacartarCartasUsadas(compuesto, elementosEnBanca) {
         for (var i = 0; i < cartasARobar; i++) {
 
             //Añadir la primera carta a la banca
-            cartasDisponibles.push(baraja[0]);
+            cartasDisponibles.push(baraja.splice(2, 1)[0]);
 
-            baraja.splice(1, 1); //Eliminar la primera carta de la baraj
+            ; //Eliminar la segunda carta de la baraja
 
             cartasDisponibles.sort(function (a, b) {
                 if (a.z > b.z) {

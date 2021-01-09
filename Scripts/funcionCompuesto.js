@@ -148,9 +148,11 @@ function comprobarCompuesto(elementos, compuesto) {
             const salida = averiguarHalogenosYAnfigenos(compuesto, mapElementos, prefijo, elementos);
 
             if (salida === false) {
+
                 alert("Este compuesto no se puede crear");
 
             }
+
             return salida;
         }
 

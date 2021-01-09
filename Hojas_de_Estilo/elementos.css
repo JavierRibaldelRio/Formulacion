@@ -1,7 +1,9 @@
 /*Etiquetas*/
 body{
 
-    background-color: rgb(96, 195, 235);
+    /* background-color: rgb(96, 195, 235); */
+    background-color: rgb(48, 52, 58);
+
 
 }
 
@@ -149,7 +151,7 @@ body{
 
     text-align: justify;
 
-    background-color: whitesmoke;
+    background-color: #16a085;
 
     padding: 0;
 
@@ -214,6 +216,6 @@ body{
 .Foto_Robar{
     display:block;
     background-color: black;
-    border: black;
+    border: 5px solid white;
     
 }

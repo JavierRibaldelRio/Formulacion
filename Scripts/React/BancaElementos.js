@@ -12,7 +12,7 @@ class Banca extends React.Component {
 
     actualizarEstado(a) {
 
-        this.setState({ arrayObjeto: [...cartasDisponibles], puntosTotales: Number(a) });
+        this.setState({ arrayObjeto: [...cartasDisponibles], puntosTotales: Number(a + this.state.puntosTotales) });
 
     }
 
@@ -72,7 +72,7 @@ class Banca extends React.Component {
 
                 <Validacion funcionAlPulsar={this.actualizarEstado.bind(this)} elementosDisponibles={this.state.arrayObjeto}></Validacion>
 
-                <Marcador puntuacion={this.state.puntosTotales}></Marcador>
+                <Marcador texto="Puntos" puntuacion={this.state.puntosTotales}></Marcador>
                 <table className="banca">
 
                     <tbody>

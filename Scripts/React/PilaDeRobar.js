@@ -8,11 +8,8 @@ class PilaRobar extends React.Component {
     //Función que se ejecuta al robar
     robar() {
 
-
-
-        console.log("fds")
-        //Si hay más cartas en la banca
-        if (this.state.contador < baraja.length) {
+        //Si hay más cartas en la banca y hay más repeticiones
+        if (this.state.contador < baraja.length && this.state.mazosRestantes > 0) {
 
             this.setState({ cartaARobar: this.props.robarUnaCarta(this.state.cartaARobar) });
 
@@ -20,7 +17,7 @@ class PilaRobar extends React.Component {
 
         }
         //Si no cambias el mazo
-        else if (this.state.contador >= baraja.length) {
+        else if (this.state.contador >= baraja.length && this.state.mazosRestantes >= 0) {
 
             this.setState({ mazosRestantes: this.state.mazosRestantes - 1, contador: 0, cartaARobar: undefined })
 
@@ -40,9 +37,11 @@ class PilaRobar extends React.Component {
                             <td></td>
 
                             <td>
-                                <input type="image" className="Foto_Robar" src="Fotografias/PatronCartas/patroncarta.png" height="200" width="160" onClick={this.robar.bind(this)}></input>
+                                <input type="image" className="Foto_Robar" src="Fotografias/PatronCartas/patroncarta.png" height="180" width="160" onClick={this.robar.bind(this)}></input>
 
                             </td>
+
+                            <td><Marcador texto="Repartos restantes" puntuacion={this.state.mazosRestantes} /> </td>
                         </tr>
                     </tbody>
                 </table>
@@ -60,7 +59,12 @@ class PilaRobar extends React.Component {
                                 </td>
 
                                 <td>
-                                    <input type="image" className="Foto_Robar" src="Fotografias/PatronCartas/patroncarta.png" height="200" width="160" onClick={this.robar.bind(this)}></input>
+                                    <input type="image" className="Foto_Robar" src="Fotografias/PatronCartas/patroncarta.png" height="180" width="160" onClick={this.robar.bind(this)}></input>
+
+                                </td>
+                                <td>
+
+                                    <Marcador texto="Repartos restantes" puntuacion={this.state.mazosRestantes} />
 
                                 </td>
 

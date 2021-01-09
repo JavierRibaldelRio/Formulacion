@@ -62,6 +62,14 @@ function averiguarHalogenosYAnfigenos(texto, mapa, prefijoHidrogeno, elementosDi
 
     if (typeof salida === "number") {
 
+        const elementosUsados = ["hidrógeno", elemento1];
+
+        const repeticionesElementosUsados = [prefijoHidrogeno, prefijoPrimerElemento];
+
+        const mapaCompuesto = crearMapaCompuesto(elementosUsados, repeticionesElementosUsados);
+
+        deacartarCartasUsadas(mapaCompuesto, elementosDisponibles);
+
         return salida
 
     } else {
