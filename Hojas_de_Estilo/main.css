@@ -1,0 +1,89 @@
+/*Etiquetas*/
+
+body {
+    /* background-color: rgb(96, 195, 235); */
+    background-color: rgb(48, 52, 58);
+}
+
+/*Banca*/
+
+.banca {
+    text-align: justify;
+    background-color: #16a085;
+    padding: 0;
+    margin: 2, 5%;
+    border-radius: 2%;
+}
+
+/*Verfiicación*/
+
+.Zona_Verificacion {
+    border: solid black;
+    /*Hace que el borde sea solido y de color negro*/
+    padding: 10px;
+    display: inline-table;
+    margin: 1;
+    background-color: white;
+    border-radius: 5%;
+    font-family: "Nunito";
+    margin-right: 50;
+}
+
+.Entrada_Verificacion {
+    border: solid black;
+    border-radius: 5%;
+}
+
+.validar_boton {
+    background-color: #17a3b8;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 13px 32px;
+    text-decoration: none;
+}
+
+/*Marcador*/
+
+.zona_puntos {
+    text-align: center;
+    border-radius: 5%;
+    font-family: "Nunito";
+}
+
+/*Pila de robar*/
+
+.Pila {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.Foto_Robar {
+    display: block;
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 5%;
+}
+
+/*Misceláneo*/
+
+.izquierda {
+    text-align: left;
+}
+
+.Texto_dentro_de_tabla {
+    font-family: "Nunito";
+}
+
+/*Panel*/
+
+.Panel_Control {
+    display: inline-table;
+    background-color: #91A4AA;
+    padding: 5;
+    border-radius: 2.5%;
+}

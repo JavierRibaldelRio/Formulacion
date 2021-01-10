@@ -5,11 +5,12 @@ class Banca extends React.Component {
 
         super(props);
 
-        this.state = { arrayObjeto: [...cartasDisponibles], puntosTotales: 0 }
+        this.state = { arrayObjeto: [...cartasDisponibles], puntosTotales: 0, notficacion: undefined, buenaNotificacion: true }
 
 
     }
 
+    //Actualiza el estado
     actualizarEstado(a) {
 
         this.setState({ arrayObjeto: [...cartasDisponibles], puntosTotales: Number(a + this.state.puntosTotales) });
@@ -24,6 +25,8 @@ class Banca extends React.Component {
 
     }
 
+    //Devolver las cartas disponiles al estado original
+
     devolverAlEstadoOriginal() {
 
         //Devolver las cartas disponiles al estado original
@@ -31,6 +34,7 @@ class Banca extends React.Component {
 
     }
 
+    //roba una carta
     robarCarta(cartaARobar) {
 
         this.setState({ arrayObjeto: [...cartasDisponibles] });
@@ -61,6 +65,23 @@ class Banca extends React.Component {
         return baraja[0];
     }
 
+    //Edita el estado conforme el imput y lo devuelve a configuración origianl
+    notificar(nuevaNotificacion, nuevoEstado) {
+
+        //Añade al estado la notificación y si es buena o mal
+        this.setState({ notficacion: nuevaNotificacion, buenaNotificacion: nuevoEstado });
+
+
+        //Pone un ocntador hacía atras
+        setTimeout(function () {
+
+            //Revierte el estado poniendolo en configuración original
+            this.setState({ notficacion: undefined, buenaNotificacion: true });
+
+        }.bind(this), tiempoNotificacionSegundos * 1000);    //El numero es el tiempo en milisegundos, por eso multiplico por mil
+
+
+    }
 
 
 
@@ -70,15 +91,23 @@ class Banca extends React.Component {
 
             <div>
 
-                <Validacion funcionAlPulsar={this.actualizarEstado.bind(this)} elementosDisponibles={this.state.arrayObjeto}></Validacion>
+                <div className="Panel_control">
 
-                <Marcador texto="Puntos" puntuacion={this.state.puntosTotales}></Marcador>
+                    <Validacion funcionAlPulsar={this.actualizarEstado.bind(this)} funcionNotificar={this.notificar.bind(this)} elementosDisponibles={this.state.arrayObjeto}></Validacion>
+
+                    <Marcador texto="Puntos" puntuacion={this.state.puntosTotales}></Marcador>
+
+                </div>
+
+                <NotificacicionUsuario texto={this.state.notficacion} tipo={this.state.buenaNotificacion} ></NotificacicionUsuario>
+
+                <br /><br />
                 <table className="banca">
 
                     <tbody>
                         <tr>
                             <td>
-                                <div>
+                                <div className="filaElementos">
 
                                     <ElementoReact
                                         objeto={this.state.arrayObjeto[0]}
@@ -99,7 +128,7 @@ class Banca extends React.Component {
                                 </div>
 
                             </td>
-                            <td width="50%" className="banca" colSpan="2">
+                            <td width="30%" className="banca" colSpan="2">
 
                                 <div className="banca">
 
@@ -112,7 +141,7 @@ class Banca extends React.Component {
                         <tr>
 
                             <td>
-                                <div>
+                                <div className="filaElementos">
 
                                     <ElementoReact
                                         objeto={this.state.arrayObjeto[1]}

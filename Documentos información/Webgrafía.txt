@@ -19,4 +19,7 @@ https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales
 https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/let
 https://es.javascript.info/task/shuffle
 https://www.jstips.co/es_es/javascript/shuffle-an-array/
-https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/lastIndexOf      
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/lastIndexOf 
+https://dle.rae.es/miscel%C3%A1neo#PNnyl9C
+https://www.mclibre.org/consultar/amaya/css/css-fuentes-web.html     
+https://developer.mozilla.org/es/docs/Web/CSS/outline-style 

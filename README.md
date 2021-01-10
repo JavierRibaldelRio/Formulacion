@@ -197,7 +197,7 @@
  - He corregido errores
  - He añadido la eliminación de cartas a los anfígenos y halógenos
 
- **Sabado 8 Casa**
+ **Sabado 9 Casa**
  - He intentado aprender a usar el debugger del VScode, sin resultado
  - He rediseñado la interfaz
    - He cambiado los colores
@@ -205,10 +205,27 @@
    - He añadido un marcador que te indica el número de vueltas a la baraja que queda
 -   He acabado de hacer todo lo que respecta a robar:
     - Eliminar las cartas al hacer un nuevo compuesto
-    - La baraj al acabar el numero de vueltas restantes ya no permite continuar
+    - La baraja al acabar el numero de vueltas restantes ya no permite continuar
+- He creado una nueva rama: **MejorarUI**, *UI User Interrface*, intefaz de usuario
+- He redondeado los bordes de:
+    - Banca
+    - Pila deRobar
+    - Marcadores
+    - Elemento
+    - Zona de verificación
+- He alineado a la izquierda el marcador y la zona de verificación
+- He editado la hoja de estilos
+
+**Domingo 10 Casa**
+- He aprendido a "*instalar*" tipografía para html
+- He separado las hojas de sestilo en distintos archivos
+- He puesto a todo la tipografia Nunito
+- He "*instalado*" la tipografía Nunito para el proyecto
+- He puesto borde blanco a las cartas
+- He solucionado el error del salto de línea despues de Marcador y Pila de Robar. Resulta que despues de un div automáticamente se produce el salto de línea. SOLUCIÓN: eliminar el div
+- He creado el componente notificación y le he añadido su funcionalidad
 
   
-
 
 
 

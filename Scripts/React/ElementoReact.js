@@ -31,10 +31,12 @@ class ElementoReact extends React.Component {
         //Lo que devuelve
         return (
 
+
             //Crea la tabla
+
             <table className={"Tabla_Elementos " + this.props.objeto.tipo} >
 
-                <tbody>
+                <tbody >
 
                     <tr className="Numero_Atomico" >
                         {/*Número Atómico*/}
