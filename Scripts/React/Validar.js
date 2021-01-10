@@ -49,6 +49,10 @@ class Validacion extends React.Component {
             this.props.funcionNotificar("Este compuesto no se puede crear", false);
 
         }
+
+        if (baraja.lenght < 10) {
+            this.props.acabar();
+        }
     }
 
     //Lo que devulve
@@ -83,7 +87,7 @@ class Validacion extends React.Component {
 
                         <td>
                             {/*Boton */}
-                            <button className="myButton" onClick={this.pasarDatosFuncionCompuesto.bind(this)}>Validar</button>
+                            <button disabled={!this.props.jugando} className="validar_boton" onClick={this.pasarDatosFuncionCompuesto.bind(this)}>Validar</button>
 
                         </td>
 

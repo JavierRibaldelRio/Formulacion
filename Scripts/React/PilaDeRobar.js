@@ -19,8 +19,11 @@ class PilaRobar extends React.Component {
         //Si no cambias el mazo
         else if (this.state.contador >= baraja.length && this.state.mazosRestantes >= 0) {
 
+
             this.setState({ mazosRestantes: this.state.mazosRestantes - 1, contador: 0, cartaARobar: undefined })
 
+        } else {
+            this.props.terminarJuego();
         }
     }
 

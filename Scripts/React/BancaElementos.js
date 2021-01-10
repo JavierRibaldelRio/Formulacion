@@ -5,7 +5,11 @@ class Banca extends React.Component {
 
         super(props);
 
-        this.state = { arrayObjeto: [...cartasDisponibles], puntosTotales: 0, notficacion: undefined, buenaNotificacion: true }
+        this.state = {
+            arrayObjeto: [...cartasDisponibles], puntosTotales: 0,
+            notficacion: undefined, buenaNotificacion: true, juegoAcabado: false,
+            juegoEnMarcha: false
+        };
 
 
     }
@@ -83,90 +87,107 @@ class Banca extends React.Component {
 
     }
 
+    //Cambia el esta haviendo que el juego se acabe
+    terminar() {
+        this.setState({ juegoAcabado: true })
+    }
 
 
     render() {
+        if (this.state.juegoAcabado === true) {
 
-        return (
+            return (
 
-            <div>
+                <div className="Fin_Juego_Div"  >
+                    <p className="Fin_Juego">EL JUEGO SE HA ACABADO, HAS OBTENIDO UN TOTAL DE {this.state.puntosTotales} PUNTOS. </p>
 
-                <div className="Panel_control">
-
-                    <Validacion funcionAlPulsar={this.actualizarEstado.bind(this)} funcionNotificar={this.notificar.bind(this)} elementosDisponibles={this.state.arrayObjeto}></Validacion>
-
-                    <Marcador texto="Puntos" puntuacion={this.state.puntosTotales}></Marcador>
 
                 </div>
 
-                <NotificacicionUsuario texto={this.state.notficacion} tipo={this.state.buenaNotificacion} ></NotificacicionUsuario>
+            )
 
-                <br /><br />
-                <table className="banca">
+        } else {
+            return (
 
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div className="filaElementos">
+                <div>
 
-                                    <ElementoReact
-                                        objeto={this.state.arrayObjeto[0]}
-                                    ></ElementoReact>
+                    <div aria-disabled="true" className="Panel_control">
 
-                                    <ElementoReact
-                                        objeto={this.state.arrayObjeto[2]}
-                                    ></ElementoReact>
+                        <Validacion jugando={this.state.juegoEnMarcha} funcionAlPulsar={this.actualizarEstado.bind(this)} funcionNotificar={this.notificar.bind(this)} elementosDisponibles={this.state.arrayObjeto}></Validacion>
 
-                                    <ElementoReact
-                                        objeto={this.state.arrayObjeto[4]}
-                                    ></ElementoReact>
+                        <Marcador texto="Puntos" acabar={this.terminar.bind(this)} puntuacion={this.state.puntosTotales}></Marcador>
 
-                                    <ElementoReact
-                                        objeto={this.state.arrayObjeto[6]}
-                                    ></ElementoReact>
+                    </div>
 
-                                </div>
+                    <NotificacicionUsuario texto={this.state.notficacion} tipo={this.state.buenaNotificacion} ></NotificacicionUsuario>
 
-                            </td>
-                            <td width="30%" className="banca" colSpan="2">
+                    <br /><br />
+                    <table className="banca">
 
-                                <div className="banca">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div className="filaElementos">
 
-                                    <PilaRobar robarUnaCarta={this.robarCarta.bind(this)} restaurar={this.devolverAlEstadoOriginal.bind(this)} anyadirAlEstadoCartaRobada={this.anyadirCartaRobado.bind(this)} ></PilaRobar>
+                                        <ElementoReact
+                                            objeto={this.state.arrayObjeto[0]}
+                                        ></ElementoReact>
 
-                                </div>
-                            </td>
-                        </tr>
+                                        <ElementoReact
+                                            objeto={this.state.arrayObjeto[2]}
+                                        ></ElementoReact>
 
-                        <tr>
+                                        <ElementoReact
+                                            objeto={this.state.arrayObjeto[4]}
+                                        ></ElementoReact>
 
-                            <td>
-                                <div className="filaElementos">
+                                        <ElementoReact
+                                            objeto={this.state.arrayObjeto[6]}
+                                        ></ElementoReact>
 
-                                    <ElementoReact
-                                        objeto={this.state.arrayObjeto[1]}
-                                    ></ElementoReact>
+                                    </div>
 
-                                    <ElementoReact
-                                        objeto={this.state.arrayObjeto[3]}
-                                    ></ElementoReact>
+                                </td>
+                                <td width="30%" className="banca" colSpan="2">
 
-                                    <ElementoReact
-                                        objeto={this.state.arrayObjeto[5]}
-                                    ></ElementoReact>
+                                    <div className="banca">
 
-                                    <ElementoReact
-                                        objeto={this.state.arrayObjeto[7]}
-                                    ></ElementoReact>
+                                        <PilaRobar terminarJuego={this.terminar.bind(this)} robarUnaCarta={this.robarCarta.bind(this)} restaurar={this.devolverAlEstadoOriginal.bind(this)} anyadirAlEstadoCartaRobada={this.anyadirCartaRobado.bind(this)} ></PilaRobar>
 
-                                </div>
+                                    </div>
+                                </td>
+                            </tr>
 
-                            </td>
+                            <tr>
 
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        )
+                                <td>
+                                    <div className="filaElementos">
+
+                                        <ElementoReact
+                                            objeto={this.state.arrayObjeto[1]}
+                                        ></ElementoReact>
+
+                                        <ElementoReact
+                                            objeto={this.state.arrayObjeto[3]}
+                                        ></ElementoReact>
+
+                                        <ElementoReact
+                                            objeto={this.state.arrayObjeto[5]}
+                                        ></ElementoReact>
+
+                                        <ElementoReact
+                                            objeto={this.state.arrayObjeto[7]}
+                                        ></ElementoReact>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            )
+        }
     }
 }
