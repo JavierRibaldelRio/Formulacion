@@ -232,8 +232,9 @@
 - He creado la pantalla de fín
 - He empezado a trabajar con el boton de empezar
 
-- [ ] Desactivar Robar tarjetas *disabled*
-  
+**Lunes 11**
+- He editado el botón  
+- He creado un botón de pausar
 
 
 

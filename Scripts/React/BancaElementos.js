@@ -8,9 +8,8 @@ class Banca extends React.Component {
         this.state = {
             arrayObjeto: [...cartasDisponibles], puntosTotales: 0,
             notficacion: undefined, buenaNotificacion: true, juegoAcabado: false,
-            juegoEnMarcha: false
-        };
-
+            juegoEnMarcha: false, textoBotonControl: "Empezar"
+        }
 
     }
 
@@ -92,6 +91,21 @@ class Banca extends React.Component {
         this.setState({ juegoAcabado: true })
     }
 
+    pausarOContinuar() {
+        var nuevoTexto;
+
+        if (this.state.juegoEnMarcha === true) {
+
+            nuevoTexto = "Reanudar";
+
+        } else {
+            nuevoTexto = "Pausar";
+        }
+
+        this.setState({ juegoEnMarcha: !this.state.juegoEnMarcha, textoBotonControl: nuevoTexto })
+
+    }
+
 
     render() {
         if (this.state.juegoAcabado === true) {
@@ -152,7 +166,7 @@ class Banca extends React.Component {
 
                                     <div className="banca">
 
-                                        <PilaRobar terminarJuego={this.terminar.bind(this)} robarUnaCarta={this.robarCarta.bind(this)} restaurar={this.devolverAlEstadoOriginal.bind(this)} anyadirAlEstadoCartaRobada={this.anyadirCartaRobado.bind(this)} ></PilaRobar>
+                                        <PilaRobar jugando={this.state.juegoEnMarcha} terminarJuego={this.terminar.bind(this)} robarUnaCarta={this.robarCarta.bind(this)} restaurar={this.devolverAlEstadoOriginal.bind(this)} anyadirAlEstadoCartaRobada={this.anyadirCartaRobado.bind(this)} ></PilaRobar>
 
                                     </div>
                                 </td>
@@ -182,6 +196,8 @@ class Banca extends React.Component {
                                     </div>
 
                                 </td>
+                                {/* Botón de empezar o pausar */}
+                                <td className="Panel_Control"><button className="Boton_Normal Boton_Play_Pause" onClick={this.pausarOContinuar.bind(this)}>{this.state.textoBotonControl}</button></td>
 
                             </tr>
                         </tbody>

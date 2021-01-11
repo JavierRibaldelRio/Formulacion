@@ -87,7 +87,7 @@ class Validacion extends React.Component {
 
                         <td>
                             {/*Boton */}
-                            <button disabled={!this.props.jugando} className="validar_boton" onClick={this.pasarDatosFuncionCompuesto.bind(this)}>Validar</button>
+                            <button disabled={!this.props.jugando} className="Boton_Verificacion Boton_Normal" onClick={this.pasarDatosFuncionCompuesto.bind(this)}>Validar</button>
 
                         </td>
 

@@ -52,17 +52,29 @@ body {
     border-radius: 5%;
 }
 
-.validar_boton {
-    background-color: #16a085;
+.Boton_Normal {
     border-radius: 4px;
     display: inline-block;
     cursor: pointer;
-    color: white;
-    font-family: Arial;
-    font-size: 20px;
+    font-family: 'Nunito';
     font-weight: bold;
-    padding: 13px 32px;
+    padding: 13px 20px;
     text-decoration: none;
+}
+
+/*Boton*/
+
+.Boton_Verificacion {
+    color: white;
+    background-color: #16a085;
+    font-size: 16px;
+}
+
+.Boton_Play_Pause {
+    color: white;
+    background-color: #ed6102;
+    margin: 5;
+    font-size: 20px;
 }
 
 /*Marcador*/
@@ -104,12 +116,4 @@ body {
     background-color: #91A4AA;
     padding: 5;
     border-radius: 2.5%;
-}
-
-@font-face {
-    font-family: 'Nunito';
-    src: url("../Tipografias/Nunito-Regular.eot");
-    src: url('../Tipografias/Nunito-Regular.eot?#iefix') format('embedded-opentype'), url('../Tipografias/Nunito-Regular.woff') format('woff'), url('../Tipografias/Nunito-Regular.ttf') format('truetype'), url('../Tipografias/Nunito-Regular.svg#adlerRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
 }
