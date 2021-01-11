@@ -13,7 +13,7 @@ class Banca extends React.Component {
 
     }
 
-    //Actualiza el estado
+    //Actualiza el estado y suma los puntos
     actualizarEstado(a) {
 
         this.setState({ arrayObjeto: [...cartasDisponibles], puntosTotales: Number(a + this.state.puntosTotales) });
@@ -45,26 +45,34 @@ class Banca extends React.Component {
 
         //Almmacen la ultima carta Robada
 
-
+        //Si la ultima es distinta a indefinda
         if (cartaARobar != undefined) {
 
+            //La guarda en esta variable
             const ultimaCartaRobada = cartaARobar;
 
+            //Y lo añade a la baraja
             baraja.push(ultimaCartaRobada);
         }
 
+        //Elimina la 1ª casilla del array baraja
         baraja.splice(0, 1);
 
+        //Le da a arrayObjeto el valor de cartasdisponibles
         this.setState({ arrayObjeto: [...cartasDisponibles] });
+
+        //Le da a arrayObjeto el valor de cartasdisponibles y le añade baraja [o]
 
         this.setState({ arrayObjeto: [...cartasDisponibles].concat(baraja[0]) });
 
+        //Dice que carta robar usada es igual a falso
         cartaRobarUsada = false;
 
         //Definimos cual es la carta robada
 
         cartaRobada = baraja[0]
 
+        //Devolvemos baraja [0]
         return baraja[0];
     }
 
@@ -88,12 +96,17 @@ class Banca extends React.Component {
 
     //Cambia el esta haviendo que el juego se acabe
     terminar() {
+
+        //Hace que juego acabado sea igual a verdadero
         this.setState({ juegoAcabado: true })
     }
 
+    //Pausa o despausa el texto
     pausarOContinuar() {
-        var nuevoTexto;
 
+        var nuevoTexto; //Texto que va a contener el texto
+
+        //Comprueba si juego esta en marcha
         if (this.state.juegoEnMarcha === true) {
 
             nuevoTexto = "Reanudar";
@@ -102,6 +115,7 @@ class Banca extends React.Component {
             nuevoTexto = "Pausar";
         }
 
+        //Invierte el valor de 
         this.setState({ juegoEnMarcha: !this.state.juegoEnMarcha, textoBotonControl: nuevoTexto })
 
     }

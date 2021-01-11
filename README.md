@@ -235,6 +235,7 @@
 **Lunes 11**
 - He editado el botón  
 - He creado un botón de pausar
+- He comentado
 
 
 
