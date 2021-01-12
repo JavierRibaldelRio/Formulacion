@@ -237,6 +237,11 @@
 - He creado un botón de pausar
 - He comentado
 
+**Martes 12**
+- He comentado
+- He tenido problemas con git
+- He añadido un contador de compustos
+
 
 
 Javier Ribal del Río 3ºB Nº22 Informática				

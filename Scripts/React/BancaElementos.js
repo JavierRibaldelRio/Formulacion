@@ -8,15 +8,19 @@ class Banca extends React.Component {
         this.state = {
             arrayObjeto: [...cartasDisponibles], puntosTotales: 0,
             notficacion: undefined, buenaNotificacion: true, juegoAcabado: false,
-            juegoEnMarcha: false, textoBotonControl: "Empezar"
+            juegoEnMarcha: false, textoBotonControl: "Empezar", compuestosCreados: [],
         }
 
     }
 
     //Actualiza el estado y suma los puntos
-    actualizarEstado(a) {
+    actualizarEstado(a, nuevoCompuestoCreado) {
 
-        this.setState({ arrayObjeto: [...cartasDisponibles], puntosTotales: Number(a + this.state.puntosTotales) });
+        this.setState({
+            arrayObjeto: [...cartasDisponibles],
+            puntosTotales: Number(a + this.state.puntosTotales),
+            compuestosCreados: this.state.compuestosCreados.concat(nuevoCompuestoCreado)
+        });
 
     }
 
@@ -108,7 +112,7 @@ class Banca extends React.Component {
 
         //Comprueba si juego esta en marcha
         if (this.state.juegoEnMarcha === true) {
-            
+
             //Asigna el nuevo texto
             nuevoTexto = "Reanudar";
 
@@ -129,7 +133,8 @@ class Banca extends React.Component {
             return (
 
                 <div className="Fin_Juego_Div"  >
-                    <p className="Fin_Juego">EL JUEGO SE HA ACABADO, HAS OBTENIDO UN TOTAL DE {this.state.puntosTotales} PUNTOS. </p>
+                    <p className="Fin_Juego">EL JUEGO SE HA ACABADO, HAS OBTENIDO UN TOTAL DE {this.state.puntosTotales} PUNTOS, Y HAS HECHO
+                    {this.state.compuestosCreados.length} COMPUESTOS. </p>
 
 
                 </div>

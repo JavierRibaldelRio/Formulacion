@@ -42,7 +42,7 @@ class Validacion extends React.Component {
 
 
             //Actualiza el estado
-            this.props.funcionAlPulsar(salida);
+            this.props.funcionAlPulsar(salida, this.state.text.toLocaleLowerCase());
 
         } else if (salida === false) {
 
