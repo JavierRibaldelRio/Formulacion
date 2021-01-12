@@ -1,4 +1,4 @@
-//Contenedor de 
+//Contenedor de el elemento banca 
 class Banca extends React.Component {
 
     constructor(props) {
@@ -108,7 +108,8 @@ class Banca extends React.Component {
 
         //Comprueba si juego esta en marcha
         if (this.state.juegoEnMarcha === true) {
-
+            
+            //Asigna el nuevo texto
             nuevoTexto = "Reanudar";
 
         } else {
@@ -120,8 +121,9 @@ class Banca extends React.Component {
 
     }
 
-
+    //Lo que se devuelve
     render() {
+        //Sí el juego ha acabdo
         if (this.state.juegoAcabado === true) {
 
             return (
