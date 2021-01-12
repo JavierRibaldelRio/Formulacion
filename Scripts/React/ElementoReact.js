@@ -17,7 +17,8 @@ class ElementoReact extends React.Component {
     //funcion de devolver
 
     render() {
-
+        
+        //Hace lque las valencias seán iguales que las del objeto del elemento
         this.state.valencias = this.props.objeto.v;
 
         //Se ejecuta una vez por cada valencia
