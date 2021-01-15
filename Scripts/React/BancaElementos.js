@@ -132,10 +132,15 @@ class Banca extends React.Component {
 
             return (
 
-                <div className="Fin_Juego_Div"  >
-                    <p className="Fin_Juego">EL JUEGO SE HA ACABADO, HAS OBTENIDO UN TOTAL DE {this.state.puntosTotales} PUNTOS, Y HAS HECHO
-                    {this.state.compuestosCreados.length} COMPUESTOS. </p>
+                <div>
+                    <div className="Fin_Juego_Div Fin_Juego"  >
+                        <p className="Fin_Juego">EL JUEGO SE HA ACABADO, HAS OBTENIDO UN TOTAL DE {this.state.puntosTotales} PUNTOS, Y HAS HECHO {this.state.compuestosCreados.length} COMPUESTOS. </p>
+                    </div>
+                    <br></br>
 
+                    <div className="Fin_Juego_Visualizar_Lista_Compuestos">
+                        <ListaCompuestos lista={this.state.compuestosCreados}></ListaCompuestos>
+                    </div>
 
                 </div>
 

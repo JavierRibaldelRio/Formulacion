@@ -242,6 +242,9 @@
 - He tenido problemas con git
 - He añadido un contador de compustos
 
+**Viernes 15**
+- He creado el componente de la lista
+
 
 
 Javier Ribal del Río 3ºB Nº22 Informática				

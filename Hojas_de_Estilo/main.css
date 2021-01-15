@@ -27,6 +27,18 @@ body {
     border-radius: 20%;
 }
 
+.Fin_Juego_Visualizar_Lista_Compuestos {
+    background-color: #DAB001;
+    font-size: 16;
+    font-family: 'Nunito';
+    font-style: bold;
+    margin: 10%;
+    padding: 10;
+    text-align: center;
+    border: solid;
+    border-radius: 20%;
+}
+
 .Fin_Juego_Div {
     display: flex;
     justify-content: center;
