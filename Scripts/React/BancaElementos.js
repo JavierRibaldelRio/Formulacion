@@ -134,16 +134,13 @@ class Banca extends React.Component {
 
                 <div>
                     <div className="Fin_Juego_Div Fin_Juego"  >
-                        <p className="Fin_Juego">EL JUEGO SE HA ACABADO, HAS OBTENIDO UN TOTAL DE {this.state.puntosTotales} PUNTOS, Y HAS HECHO {this.state.compuestosCreados.length} COMPUESTOS. </p>
+                        <p className="Fin_Juego">EL JUEGO SE HA ACABADO, HAS OBTENIDO UN TOTAL DE {this.state.puntosTotales} PUNTOS, Y FORMULADO {this.state.compuestosCreados.length} COMPUESTOS. </p>
                         <br></br>
                         <ListaCompuestos lista={this.state.compuestosCreados}></ListaCompuestos>
 
                     </div>
                     <br></br>
 
-                    {/* <div className="Fin_Juego_Visualizar_Lista_Compuestos">
-                        <ListaCompuestos lista={this.state.compuestosCreados}></ListaCompuestos>
-                    </div> */}
 
                 </div>
 
@@ -157,8 +154,24 @@ class Banca extends React.Component {
                     <div aria-disabled="true" className="Panel_control">
 
                         <Validacion jugando={this.state.juegoEnMarcha} funcionAlPulsar={this.actualizarEstado.bind(this)} funcionNotificar={this.notificar.bind(this)} elementosDisponibles={this.state.arrayObjeto}></Validacion>
+                        <table className="Tabla_Marca">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <Marcador texto="Puntos" acabar={this.terminar.bind(this)} puntuacion={this.state.puntosTotales}></Marcador>
+                                    </td>
 
-                        <Marcador texto="Puntos" acabar={this.terminar.bind(this)} puntuacion={this.state.puntosTotales}></Marcador>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <Marcador texto="Compuestos Creados" puntuacion={this.state.compuestosCreados.length} />
+                                    </td>
+
+                                </tr>
+                            </tbody>
+
+                        </table>
 
                     </div>
 

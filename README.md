@@ -247,6 +247,9 @@
 - He añadido el componente lista
 - He empezado a darle formatoa al componente lista
 
+**Sabado 16**
+- He acabdado de darle formato al componente lista 
+- He hecho un marcador con el numero de compuestos creados
 
 
 

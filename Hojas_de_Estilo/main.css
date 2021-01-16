@@ -15,12 +15,16 @@ body {
     border-radius: 2%;
 }
 
+.Tabla_Marca {
+    display: inline-table;
+}
+
 .Fin_Juego {
     background-color: #DAB001;
     font-size: 45;
     font-family: 'Nunito';
     font-style: bold;
-    margin: 15%;
+    margin: 10%;
     padding: 10;
     text-align: center;
     border: solid;
@@ -28,14 +32,12 @@ body {
 }
 
 .Fin_Juego_Visualizar_Lista_Compuestos {
-    background-color: #DAB001;
     font-size: 20;
     font-family: 'Nunito';
     font-style: bold;
     margin: 2;
     padding: 10;
     text-align: center;
-    border-radius: 20%;
 }
 
 .Lista_Compuestos {
