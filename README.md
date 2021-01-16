@@ -244,6 +244,11 @@
 
 **Viernes 15**
 - He creado el componente de la lista
+- He añadido el componente lista
+- He empezado a darle formatoa al componente lista
+
+
+
 
 
 
