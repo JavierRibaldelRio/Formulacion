@@ -1,4 +1,4 @@
-//Contenedor de 
+//Contenedor de el elemento banca 
 class Banca extends React.Component {
 
     constructor(props) {
@@ -8,15 +8,19 @@ class Banca extends React.Component {
         this.state = {
             arrayObjeto: [...cartasDisponibles], puntosTotales: 0,
             notficacion: undefined, buenaNotificacion: true, juegoAcabado: false,
-            juegoEnMarcha: false, textoBotonControl: "Empezar"
+            juegoEnMarcha: false, textoBotonControl: "Empezar", compuestosCreados: [],
         }
 
     }
 
     //Actualiza el estado y suma los puntos
-    actualizarEstado(a) {
+    actualizarEstado(a, nuevoCompuestoCreado) {
 
-        this.setState({ arrayObjeto: [...cartasDisponibles], puntosTotales: Number(a + this.state.puntosTotales) });
+        this.setState({
+            arrayObjeto: [...cartasDisponibles],
+            puntosTotales: Number(a + this.state.puntosTotales),
+            compuestosCreados: this.state.compuestosCreados.concat(nuevoCompuestoCreado)
+        });
 
     }
 
@@ -109,6 +113,7 @@ class Banca extends React.Component {
         //Comprueba si juego esta en marcha
         if (this.state.juegoEnMarcha === true) {
 
+            //Asigna el nuevo texto
             nuevoTexto = "Reanudar";
 
         } else {
@@ -120,14 +125,21 @@ class Banca extends React.Component {
 
     }
 
-
+    //Lo que se devuelve
     render() {
+        //Sí el juego ha acabdo
         if (this.state.juegoAcabado === true) {
 
             return (
 
-                <div className="Fin_Juego_Div"  >
-                    <p className="Fin_Juego">EL JUEGO SE HA ACABADO, HAS OBTENIDO UN TOTAL DE {this.state.puntosTotales} PUNTOS. </p>
+                <div>
+                    <div className="Fin_Juego_Div Fin_Juego"  >
+                        <p className="Fin_Juego">EL JUEGO SE HA ACABADO, HAS OBTENIDO UN TOTAL DE {this.state.puntosTotales} PUNTOS, Y FORMULADO {this.state.compuestosCreados.length} COMPUESTOS. </p>
+                        <br></br>
+                        <ListaCompuestos lista={this.state.compuestosCreados}></ListaCompuestos>
+
+                    </div>
+                    <br></br>
 
 
                 </div>
@@ -142,8 +154,24 @@ class Banca extends React.Component {
                     <div aria-disabled="true" className="Panel_control">
 
                         <Validacion jugando={this.state.juegoEnMarcha} funcionAlPulsar={this.actualizarEstado.bind(this)} funcionNotificar={this.notificar.bind(this)} elementosDisponibles={this.state.arrayObjeto}></Validacion>
+                        <table className="Tabla_Marca">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <Marcador texto="Puntos" acabar={this.terminar.bind(this)} puntuacion={this.state.puntosTotales}></Marcador>
+                                    </td>
 
-                        <Marcador texto="Puntos" acabar={this.terminar.bind(this)} puntuacion={this.state.puntosTotales}></Marcador>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <Marcador texto="Compuestos Creados" puntuacion={this.state.compuestosCreados.length} />
+                                    </td>
+
+                                </tr>
+                            </tbody>
+
+                        </table>
 
                     </div>
 

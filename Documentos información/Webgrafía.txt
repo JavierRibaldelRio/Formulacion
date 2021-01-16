@@ -22,7 +22,8 @@ https://www.jstips.co/es_es/javascript/shuffle-an-array/
 https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/lastIndexOf 
 https://dle.rae.es/miscel%C3%A1neo#PNnyl9C
 https://www.mclibre.org/consultar/amaya/css/css-fuentes-web.html     
-https://developer.mozilla.org/es/docs/Web/CSS/outline-style 
+https://developer.mozilla.org/es/docs/Web/CSS/outline-style
+https://developer.mozilla.org/es/docs/Web/HTML/Elemento/ul 
 
 #Añadir tipografía a css
 https://www.elblogdelseo.com/como-utilizar-cualquier-fuente-en-tu-web/

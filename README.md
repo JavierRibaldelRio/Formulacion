@@ -237,6 +237,22 @@
 - He creado un botón de pausar
 - He comentado
 
+**Martes 12**
+- He comentado
+- He tenido problemas con git
+- He añadido un contador de compustos
+
+**Viernes 15**
+- He creado el componente de la lista
+- He añadido el componente lista
+- He empezado a darle formatoa al componente lista
+
+**Sabado 16**
+- He acabdado de darle formato al componente lista 
+- He hecho un marcador con el numero de compuestos creados
+
+
+
 
 
 Javier Ribal del Río 3ºB Nº22 Informática				
