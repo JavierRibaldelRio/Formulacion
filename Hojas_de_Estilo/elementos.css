@@ -1,221 +1,100 @@
-/*Etiquetas*/
-body{
-
-    /* background-color: rgb(96, 195, 235); */
-    background-color: rgb(48, 52, 58);
-
-
-}
+/* Todo lo respecto a los elementos */
 
 /*Clases*/
-.Numero_Atomico{
 
-    text-align: left;   /*Alineación*/ 
-
-    margin: 1;          /*Margen*/
-
+.Numero_Atomico {
+    text-align: left;
+    /*Alineación*/
+    margin: 1;
+    /*Margen*/
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
-.Texto_dentro_de_tabla{
-
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-}
-
-.Nombre{
-
+.Nombre {
     text-align: center;
     margin: 1;
-
 }
 
-.Valencias{
-
+.Valencias {
     text-align: left;
     margin: 1;
-
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
-.Simbolo_Quimico{
-
-    text-align: center; 
-
-    font-size: 50;  /*Tamaño de la fuente*/
-
-    padding: 10;    /*Distancia entre otros elementos*/
-
+.Simbolo_Quimico {
+    text-align: center;
+    font-size: 50;
+    /*Tamaño de la fuente*/
+    padding: 10;
+    /*Distancia entre otros elementos*/
     margin: 1;
-
     font-family: monospace;
-
-
-
 }
 
-.Puntos{
-
+.Puntos {
     text-align: left;
     margin: 1;
-
     font-family: Arial, Helvetica, sans-serif;
-
-
-
 }
 
-.Grupo{
-
+.Grupo {
     text-align: left;
-
     margin: 1;
-
     font-family: Arial, Helvetica, sans-serif;
-
-
 }
-.Tabla_Elementos{
 
-    border: solid black;    /*Hace que el borde sea solido y de color negro*/
-
-    padding: 10px;      
-
+.Tabla_Elementos {
+    border: 5px solid white;
+    /*Hace que el borde sea solido y de color negro*/
+    padding: 10px;
     /* En html cuando haces una tabla automaticamente se genera un salto de linea,
     es decir que no es necesario poner nada (<br>,<pre>..) para saltar de línea,
     a causa de seo no puedes poner dos tablas en fila, el atributo de display de
     css si que puedes hacerlo*/
-    display: inline-table;     
-
-    margin: 1;
-
+    display: inline-table;
+    margin: 5;
+    border-radius: 5%;
+    /*outline: 2px black solid;*/
     /*Tamaño de la tabla*/
 }
 
-.Grupo1{
-
+.Grupo1 {
     background-color: yellow;
-
     color: purple;
 }
 
-.Grupo2{
-
+.Grupo2 {
     background-color: orangered;
-
 }
 
-.Metal_Trancision{
-
+.Metal_Trancision {
     background-color: greenyellow;
-
 }
 
-.Grupo13{
-
+.Grupo13 {
     background-color: #F7C0E4;
-
 }
 
-.Grupo14{
-
-    background-color:#dbcd97;
-
+.Grupo14 {
+    background-color: #dbcd97;
 }
 
-.Grupo15{
-
+.Grupo15 {
     background-color: slateblue;
-
     color: greenyellow;
-
 }
 
-.Grupo16{
-
+.Grupo16 {
     background-color: red;
-
 }
 
-.Grupo17{
-
+.Grupo17 {
     background-color: #4ce682;
-
     color: purple;
-
 }
 
-.banca{
-
-    text-align: justify;
-
-    background-color: #16a085;
-
-    padding: 0;
-
-    margin: 5;
-
-
-
-    
-}
-
-.Zona_Verificacion{
-
-    border: solid black;    /*Hace que el borde sea solido y de color negro*/
-
-    padding: 10px;
-
-    display: inline-table;   
-
-    margin: 1;   
-
-    background-color: white;    
-
-}
-
-.Entrada_Verificacion{
-
-    border: solid black;
-}
-
-.validar_boton {
-    background-color:#17a3b8;
-	border-radius:4px;
-	display:inline-block;
-	cursor:pointer;
-	color:white;
-	font-family:Arial;
-	font-size:20px;
-	font-weight:bold;
-	padding:13px 32px;
-	text-decoration:none;
-
-}
-
-.zona_puntos{
-
+.filaElementos {
+    margin: 2%;
+    margin-bottom: 0;
     text-align: center;
-
-}
-
-.izquierda{
-
-    text-align: left;
-
-}
-
-.Pila{
-
-    text-align: center;
-    vertical-align: middle;
-}
-
-.Foto_Robar{
-    display:block;
-    background-color: black;
-    border: 5px solid white;
-    
 }

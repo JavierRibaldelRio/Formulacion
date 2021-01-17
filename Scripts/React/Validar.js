@@ -20,7 +20,9 @@ class Validacion extends React.Component {
     //Ejecutar la función de pasarcompuesto
     pasarDatosFuncionCompuesto() {
 
-        const elementosDisponiblesOrdenados = this.props.elementosDisponibles.sort(function (a, b) {
+        var elementosDisponiblesOrdenados = [...this.props.elementosDisponibles]
+
+        elementosDisponiblesOrdenados = elementosDisponiblesOrdenados.sort(function (a, b) {
             if (a.z > b.z) {
                 return 1;
             }
@@ -38,11 +40,20 @@ class Validacion extends React.Component {
 
         if (typeof salida === "number") {
 
-            alert("Has obtenido " + salida + " puntos.");
+            this.props.funcionNotificar("Has obtenido " + salida + " puntos.", true);
+
 
             //Actualiza el estado
-            this.props.funcionAlPulsar(salida);
+            this.props.funcionAlPulsar(salida, this.state.text.toLocaleLowerCase());
 
+        } else if (salida === false) {
+
+            this.props.funcionNotificar("Este compuesto no se puede crear", false);
+
+        }
+
+        if (baraja.lenght < 10) {
+            this.props.acabar();
         }
     }
 
@@ -51,43 +62,43 @@ class Validacion extends React.Component {
 
         return (
 
-            <div>
-                <table className="Zona_Verificacion">
 
-                    <tbody>
+            <table className="Zona_Verificacion">
 
-                        <tr>
+                <tbody>
 
-                            <td>
+                    <tr>
 
-                                Inserte el compuesto:
+                        <td>
+
+                            Inserte el compuesto:
 
                         </td>
 
-                        </tr>
+                    </tr>
 
-                        <tr>
-                            <td>
-                                <input onChange={this.cambiarTexto.bind(this)} />
+                    <tr>
+                        <td>
+                            <input onChange={this.cambiarTexto.bind(this)} />
 
-                            </td>
+                        </td>
 
-                        </tr>
+                    </tr>
 
-                        <tr>
+                    <tr>
 
-                            <td>
-                                {/*Boton */}
-                                <button className="myButton" onClick={this.pasarDatosFuncionCompuesto.bind(this)}>Validar</button>
+                        <td>
+                            {/*Boton */}
+                            <button disabled={!this.props.jugando} className="Boton_Verificacion Boton_Normal" onClick={this.pasarDatosFuncionCompuesto.bind(this)}>Validar</button>
 
-                            </td>
+                        </td>
 
-                        </tr>
 
-                    </tbody>
-                </table>
+                    </tr>
 
-            </div>
+                </tbody>
+            </table>
+
 
 
         )

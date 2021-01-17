@@ -8,7 +8,6 @@ function comprobarCompuesto(elementos, compuesto) {
     if (typeof compuesto != "string") {
 
         //Error
-        alert("Por favor inserte un valor valido.");
 
         console.log(typeof compuesto);
 
@@ -99,8 +98,6 @@ function comprobarCompuesto(elementos, compuesto) {
 
                 } else {
 
-                    alert(errorCompuesto);  //Error
-
                     return false;
 
                 }
@@ -139,7 +136,6 @@ function comprobarCompuesto(elementos, compuesto) {
             //Si el prefijo es -1 error
             if (prefijo === -1) {
 
-                alert(errorCompuesto);
 
                 return false
 
@@ -149,7 +145,6 @@ function comprobarCompuesto(elementos, compuesto) {
 
             if (salida === false) {
 
-                alert("Este compuesto no se puede crear");
 
             }
 
@@ -158,7 +153,6 @@ function comprobarCompuesto(elementos, compuesto) {
 
         //Codigo de los compuestos de hidruros y las columnas 16 y17 
 
-        alert(errorCompuesto);  //Error
 
         return false;
 

@@ -10,7 +10,7 @@
 ### Descripción del proyecto:
 
 #### Herramientas:
-  
+
   - Utilizando los lenguajes de html y JavaScript, y css para los formatear el texto
   - Uso de la ID VScode (Visual Studio Code) para el desarollo
   - Uso de Chrome o Chromium o firefox (depende de la situación) para ver la página web
@@ -175,10 +175,10 @@
 
 **Martes 29**
 
-<u>IMPORTANTE: Ha diferencia de otros lenguajes derivados de C como C++ C# o Java, al pasar un objeto(array,clase o función) se pasa como referencia, lo que en c++ se haria con & . Para evitarlo hay que hacer una copia previa. Para el array lo poudes hacer asi: *</u>
+<u>IMPORTANTE: Ha diferencia de otros lenguajes derivados de C como C++ C# o Java, al pasar un objeto(array,clase o función) se pasa como referencia, lo que en c++ se haria con & . Para evitarlo hay que hacer una copia previa. Para el array lo poudes hacer asi: </u>
 
 > ```javascript
-> var arr1 = [1,2,3,4,5,6,7,8,9,];
+> var arr1 = [1,2,3,4,5,6,7,8,9,10];
 > 
 > var arr2 = [...arr1];	//Necesario estar usando node
 > 
@@ -197,19 +197,69 @@
  - He corregido errores
  - He añadido la eliminación de cartas a los anfígenos y halógenos
 
- **Sabado 8 Casa**
+ **Sábado 9 Casa**
  - He intentado aprender a usar el debugger del VScode, sin resultado
- - He rediseñado la interfaz
+ - He re diseñado la interfaz
    - He cambiado los colores
    - He hecho más pequeña la foto de la carta a Robar
    - He añadido un marcador que te indica el número de vueltas a la baraja que queda
 -   He acabado de hacer todo lo que respecta a robar:
     - Eliminar las cartas al hacer un nuevo compuesto
-    - La baraj al acabar el numero de vueltas restantes ya no permite continuar
+    - La baraja al acabar el numero de vueltas restantes ya no permite continuar
+- He creado una nueva rama: **MejorarUI**, *UI User Interrface*, intefaz de usuario
+- He redondeado los bordes de:
+    - Banca
+    - Pila deRobar
+    - Marcadores
+    - Elemento
+    - Zona de verificación
+- He alineado a la izquierda el marcador y la zona de verificación
+- He editado la hoja de estilos
 
-  
+**Domingo 10 Casa**
+- He aprendido a "*instalar*" tipografía para html
+- He separado las hojas de sestilo en distintos archivos
+- He puesto a todo la tipografia Nunito
+- He "*instalado*" la tipografía Nunito para el proyecto
+- He puesto borde blanco a las cartas
+- He solucionado el error del salto de línea despues de Marcador y Pila de Robar. Resulta que despues de un div automáticamente se produce el salto de línea. SOLUCIÓN: eliminar el div
+- He creado el componente notificación y le he añadido su funcionalidad
+- He corregido errores que han avido al "*instalar*" en el proyecto la tipografía nunito
+- He conectado GitHub a Netlify
+- He creado un lugar donde guardar la aplicación para poder enseñara con más facilidad, esta enlazada con la rama principal. Es decir; que los cambios en la web solo se verán reflejados cuando el *push* o el *merge* hayan sido efectuados en o hacía la rama principal. En este caso **main**
+- He eliminado los alerts
+- Le he dado formato al botón
+- He creado la pantalla de fín
+- He empezado a trabajar con el boton de empezar
+
+**Lunes 11**
+- He editado el botón  
+- He creado un botón de pausar
+- He comentado
+
+**Martes 12**
+- He comentado
+- He tenido problemas con git
+- He añadido un contador de compustos
+
+**Viernes 15**
+- He creado el componente de la lista
+- He añadido el componente lista
+- He empezado a darle formatoa al componente lista
+
+**Sabado 16**
+- He acabdado de darle formato al componente lista 
+- He hecho un marcador con el numero de compuestos creados
+
+**Domingo 17 Casa**
+- He solucionado un error que había al validar
+- He editado el btón de empezar
+- He creado el botón de terminar
+
+
 
 
 
 
 Javier Ribal del Río 3ºB Nº22 Informática				
+

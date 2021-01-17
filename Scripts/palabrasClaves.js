@@ -31,3 +31,6 @@ const sufijo16Y17 = "uro";  //Sin guión
 const sulfuro = "sulfuro";
 
 const numeroDeCartas = 8;
+
+//Almacena el numero de segundos de la notificación
+const tiempoNotificacionSegundos = 5;

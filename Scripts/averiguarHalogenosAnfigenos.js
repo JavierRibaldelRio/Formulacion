@@ -74,7 +74,6 @@ function averiguarHalogenosYAnfigenos(texto, mapa, prefijoHidrogeno, elementosDi
 
     } else {
 
-        alert("Este compuesto no se puede crear");
 
         return false
 

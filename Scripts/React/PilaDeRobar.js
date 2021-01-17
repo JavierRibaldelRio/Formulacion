@@ -2,7 +2,7 @@ class PilaRobar extends React.Component {
 
     constructor(props) {
         super(props)
-        this.state = { cartaARobar: undefined, mazosRestantes: 3, contador: 0 };
+        this.state = { cartaARobar: undefined, mazosRestantes: 2, contador: 0 };
     }
 
     //Función que se ejecuta al robar
@@ -19,8 +19,11 @@ class PilaRobar extends React.Component {
         //Si no cambias el mazo
         else if (this.state.contador >= baraja.length && this.state.mazosRestantes >= 0) {
 
+
             this.setState({ mazosRestantes: this.state.mazosRestantes - 1, contador: 0, cartaARobar: undefined })
 
+        } else {
+            this.props.terminarJuego();
         }
     }
 
@@ -37,7 +40,7 @@ class PilaRobar extends React.Component {
                             <td></td>
 
                             <td>
-                                <input type="image" className="Foto_Robar" src="Fotografias/PatronCartas/patroncarta.png" height="180" width="160" onClick={this.robar.bind(this)}></input>
+                                <input disabled={!this.props.jugando} type="image" className="Foto_Robar" src="Fotografias/PatronCartas/patroncarta.png" height="180" width="160" onClick={this.robar.bind(this)}></input>
 
                             </td>
 

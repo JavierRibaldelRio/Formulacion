@@ -11,25 +11,23 @@ class Marcador extends React.Component {
 
         //El html
         return (
-            <div className="zona_puntos">
-                {/*Tabla donde estan los puntos*/}
+            ///*Tabla donde estan los puntos*/}
 
-                <table className="Zona_Verificacion">
+            <table className="Zona_Verificacion">
 
-                    <tbody>
+                <tbody>
 
-                        <tr>
+                    <tr>
 
-                            <td>{this.props.texto}:</td>
+                        <td>{this.props.texto}:</td>
 
-                            <td>{this.props.puntuacion}</td>
+                        <td>{this.props.puntuacion}</td>
 
-                        </tr>
+                    </tr>
 
-                    </tbody>
+                </tbody>
 
-                </table>
-            </div>
+            </table>
         )
     }
 
