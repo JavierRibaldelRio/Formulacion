@@ -20,7 +20,9 @@ class Validacion extends React.Component {
     //Ejecutar la función de pasarcompuesto
     pasarDatosFuncionCompuesto() {
 
-        const elementosDisponiblesOrdenados = this.props.elementosDisponibles.sort(function (a, b) {
+        var elementosDisponiblesOrdenados = [...this.props.elementosDisponibles]
+
+        elementosDisponiblesOrdenados = elementosDisponiblesOrdenados.sort(function (a, b) {
             if (a.z > b.z) {
                 return 1;
             }
@@ -90,6 +92,7 @@ class Validacion extends React.Component {
                             <button disabled={!this.props.jugando} className="Boton_Verificacion Boton_Normal" onClick={this.pasarDatosFuncionCompuesto.bind(this)}>Validar</button>
 
                         </td>
+
 
                     </tr>
 

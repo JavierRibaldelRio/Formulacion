@@ -44,28 +44,20 @@ class Banca extends React.Component {
     //roba una carta
     robarCarta(cartaARobar) {
 
-        this.setState({ arrayObjeto: [...cartasDisponibles] });
-
-
         //Almmacen la ultima carta Robada
 
-        //Si la ultima es distinta a indefinda
-        if (cartaARobar != undefined) {
+        // //Si la ultima es distinta a indefinda
+        // if (cartaARobar != undefined) {
 
-            //La guarda en esta variable
-            const ultimaCartaRobada = cartaARobar;
+        //     //La guarda en esta variable
+        //     const ultimaCartaRobada = cartaARobar;
 
-            //Y lo añade a la baraja
-            baraja.push(ultimaCartaRobada);
-        }
+        //     //Y lo añade a la baraja
+        //     baraja.push(ultimaCartaRobada);
+        // }
 
         //Elimina la 1ª casilla del array baraja
         baraja.splice(0, 1);
-
-        //Le da a arrayObjeto el valor de cartasdisponibles
-        this.setState({ arrayObjeto: [...cartasDisponibles] });
-
-        //Le da a arrayObjeto el valor de cartasdisponibles y le añade baraja [o]
 
         this.setState({ arrayObjeto: [...cartasDisponibles].concat(baraja[0]) });
 
@@ -136,6 +128,7 @@ class Banca extends React.Component {
                     <div className="Fin_Juego_Div Fin_Juego"  >
                         <p className="Fin_Juego">EL JUEGO SE HA ACABADO, HAS OBTENIDO UN TOTAL DE {this.state.puntosTotales} PUNTOS, Y FORMULADO {this.state.compuestosCreados.length} COMPUESTOS. </p>
                         <br></br>
+
                         <ListaCompuestos lista={this.state.compuestosCreados}></ListaCompuestos>
 
                     </div>
@@ -147,6 +140,22 @@ class Banca extends React.Component {
             )
 
         } else {
+            //Almacena la ID de el boton lo cual hace que que cambie le tamaño del botón
+            var idBoton, botonAcabar;    // Almacena el 
+            if (this.state.textoBotonControl === "Empezar") {
+                idBoton = "Empezar";
+
+                //Almacena lo que pondrá
+                botonAcabar = <p></p>;
+            }
+
+            else {
+                idBoton = "Boton_de_Control";
+                //Almacena el botón que creará cuando se este jugando
+                botonAcabar = <button id={idBoton} onClick={this.terminar.bind(this)} className="Boton_Normal Boton_Play_Pause">Terminar</button>
+
+            }
+
             return (
 
                 <div>
@@ -239,9 +248,16 @@ class Banca extends React.Component {
 
                                 </td>
                                 {/* Botón de empezar o pausar */}
-                                <td className="Panel_Control"><button className="Boton_Normal Boton_Play_Pause" onClick={this.pausarOContinuar.bind(this)}>{this.state.textoBotonControl}</button></td>
+                                <td className="Panel_Control"><button id={idBoton} className="Boton_Normal Boton_Play_Pause" onClick={this.pausarOContinuar.bind(this)}>{this.state.textoBotonControl}</button>
+
+                                    <br></br>
+
+                                    {botonAcabar}
+                                </td>
 
                             </tr>
+
+
                         </tbody>
                     </table>
                 </div>

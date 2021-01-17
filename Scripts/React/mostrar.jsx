@@ -4,6 +4,7 @@ ReactDOM.render(
 
     {/* Crea el objeto banca */}
 
+
     <Banca></Banca>
 
   </div>,

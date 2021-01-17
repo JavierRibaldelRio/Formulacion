@@ -251,6 +251,12 @@
 - He acabdado de darle formato al componente lista 
 - He hecho un marcador con el numero de compuestos creados
 
+**Domingo 17 Casa**
+- He solucionado un error que había al validar
+- He editado el btón de empezar
+- He creado el botón de terminar
+
+
 
 
 
