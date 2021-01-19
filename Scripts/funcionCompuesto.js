@@ -151,6 +151,43 @@ function comprobarCompuesto(elementos, compuesto) {
             return salida;
         }
 
+        else if (compuesto.includes(oxido) && buscarElementoEnMapa(mapElementos, "O")) {
+            // console.log("Incluye hidruro");
+
+            var hidruroIncorrecto = true;   //para comprobar si hay que avisar al usuario de un error
+
+            //Si lo es comprueba cuantas meleculas tiene de hidruro
+            if (compuesto.startsWith(hidruro) || compuesto.startsWith(prefijos[1] + hidruro)) {
+
+                
+
+            }
+
+
+            //Lo que se tiene que ejecutar si es un hidruro
+            function ejecucionHidruro(numero) {
+
+                hidruroIncorrecto = false;  // Para marcar que no ahí error
+
+                var sal = averiguarCompuestoHidruro(compuesto, mapElementos, numero);
+
+                // console.log(sal)
+
+                if (typeof sal === "number") {
+
+
+                    return sal;
+
+
+                } else {
+
+                    return false;
+
+                }
+
+            }
+        }
+
         //Codigo de los compuestos de hidruros y las columnas 16 y17 
 
 
