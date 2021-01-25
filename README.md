@@ -256,6 +256,9 @@
 - He editado el btón de empezar
 - He creado el botón de terminar
 
+**Lunes 25**
+- He implementado los Óxidos
+
 
 
 
