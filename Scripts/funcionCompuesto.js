@@ -24,85 +24,87 @@ function comprobarCompuesto(elementos, compuesto) {
         //Comprueba si es un hidruro
         if (compuesto.includes(hidruro) && comprobarSiHayHidrogeno(mapElementos)) {
 
-            // console.log("Incluye hidruro");
+            // // console.log("Incluye hidruro");
 
-            var hidruroIncorrecto = true;   //para comprobar si hay que avisar al usuario de un error
+            // var hidruroIncorrecto = true;   //para comprobar si hay que avisar al usuario de un error
 
-            //Si lo es comprueba cuantas meleculas tiene de hidruro
-            if (compuesto.startsWith(hidruro) || compuesto.startsWith(prefijos[1] + hidruro)) {
+            // //Si lo es comprueba cuantas meleculas tiene de hidruro
+            // if (compuesto.startsWith(hidruro) || compuesto.startsWith(prefijos[1] + hidruro)) {
 
-                // console.log("mono");
+            //     // console.log("mono");
 
-                const resultado = ejecucionHidruro(1);  //Lo que se ha de ejecutar en caso de que sea un hidrudo
+            //     const resultado = ejecucionHidruro(1);  //Lo que se ha de ejecutar en caso de que sea un hidrudo
 
-                //Si es falso devuelves resultado
-                if (false === resultado) {
+            //     //Si es falso devuelves resultado
+            //     if (false === resultado) {
 
-                    return false;
+            //         return false;
 
-                }
+            //     }
 
-                //Si no es falso y es verdadero devuelves true
-                else if (typeof resultado === "number") {
+            //     //Si no es falso y es verdadero devuelves true
+            //     else if (typeof resultado === "number") {
 
-                    return resultado;
+            //         return resultado;
 
-                }
+            //     }
 
-            } else {
+            // } else {
 
-                //Se ejecuta una vez por cada prefijo
-                for (var i = 2; i < numeroDePrefijos; i++) {
+            //     //Se ejecuta una vez por cada prefijo
+            //     for (var i = 2; i < numeroDePrefijos; i++) {
 
-                    //Comprueba con que prefijos coinciden con el prefijo
-                    if (compuesto.startsWith(prefijos[i] + hidruro)) {
+            //         //Comprueba con que prefijos coinciden con el prefijo
+            //         if (compuesto.startsWith(prefijos[i] + hidruro)) {
 
-                        const resultado = ejecucionHidruro(i);  //Lo que se ha de ejecutar en caso de que sea un hidrudo
+            //             const resultado = ejecucionHidruro(i);  //Lo que se ha de ejecutar en caso de que sea un hidrudo
 
-                        //Si es falso devuelves resultado
-                        if (false === resultado) {
+            //             //Si es falso devuelves resultado
+            //             if (false === resultado) {
 
-                            return false;
+            //                 return false;
 
-                        }
+            //             }
 
-                        //Si no es falso y es verdadero devuelves true
-                        else if (typeof resultado === "number") {
+            //             //Si no es falso y es verdadero devuelves true
+            //             else if (typeof resultado === "number") {
 
-                            return resultado;
+            //                 return resultado;
 
-                        }
+            //             }
 
-                        i = numeroDePrefijos; //Para que no lo comprueve más el for, de esa forma se deja de comprobar si el prefijo es el mismi
-                    }
+            //             i = numeroDePrefijos; //Para que no lo comprueve más el for, de esa forma se deja de comprobar si el prefijo es el mismi
+            //         }
 
-                }
+            //     }
 
-            }
-
-
-            //Lo que se tiene que ejecutar si es un hidruro
-            function ejecucionHidruro(numero) {
-
-                hidruroIncorrecto = false;  // Para marcar que no ahí error
-
-                var sal = averiguarCompuestoHidruro(compuesto, mapElementos, numero);
-
-                // console.log(sal)
-
-                if (typeof sal === "number") {
+            // }
 
 
-                    return sal;
+            // //Lo que se tiene que ejecutar si es un hidruro
+            // function ejecucionHidruro(numero) {
+
+            //     hidruroIncorrecto = false;  // Para marcar que no ahí error
+
+            //     var sal = averiguarCompuestoHidruro(compuesto, mapElementos, numero);
+
+            //     // console.log(sal)
+
+            //     if (typeof sal === "number") {
 
 
-                } else {
+            //         return sal;
 
-                    return false;
 
-                }
+            //     } else {
 
-            }
+            //         return false;
+
+            //     }
+
+            // }
+
+            console.log(comprobarCompuestoBinario(hidruro, compuesto, mapElementos));
 
         }
 
@@ -159,7 +161,7 @@ function comprobarCompuesto(elementos, compuesto) {
             //Si lo es comprueba cuantas meleculas tiene de hidruro
             if (compuesto.startsWith(hidruro) || compuesto.startsWith(prefijos[1] + hidruro)) {
 
-                
+
 
             }
 
