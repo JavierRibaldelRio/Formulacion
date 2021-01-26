@@ -4,8 +4,14 @@ function comprobarCompuestoBinario(compuestoBinarioABuscar, compuesto, mapElemen
 
     var binarioIncorrecto = true;   //para comprobar si hay que avisar al usuario de un error
 
+    var primerPrefijo = prefijos[1];
+    //Como el monoóxido lleva solo f
+    if(compuestoBinarioABuscar === oxido){
+        primerPrefijo = "mon"
+    }
+
     //Si lo es comprueba cuantas meleculas tiene de hidruro
-    if (compuesto.startsWith(compuestoBinarioABuscar) || compuesto.startsWith(prefijos[1] + compuestoBinarioABuscar)) {
+    if (compuesto.startsWith(compuestoBinarioABuscar) || compuesto.startsWith(primerPrefijo + compuestoBinarioABuscar)) {
 
         // console.log("mono");
 

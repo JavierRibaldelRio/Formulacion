@@ -259,6 +259,13 @@
 **Lunes 25**
 - He implementado los Óxidos
 
+**Martes 26**
+- He corregido el error de monóxido
+
+**Proximo dia**
+
+- [ ] hidruro de (ERROR)
+
 
 
 
