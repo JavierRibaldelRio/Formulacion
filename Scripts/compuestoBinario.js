@@ -1,12 +1,20 @@
 function comprobarCompuestoBinario(compuestoBinarioABuscar, compuesto, mapElementos, elementos) {
 
+    //Comprobar si el compuesto tiene las suficientes letras para valorarse
+
+    if (compuesto.trim().split(" ").length != 3) {
+
+        return false;
+
+    }
+
     // console.log("Incluye hidruro");
 
     var binarioIncorrecto = true;   //para comprobar si hay que avisar al usuario de un error
 
     var primerPrefijo = prefijos[1];
     //Como el monoóxido lleva solo f
-    if(compuestoBinarioABuscar === oxido){
+    if (compuestoBinarioABuscar === oxido) {
         primerPrefijo = "mon"
     }
 

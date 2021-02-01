@@ -262,9 +262,13 @@
 **Martes 26**
 - He corregido el error de monóxido
 
-**Proximo dia**
+  **Proximo dia**
 
-- [ ] hidruro de (ERROR)
+  - [x] hidruro de (ERROR) Cuando tiene menos de tres palabra
+
+**Lunes 1**
+- He solucionado el error del día anterior
+
 
 
 
