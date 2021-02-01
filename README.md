@@ -256,6 +256,20 @@
 - He editado el btón de empezar
 - He creado el botón de terminar
 
+**Lunes 25**
+- He implementado los Óxidos
+
+**Martes 26**
+- He corregido el error de monóxido
+
+  **Proximo dia**
+
+  - [x] hidruro de (ERROR) Cuando tiene menos de tres palabra
+
+**Lunes 1**
+- He solucionado el error del día anterior
+
+
 
 
 

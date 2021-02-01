@@ -48,6 +48,8 @@ class Validacion extends React.Component {
 
         } else if (salida === false) {
 
+
+
             this.props.funcionNotificar("Este compuesto no se puede crear", false);
 
         }
