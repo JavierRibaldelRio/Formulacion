@@ -34,3 +34,7 @@ const numeroDeCartas = 8;
 
 //Almacena el numero de segundos de la notificación
 const tiempoNotificacionSegundos = 5;
+
+//Almacena la palabra de los  oxidos
+
+const oxido = "óxido";

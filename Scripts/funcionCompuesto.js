@@ -22,87 +22,9 @@ function comprobarCompuesto(elementos, compuesto) {
         const compuestoPartido = compuesto.split(" ");
 
         //Comprueba si es un hidruro
-        if (compuesto.includes(hidruro) && comprobarSiHayHidrogeno(mapElementos)) {
+        if (compuesto.includes(hidruro) && buscarElementoEnMapa(mapElementos, "H")) {
 
-            // console.log("Incluye hidruro");
-
-            var hidruroIncorrecto = true;   //para comprobar si hay que avisar al usuario de un error
-
-            //Si lo es comprueba cuantas meleculas tiene de hidruro
-            if (compuesto.startsWith(hidruro) || compuesto.startsWith(prefijos[1] + hidruro)) {
-
-                // console.log("mono");
-
-                const resultado = ejecucionHidruro(1);  //Lo que se ha de ejecutar en caso de que sea un hidrudo
-
-                //Si es falso devuelves resultado
-                if (false === resultado) {
-
-                    return false;
-
-                }
-
-                //Si no es falso y es verdadero devuelves true
-                else if (typeof resultado === "number") {
-
-                    return resultado;
-
-                }
-
-            } else {
-
-                //Se ejecuta una vez por cada prefijo
-                for (var i = 2; i < numeroDePrefijos; i++) {
-
-                    //Comprueba con que prefijos coinciden con el prefijo
-                    if (compuesto.startsWith(prefijos[i] + hidruro)) {
-
-                        const resultado = ejecucionHidruro(i);  //Lo que se ha de ejecutar en caso de que sea un hidrudo
-
-                        //Si es falso devuelves resultado
-                        if (false === resultado) {
-
-                            return false;
-
-                        }
-
-                        //Si no es falso y es verdadero devuelves true
-                        else if (typeof resultado === "number") {
-
-                            return resultado;
-
-                        }
-
-                        i = numeroDePrefijos; //Para que no lo comprueve más el for, de esa forma se deja de comprobar si el prefijo es el mismi
-                    }
-
-                }
-
-            }
-
-
-            //Lo que se tiene que ejecutar si es un hidruro
-            function ejecucionHidruro(numero) {
-
-                hidruroIncorrecto = false;  // Para marcar que no ahí error
-
-                var sal = averiguarCompuestoHidruro(compuesto, mapElementos, numero);
-
-                // console.log(sal)
-
-                if (typeof sal === "number") {
-
-
-                    return sal;
-
-
-                } else {
-
-                    return false;
-
-                }
-
-            }
+            return comprobarCompuestoBinario(hidruro, compuesto, mapElementos, elementos);
 
         }
 
@@ -151,6 +73,13 @@ function comprobarCompuesto(elementos, compuesto) {
             return salida;
         }
 
+        else if (compuesto.includes(oxido) && buscarElementoEnMapa(mapElementos, "O")) {
+
+            return comprobarCompuestoBinario(oxido, compuesto, mapElementos, elementos);
+
+
+        }
+
         //Codigo de los compuestos de hidruros y las columnas 16 y17 
 
 
@@ -193,89 +122,6 @@ function comprobarCompuesto(elementos, compuesto) {
         return mapaElementos;   //Retorna el mapa
     }
 
-    function averiguarCompuestoHidruro(texto, mapa, prefijoHidrogeno) {
-
-        var devolver = false;   //Almacena lo que se va ha devolver
-
-        texto = texto.trim()    //Para quitar leos espacios a pricipio de palabra
-
-        var textoSeparado = texto.split(" ");   //Para separar las palabras en meterlas en un array invididual
-
-        // console.log(textoSeparado);
-
-        var elemento = textoSeparado[2];    //coger el tercer trozo de el array de palabras torceadas
-
-        var nombreSegundoElemento;
-
-        var numeroPrefijoSegundoElemento;
-
-        //Se ejecuta por cada casilla del mapa
-        mapa.forEach(function (valor, key) {
-
-            //Almacena el nombre del segundo compuesto
-            const nombre = key.nombre/*Coger la propiedad*/.toLocaleLowerCase();    //Para pasar a minusculas
-
-            //Si acaba con nombre
-            if (elemento.endsWith(nombre)) {
-
-                //Prefijo del 2º Elemnto
-
-                // console.log("iguales");
-
-                var prefijoMultipicador = elemento.split(nombre)[0]; //Sacar el prefijo
-
-                //Si no hay particula quiere decir que es 1(mono)
-                if (prefijoMultipicador === "") {
-
-                    numeroPrefijoSegundoElemento = 1;      //Ya que si no hay nada es mono
-
-                }
-
-                //Para encontrar el prefijo               
-                else {
-
-                    numeroPrefijoSegundoElemento = encontrarPrefijo(prefijoMultipicador);
-
-                }
-
-                // console.log(numeroPrefijoSegundoElemento);
-
-                //Si número de prefijo es -1 [ERROR] o es de un grupo de los anfigenos o Halogenos
-                if (numeroPrefijoSegundoElemento === -1 || key.grupo > 15) {
-
-                    return false;
-
-                }
-                //Devuelve -2
-
-                //Asigna a la variable del mapa
-
-                nombreSegundoElemento = nombre;
-
-                //Dice si es posible combinar los introducidios, sumar y comprobar valencias
-                devolver = comprobarSiPuedeGenerarCompuestos("hidrógeno", prefijoHidrogeno, nombre, numeroPrefijoSegundoElemento, mapa);
-
-            }
-
-        });
-
-        //Si es un numero
-        if (typeof devolver === "number") {
-
-            //Creamos la matriz del compuesto
-
-            const elementosUsados = ["hidrógeno", nombreSegundoElemento.toLocaleLowerCase()];
-
-            const repeticionesElementosUsados = [prefijoHidrogeno, numeroPrefijoSegundoElemento];
-
-            const mapaCompuesto = crearMapaCompuesto(elementosUsados, repeticionesElementosUsados);
-
-            deacartarCartasUsadas(mapaCompuesto, elementos);
-        }
-
-        return devolver;
-
-    }
 
     //Funcion para comprobar que prefijo es
 
