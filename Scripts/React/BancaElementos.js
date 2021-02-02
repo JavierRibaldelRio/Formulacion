@@ -131,8 +131,14 @@ class Banca extends React.Component {
 
                         <ListaCompuestos lista={this.state.compuestosCreados}></ListaCompuestos>
 
+                        <form className="Panel_Control">
+
+                            <button className="Boton_Play_Pause Boton_Normal">Volver a Jugar</button>
+
+                        </form>
+
+
                     </div>
-                    <br></br>
 
 
                 </div>
@@ -248,7 +254,9 @@ class Banca extends React.Component {
 
                                 </td>
                                 {/* Botón de empezar o pausar */}
-                                <td className="Panel_Control"><button id={idBoton} className="Boton_Normal Boton_Play_Pause" onClick={this.pausarOContinuar.bind(this)}>{this.state.textoBotonControl}</button>
+                                <td className="Panel_Control">
+
+                                    <button id={idBoton} className="Boton_Normal Boton_Play_Pause" onClick={this.pausarOContinuar.bind(this)}>{this.state.textoBotonControl}</button>
 
                                     <br></br>
 

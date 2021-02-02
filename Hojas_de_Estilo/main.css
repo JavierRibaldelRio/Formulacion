@@ -41,7 +41,7 @@ body {
 }
 
 .Lista_Compuestos {
-    list-style-type: lower-alpha;
+    list-style-type: square;
 }
 
 .Fin_Juego_Div {
