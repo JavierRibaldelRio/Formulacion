@@ -186,7 +186,7 @@
 
 ## 2021
 
-## Diciembre
+## Enero
 
 **Viernes 8 Informática**
 
@@ -266,8 +266,14 @@
 
   - [x] hidruro de (ERROR) Cuando tiene menos de tres palabra
 
+## Febrero
+
 **Lunes 1**
 - He solucionado el error del día anterior
+
+
+**Martes 2 Informática**
+- He quitado el *-1* a la valencia del óxigeno
 
 
 
