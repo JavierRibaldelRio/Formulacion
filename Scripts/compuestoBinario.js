@@ -122,8 +122,6 @@ function averiguarCompuestoBinario(texto, mapa, prefijoBinario1, primerCompuesto
 
             //Prefijo del 2º Elemnto
 
-            // console.log("iguales");
-
             var prefijoMultipicador = elemento.split(nombre)[0]; //Sacar el prefijo
 
             //Si no hay particula quiere decir que es 1(mono)

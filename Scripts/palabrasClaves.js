@@ -38,3 +38,6 @@ const tiempoNotificacionSegundos = 5;
 //Almacena la palabra de los  oxidos
 
 const oxido = "óxido";
+
+//Almacena la formula del agua
+const aguaSistematica = "óxido de dihidrógeno";

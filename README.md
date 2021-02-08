@@ -276,6 +276,9 @@
 - He quitado el *-1* a la valencia del óxigeno
 - He añadido un botón de volver a jugar
 
+**Lunes 8**
+- He añadido la escepción del agua
+
 
 
 

@@ -80,10 +80,9 @@ function comprobarCompuesto(elementos, compuesto) {
 
         }
 
-        //Codigo de los compuestos de hidruros y las columnas 16 y17 
 
 
-        return false;
+        return identificarCompuestosExcepcionales(compuesto, mapElementos, elementos);
 
     }
 
