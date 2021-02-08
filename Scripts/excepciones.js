@@ -15,6 +15,19 @@ function identificarCompuestosExcepcionales(compuesto, mapaElementos, elementos)
 
             break;
 
+        case "ozono":
+
+            mapaElementos.forEach(function (clave, valor) {
+
+                if (valor.nombre.toLowerCase() === "oxigeno" && valor >= 3) {
+                    console.log("Ozono");
+                }
+
+
+            })
+
+            break;
+
 
     }
 
