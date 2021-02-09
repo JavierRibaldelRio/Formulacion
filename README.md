@@ -276,6 +276,13 @@
 - He quitado el *-1* a la valencia del óxigeno
 - He añadido un botón de volver a jugar
 
+**Lunes 8**
+- He añadido la excepción del agua
+
+**Martes 9**
+- He añaddido la excepción del ozono
+- Me he dado cuenta de que hay un error en la función de calcular puntuación, solo vale para compuestos binarios y lo he correguido
+
 
 
 

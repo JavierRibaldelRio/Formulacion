@@ -80,10 +80,9 @@ function comprobarCompuesto(elementos, compuesto) {
 
         }
 
-        //Codigo de los compuestos de hidruros y las columnas 16 y17 
 
 
-        return false;
+        return identificarCompuestosExcepcionales(compuesto, mapElementos, elementos);
 
     }
 
@@ -159,15 +158,18 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
             //Se asegura de que los compuestos estan
             if (comprobarSiEstanLosCompuestos(primeraPalabra, prefijoPrimeraPalabra, mapa) && comprobarSiEstanLosCompuestos(segundaPalabra, prefijoSegundaPalabra, mapa)) {
 
+                //Almaceno lo que se va ha devolver
                 var devol;
 
+                //Array de objetos que almacena los objetos utilizados para este compuesto
                 var arrayCompuesto = crearArrayCompuesto(); //Crea un array corresponde al compuesto
 
                 //Devolver el valor de neutro
                 const devolver = neutro();
 
                 if (devolver === true) {
-                    devol = calcularPuntuacion(arrayCompuesto, prefijoPrimeraPalabra, prefijoSegundaPalabra);
+                    //Calcula puntaución, la cual requiere un mapa de el compuesto, para eso utilizo la función de crearMapaCompuesto la cual pide un array de elemen
+                    devol = calcularPuntuacion(crearMapaCompuestoPuntuacion(arrayCompuesto, [prefijoPrimeraPalabra, prefijoSegundaPalabra]));
 
                 }
 
@@ -196,7 +198,6 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
                     } else {
 
                         return -1;
-
                     }
 
                     //Suma todas las casillas de todos los arrays
@@ -213,11 +214,8 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
                                 if ((array1[i] + array2[j]) === 0) {
 
                                     return true;
-
                                 }
-
                             }
-
                         }
 
                         //Si no devuelve true devulve false
