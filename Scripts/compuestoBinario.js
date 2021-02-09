@@ -174,7 +174,7 @@ function averiguarCompuestoBinario(texto, mapa, prefijoBinario1, primerCompuesto
 
         const mapaCompuesto = crearMapaCompuesto(elementosUsados, repeticionesElementosUsados);
 
-        deacartarCartasUsadas(mapaCompuesto, elementos);
+        descartarCartasUsadas(mapaCompuesto, elementos);
     }
 
     return devolver;

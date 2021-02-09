@@ -1,6 +1,6 @@
 //Función que elimina las cartas usadas
 
-function deacartarCartasUsadas(compuesto, elementosEnBanca) {
+function descartarCartasUsadas(compuesto, elementosEnBanca) {
 
     var totalDeCartasUsadas;    //VAriable que almacena la suma de valores
 

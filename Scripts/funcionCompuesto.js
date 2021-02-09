@@ -195,7 +195,6 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
                     } else {
 
                         return -1;
-
                     }
 
                     //Suma todas las casillas de todos los arrays
@@ -212,11 +211,8 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
                                 if ((array1[i] + array2[j]) === 0) {
 
                                     return true;
-
                                 }
-
                             }
-
                         }
 
                         //Si no devuelve true devulve false
