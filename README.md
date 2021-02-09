@@ -277,7 +277,11 @@
 - He añadido un botón de volver a jugar
 
 **Lunes 8**
-- He añadido la escepción del agua
+- He añadido la excepción del agua
+
+**Martes 9**
+- He empezado ha añdir la excepción del ozono
+- Me he dado cuenta de que hay un error en la función de calcular puntuación, solo vale para compuestos binarios y lo he correguido
 
 
 

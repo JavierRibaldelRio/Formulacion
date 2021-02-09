@@ -17,13 +17,12 @@ function identificarCompuestosExcepcionales(compuesto, mapaElementos, elementos)
 
         case "ozono":
 
-            console.info("Ozono Reconocido");
 
 
             mapaElementos.forEach(function (clave, valor) {
 
                 if (valor.nombre.toLowerCase() === "oxigeno" && clave >= 3) {
-                    console.log("Ozono");
+
 
                 }
 
