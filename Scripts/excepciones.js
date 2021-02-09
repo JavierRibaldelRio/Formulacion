@@ -24,10 +24,15 @@ function identificarCompuestosExcepcionales(compuesto, mapaElementos, elementos)
                 if (valor.nombre.toLowerCase() === "oxigeno" && clave >= 3) {
 
 
+                    descartarCartasUsadas(crearMapaCompuesto(Array.from([valor.nombre.toLowerCase()]), Array.from([3])), elementos);
+
+                    //Calcula la puntuacion
+                    formulable = calcularPuntuacion(crearMapaCompuestoPuntuacion(Array.from([valor]), Array.from([3])));
+
                 }
 
 
-            })
+            });
 
             break;
 

@@ -1,13 +1,13 @@
 //Función que elimina las cartas usadas
 
-function descartarCartasUsadas(compuesto, elementosEnBanca) {
+function descartarCartasUsadas(mapaCompuesto, elementosEnBanca) {
 
     var totalDeCartasUsadas;    //VAriable que almacena la suma de valores
 
     var arrayValores = [];   //Matriz que almacena todos los valores
 
     //El valor es el numero de repeticiones y la clave el elemento
-    compuesto.forEach(function (valor, clave) {
+    mapaCompuesto.forEach(function (valor, clave) {
 
         arrayValores.push(valor);
 
