@@ -269,6 +269,7 @@
 ## Febrero
 
 **Lunes 1**
+
 - He solucionado el error del día anterior
 
 
@@ -277,11 +278,59 @@
 - He añadido un botón de volver a jugar
 
 **Lunes 8**
+
 - He añadido la excepción del agua
 
 **Martes 9**
-- He añaddido la excepción del ozono
+- He añadido la excepción del ozono
 - Me he dado cuenta de que hay un error en la función de calcular puntuación, solo vale para compuestos binarios y lo he correguido
+
+Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de informática, y también he tenido que aprender a formular las Sales Binararias
+
+
+
+**Miércoles 17 Clase de Física y  Química (Laura)**
+
+- Me he dado cuenta de muchos errores que tengo en el juego
+
+- [ ] Los elementos si se puden se han de simplificar
+
+>~~Li<sub>2</sub>H<sub>2</sub>~~  NO → LiH Sí :happy:
+
+- [ ] Las columnas de los Anfígenos y los Halógenos al combinarse con el hidrógneo siempre toman valencia |1| en caso de los Halógenos y |2| en el caso de los Anfígenos. Por lo tanto.esto genera un número limitado de posibles combinaciones
+
+    Halógenos
+    >HF
+    > HCl
+    > HBr
+    > HI
+
+    Anfígenos
+
+    >  H<sub>2</sub>S
+    >  H<sub>2</sub>Se
+
+
+- [ ] Al robar una carta y realizar un compuesto sin la carta robada esta se duplica, aparece en la banca y en la pila de robar; pero solo se encuentra una vez repetida en el array de elementos disponibles
+
+- [ ] Los Carbonoides (Sl, C), los nitrogenoides (N, P, As, Sb) y el Boro (B).Se utilizan con una única valencia en el caso de los Carbonoides (Si, C) solo se utilizara la valencia de | 4 | y en el caso de los nitrogenoides (N, P, As, Sb) y el boro (B) se utlizara la valencia de | 3 |. Esto genera un número limitado de combinaciones
+
+  Boro
+
+  >BH<sub>3</sub>
+
+  Carbonoides
+  
+  > CH<sub>4</sub>
+  > SiH<sub>4</sub>
+
+  Nitrogenoides
+  
+  >NH<sub>3</sub> [Amoniaco]
+  >PH<sub>3</sub> 
+  >AsH<sub>3</sub> 
+  >SbH<sub>3</sub> 
+
 
 
 
