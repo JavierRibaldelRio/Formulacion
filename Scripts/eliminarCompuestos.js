@@ -47,6 +47,8 @@ function descartarCartasUsadas(mapaCompuesto, elementosEnBanca) {
 
     if (cartasDisponibles.length < 8) {
 
+        cartaRobarUsada = true
+
         const cartasARobar = 8 - cartasDisponibles.length;
 
         for (var i = 0; i < cartasARobar; i++) {
@@ -54,8 +56,9 @@ function descartarCartasUsadas(mapaCompuesto, elementosEnBanca) {
             //Añadir la primera carta a la banca
             cartasDisponibles.push(baraja.splice(2, 1)[0]);
 
-            ; //Eliminar la segunda carta de la baraja
+            //Eliminar la segunda carta de la baraja
 
+            //Prdena
             cartasDisponibles.sort(function (a, b) {
                 if (a.z > b.z) {
                     return 1;
