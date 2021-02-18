@@ -2,7 +2,7 @@
 function averiguarHalogenosYAnfigenos(texto, mapa, prefijoHidrogeno, elementosDisponibles) {
 
     //Array de cartas de todos los Halógenos y Anfígenos
-    var cartasAnfigenoHalogenos = encontrarEnBancaAnfigenosYHalogenos();
+    var cartasHidracidos = encontrarEnBancaAnfigenosYHalogenos();
 
     //Separa el texto en palabras y coge la primera
     var primerElemento = texto.split(" ")[0];
@@ -16,14 +16,14 @@ function averiguarHalogenosYAnfigenos(texto, mapa, prefijoHidrogeno, elementosDi
     //Primer elmento almacenado correctamente
     var elemento1;
 
-    for (var i = 0; i < cartasAnfigenoHalogenos.length; i++) {
+    for (var i = 0; i < cartasHidracidos.length; i++) {
 
         //Primer elemento
         switch (primerElementoSinPrefijoConSufijo.substr(0, 2)) {
 
-            case cartasAnfigenoHalogenos[i].nombre.toLowerCase().substr(0, 2):
+            case cartasHidracidos[i].nombre.toLowerCase().substr(0, 2):
 
-                elemento1 = cartasAnfigenoHalogenos[i].nombre.toLowerCase();
+                elemento1 = cartasHidracidos[i].nombre.toLowerCase();
 
                 break;
 
@@ -81,19 +81,19 @@ function averiguarHalogenosYAnfigenos(texto, mapa, prefijoHidrogeno, elementosDi
 
     function encontrarEnBancaAnfigenosYHalogenos() {
 
-        var arrayDeAnfigenosYHalogenos = []; elemento1
+        var arrayDeHidracidos = []; elemento1
 
         for (var i = 0; i < elementosDisponibles.length; i++) {
 
             if (elementosDisponibles[i].grupo === 16 || elementosDisponibles[i].grupo === 17) {
 
-                arrayDeAnfigenosYHalogenos.push(elementosDisponibles[i]);
+                arrayDeHidracidos.push(elementosDisponibles[i]);
 
             }
 
         }
 
-        return arrayDeAnfigenosYHalogenos;
+        return arrayDeHidracidos;
 
     }
 
