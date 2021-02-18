@@ -293,7 +293,7 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 - Me he dado cuenta de muchos errores que tengo en el juego
 
-- [ ] Los elementos si se puden se han de simplificar
+- [x] Los elementos si se puden se han de simplificar
 
 >~~Li<sub>2</sub>H<sub>2</sub>~~  NO → LiH Sí :happy:
 
@@ -330,6 +330,10 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
   >PH<sub>3</sub> 
   >AsH<sub>3</sub> 
   >SbH<sub>3</sub> 
+
+  **Jueves 18 Casa**
+  - He creado una rama Errores
+  - He solucionado uno de los Errores
 
 
 
