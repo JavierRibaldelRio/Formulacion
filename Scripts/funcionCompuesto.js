@@ -155,6 +155,52 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
         //Se asegura de que la suma de los dos prefijos es menor que al número total de prefijos
         if (prefijoPrimeraPalabra + prefijoSegundaPalabra <= numeroDePrefijos) {
 
+            //Asegurarse de que el compuesto esta simplificado al máximo
+            if (prefijoPrimeraPalabra > 1 && prefijoSegundaPalabra > 1) {
+
+                //Almacena el valor maximo del número de oxidación
+
+                var max, min;
+
+                //Almacena el resultado de la división de max/min
+
+                let division;
+
+                //Si el mayor es primero
+                if (prefijoPrimeraPalabra > prefijoSegundaPalabra) {
+
+                    max = prefijoPrimeraPalabra;
+
+                    min = prefijoSegundaPalabra;
+
+                }
+                //sino
+                else {
+                    max = prefijoSegundaPalabra;
+
+                    min = prefijoPrimeraPalabra;
+
+                }
+
+                //Divide el máximo entre el mínimo
+                division = max / min;
+
+                console.log("funciona correctamente");
+
+                console.info(division);
+
+                //Si el valor de la division es igual a la prate entera de la división
+                //Es decir comprueba si es entero o decimal
+
+                if (division === Math.floor(division)/*Math.floor() saca la parte entera de la coma*/) {
+
+                    return false;
+
+                }
+
+
+            }
+
             //Se asegura de que los compuestos estan
             if (comprobarSiEstanLosCompuestos(primeraPalabra, prefijoPrimeraPalabra, mapa) && comprobarSiEstanLosCompuestos(segundaPalabra, prefijoSegundaPalabra, mapa)) {
 
