@@ -15,6 +15,8 @@ function comprobarCompuesto(elementos, compuesto) {
     //si es un string
     else {
 
+        compuesto = compuesto.trim(); //Quita si hay los primes y ultimos espacios
+
         compuesto = compuesto.toLocaleLowerCase();  //Pasa a minusculas
 
         const mapElementos = crearMap();    //Crear el mapa de les elementos
@@ -42,33 +44,22 @@ function comprobarCompuesto(elementos, compuesto) {
             var prefijo;
 
 
-            //Si no hay nada es que es mono
-            if (prefijoTexto[0] === "") {
+            //Si no hay prefijo o es mono
+            if (prefijoTexto[0] === "" || prefijoTexto === prefijos[1]) {
 
                 prefijo = 1;
 
             }
-            //Si no es mono encuentra el prefijo
-            else {
+            //es di
+            else if (prefijoTexto[0] === prefijos[2]) {
 
-                prefijo = encontrarPrefijo(prefijoTexto[0]);
+                prefijo = 2;
 
-            }
-
-            //Si el prefijo es -1 error
-            if (prefijo === -1) {
-
-
-                return false
-
+            } else {
+                return false;
             }
 
             const salida = averiguarHalogenosYAnfigenos(compuesto, mapElementos, prefijo, elementos);
-
-            if (salida === false) {
-
-
-            }
 
             return salida;
         }
