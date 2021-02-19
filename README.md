@@ -342,6 +342,9 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 - He solucionado 3 de los Errores
 
+**Viernes 19 Informática**
+- He solucionado el cuarto error 
+
   
 
 

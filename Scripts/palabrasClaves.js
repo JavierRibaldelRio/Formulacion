@@ -41,3 +41,8 @@ const oxido = "óxido";
 
 //Almacena la formula del agua
 const aguaSistematica = "óxido de dihidrógeno";
+
+//Almacena el hidrógeno
+const hidrogeno = "hidrógeno";
+//Almacena el carbono
+const carbono = "carbono";
