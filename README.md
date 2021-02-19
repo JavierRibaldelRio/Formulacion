@@ -318,7 +318,7 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 - [x] Al robar una carta y realizar un compuesto sin la carta robada esta se duplica, aparece en la banca y en la pila de robar; pero solo se encuentra una vez repetida en el array de elementos disponibles
 
-- [ ] Los Carbonoides (Sl, C), los nitrogenoides (N, P, As, Sb) y el Boro (B).Se utilizan con una única valencia en el caso de los Carbonoides (Si, C) solo se utilizara la valencia de | 4 | y en el caso de los nitrogenoides (N, P, As, Sb) y el boro (B) se utlizara la valencia de | 3 |. Esto genera un número limitado de combinaciones
+- [x] Los Carbonoides (Sl, C), los nitrogenoides (N, P, As, Sb) y el Boro (B).Se utilizan con una única valencia en el caso de los Carbonoides (Si, C) solo se utilizara la valencia de | 4 | y en el caso de los nitrogenoides (N, P, As, Sb) y el boro (B) se utlizara la valencia de | 3 |. Esto genera un número limitado de combinaciones
 
   Boro
 
@@ -341,6 +341,9 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 - He creado una rama Errores
 
 - He solucionado 3 de los Errores
+
+**Viernes 19 Informática**
+- He solucionado el cuarto error 
 
   
 

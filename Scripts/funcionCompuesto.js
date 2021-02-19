@@ -146,6 +146,9 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
         //Se asegura de que la suma de los dos prefijos es menor que al número total de prefijos
         if (prefijoPrimeraPalabra + prefijoSegundaPalabra <= numeroDePrefijos) {
 
+            //Eliminar los Nitrogenoides el carbonoide
+
+
             //Asegurarse de que el compuesto esta simplificado al máximo
             if (prefijoPrimeraPalabra > 1 && prefijoSegundaPalabra > 1) {
 
@@ -200,6 +203,26 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
 
                 //Array de objetos que almacena los objetos utilizados para este compuesto
                 var arrayCompuesto = crearArrayCompuesto(); //Crea un array corresponde al compuesto
+
+                if(arrayCompuesto[0].nombre.toLocaleLowerCase() === hidrogeno){
+
+                    console.log("CArbonoides,Nitrogenoides");
+
+                    if(arrayCompuesto[1].grupo === 15 ){
+
+                        if (prefijoPrimeraPalabra != 3){
+                            return false;
+                        }
+
+                    } else  if(arrayCompuesto[1].nombre.nombretoLocaleLowerCase() === carbono ){
+
+                        if (prefijoPrimeraPalabra != 4){
+                            return false;
+                        }
+
+                    }
+
+                }
 
                 //Devolver el valor de neutro
                 const devolver = neutro();
