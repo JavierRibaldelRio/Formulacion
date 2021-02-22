@@ -15,6 +15,8 @@ function comprobarCompuesto(elementos, compuesto) {
     //si es un string
     else {
 
+        compuesto = compuesto.trim(); //Quita si hay los primes y ultimos espacios
+
         compuesto = compuesto.toLocaleLowerCase();  //Pasa a minusculas
 
         const mapElementos = crearMap();    //Crear el mapa de les elementos
@@ -42,33 +44,22 @@ function comprobarCompuesto(elementos, compuesto) {
             var prefijo;
 
 
-            //Si no hay nada es que es mono
-            if (prefijoTexto[0] === "") {
+            //Si no hay prefijo o es mono
+            if (prefijoTexto[0] === "" || prefijoTexto === prefijos[1]) {
 
                 prefijo = 1;
 
             }
-            //Si no es mono encuentra el prefijo
-            else {
+            //es di
+            else if (prefijoTexto[0] === prefijos[2]) {
 
-                prefijo = encontrarPrefijo(prefijoTexto[0]);
+                prefijo = 2;
 
-            }
-
-            //Si el prefijo es -1 error
-            if (prefijo === -1) {
-
-
-                return false
-
+            } else {
+                return false;
             }
 
             const salida = averiguarHalogenosYAnfigenos(compuesto, mapElementos, prefijo, elementos);
-
-            if (salida === false) {
-
-
-            }
 
             return salida;
         }
@@ -155,6 +146,55 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
         //Se asegura de que la suma de los dos prefijos es menor que al número total de prefijos
         if (prefijoPrimeraPalabra + prefijoSegundaPalabra <= numeroDePrefijos) {
 
+            //Eliminar los Nitrogenoides el carbonoide
+
+
+            //Asegurarse de que el compuesto esta simplificado al máximo
+            if (prefijoPrimeraPalabra > 1 && prefijoSegundaPalabra > 1) {
+
+                //Almacena el valor maximo del número de oxidación
+
+                var max, min;
+
+                //Almacena el resultado de la división de max/min
+
+                let division;
+
+                //Si el mayor es primero
+                if (prefijoPrimeraPalabra > prefijoSegundaPalabra) {
+
+                    max = prefijoPrimeraPalabra;
+
+                    min = prefijoSegundaPalabra;
+
+                }
+                //sino
+                else {
+                    max = prefijoSegundaPalabra;
+
+                    min = prefijoPrimeraPalabra;
+
+                }
+
+                //Divide el máximo entre el mínimo
+                division = max / min;
+
+                console.log("funciona correctamente");
+
+                console.info(division);
+
+                //Si el valor de la division es igual a la prate entera de la división
+                //Es decir comprueba si es entero o decimal
+
+                if (division === Math.floor(division)/*Math.floor() saca la parte entera de la coma*/) {
+
+                    return false;
+
+                }
+
+
+            }
+
             //Se asegura de que los compuestos estan
             if (comprobarSiEstanLosCompuestos(primeraPalabra, prefijoPrimeraPalabra, mapa) && comprobarSiEstanLosCompuestos(segundaPalabra, prefijoSegundaPalabra, mapa)) {
 
@@ -163,6 +203,26 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
 
                 //Array de objetos que almacena los objetos utilizados para este compuesto
                 var arrayCompuesto = crearArrayCompuesto(); //Crea un array corresponde al compuesto
+
+                if(arrayCompuesto[0].nombre.toLocaleLowerCase() === hidrogeno){
+
+                    console.log("CArbonoides,Nitrogenoides");
+
+                    if(arrayCompuesto[1].grupo === 15 ){
+
+                        if (prefijoPrimeraPalabra != 3){
+                            return false;
+                        }
+
+                    } else  if(arrayCompuesto[1].nombre.nombretoLocaleLowerCase() === carbono ){
+
+                        if (prefijoPrimeraPalabra != 4){
+                            return false;
+                        }
+
+                    }
+
+                }
 
                 //Devolver el valor de neutro
                 const devolver = neutro();

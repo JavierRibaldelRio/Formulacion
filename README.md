@@ -12,9 +12,15 @@
 #### Herramientas:
 
   - Utilizando los lenguajes de html y JavaScript, y css para los formatear el texto
-  - Uso de la ID VScode (Visual Studio Code) para el desarollo
+
+  - Uso de la ID VScode (Visual Studio Code) para el desarrollo
+
   - Uso de Chrome o Chromium o firefox (depende de la situación) para ver la página web
+
   - Uso de las herramientas de las Dev Tools  (visibles al presionar Ctrl + Mayus + i o con clic derecho inspeccionar)
+
+  - La extensión de Git Hub
+
   - Uso de GitHub para gestionar las versiones del proyecto y tener copiado en Internet todo el trabajo
 
   - Framework
@@ -23,7 +29,7 @@
   
 - #### Funcionamiento
 
-  ​		Se trata de un juego para un jugador el cual consistirá en que el programa le mostrará al usuario hocho elementos. El programa se asegurándose de que entre estos siete elementos por lo menos exista una combinación posible de Óxidos o Hidruros o Sales. Cada uno de los elementos tendrá asignado una puntuación y al combinar los elementos se sumarán los puntos. La suma de estos puntos sera la puntuación que obtendrá el jugador en esa ronda. El número de rondas se determinara por el jugador al comenzar la partida. Se podrá robar, tipo solitario al robar una carta se tapara la anterior.
+  ​		Se trata de un juego para un jugador el cual consistirá en que el programa le mostrará al usuario ocho elementos. El programa se asegurándose de que entre estos siete elementos por lo menos exista una combinación posible de Óxidos o Hidruros o Sales. Cada uno de los elementos tendrá asignado una puntuación y al combinar los elementos se sumarán los puntos. La suma de estos puntos sera la puntuación que obtendrá el jugador en esa ronda. El número de rondas se determinara por el jugador al comenzar la partida. Se podrá robar, tipo solitario al robar una carta  tapara la anterior.
 
 ---
 
@@ -121,8 +127,7 @@
 - He creado el diseño de la tabla
 
 
-
-### DICIEMBRE
+### Diciembre
 
 **Miércoles 2**
 
@@ -293,11 +298,11 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 - Me he dado cuenta de muchos errores que tengo en el juego
 
-- [ ] Los elementos si se puden se han de simplificar
+- [x] Los elementos si se puden se han de simplificar
 
 >~~Li<sub>2</sub>H<sub>2</sub>~~  NO → LiH Sí :happy:
 
-- [ ] Las columnas de los Anfígenos y los Halógenos al combinarse con el hidrógneo siempre toman valencia |1| en caso de los Halógenos y |2| en el caso de los Anfígenos. Por lo tanto.esto genera un número limitado de posibles combinaciones
+- [x] Las columnas de los Anfígenos y los Halógenos al combinarse con el hidrógneo siempre toman valencia |1| en caso de los Halógenos y |2| en el caso de los Anfígenos. Por lo tanto.esto genera un número limitado de posibles combinaciones
 
     Halógenos
     >HF
@@ -311,9 +316,9 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
     >  H<sub>2</sub>Se
 
 
-- [ ] Al robar una carta y realizar un compuesto sin la carta robada esta se duplica, aparece en la banca y en la pila de robar; pero solo se encuentra una vez repetida en el array de elementos disponibles
+- [x] Al robar una carta y realizar un compuesto sin la carta robada esta se duplica, aparece en la banca y en la pila de robar; pero solo se encuentra una vez repetida en el array de elementos disponibles
 
-- [ ] Los Carbonoides (Sl, C), los nitrogenoides (N, P, As, Sb) y el Boro (B).Se utilizan con una única valencia en el caso de los Carbonoides (Si, C) solo se utilizara la valencia de | 4 | y en el caso de los nitrogenoides (N, P, As, Sb) y el boro (B) se utlizara la valencia de | 3 |. Esto genera un número limitado de combinaciones
+- [x] Los Carbonoides (Sl, C), los nitrogenoides (N, P, As, Sb) y el Boro (B).Se utilizan con una única valencia en el caso de los Carbonoides (Si, C) solo se utilizara la valencia de | 4 | y en el caso de los nitrogenoides (N, P, As, Sb) y el boro (B) se utlizara la valencia de | 3 |. Esto genera un número limitado de combinaciones
 
   Boro
 
@@ -331,11 +336,22 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
   >AsH<sub>3</sub> 
   >SbH<sub>3</sub> 
 
+**Jueves 18 Casa**
+
+- He creado una rama Errores
+
+- He solucionado 3 de los Errores
+
+**Viernes 19 Informática**
+- He solucionado el cuarto error 
+
+  
 
 
 
 
 
 
-Javier Ribal del Río 3ºB Nº22 Informática				
+
+Javier Ribal del Río 3ºB Nº21 Informática				
 

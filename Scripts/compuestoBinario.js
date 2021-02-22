@@ -156,6 +156,8 @@ function averiguarCompuestoBinario(texto, mapa, prefijoBinario1, primerCompuesto
 
             nombreSegundoElemento = nombre;
 
+            
+
             //Dice si es posible combinar los introducidios, sumar y comprobar valencias
             devolver = comprobarSiPuedeGenerarCompuestos(nombresEquivalentes(primerCompuesto), prefijoBinario1, nombre, numeroPrefijoSegundoElemento, mapa);
 
