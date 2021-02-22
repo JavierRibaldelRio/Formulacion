@@ -71,9 +71,12 @@ function comprobarCompuesto(elementos, compuesto) {
 
         }
 
+        //Parte de sales binarias
+        else if (compuesto.includes(fluoruro))
 
 
-        return identificarCompuestosExcepcionales(compuesto, mapElementos, elementos);
+
+            return identificarCompuestosExcepcionales(compuesto, mapElementos, elementos);
 
     }
 
@@ -204,19 +207,19 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
                 //Array de objetos que almacena los objetos utilizados para este compuesto
                 var arrayCompuesto = crearArrayCompuesto(); //Crea un array corresponde al compuesto
 
-                if(arrayCompuesto[0].nombre.toLocaleLowerCase() === hidrogeno){
+                if (arrayCompuesto[0].nombre.toLocaleLowerCase() === hidrogeno) {
 
                     console.log("CArbonoides,Nitrogenoides");
 
-                    if(arrayCompuesto[1].grupo === 15 ){
+                    if (arrayCompuesto[1].grupo === 15) {
 
-                        if (prefijoPrimeraPalabra != 3){
+                        if (prefijoPrimeraPalabra != 3) {
                             return false;
                         }
 
-                    } else  if(arrayCompuesto[1].nombre.nombretoLocaleLowerCase() === carbono ){
+                    } else if (arrayCompuesto[1].nombre.nombretoLocaleLowerCase() === carbono) {
 
-                        if (prefijoPrimeraPalabra != 4){
+                        if (prefijoPrimeraPalabra != 4) {
                             return false;
                         }
 

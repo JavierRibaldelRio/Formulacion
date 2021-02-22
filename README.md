@@ -345,6 +345,11 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 **Viernes 19 Informática**
 - He solucionado el cuarto error 
 
+**Lunes 22**
+- He empezado a trabajar en las sales Binarias
+- He hecho una hoja de cálculo de los elementos en su forma de compuesto y he intentado exportala a json para leerla con javascript.
+- No he podido por un problema de las librerias del script de R que utilizo para exportar a json.
+
   
 
 
