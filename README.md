@@ -349,6 +349,16 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 - He empezado a trabajar en las sales Binarias
 - He hecho una hoja de cálculo de los elementos en su forma de compuesto y he intentado exportala a json para leerla con javascript.
 - No he podido por un problema de las librerias del script de R que utilizo para exportar a json.
+- He instalado en mi ordenador las librerias que faltaban para pasar a json
+- He pasado a json el archivo de los Anfígenos y Halógenos en forma de compuesto
+
+
+**Martes 23 Informática**
+- He organizado los archivos
+- He añado los json
+- He añadido la fución de pasar a un array todo el json
+- He acabado de crear todo lo anterior
+- Me he informado sobre otro tipo de excepciones
 
   
 
