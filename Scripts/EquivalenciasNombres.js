@@ -25,6 +25,16 @@ function nombresEquivalentes(nombre) {
 
     }
 
+    for (var i = 0; i < arrayAnfigenosHalogenos.length; i++) {
+
+        if (nombre === arrayAnfigenosHalogenos[i].nuevoNombreElemento) {
+
+
+
+        }
+
+    }
+
     return nombreAutentico;
 
 }
