@@ -361,7 +361,15 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 - Me he informado sobre otro tipo de excepciones
 
   
+## Marzo
 
+**Lunes 1**
+
+- He intentado avanzar con la parte de3 añadir las sales binarias
+
+**Martes 2 Informática**
+- He acabado la función de buscar por SQ
+- He acabado de añadir a la funcion equeivalencias loa sarchivos con uro
 
 
 

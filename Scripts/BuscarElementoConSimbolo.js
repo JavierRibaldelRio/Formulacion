@@ -2,10 +2,15 @@
 
 function buscarElementoPorSimbolo(arrayABuscar/*El array en el que vas a buscar*/, letra /*Letra que vas a buscar*/) {
 
-
-    return arrayABuscar.find(igualSQ());
+    //Para saber cual cumple la comparación
+    return arrayABuscar.find(igualSQ);
 
     //funcion para saver si el simbolo quimico es igual
+
+    function igualSQ(objeto){
+
+        return objeto.sq ===letra;
+    }
 
 
 }

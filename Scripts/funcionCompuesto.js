@@ -72,11 +72,8 @@ function comprobarCompuesto(elementos, compuesto) {
         }
 
         //Parte de sales binarias
-        else if (compuesto.includes(fluoruro))
-
-
-
-            return identificarCompuestosExcepcionales(compuesto, mapElementos, elementos);
+        
+        
 
     }
 
