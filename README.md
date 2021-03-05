@@ -365,7 +365,7 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 **Lunes 1**
 
-- He intentado avanzar con la parte de3 añadir las sales binarias
+- He intentado avanzar con la parte de añadir las sales binarias
 
 **Martes 2 Informática**
 - He acabado la función de buscar por SQ
@@ -373,7 +373,9 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 
 
-
+**Viernes 5 Informática**
+- He solucinado un error de hidruros
+- 
 
 
 Javier Ribal del Río 3ºB Nº21 Informática				

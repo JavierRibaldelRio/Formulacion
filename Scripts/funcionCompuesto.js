@@ -72,7 +72,10 @@ function comprobarCompuesto(elementos, compuesto) {
         }
 
         //Parte de sales binarias
-        
+        else{
+
+            return
+        }
         
 
     }
@@ -214,7 +217,7 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
                             return false;
                         }
 
-                    } else if (arrayCompuesto[1].nombre.nombretoLocaleLowerCase() === carbono) {
+                    } else if (arrayCompuesto[1].nombre.toLocaleLowerCase() === carbono) {
 
                         if (prefijoPrimeraPalabra != 4) {
                             return false;
