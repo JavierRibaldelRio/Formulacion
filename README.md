@@ -305,7 +305,7 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 - [x] Las columnas de los Anfígenos y los Halógenos al combinarse con el hidrógneo siempre toman valencia |1| en caso de los Halógenos y |2| en el caso de los Anfígenos. Por lo tanto.esto genera un número limitado de posibles combinaciones
 
     Halógenos
-    >HF
+    > HF
     > HCl
     > HBr
     > HI
@@ -331,10 +331,10 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
   Nitrogenoides
   
-  >NH<sub>3</sub> [Amoniaco]
-  >PH<sub>3</sub> 
-  >AsH<sub>3</sub> 
-  >SbH<sub>3</sub> 
+  > NH<sub>3</sub> [Amoniaco]
+  > PH<sub>3</sub> 
+  > AsH<sub>3</sub> 
+  > SbH<sub>3</sub> 
 
 **Jueves 18 Casa**
 
@@ -375,8 +375,10 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 **Viernes 5 Informática**
 - He solucinado un error de hidruros
-- 
+- He continuado con las sales binarias
+
+**Viernes 5 Casa**
+- He acabado de añadir las sales binarias
 
 
 Javier Ribal del Río 3ºB Nº21 Informática				
-

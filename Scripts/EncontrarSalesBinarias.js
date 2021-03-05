@@ -2,11 +2,11 @@
 // ejecutar la función de identificar compuestouna vez por cada tipo de sal 
 // binaria que pueda encontrar
 
-function comprobarSalesBinarias(textoUsuario,mapaElementos,elementosDisponibles){
-    
-    for(var i = 0; i < arrayAnfigenosHalogenos.length;i++){
+function comprobarSalesBinarias(textoUsuario, mapaElementos, elementosDisponibles) {
 
-        if (compuesto.includes(arrayAnfigenosHalogenos[i].nuevoNombreElemento.toLowerCase()) && buscarElementoEnMapa(mapElementos, arrayAnfigenosHalogenos[i].sq)) {
+    for (var i = 0; i < arrayAnfigenosHalogenos.length; i++) {
+
+        if (textoUsuario.includes(arrayAnfigenosHalogenos[i].nuevoNombreElemento.toLowerCase()) && buscarElementoEnMapa(mapaElementos, arrayAnfigenosHalogenos[i].sq)) {
 
             console.log(arrayAnfigenosHalogenos[i]);
 

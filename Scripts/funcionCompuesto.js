@@ -68,18 +68,27 @@ function comprobarCompuesto(elementos, compuesto) {
 
             return comprobarCompuestoBinario(oxido, compuesto, mapElementos, elementos);
 
-
         }
 
         //Parte de sales binarias
-        else{
+        else {
 
-            return
+            //MIra si es correcto y lo almacena
+            let correcto = comprobarSalesBinarias(compuesto, mapElementos, elementos);
+
+            if (correcto !== true) {
+
+                return identificarCompuestosExcepcionales(compuesto, mapElementos, elementos)
+
+            } else {
+
+                return correcto;
+
+            }
+
+            return false;
         }
-        
-
     }
-
 
     //Funciones
 
