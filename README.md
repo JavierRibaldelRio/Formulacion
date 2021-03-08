@@ -380,5 +380,8 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 **Viernes 5 Casa**
 - He acabado de añadir las sales binarias
 
+**Lunes 8**
+- He empezado a corregir loo de los errores entre Anfígenos y Halógenos
+
 
 Javier Ribal del Río 3ºB Nº21 Informática				

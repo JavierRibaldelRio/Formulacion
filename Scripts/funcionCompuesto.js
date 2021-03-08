@@ -76,7 +76,7 @@ function comprobarCompuesto(elementos, compuesto) {
             //MIra si es correcto y lo almacena
             let correcto = comprobarSalesBinarias(compuesto, mapElementos, elementos);
 
-            if (correcto !== true) {
+            if (typeof correcto === "boolean") {
 
                 return identificarCompuestosExcepcionales(compuesto, mapElementos, elementos)
 
@@ -355,7 +355,8 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
         }
 
         //Error    
-    } else {
+    }
+    else {
 
         return -1;
 
