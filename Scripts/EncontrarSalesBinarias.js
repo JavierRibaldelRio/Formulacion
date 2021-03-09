@@ -12,7 +12,9 @@ function comprobarSalesBinarias(textoUsuario, mapaElementos, elementosDisponible
 
             //Zona de mirar si tiene el orden correcto de la z
 
-            function ordenCorrecto(texto) {
+            console.log(comprobarSiEsCorrecto(textoUsuario));
+
+            function comprobarSiEsCorrecto(texto) {
 
                 //Guarda el nommbre del compuesto en forma de matriz de palabras
                 var textoPartido = [];
@@ -20,18 +22,39 @@ function comprobarSalesBinarias(textoUsuario, mapaElementos, elementosDisponible
                 //almacena el elemento
                 var textoSinPrefijo;
 
+                //almacenara la salida de comproca Si hay elemento por nombre
+                var salidaComprobarSiHayElementoPorNombre;
+
                 //Quitar los espacios de palabra ha pricipio de  texto
 
                 texto = texto.trim();
 
                 //Recorta por espacios y lo combierte en un array de palabras
-                textoPartido = texto.split("");
+                textoPartido = texto.split(" ");
 
                 //Extrae el prefijo de la última palabra de texto partido y lo almacena
                 textoSinPrefijo = extraerPrefijos(textoPartido[textoPartido.length - 1]);
 
-                ///////////////////////////////////////////////////////////////////////////////////////                
+                //asigan ha salidaComprobarSiHayElementoPorNombre la salida de 
+                salidaComprobarSiHayElementoPorNombre = comprobarSiHayElementoPorNombre(textoSinPrefijo, elementosDisponibles);
 
+                if (salidaComprobarSiHayElementoPorNombre === false) {
+
+                    return false;
+
+                } else {
+
+                    //Almacena el primer elemento
+
+                    var primerElmento = comprobarSiHayElementoPorNombre(nombresEquivalentes(arrayAnfigenosHalogenos[i].nuevoNombreElemento.toLowerCase()), elementosDisponibles);
+
+                }
+
+
+
+                console.log(primerElmento);
+
+                console.log(salidaComprobarSiHayElementoPorNombre);
 
             }
 

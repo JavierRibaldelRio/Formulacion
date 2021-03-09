@@ -381,7 +381,13 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 - He acabado de añadir las sales binarias
 
 **Lunes 8**
-- He empezado a corregir loo de los errores entre Anfígenos y Halógenos
+- He empezado a corregir lo de los errores entre Anfígenos y Halógenos
+
+**Martes 9 Casa**
+- He añadido un script que te devuelve el objeto del elemento que tiene ese nombre
+- He avanzado con los errores
+- He creado un script para comprobar si el orden es correcto: **Falta añadirlo al html**
+- He añadido una tabla periodica al sisteam ade archivos
 
 
 Javier Ribal del Río 3ºB Nº21 Informática				
