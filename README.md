@@ -352,6 +352,7 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 - He instalado en mi ordenador las librerias que faltaban para pasar a json
 - He pasado a json el archivo de los Anfígenos y Halógenos en forma de compuesto
 
+**Durante este tiempo he estado mucho tiempo sin programar porque me he tenido que estudiar mucho para los examenes de la 2ª Evaluación y también he tenido que hacer el examen teorico de audacity, a parte de estudiar las preguntas para el examen**
 
 **Martes 23 Informática**
 - He organizado los archivos
@@ -388,6 +389,17 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 - He avanzado con los errores
 - He creado un script para comprobar si el orden es correcto: **Falta añadirlo al html**
 - He añadido una tabla periodica al sisteam ade archivos
+
+**Miércoles 10 Casa**
+- He acabado la función de comprobar orden compuesto
+- He añadido al index la funcion de comprobar orden compuesto
+- He acabado las sales bianarias
+- He añadido la excepción de la sal común
+
+> NaCl Cloruro de sodio → sal común
+
+- He hecho revisión de errores
+- He hecho un merge a la rama principal
 
 
 Javier Ribal del Río 3ºB Nº21 Informática				

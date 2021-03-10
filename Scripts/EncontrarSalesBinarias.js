@@ -12,7 +12,6 @@ function comprobarSalesBinarias(textoUsuario, mapaElementos, elementosDisponible
 
             //Zona de mirar si tiene el orden correcto de la z
 
-            console.log(comprobarSiEsCorrecto(textoUsuario));
 
             function comprobarSiEsCorrecto(texto) {
 
@@ -38,7 +37,7 @@ function comprobarSalesBinarias(textoUsuario, mapaElementos, elementosDisponible
                 //asigan ha salidaComprobarSiHayElementoPorNombre la salida de 
                 salidaComprobarSiHayElementoPorNombre = comprobarSiHayElementoPorNombre(textoSinPrefijo, elementosDisponibles);
 
-                if (salidaComprobarSiHayElementoPorNombre === false) {
+                if (salidaComprobarSiHayElementoPorNombre === false || salidaComprobarSiHayElementoPorNombre.nombre.toLowerCase() === nombresEquivalentes(oxido)) {
 
                     return false;
 
@@ -51,18 +50,19 @@ function comprobarSalesBinarias(textoUsuario, mapaElementos, elementosDisponible
                 }
 
 
-
-                console.log(primerElmento);
-
-                console.log(salidaComprobarSiHayElementoPorNombre);
+                return comprobarOrdenCorrecto(primerElmento, salidaComprobarSiHayElementoPorNombre);
 
             }
 
-            console.log(arrayAnfigenosHalogenos[i]);
+            //Cmprueba si es correcto el orden del texto del usuario
+            if (comprobarSiEsCorrecto(textoUsuario) === false) {
+                return false;
+            }
+            //Deveulve el resultado
+            else {
+                return comprobarCompuestoBinario(arrayAnfigenosHalogenos[i].nuevoNombreElemento.toLowerCase(), textoUsuario, mapaElementos, elementosDisponibles);
 
-            return comprobarCompuestoBinario(arrayAnfigenosHalogenos[i].nuevoNombreElemento.toLowerCase(), textoUsuario, mapaElementos, elementosDisponibles);
-
-
+            }
         }
 
     }
