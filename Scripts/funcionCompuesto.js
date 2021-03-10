@@ -68,15 +68,27 @@ function comprobarCompuesto(elementos, compuesto) {
 
             return comprobarCompuestoBinario(oxido, compuesto, mapElementos, elementos);
 
-
         }
 
+        //Parte de sales binarias
+        else {
 
+            //MIra si es correcto y lo almacena
+            let correcto = comprobarSalesBinarias(compuesto, mapElementos, elementos);
 
-        return identificarCompuestosExcepcionales(compuesto, mapElementos, elementos);
+            if (typeof correcto === "boolean") {
 
+                return identificarCompuestosExcepcionales(compuesto, mapElementos, elementos)
+
+            } else {
+
+                return correcto;
+
+            }
+
+            return false;
+        }
     }
-
 
     //Funciones
 
@@ -204,19 +216,19 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
                 //Array de objetos que almacena los objetos utilizados para este compuesto
                 var arrayCompuesto = crearArrayCompuesto(); //Crea un array corresponde al compuesto
 
-                if(arrayCompuesto[0].nombre.toLocaleLowerCase() === hidrogeno){
+                if (arrayCompuesto[0].nombre.toLocaleLowerCase() === hidrogeno) {
 
                     console.log("CArbonoides,Nitrogenoides");
 
-                    if(arrayCompuesto[1].grupo === 15 ){
+                    if (arrayCompuesto[1].grupo === 15) {
 
-                        if (prefijoPrimeraPalabra != 3){
+                        if (prefijoPrimeraPalabra != 3) {
                             return false;
                         }
 
-                    } else  if(arrayCompuesto[1].nombre.nombretoLocaleLowerCase() === carbono ){
+                    } else if (arrayCompuesto[1].nombre.toLocaleLowerCase() === carbono) {
 
-                        if (prefijoPrimeraPalabra != 4){
+                        if (prefijoPrimeraPalabra != 4) {
                             return false;
                         }
 
@@ -343,7 +355,8 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
         }
 
         //Error    
-    } else {
+    }
+    else {
 
         return -1;
 

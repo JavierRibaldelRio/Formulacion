@@ -36,6 +36,12 @@ function identificarCompuestosExcepcionales(compuesto, mapaElementos, elementos)
 
             break;
 
+        case "sal común":
+
+            formulable = comprobarSalesBinarias(sal, mapaElementos, elementos);
+
+            break;
+
 
     }
 

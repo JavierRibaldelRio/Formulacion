@@ -305,7 +305,7 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 - [x] Las columnas de los Anfígenos y los Halógenos al combinarse con el hidrógneo siempre toman valencia |1| en caso de los Halógenos y |2| en el caso de los Anfígenos. Por lo tanto.esto genera un número limitado de posibles combinaciones
 
     Halógenos
-    >HF
+    > HF
     > HCl
     > HBr
     > HI
@@ -331,10 +331,10 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
   Nitrogenoides
   
-  >NH<sub>3</sub> [Amoniaco]
-  >PH<sub>3</sub> 
-  >AsH<sub>3</sub> 
-  >SbH<sub>3</sub> 
+  > NH<sub>3</sub> [Amoniaco]
+  > PH<sub>3</sub> 
+  > AsH<sub>3</sub> 
+  > SbH<sub>3</sub> 
 
 **Jueves 18 Casa**
 
@@ -345,13 +345,61 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 **Viernes 19 Informática**
 - He solucionado el cuarto error 
 
+**Lunes 22**
+- He empezado a trabajar en las sales Binarias
+- He hecho una hoja de cálculo de los elementos en su forma de compuesto y he intentado exportala a json para leerla con javascript.
+- No he podido por un problema de las librerias del script de R que utilizo para exportar a json.
+- He instalado en mi ordenador las librerias que faltaban para pasar a json
+- He pasado a json el archivo de los Anfígenos y Halógenos en forma de compuesto
+
+**Durante este tiempo he estado mucho tiempo sin programar porque me he tenido que estudiar mucho para los examenes de la 2ª Evaluación y también he tenido que hacer el examen teorico de audacity, a parte de estudiar las preguntas para el examen**
+
+**Martes 23 Informática**
+- He organizado los archivos
+- He añado los json
+- He añadido la fución de pasar a un array todo el json
+- He acabado de crear todo lo anterior
+- Me he informado sobre otro tipo de excepciones
+
   
+## Marzo
+
+**Lunes 1**
+
+- He intentado avanzar con la parte de añadir las sales binarias
+
+**Martes 2 Informática**
+- He acabado la función de buscar por SQ
+- He acabado de añadir a la funcion equeivalencias loa sarchivos con uro
 
 
 
+**Viernes 5 Informática**
+- He solucinado un error de hidruros
+- He continuado con las sales binarias
 
+**Viernes 5 Casa**
+- He acabado de añadir las sales binarias
 
+**Lunes 8**
+- He empezado a corregir lo de los errores entre Anfígenos y Halógenos
+
+**Martes 9 Casa**
+- He añadido un script que te devuelve el objeto del elemento que tiene ese nombre
+- He avanzado con los errores
+- He creado un script para comprobar si el orden es correcto: **Falta añadirlo al html**
+- He añadido una tabla periodica al sisteam ade archivos
+
+**Miércoles 10 Casa**
+- He acabado la función de comprobar orden compuesto
+- He añadido al index la funcion de comprobar orden compuesto
+- He acabado las sales bianarias
+- He añadido la excepción de la sal común
+
+> NaCl Cloruro de sodio → sal común
+
+- He hecho revisión de errores
+- He hecho un merge a la rama principal
 
 
 Javier Ribal del Río 3ºB Nº21 Informática				
-
