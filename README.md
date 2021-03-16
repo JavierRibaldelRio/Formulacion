@@ -1,11 +1,11 @@
 # FORMULACIÓN
 
+![](/home/javi/Desktop/Programacion/Web/Formulacion/Documentos/GitHub/Foto_Perfil/foto.png)
+
 ### Objetivos del proyecto:
 
 - [ ] Fomentar el aprendizaje de la formulación de forma entretenida
 - [ ] Aprender la escritura correcta en **Español** de los compuestos
-
-
 
 ### Descripción del proyecto:
 
@@ -400,6 +400,12 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 - He hecho revisión de errores
 - He hecho un merge a la rama principal
+
+**Hemos empezado con *OpenShot* en Informática**
+
+**Lunes 15**
+
+- He actualizado el Git Hub añadiendole una imagen de perfil al proyecto
 
 
 Javier Ribal del Río 3ºB Nº21 Informática				
