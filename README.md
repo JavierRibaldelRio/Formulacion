@@ -407,5 +407,12 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 - He actualizado el Git Hub añadiendole una imagen de perfil al proyecto
 
+**Jueves 18**
+- He añadido el script de las sustancias simples
 
-Javier Ribal del Río 3ºB Nº21 Informática				
+**Sabado 20**
+- He intentado avanzar
+
+
+Javier Ribal del Río 3ºB Nº21 Informática	
+

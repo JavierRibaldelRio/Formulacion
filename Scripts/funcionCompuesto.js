@@ -22,9 +22,39 @@ function comprobarCompuesto(elementos, compuesto) {
         const mapElementos = crearMap();    //Crear el mapa de les elementos
 
         const compuestoPartido = compuesto.split(" ");
+        //Comprueba las sustancias simples
 
+        if (compuestoPartido.length === 1) {
+
+            var salidaSS = identificarSustanciasSimples(compuestoPartido[0], elementos, mapElementos);
+
+            if (salidaSS !== false) {
+
+                //Crea el mapa del compuesto
+                var mapaCompuesto = new Map();
+
+                //Añade el elemento al mapa
+                mapaCompuesto.set(salidaSS, 2);
+
+                //eliminar las cartas que han sido usadas
+                descartarCartasUsadas(crearMapaCompuesto([salidaSS.nombre.toLocaleLowerCase()], [2]), elementos);
+
+                //Devulve la puntuación 
+                return calcularPuntuacion(mapaCompuesto);
+
+
+            } else {
+
+                return identificarCompuestosExcepcionales(compuesto, mapElementos, elementos);
+
+            }
+
+
+
+
+        }
         //Comprueba si es un hidruro
-        if (compuesto.includes(hidruro) && buscarElementoEnMapa(mapElementos, "H")) {
+        else if (compuesto.includes(hidruro) && buscarElementoEnMapa(mapElementos, "H")) {
 
             return comprobarCompuestoBinario(hidruro, compuesto, mapElementos, elementos);
 
@@ -78,7 +108,7 @@ function comprobarCompuesto(elementos, compuesto) {
 
             if (typeof correcto === "boolean") {
 
-                return identificarCompuestosExcepcionales(compuesto, mapElementos, elementos)
+                return identificarCompuestosExcepcionales(compuesto, mapElementos, elementos);
 
             } else {
 
@@ -246,7 +276,7 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
                 }
 
                 else {
-                    devol = false
+                    devol = false;
                 }
 
                 return devol;
