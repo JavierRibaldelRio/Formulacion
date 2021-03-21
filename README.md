@@ -399,7 +399,7 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 > NaCl Cloruro de sodio → sal común
 
 - He hecho revisión de errores
-- He hecho un merge a la rama principal
+- He hecho un *merge* a la rama principal
 
 **Hemos empezado con *OpenShot* en Informática**
 
@@ -411,8 +411,25 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 - He añadido el script de las sustancias simples
 
 **Sabado 20**
-- He intentado avanzar
+- He acabado las Sustancias Simples
 
+**Domingo 21**
+
+- He empezado con las Sales volátiles
+
+- He añadido lo siguientes elementos a la hoja de Anfígenos Halógenos (quiero renombrarla en un futuro).
+
+
+|Nombre Original| Nuevo Nombre | Simbolo químico   |
+|---------| --------- | ---- |
+| Silicio | Siliciuro | Si   |
+| Carbono | Carburo   | C    |
+| Nitrógeno | Nitruro   | N    |
+| Fósforo | Fosfuro   | P    |
+| Arsénico | Arseniuro | As   |
+| Boro| Boruro    | B    |
+
+- Falta convertirla a Json 
 
 Javier Ribal del Río 3ºB Nº21 Informática	
 
