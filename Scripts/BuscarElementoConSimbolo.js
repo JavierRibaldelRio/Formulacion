@@ -7,9 +7,9 @@ function buscarElementoPorSimbolo(arrayABuscar/*El array en el que vas a buscar*
 
     //funcion para saver si el simbolo quimico es igual
 
-    function igualSQ(objeto){
-
-        return objeto.sq ===letra;
+    function igualSQ(objeto) {
+        ///////////////////////////
+        return objeto.sq.trim() === letra;
     }
 
 

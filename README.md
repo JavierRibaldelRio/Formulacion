@@ -431,5 +431,12 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 - Falta convertirla a Json 
 
+**Lunes 22**
+- He pasado a Json la excel
+- He corregido errores de algunos archivos
+
+**Proximo Día**
+-[ ] Revisar errores
+
 Javier Ribal del Río 3ºB Nº21 Informática	
 
