@@ -464,6 +464,8 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 - He cambiado de hacer el codigo para Sales Volátiles
 - He añadido la valencia -3 al boro
 - Me han surgido problemas con el conversor de R.
+- He hecho un *apaño* provisional para el conversor
+- He añadido el archivo gitignore
 
 Javier Ribal del Río 3ºB Nº21 Informática	
 
