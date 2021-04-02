@@ -1,3 +1,8 @@
+//Crea el array de sales binarias
+
+const jsonDatosNoMetales = JSON.parse(jsonNoMetales);
+
+const noMetales = pasarAJsonAnfigenosHalogenos(jsonDatosNoMetales);
 
 //Para coger los datos de el json
 var jsonDatosElementos = JSON.parse(jsonElementos);

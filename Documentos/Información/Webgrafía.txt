@@ -24,6 +24,7 @@ https://dle.rae.es/miscel%C3%A1neo#PNnyl9C
 https://www.mclibre.org/consultar/amaya/css/css-fuentes-web.html     
 https://developer.mozilla.org/es/docs/Web/CSS/outline-style
 https://developer.mozilla.org/es/docs/Web/HTML/Elemento/ul 
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/floor
 
 #Añadir tipografía a css
 https://www.elblogdelseo.com/como-utilizar-cualquier-fuente-en-tu-web/
