@@ -104,7 +104,7 @@ function comprobarCompuesto(elementos, compuesto) {
         else {
 
             //MIra si es correcto y lo almacena
-            let correcto = comprobarSalesBinarias(compuesto, mapElementos, elementos);
+            let correcto = comprobarSalesBinariasVolatiles(compuesto, mapElementos, elementos);
 
             if (typeof correcto === "boolean") {
 

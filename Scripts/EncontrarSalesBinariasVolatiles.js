@@ -2,13 +2,13 @@
 // ejecutar la función de identificar compuestouna vez por cada tipo de sal 
 // binaria que pueda encontrar
 
-function comprobarSalesBinarias(textoUsuario, mapaElementos, elementosDisponibles) {
+function comprobarSalesBinariasVolatiles(textoUsuario, mapaElementos, elementosDisponibles) {
 
 
 
-    for (var i = 0; i < arrayAnfigenosHalogenos.length; i++) {
+    for (var i = 0; i < noMetales.length; i++) {
 
-        if (textoUsuario.includes(arrayAnfigenosHalogenos[i].nuevoNombreElemento.toLowerCase()) && buscarElementoEnMapa(mapaElementos, arrayAnfigenosHalogenos[i].sq)) {
+        if (textoUsuario.includes(noMetales[i].nuevoNombreElemento.toLowerCase()) && buscarElementoEnMapa(mapaElementos, noMetales[i].sq)) {
 
             //Zona de mirar si tiene el orden correcto de la z
 
@@ -45,7 +45,7 @@ function comprobarSalesBinarias(textoUsuario, mapaElementos, elementosDisponible
 
                     //Almacena el primer elemento
 
-                    var primerElmento = comprobarSiHayElementoPorNombre(nombresEquivalentes(arrayAnfigenosHalogenos[i].nuevoNombreElemento.toLowerCase()), elementosDisponibles);
+                    var primerElmento = comprobarSiHayElementoPorNombre(nombresEquivalentes(noMetales[i].nuevoNombreElemento.toLowerCase()), elementosDisponibles);
 
                 }
 
@@ -60,7 +60,7 @@ function comprobarSalesBinarias(textoUsuario, mapaElementos, elementosDisponible
             }
             //Deveulve el resultado
             else {
-                return comprobarCompuestoBinario(arrayAnfigenosHalogenos[i].nuevoNombreElemento.toLowerCase(), textoUsuario, mapaElementos, elementosDisponibles);
+                return comprobarCompuestoBinario(noMetales[i].nuevoNombreElemento.toLowerCase(), textoUsuario, mapaElementos, elementosDisponibles);
 
             }
         }

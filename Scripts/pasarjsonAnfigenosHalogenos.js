@@ -1,16 +1,16 @@
 //Se ocupa de pasar el json a 
-function pasarAJsonAnfigenosHalogenos(arrayJson){
+function pasarAJsonAnfigenosHalogenos(arrayJson) {
 
-    var array = [] ;
+    var array = [];
 
-    for(var i = 0; i < arrayJson.length;i++){
+    for (var i = 0; i < arrayJson.length; i++) {
 
-        var nuevoElemento = 
-        new ElementoAnfigenoHalogeno(arrayJson[i].Nuevo_Nombre_Elemento,arrayJson[i].sq);
-        
+        var nuevoElemento =
+            new ElementoNoMetal(arrayJson[i].Nuevo_Nombre_Elemento, arrayJson[i].sq);
+
         array.push(nuevoElemento);
     }
 
-    return array; 
+    return array;
 
 }
