@@ -25,15 +25,15 @@ function nombresEquivalentes(nombre) {
 
     }
     //Repetir una vez por toda la longitud de array anfigenos alogenos
-    for (var i = 0; i < arrayAnfigenosHalogenos.length; i++) {
+    for (var i = 0; i < noMetales.length; i++) {
 
         //Si el nombre actual es igual al nuevo nombre del elemento
-        if (nombre === arrayAnfigenosHalogenos[i].nuevoNombreElemento.toLocaleLowerCase()) {
+        if (nombre === noMetales[i].nuevoNombreElemento.toLocaleLowerCase()) {
 
             // Devolvemos el nombrea autentico (fluor, fluoruro) y lo pasamao a minusculas
-            nombreAutentico = buscarElementoPorSimbolo(arrayClases,arrayAnfigenosHalogenos[i].sq).nombre.toLocaleLowerCase();
+            nombreAutentico = buscarElementoPorSimbolo(arrayClases, noMetales[i].sq).nombre.toLocaleLowerCase();
 
-            
+
         }
 
     }

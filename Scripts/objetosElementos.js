@@ -1,13 +1,13 @@
 //Definir el objeto de elemento
 function Elemento(z, nombre, sq, v, repeticion, puntos, grupo, tipo) {
-    
+
     //Constructor
-    
+
     this.z = z; //Numero Massico
 
     this.nombre = nombre; //Nombre del elemento
 
-    this.sq = sq; //Simbolo quimico 
+    this.sq = sq.trim(); //Simbolo quimico 
 
     this.v = v; //Valencias
 

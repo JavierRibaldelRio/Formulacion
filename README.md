@@ -388,9 +388,10 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 - He añadido un script que te devuelve el objeto del elemento que tiene ese nombre
 - He avanzado con los errores
 - He creado un script para comprobar si el orden es correcto: **Falta añadirlo al html**
-- He añadido una tabla periodica al sisteam ade archivos
+- He añadido una tabla periódica al sistema ade archivos
 
 **Miércoles 10 Casa**
+
 - He acabado la función de comprobar orden compuesto
 - He añadido al index la funcion de comprobar orden compuesto
 - He acabado las sales bianarias
@@ -405,7 +406,7 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 **Lunes 15**
 
-- He actualizado el Git Hub añadiendole una imagen de perfil al proyecto
+- He actualizado el Git Hub añadiéndole una imagen de perfil al proyecto
 
 **Jueves 18**
 - He añadido el script de las sustancias simples
@@ -435,8 +436,34 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 - He pasado a Json la excel
 - He corregido errores de algunos archivos
 
-**Proximo Día**
--[ ] Revisar errores
+**Próximo Día**
+
+- [x] Revisar errores
+
+**Domingo 27**
+
+- He acabado las sales volátiles; ha excepción del boro que me da error
+
+**Lunes 29**
+
+- He encontrado información contradictoria sobre el: *Boro (B)*.
+
+  - Según la tabla periódica del colegio el boro tiene valencias: -3 y 3
+  - Según la web de las sales volátiles ([Enlace](https://www.formulacionquimica.com/sales-volatiles/)) el boro tiene valencias -3 y 3
+  - Según el juego de Laura el boro tiene valencia 3
+  - Según "Google" el boro tiene valencia 3
+- He empezado a renombrar codigos ya que el código de las sales binarias es el mismo que el de las sales vólatiles
+
+**Martes 30 Informática** 
+
+- [x] He de preguntarle a Román la valencia del Boro
+
+## Abril
+
+**Viernes 2**
+- He cambiado de hacer el codigo para Sales Volátiles
+- He añadido la valencia -3 al boro
+- Me han surgido problemas con el conversor de R.
 
 Javier Ribal del Río 3ºB Nº21 Informática	
 
