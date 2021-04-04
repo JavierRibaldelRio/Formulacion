@@ -15,6 +15,19 @@ function identificarCompuestosExcepcionales(compuesto, mapaElementos, elementos)
 
             break;
 
+        case "amoniaco":
+            //Le manda la formula de agua para comprobar que lo puede formular
+            formulable = comprobarCompuestoBinario(hidruro, amoniacoSistematico, mapaElementos, elementos);
+
+            break;
+
+
+        case "metano":
+            formulable = comprobarCompuestoBinario(hidruro, metanoSistematico, mapaElementos, elementos);
+
+            break;
+
+
         case "ozono":
 
 
@@ -38,7 +51,7 @@ function identificarCompuestosExcepcionales(compuesto, mapaElementos, elementos)
 
         case "sal común":
 
-            formulable = comprobarSalesBinarias(sal, mapaElementos, elementos);
+            formulable = comprobasSalesVolatiles(sal, mapaElementos, elementos);
 
             break;
 

@@ -51,3 +51,10 @@ const carbono = "carbono";
 
 const sal = "cloruro de sodio";
 
+//Almacena la formula del amoniavo (NH3)
+
+const amoniacoSistematico = "trihidruro de nitrógeno";
+
+//Alamacena el metano en sistematica (CH4)
+
+const metanoSistematico = "tetrahidruro de carbono";

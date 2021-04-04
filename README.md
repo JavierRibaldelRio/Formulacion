@@ -375,6 +375,7 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 
 **Viernes 5 Informática**
+
 - He solucinado un error de hidruros
 - He continuado con las sales binarias
 
@@ -452,7 +453,7 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
   - Según la web de las sales volátiles ([Enlace](https://www.formulacionquimica.com/sales-volatiles/)) el boro tiene valencias -3 y 3
   - Según el juego de Laura el boro tiene valencia 3
   - Según "Google" el boro tiene valencia 3
-- He empezado a renombrar codigos ya que el código de las sales binarias es el mismo que el de las sales vólatiles
+- He empezado a renombrar códigos ya que el código de las sales binarias es el mismo que el de las sales vólatiles
 
 **Martes 30 Informática** 
 
@@ -466,6 +467,22 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 - Me han surgido problemas con el conversor de R.
 - He hecho un *apaño* provisional para el conversor
 - He añadido el archivo gitignore
+
+
+
+**Sábado 3**
+
+- He empezado a añadir las excepciones que me faltaban
+
+| Símbolo Químico | Nombre Alternativo (Nome. Tradicional) | Nombre Nomenclatura Sistematica |
+| --------------- | -------------------------------------- | ------------------------------- |
+| NH<sub>3</sub>  | Amoniaco                               | Trihiduro de dinitrógeno        |
+| CH<sub>4</sub>  | Metano                                 | Tetrahidruro de carbono         |
+
+**Domingo 4**
+
+- He abado de añadir las excepciones que me faltaban
+- He aptendido a utilizar el firefox para programación lo cual me permite utilizar la consola de depuración en una nueva ventana.
 
 Javier Ribal del Río 3ºB Nº21 Informática	
 
