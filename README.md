@@ -492,6 +492,10 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 - He intentado reproducir un sonido en la web. Pero no he conseguido nada.
 
+**Martes 13**
+- He reproduciodo el sonido en javascript.
+- He empeado ha hacer el sonido r¡de respuesta incorrecata
+
 
 
 Javier Ribal del Río 3ºB Nº21 Informática	
