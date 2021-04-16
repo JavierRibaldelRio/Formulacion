@@ -13,7 +13,7 @@ function reproducirSonido(correcto) {
         
         //Asigna a la variable audio el sonido de  errar
 
-        audio = new Audio("Musica/Acertar/Sonido_Correcto.wav");
+        audio = new Audio("Musica/Errar/Sonido_Errar.wav");
     }
     audio.play();
 

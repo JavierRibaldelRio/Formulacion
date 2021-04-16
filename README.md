@@ -494,9 +494,12 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 **Martes 13**
 - He reproduciodo el sonido en javascript.
-- He empeado ha hacer el sonido r¡de respuesta incorrecata
+- He empeado ha hacer el sonido r¡de respuesta incorrecta
 
 
+**Viernes 16 Informática**
+- He acabdo el sonid de incorrecto
+- He añadido al script de audio el sonido incorrecto
 
 Javier Ribal del Río 3ºB Nº21 Informática	
 
