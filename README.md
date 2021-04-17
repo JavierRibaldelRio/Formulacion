@@ -486,7 +486,7 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 **Del Lunes 5 al viernes 9**
 
-- He creado con musescore el sonido de la pregunta respuestptendido a
+- He creado con musescore el sonido de la pregunta correcta
 
 **Domingo 10**
 
@@ -503,6 +503,9 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 **Sabado 17**
 - He añadido la música al proyecto
+- He empezado a trabajar en cambiar los puntos 
+- Me a surgido una duda sobre las valencias del flúor. Es -1 o -1 y 1
+- He reorganizado el sistema de archivos
 
 Javier Ribal del Río 3ºB Nº21 Informática	
 
