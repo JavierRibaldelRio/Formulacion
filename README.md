@@ -481,8 +481,28 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 **Domingo 4**
 
-- He abado de añadir las excepciones que me faltaban
-- He aptendido a utilizar el firefox para programación lo cual me permite utilizar la consola de depuración en una nueva ventana.
+- He acabado de añadir las excepciones que me faltaban
+- He aprendido a utilizar el firefox para programación lo cual me permite utilizar la consola de depuración en una nueva ventana.
+
+**Del Lunes 5 al viernes 9**
+
+- He creado con musescore el sonido de la pregunta respuestptendido a
+
+**Domingo 10**
+
+- He intentado reproducir un sonido en la web. Pero no he conseguido nada.
+
+**Martes 13**
+- He reproduciodo el sonido en javascript.
+- He empeado ha hacer el sonido r¡de respuesta incorrecta
+
+
+**Viernes 16 Informática**
+- He acabdo el sonid de incorrecto
+- He añadido al script de audio el sonido incorrecto
+
+**Sabado 17**
+- He añadido la música al proyecto
 
 Javier Ribal del Río 3ºB Nº21 Informática	
 
