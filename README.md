@@ -501,5 +501,8 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 - He acabdo el sonid de incorrecto
 - He añadido al script de audio el sonido incorrecto
 
+**Sabado 17**
+- He añadido la música al proyecto
+
 Javier Ribal del Río 3ºB Nº21 Informática	
 

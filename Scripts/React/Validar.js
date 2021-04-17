@@ -20,8 +20,10 @@ class Validacion extends React.Component {
     //Ejecutar la función de pasarcompuesto
     pasarDatosFuncionCompuesto() {
 
+        //Almacena en forma de variable las propiedades
         var elementosDisponiblesOrdenados = [...this.props.elementosDisponibles]
 
+        //Ordena
         elementosDisponiblesOrdenados = elementosDisponiblesOrdenados.sort(function (a, b) {
             if (a.z > b.z) {
                 return 1;
@@ -35,26 +37,37 @@ class Validacion extends React.Component {
         });
 
 
+        //Salida de la función que se ocupa de comprobar si el compuesro es correcto
         const salida = comprobarCompuesto(elementosDisponiblesOrdenados, this.state.text);
 
-
+        //Si la salida es un número
         if (typeof salida === "number") {
 
+            //Manda la notificación de correcto
             this.props.funcionNotificar("Has obtenido " + salida + " puntos.", true);
 
+            //Reproduce el sonido de correcto
+
+            reproducirSonido(true);
 
             //Actualiza el estado
             this.props.funcionAlPulsar(salida, this.state.text.toLocaleLowerCase());
 
-        } else if (salida === false) {
+        }
 
+        //Si es falso
+        else if (salida === false) {
 
+            //Reproduce el sonido de incorrecto
 
+            reproducirSonido(false);
+
+            //manda la notificación
             this.props.funcionNotificar("Este compuesto no se puede crear", false);
 
         }
 
-        if (baraja.lenght < 10) {
+        if (baraja.lenght < 8) {
             this.props.acabar();
         }
     }
