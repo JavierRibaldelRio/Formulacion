@@ -507,5 +507,11 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 - Me a surgido una duda sobre las valencias del flúor. Es -1 o -1 y 1
 - He reorganizado el sistema de archivos
 
+**Lunes 19**
+
+- He cambiado las puntuaciones de los elementos
+
+
+
 Javier Ribal del Río 3ºB Nº21 Informática	
 
