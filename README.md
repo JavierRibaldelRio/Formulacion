@@ -498,7 +498,7 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 
 **Viernes 16 Informática**
-- He acabdo el sonid de incorrecto
+- He acabdo el sonido de incorrecto
 - He añadido al script de audio el sonido incorrecto
 
 **Sabado 17**
@@ -510,6 +510,15 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 **Lunes 19**
 
 - He cambiado las puntuaciones de los elementos
+
+**Martes 20 Informática**
+
+- Le he enseñado a Román los nuevos puntos
+
+**Miércoles 21**
+
+- He preparado el archivo de los puntos para exportarlo a *.json*. Ya que da problemas con las formulas y he tenido que eliminar de la hoja de cálculo las columnas innecesarias. Para ello he hecho una copia y he suprimido todo lo innecesario. 
+- Como no puedo aplicar el script de R para pasar a json en mi ordenador porqué tiene instalado *manjaro* 
 
 
 
