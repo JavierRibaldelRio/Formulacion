@@ -520,6 +520,11 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 - He preparado el archivo de los puntos para exportarlo a *.json*. Ya que da problemas con las formulas y he tenido que eliminar de la hoja de cálculo las columnas innecesarias. Para ello he hecho una copia y he suprimido todo lo innecesario. 
 - Como no puedo aplicar el script de R para pasar a json en mi ordenador porqué tiene instalado *manjaro* 
 
+**Jueves 22** 
+
+- He pasado a json la nueva hoja de cálculo
+- He acabado de cambiar los puntos
+
 
 
 Javier Ribal del Río 3ºB Nº21 Informática	
