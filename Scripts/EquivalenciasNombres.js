@@ -20,7 +20,7 @@ function nombresEquivalentes(nombre) {
 
         //oxido
         case oxido:
-            nombreAutentico = "oxigeno";
+            nombreAutentico = "oxígeno";
             break;
 
     }

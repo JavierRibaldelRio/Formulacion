@@ -34,7 +34,7 @@ function identificarCompuestosExcepcionales(compuesto, mapaElementos, elementos)
 
             mapaElementos.forEach(function (clave, valor) {
 
-                if (valor.nombre.toLowerCase() === "oxigeno" && clave >= 3) {
+                if (valor.nombre.toLowerCase() === "oxígeno" && clave >= 3) {
 
 
                     descartarCartasUsadas(crearMapaCompuesto(Array.from([valor.nombre.toLowerCase()]), Array.from([3])), elementos);
