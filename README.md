@@ -279,7 +279,7 @@
 
 
 **Martes 2 Informática**
-- He quitado el *-1* a la valencia del óxigeno
+- He quitado el *-1* a la valencia del óxígeno
 - He añadido un botón de volver a jugar
 
 **Lunes 8**
