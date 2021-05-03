@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <script src="FileSaver.js"></script>
+  <title></title>
+</head>
+
+<body>
+
+
+  <script>
+
+    function guardarTexto(textoAGuardar) {
+
+      var blob = new Blob([textoAGuardar], { type: "text/plain;charset=utf-8" });
+
+      saveAs(blob, "texto.txt");
+
+    }
+
+  </script>
+</body>
+
+</html>

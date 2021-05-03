@@ -525,6 +525,11 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 - He pasado a json la nueva hoja de cálculo
 - He acabado de cambiar los puntos
 
+## Mayo
+
+**Lunes 3**
+- He seguido buscando guardar las puntuaciones en javascript con un script que se llama blob pero no ha funcionado
+
 
 
 Javier Ribal del Río 3ºB Nº21 Informática	
