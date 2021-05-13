@@ -511,6 +511,14 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 - He cambiado las puntuaciones de los elementos
 
+## Mayo
+
+**He estado mirando como hacer para guardar las puntuaciones en un servidor online**
+
+**Jueves 13**
+- He empezado con php
+
+
 **Martes 20 Informática**
 
 - Le he enseñado a Román los nuevos puntos
