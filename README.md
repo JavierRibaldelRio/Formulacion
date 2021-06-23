@@ -331,7 +331,7 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
   Nitrogenoides
   
-  > NH<sub>3</sub> [Amoniaco]
+  > NH<sub>3</sub> [Amoniaco]º
   > PH<sub>3</sub> 
   > AsH<sub>3</sub> 
   > SbH<sub>3</sub> 
@@ -525,7 +525,11 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 - He pasado a json la nueva hoja de cálculo
 - He acabado de cambiar los puntos
 
+## Verano
 
+**Miércoles 23**
+
+- He mejorado el conversor de R
 
 Javier Ribal del Río 3ºB Nº21 Informática	
 
