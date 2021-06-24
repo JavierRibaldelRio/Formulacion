@@ -58,3 +58,7 @@ const amoniacoSistematico = "trihidruro de nitrógeno";
 //Alamacena el metano en sistematica (CH4)
 
 const metanoSistematico = "tetrahidruro de carbono";
+
+export default numeroDeCartas;
+
+export { tiempoNotificacionSegundos };

@@ -1,3 +1,12 @@
+
+
+import ElementoReact from './ElementoReact';
+import Marcador from './Marcador';
+import baraja from './main';
+import { cartaRobarUsada } from './main';
+
+var React = require('react');   //Activa REACt
+
 class PilaRobar extends React.Component {
 
     constructor(props) {
@@ -82,3 +91,5 @@ class PilaRobar extends React.Component {
         }
     }
 }
+
+export default PilaRobar;

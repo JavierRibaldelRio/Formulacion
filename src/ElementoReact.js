@@ -1,3 +1,7 @@
+
+var React = require('react');   //Activa REACt
+
+
 //Definir la clase de react 
 class ElementoReact extends React.Component {
 
@@ -17,7 +21,7 @@ class ElementoReact extends React.Component {
     //funcion de devolver
 
     render() {
-        
+
         //Hace lque las valencias seán iguales que las del objeto del elemento
         this.state.valencias = this.props.objeto.v;
 
@@ -99,3 +103,5 @@ class ElementoReact extends React.Component {
     }
 
 }
+
+export default ElementoReact;

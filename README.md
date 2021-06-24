@@ -527,9 +527,15 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 ## Verano
 
+## Junio
+
 **Miércoles 23**
 
 - He mejorado el conversor de R
+
+**Jueves 24**
+
+- He empezado a pasar a Node todo el proyect0
 
 Javier Ribal del Río 3ºB Nº21 Informática	
 

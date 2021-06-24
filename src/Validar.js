@@ -1,3 +1,6 @@
+var React = require('react');   //Activa REACt
+
+
 class Validacion extends React.Component {
 
     constructor(props) {
@@ -113,13 +116,8 @@ class Validacion extends React.Component {
 
                 </tbody>
             </table>
-
-
-
         )
-
-
-
     }
-
 }
+
+export default Validacion;

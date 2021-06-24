@@ -1,3 +1,6 @@
+var React = require('react');   //Activa REACt
+
+
 class Marcador extends React.Component {
 
     constructor(props) {
@@ -32,3 +35,5 @@ class Marcador extends React.Component {
     }
 
 }
+
+export default Marcador;

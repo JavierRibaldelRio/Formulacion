@@ -125,3 +125,11 @@ function random(min, max) {
     return Math.floor((Math.random() * (max - min + 1)) + min); //Devuelve el numero aleatorio
 
 }
+
+export { cartasDisponibles };
+
+export default baraja;
+
+export { cartaRobada };
+
+export { cartaRobarUsada };

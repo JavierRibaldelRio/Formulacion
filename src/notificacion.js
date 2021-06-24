@@ -1,3 +1,7 @@
+
+var React = require('react');   //Activa REACt
+
+
 class NotificacicionUsuario extends React.Component {
 
     constructor(props) {
@@ -41,3 +45,5 @@ class NotificacicionUsuario extends React.Component {
 
     }
 }
+
+export default NotificacicionUsuario;
