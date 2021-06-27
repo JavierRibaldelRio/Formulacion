@@ -540,5 +540,8 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 **Viernes 26**
 - He continuado pasando el proyecto a Node
 
+**Sabado 27** 
+- He acabado con la parte de los imports
+
 Javier Ribal del Río 3ºB Nº21 Informática	
 
