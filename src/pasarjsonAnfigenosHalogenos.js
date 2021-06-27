@@ -1,4 +1,7 @@
 //Se ocupa de pasar el json a 
+
+import ElementoNoMetal from "./objetoNoMetal";
+
 function pasarAJsonAnfigenosHalogenos(arrayJson) {
 
     var array = [];
@@ -14,3 +17,5 @@ function pasarAJsonAnfigenosHalogenos(arrayJson) {
     return array;
 
 }
+
+export default pasarAJsonAnfigenosHalogenos;

@@ -23,9 +23,9 @@
 
 .Simbolo_Quimico {
     text-align: center;
-    font-size: 50;
+    font-size: 50px;
     /*Tamaño de la fuente*/
-    padding: 10;
+    padding: 10px;
     /*Distancia entre otros elementos*/
     margin: 1;
     font-family: monospace;
@@ -52,7 +52,7 @@
     a causa de seo no puedes poner dos tablas en fila, el atributo de display de
     css si que puedes hacerlo*/
     display: inline-table;
-    margin: 5;
+    margin: 5px;
     border-radius: 5%;
     /*outline: 2px black solid;*/
     /*Tamaño de la tabla*/

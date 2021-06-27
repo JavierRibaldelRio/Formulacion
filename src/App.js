@@ -1,4 +1,8 @@
 import './App.css';       //Importa la hoja de estilo App
+import './main.css';
+import './notificacion.css';
+import './tipografias.css';
+import './elementos.css';
 
 import ListaCompuestos from './ListaCompuestoCreados';
 import Marcador from './Marcador';

@@ -1,5 +1,7 @@
+import './elementos.css';
 
 var React = require('react');   //Activa REACt
+
 
 
 //Definir la clase de react 

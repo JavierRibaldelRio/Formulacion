@@ -1,3 +1,4 @@
+import './notificacion.css'
 
 var React = require('react');   //Activa REACt
 

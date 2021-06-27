@@ -1,4 +1,4 @@
-//objeto sales binarias
+//Objeto No metales
 
 function ElementoNoMetal(nuevoNombreElemento, sq) {
 
@@ -6,3 +6,5 @@ function ElementoNoMetal(nuevoNombreElemento, sq) {
 
     this.sq = sq.trim();   //Simbolo quimico
 }
+
+export default ElementoNoMetal;

@@ -1,3 +1,10 @@
+import jsonNoMetales from './jsonNoMetales'
+import jsonElementos from './jsonElementos'
+import pasarAJsonAnfigenosHalogenos from './pasarjsonAnfigenosHalogenos';
+import numeroDeCartas from './palabrasClaves';
+
+import shuffle from './barajar';
+import Elemento from './objetosElementos';
 //Crea el array de sales binarias
 
 const jsonDatosNoMetales = JSON.parse(jsonNoMetales);

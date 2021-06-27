@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: 'Nunito';
-    src: url("../Tipografias/Nunito-Regular.eot");
-    src: url('../Tipografias/Nunito-Regular.eot?#iefix') format('embedded-opentype'), url('../Tipografias/Nunito-Regular.woff') format('woff'), url('../Tipografias/Nunito-Regular.ttf') format('truetype'), url('../Tipografias/Nunito-Regular.svg#adlerRegular') format('svg');
+    src: url("./Nunito-Regular.eot");
+    src: url('./Nunito-Regular.eot?#iefix') format('embedded-opentype'), url('./Nunito-Regular.woff') format('woff'), url('./Nunito-Regular.ttf') format('truetype'), url('./Nunito-Regular.svg#adlerRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }

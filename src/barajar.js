@@ -16,3 +16,5 @@ function shuffle(arr) {
     }
     return array;
 }
+
+export default shuffle;

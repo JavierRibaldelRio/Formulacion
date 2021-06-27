@@ -20,3 +20,5 @@ function Elemento(z, nombre, sq, v, repeticion, puntos, grupo, tipo) {
     this.tipo = tipo;   //El tipo de color...
 
 }
+
+export default Elemento;

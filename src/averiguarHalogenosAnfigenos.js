@@ -1,3 +1,12 @@
+
+import extraerPrefijos from "./extraerPrefijo";
+import { sulfuro } from "./palabrasClaves";
+import { encontrarPrefijo } from "./funcionCompuesto";
+import descartarCartasUsadas from "./eliminarCompuestos";
+import crearMapaCompuesto from "./crearMapaCompuesto";
+
+import { comprobarSiPuedeGenerarCompuestos } from "./funcionCompuesto";
+
 //Función que comprueba si es un hidruro
 function averiguarHalogenosYAnfigenos(texto, mapa, prefijoHidrogeno, elementosDisponibles) {
 
@@ -81,7 +90,7 @@ function averiguarHalogenosYAnfigenos(texto, mapa, prefijoHidrogeno, elementosDi
 
     function encontrarEnBancaAnfigenosYHalogenos() {
 
-        var arrayDeHidracidos = []; elemento1
+        var arrayDeHidracidos = [];
 
         for (var i = 0; i < elementosDisponibles.length; i++) {
 
@@ -98,3 +107,5 @@ function averiguarHalogenosYAnfigenos(texto, mapa, prefijoHidrogeno, elementosDi
     }
 
 }
+
+export default averiguarHalogenosYAnfigenos;

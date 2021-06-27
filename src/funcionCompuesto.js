@@ -7,6 +7,14 @@ import calcularPuntuacion from './calcularPuntos';
 import identificarCompuestosExcepcionales from './excepciones';
 import comprobarCompuestoBinario from './compuestoBinario';
 import './palabrasClaves'
+import { hidruro, prefijos, oxido } from './palabrasClaves';
+import buscarElementoEnMapa from './buscarEnMapCompuestos';
+import { sufijo16Y17, hidrogeno, carbono } from './palabrasClaves';
+import averiguarHalogenosYAnfigenos from './averiguarHalogenosAnfigenos';
+import { numeroDePrefijos } from './palabrasClaves';
+import { crearMapaCompuestoPuntuacion } from './calcularPuntos';
+import comprobarSalesBinariasVolatiles from './EncontrarSalesBinariasVolatiles';
+
 
 
 
