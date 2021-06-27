@@ -23,11 +23,10 @@ var numeroElementosACoger = 8;
 //Baraja baraja
 var baraja = shuffle(crearBarajaOrdenada(arrayClases));
 
-var cartasDisponibles = baraja.splice(0, numeroDeCartas);
 
-var cartaRobada;
+window.$cartasDisponibles = baraja.splice(0, numeroDeCartas);
 
-cartasDisponibles.sort(function (a, b) {
+window.$cartasDisponibles.sort(function (a, b) {
     if (a.z > b.z) {
         return 1;
     }
@@ -39,7 +38,7 @@ cartasDisponibles.sort(function (a, b) {
     }
 });
 
-var cartaRobarUsada = false
+window.$cartaRobarUsada = false
 
 //Funciones
 //Convertir en array numerico el string de las valencias ya que del json vienen en forma de texto
@@ -132,11 +131,5 @@ function random(min, max) {
     return Math.floor((Math.random() * (max - min + 1)) + min); //Devuelve el numero aleatorio
 
 }
-
-export { cartasDisponibles };
-
 export default baraja;
-
-export { cartaRobada };
-
-export { cartaRobarUsada, noMetales, arrayClases };
+export { noMetales, arrayClases };

@@ -3,7 +3,6 @@
 import ElementoReact from './ElementoReact';
 import Marcador from './Marcador';
 import baraja from './main';
-import { cartaRobarUsada } from './main';
 
 var React = require('react');   //Activa REACt
 
@@ -39,7 +38,7 @@ class PilaRobar extends React.Component {
     render() {
 
 
-        if (this.state.cartaARobar === undefined || cartaRobarUsada === true) {
+        if (this.state.cartaARobar === undefined || window.$cartaRobarUsada === true) {
 
             return (
                 <table>

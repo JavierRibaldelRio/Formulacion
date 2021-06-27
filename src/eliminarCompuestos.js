@@ -1,6 +1,3 @@
-import { cartaRobada } from './main';
-import { cartaRobarUsada } from './main';
-import { cartasDisponibles } from './main';
 import baraja from './main';
 
 //Función que elimina las cartas usadas
@@ -24,16 +21,16 @@ function descartarCartasUsadas(mapaCompuesto, elementosEnBanca) {
 
                 //Comprovar si carta robado no esta definida
 
-                if (cartaRobada != undefined) {
+                if (window.$cartaRobada != undefined) {
 
                     if (elementosEnBanca[i + 1] === undefined) {
-                        cartaRobarUsada = true;
+                        window.$cartaRobarUsada = true;
 
                     }
 
                     //Si el nombre de la carta robada es igual a la clave   
-                    else if (cartaRobada.nombre.toLocaleLowerCase() === clave && elementosEnBanca[i + 1].nombre.toLocaleLowerCase() != clave) {
-                        cartaRobarUsada = true;
+                    else if (window.$cartaRobada.nombre.toLocaleLowerCase() === clave && elementosEnBanca[i + 1].nombre.toLocaleLowerCase() != clave) {
+                        window.$cartaRobarUsada = true;
 
                     }
                 }
@@ -48,23 +45,23 @@ function descartarCartasUsadas(mapaCompuesto, elementosEnBanca) {
 
     totalDeCartasUsadas = sumarArray(arrayValores);
 
-    cartasDisponibles = elementosEnBanca;
+    window.$cartasDisponibles = elementosEnBanca;
 
-    if (cartasDisponibles.length < 8) {
+    if (window.$cartasDisponibles.length < 8) {
 
-        cartaRobarUsada = true
+        window.$cartaRobarUsada = true
 
-        const cartasARobar = 8 - cartasDisponibles.length;
+        const cartasARobar = 8 - window.$cartasDisponibles.length;
 
         for (var i = 0; i < cartasARobar; i++) {
 
             //Añadir la primera carta a la banca
-            cartasDisponibles.push(baraja.splice(2, 1)[0]);
+            window.$cartasDisponibles.push(baraja.splice(2, 1)[0]);
 
             //Eliminar la segunda carta de la baraja
 
             //Prdena
-            cartasDisponibles.sort(function (a, b) {
+            window.$cartasDisponibles.sort(function (a, b) {
                 if (a.z > b.z) {
                     return 1;
                 }
@@ -76,7 +73,7 @@ function descartarCartasUsadas(mapaCompuesto, elementosEnBanca) {
                 }
             });
 
-            console.log(cartaRobarUsada);
+            console.log(window.$cartaRobarUsada);
 
         }
 

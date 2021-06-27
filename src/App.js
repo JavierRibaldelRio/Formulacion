@@ -13,11 +13,8 @@ import PilaRobar from './PilaDeRobar';
 
 //Variables a Importar
 
-import { cartaRobada } from './main';
 import baraja from './main';
 import numeroDeCartas from './palabrasClaves';
-import { cartasDisponibles } from './main'
-import { cartaRobarUsada } from './main';
 import { tiempoNotificacionSegundos } from './palabrasClaves';
 
 
@@ -43,7 +40,7 @@ class App extends React.Component {
   actualizarEstado(a, nuevoCompuestoCreado) {
 
     this.setState({
-      arrayObjeto: [...cartasDisponibles],
+      arrayObjeto: [...window.$cartasDisponibles],
       puntosTotales: Number(a + this.state.puntosTotales),
       compuestosCreados: this.state.compuestosCreados.concat(nuevoCompuestoCreado)
     });
@@ -63,7 +60,7 @@ class App extends React.Component {
   devolverAlEstadoOriginal() {
 
     //Devolver las cartas disponiles al estado original
-    this.setState({ arrayObjeto: [...cartasDisponibles] });
+    this.setState({ arrayObjeto: [...window.$cartasDisponibles] });
 
   }
 
@@ -74,14 +71,14 @@ class App extends React.Component {
     //Elimina la 1ª casilla del array baraja
     baraja.splice(0, 1);
 
-    this.setState({ arrayObjeto: [...cartasDisponibles].concat(baraja[0]) });
+    this.setState({ arrayObjeto: [...window.$cartasDisponibles].concat(baraja[0]) });
 
     //Dice que carta robar usada es igual a falso
-    cartaRobarUsada = false;
+    window.$cartaRobarUsada = false;
 
     //Definimos cual es la carta robada
 
-    cartaRobada = baraja[0]
+    window.$cartaRobada = baraja[0]
 
     //Devolvemos baraja [0]
     return baraja[0];
@@ -239,7 +236,7 @@ class App extends React.Component {
 
                   <div className="banca">
 
-                    <PilaRobar jugando={this.state.juegoEnMarcha} terminarJuego={this.terminar.bind(this)} robarUnaCarta={this.robarCarta.bind(this)} restaurar={this.devolverAlEstadoOriginal.bind(this)} anyadirAlEstadoCartaRobada={this.anyadirCartaRobado.bind(this)} ></PilaRobar>
+                    <PilaRobar jugando={this.state.juegoEnMarcha} terminarJuego={this.terminar.bind(this)} robarUnaCarta={this.robarCarta.bind(this)} restaurar={this.devolverAlEstadoOriginal.bind(this)} anyadirAlEstadoCartaRobada={this.anyadirCartaRobado.bind(this)}  ></PilaRobar>
 
                   </div>
                 </td>

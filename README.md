@@ -542,6 +542,13 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 **Sabado 27** 
 - He acabado con la parte de los imports
+- He aprendido a crear varibles globales
+- He editado el CSS
+
+**Próximo Día**
+- [ ] Quitarle (otra vez) al oxígeno la valencia de -1
+- [ ] Solucionar el error de al robar carta cambiar todas
+
 
 Javier Ribal del Río 3ºB Nº21 Informática	
 

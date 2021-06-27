@@ -6,7 +6,7 @@ class Banca extends React.Component {
         super(props);
 
         this.state = {
-            arrayObjeto: [...cartasDisponibles], puntosTotales: 0,
+            arrayObjeto: [...window.$cartasDisponibles], puntosTotales: 0,
             notficacion: undefined, buenaNotificacion: true, juegoAcabado: false,
             juegoEnMarcha: false, textoBotonControl: "Empezar", compuestosCreados: [],
         }
@@ -17,7 +17,7 @@ class Banca extends React.Component {
     actualizarEstado(a, nuevoCompuestoCreado) {
 
         this.setState({
-            arrayObjeto: [...cartasDisponibles],
+            arrayObjeto: [...window.$cartasDisponibles],
             puntosTotales: Number(a + this.state.puntosTotales),
             compuestosCreados: this.state.compuestosCreados.concat(nuevoCompuestoCreado)
         });
@@ -37,7 +37,7 @@ class Banca extends React.Component {
     devolverAlEstadoOriginal() {
 
         //Devolver las cartas disponiles al estado original
-        this.setState({ arrayObjeto: [...cartasDisponibles] });
+        this.setState({ arrayObjeto: [...window.$cartasDisponibles] });
 
     }
 
@@ -59,7 +59,7 @@ class Banca extends React.Component {
         //Elimina la 1ª casilla del array baraja
         baraja.splice(0, 1);
 
-        this.setState({ arrayObjeto: [...cartasDisponibles].concat(baraja[0]) });
+        this.setState({ arrayObjeto: [...window.$cartasDisponibles].concat(baraja[0]) });
 
         //Dice que carta robar usada es igual a falso
         cartaRobarUsada = false;
