@@ -14,3 +14,5 @@ function buscarElementoPorSimbolo(arrayABuscar/*El array en el que vas a buscar*
 
 
 }
+
+export default buscarElementoPorSimbolo;

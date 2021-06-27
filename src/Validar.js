@@ -1,4 +1,10 @@
+import comprobarCompuesto from './funcionCompuesto';
+import reproducirSonido from './ReproducirMusica';
+import baraja from './main';
+
+
 var React = require('react');   //Activa REACt
+//
 
 
 class Validacion extends React.Component {

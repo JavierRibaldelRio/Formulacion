@@ -1,3 +1,12 @@
+import { hidruro } from "./palabrasClaves";
+import { oxido } from "./palabrasClaves";
+
+import { noMetales, arrayClases } from './main'
+
+import buscarElementoPorSimbolo from "./BuscarElementoConSimbolo";
+
+import comprobarCompuestoBinario from "./compuestoBinario";
+
 function nombresEquivalentes(nombre) {
 
     if (typeof nombre != "string") {
@@ -41,3 +50,5 @@ function nombresEquivalentes(nombre) {
     return nombreAutentico;
 
 }
+
+export default nombresEquivalentes;

@@ -132,4 +132,4 @@ export default baraja;
 
 export { cartaRobada };
 
-export { cartaRobarUsada };
+export { cartaRobarUsada, noMetales, arrayClases };

@@ -1,4 +1,14 @@
 //Función que compruba las ecepciones
+import comprobarCompuestoBinario from "./compuestoBinario";
+import { crearMapaCompuestoPuntuacion } from "./calcularPuntos";
+import calcularPuntuacion from "./calcularPuntos";
+
+import descartarCartasUsadas from "./eliminarCompuestos";
+import crearMapaCompuesto from "./crearMapaCompuesto";
+import comprobarSalesBinariasVolatiles from "./EncontrarSalesBinariasVolatiles";
+
+import { oxido, hidruro, sal, metanoSistematico, amoniacoSistematico, aguaSistematica } from './palabrasClaves';
+
 
 function identificarCompuestosExcepcionales(compuesto, mapaElementos, elementos) {
 
@@ -51,7 +61,7 @@ function identificarCompuestosExcepcionales(compuesto, mapaElementos, elementos)
 
         case "sal común":
 
-            formulable = comprobasSalesVolatiles(sal, mapaElementos, elementos);
+            formulable = comprobarSalesBinariasVolatiles(sal, mapaElementos, elementos);
 
             break;
 
@@ -60,5 +70,6 @@ function identificarCompuestosExcepcionales(compuesto, mapaElementos, elementos)
 
     return formulable;
 
-
 }
+
+export default identificarCompuestosExcepcionales;

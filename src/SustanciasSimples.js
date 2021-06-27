@@ -49,3 +49,5 @@ function identificarSustanciasSimples(textoUsuario, elementosDisponibles, map) {
 
     return resultadoFuncion;
 }
+
+export default identificarSustanciasSimples;

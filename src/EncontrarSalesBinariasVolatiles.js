@@ -1,3 +1,16 @@
+import { oxido } from './palabrasClaves';
+
+import { noMetales } from './main';
+import extraerPrefijos from './extraerPrefijo';
+import nombresEquivalentes from './EquivalenciasNombres';
+
+import comprobarSiHayElementoPorNombre from './comprobarSiHayPorNombre';
+import buscarElementoEnMapa from './buscarEnMapCompuestos';
+import comprobarOrdenCorrecto from './ComprobarOrden';
+
+import comprobarCompuestoBinario from './compuestoBinario';
+
+
 // Funcion que se ocupa de encontar las sales bianrias, su objetivo es:
 // ejecutar la función de identificar compuestouna vez por cada tipo de sal 
 // binaria que pueda encontrar
@@ -72,3 +85,5 @@ function comprobarSalesBinariasVolatiles(textoUsuario, mapaElementos, elementosD
     return false;
 
 }
+
+export default comprobarSalesBinariasVolatiles;

@@ -1,3 +1,10 @@
+import { prefijos, oxido, numeroDePrefijos, hidruro } from './palabrasClaves';
+import { encontrarPrefijo, comprobarSiPuedeGenerarCompuestos } from './funcionCompuesto'
+import nombresEquivalentes from './EquivalenciasNombres';
+import crearMapaCompuesto from "./crearMapaCompuesto";
+import descartarCartasUsadas from './eliminarCompuestos';
+
+
 function comprobarCompuestoBinario(compuestoBinarioABuscar, compuesto, mapElementos, elementos) {
 
     //Comprobar si el compuesto tiene las suficientes letras para valorarse
@@ -156,7 +163,7 @@ function averiguarCompuestoBinario(texto, mapa, prefijoBinario1, primerCompuesto
 
             nombreSegundoElemento = nombre;
 
-            
+
 
             //Dice si es posible combinar los introducidios, sumar y comprobar valencias
             devolver = comprobarSiPuedeGenerarCompuestos(nombresEquivalentes(primerCompuesto), prefijoBinario1, nombre, numeroPrefijoSegundoElemento, mapa);
@@ -182,3 +189,5 @@ function averiguarCompuestoBinario(texto, mapa, prefijoBinario1, primerCompuesto
     return devolver;
 
 }
+
+export default comprobarCompuestoBinario;

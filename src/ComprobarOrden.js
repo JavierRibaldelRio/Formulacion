@@ -27,3 +27,5 @@ function comprobarOrdenCorrecto(primerElmento, segundoElemento) {
 
     return false;
 }
+
+export default comprobarOrdenCorrecto;

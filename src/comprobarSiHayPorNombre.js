@@ -1,5 +1,7 @@
 //Función que sribe para saver si el elemento se encuenttra en el array
 
+import { comprobarSiPuedeGenerarCompuestos } from "./funcionCompuesto";
+
 function comprobarSiHayElementoPorNombre(elementoABuscar/*texto*/, elementosPosibles/*Array*/) {
 
     //Lo que se va a devolver
@@ -30,3 +32,5 @@ function comprobarSiHayElementoPorNombre(elementoABuscar/*texto*/, elementosPosi
 
     }
 }
+
+export default comprobarSiHayElementoPorNombre;

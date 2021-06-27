@@ -62,3 +62,4 @@ const metanoSistematico = "tetrahidruro de carbono";
 export default numeroDeCartas;
 
 export { tiempoNotificacionSegundos };
+export { prefijos, oxido, numeroDePrefijos, hidruro, sal, metanoSistematico, amoniacoSistematico, aguaSistematica, sufijo16Y17 };

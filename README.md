@@ -535,7 +535,10 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
 **Jueves 24**
 
-- He empezado a pasar a Node todo el proyect0
+- He empezado a pasar a Node todo el proyecto
+
+**Viernes 26**
+- He continuado pasando el proyecto a Node
 
 Javier Ribal del Río 3ºB Nº21 Informática	
 

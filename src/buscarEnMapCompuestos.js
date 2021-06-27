@@ -18,3 +18,5 @@ function buscarElementoEnMapa(mapaElementos, letra) {
     return devolver;    //Devue
 
 }
+
+export default buscarElementoEnMapa;

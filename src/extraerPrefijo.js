@@ -1,5 +1,7 @@
 //Función que saca los prefijos de las palabras
 
+import { prefijos } from "./palabrasClaves";
+
 function extraerPrefijos(textoElemento) {
 
     //Pasa el texto a minusculas
@@ -23,10 +25,12 @@ function extraerPrefijos(textoElemento) {
     }
 
     if (palabra[1] === undefined) {
-        
+
         return textoElemento;
     }
 
     return palabra[1];
 
 }
+
+export default extraerPrefijos;

@@ -1,3 +1,8 @@
+import { cartaRobada } from './main';
+import { cartaRobarUsada } from './main';
+import { cartasDisponibles } from './main';
+import baraja from './main';
+
 //Función que elimina las cartas usadas
 
 function descartarCartasUsadas(mapaCompuesto, elementosEnBanca) {
@@ -97,3 +102,5 @@ function sumarArray(arr) {
     return suma;
 
 }
+
+export default descartarCartasUsadas;

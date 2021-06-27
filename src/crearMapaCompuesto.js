@@ -14,3 +14,5 @@ function crearMapaCompuesto(arrayNombre, arrayRepeticiones) {
     return mapa;
 
 }
+
+export default crearMapaCompuesto;

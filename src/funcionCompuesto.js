@@ -1,3 +1,15 @@
+//Importaciones
+
+import identificarSustanciasSimples from './SustanciasSimples';
+import descartarCartasUsadas from './eliminarCompuestos';
+import crearMapaCompuesto from './crearMapaCompuesto';
+import calcularPuntuacion from './calcularPuntos';
+import identificarCompuestosExcepcionales from './excepciones';
+import comprobarCompuestoBinario from './compuestoBinario';
+import './palabrasClaves'
+
+
+
 //Funcion que comprueva si es posible crear este compuesto
 function comprobarCompuesto(elementos, compuesto) {
 
@@ -454,3 +466,7 @@ function comprobarSiHayHidrogeno(mapaElementos) {
     return devolver;    //Devuelve
 
 }
+
+export default comprobarCompuesto;
+export { comprobarSiHayHidrogeno };
+export { encontrarPrefijo, comprobarSiPuedeGenerarCompuestos };
