@@ -134,7 +134,7 @@ body {
 .Panel_Control {
     display: inline-table;
     background-color: #91A4AA;
-    padding: 5;
+    padding: 5px;
     border-radius: 2.5%;
 }
 
