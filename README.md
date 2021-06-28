@@ -545,10 +545,9 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 - He aprendido a crear varibles globales
 - He editado el CSS
 
-**Próximo Día**
+<!-- **Próximo Día** -->
 - [ ] Quitarle (otra vez) al oxígeno la valencia de -1
 - [ ] Solucionar el error de al robar carta cambiar todas
-
-
+- [ ] Editar el CSS de la notificación
 Javier Ribal del Río 3ºB Nº21 Informática	
 
