@@ -331,7 +331,7 @@ Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de info
 
   Nitrogenoides
   
-  > NH<sub>3</sub> [Amoniaco]º
+  > NH<sub>3</sub> [Amoniaco]
   > PH<sub>3</sub> 
   > AsH<sub>3</sub> 
   > SbH<sub>3</sub> 
