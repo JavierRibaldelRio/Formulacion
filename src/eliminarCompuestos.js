@@ -1,4 +1,3 @@
-import baraja from './main';
 
 //Función que elimina las cartas usadas
 
@@ -56,7 +55,7 @@ function descartarCartasUsadas(mapaCompuesto, elementosEnBanca) {
         for (var i = 0; i < cartasARobar; i++) {
 
             //Añadir la primera carta a la banca
-            window.$cartasDisponibles.push(baraja.splice(2, 1)[0]);
+            window.$cartasDisponibles.push(window.$baraja.splice(2, 1)[0]);
 
             //Eliminar la segunda carta de la baraja
 

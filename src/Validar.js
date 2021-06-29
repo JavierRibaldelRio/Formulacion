@@ -1,6 +1,5 @@
 import comprobarCompuesto from './funcionCompuesto';
 import reproducirSonido from './ReproducirMusica';
-import baraja from './main';
 
 
 var React = require('react');   //Activa REACt
@@ -76,7 +75,7 @@ class Validacion extends React.Component {
 
         }
 
-        if (baraja.lenght < 8) {
+        if (window.$baraja.lenght < 8) {
             this.props.acabar();
         }
     }

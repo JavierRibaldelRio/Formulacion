@@ -56,20 +56,20 @@ class Banca extends React.Component {
         //     baraja.push(ultimaCartaRobada);
         // }
 
-        //Elimina la 1ª casilla del array baraja
-        baraja.splice(0, 1);
+        //Elimina la 1ª casilla del array window.$baraja
+        window.$baraja.splice(0, 1);
 
-        this.setState({ arrayObjeto: [...window.$cartasDisponibles].concat(baraja[0]) });
+        this.setState({ arrayObjeto: [...window.$cartasDisponibles].concat(window.$baraja[0]) });
 
         //Dice que carta robar usada es igual a falso
         cartaRobarUsada = false;
 
         //Definimos cual es la carta robada
 
-        cartaRobada = baraja[0]
+        cartaRobada = window.$baraja[0]
 
         //Devolvemos baraja [0]
-        return baraja[0];
+        return window.$baraja[0];
     }
 
     //Edita el estado conforme el imput y lo devuelve a configuración origianl
