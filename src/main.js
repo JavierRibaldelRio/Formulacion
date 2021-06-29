@@ -20,11 +20,10 @@ var puntos; //Almacena el número
 
 var numeroElementosACoger = 8;
 
-//Baraja baraja
-var baraja = shuffle(crearBarajaOrdenada(arrayClases));
+//Baraja barajada
+window.$baraja = shuffle(crearBarajaOrdenada(arrayClases));
 
-
-window.$cartasDisponibles = baraja.splice(0, numeroDeCartas);
+window.$cartasDisponibles = window.$baraja.splice(0, numeroDeCartas);
 
 window.$cartasDisponibles.sort(function (a, b) {
     if (a.z > b.z) {
@@ -131,5 +130,4 @@ function random(min, max) {
     return Math.floor((Math.random() * (max - min + 1)) + min); //Devuelve el numero aleatorio
 
 }
-export default baraja;
 export { noMetales, arrayClases };

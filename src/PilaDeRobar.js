@@ -2,7 +2,6 @@
 
 import ElementoReact from './ElementoReact';
 import Marcador from './Marcador';
-import baraja from './main';
 
 var React = require('react');   //Activa REACt
 
@@ -17,7 +16,7 @@ class PilaRobar extends React.Component {
     robar() {
 
         //Si hay más cartas en la banca y hay más repeticiones
-        if (this.state.contador < baraja.length && this.state.mazosRestantes > 0) {
+        if (this.state.contador < window.$baraja.length && this.state.mazosRestantes > 0) {
 
             this.setState({ cartaARobar: this.props.robarUnaCarta(this.state.cartaARobar) });
 
@@ -25,7 +24,7 @@ class PilaRobar extends React.Component {
 
         }
         //Si no cambias el mazo
-        else if (this.state.contador >= baraja.length && this.state.mazosRestantes >= 0) {
+        else if (this.state.contador >= window.$baraja.length && this.state.mazosRestantes >= 0) {
 
 
             this.setState({ mazosRestantes: this.state.mazosRestantes - 1, contador: 0, cartaARobar: undefined })

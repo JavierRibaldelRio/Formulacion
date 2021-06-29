@@ -13,7 +13,6 @@ import PilaRobar from './PilaDeRobar';
 
 //Variables a Importar
 
-import baraja from './main';
 import numeroDeCartas from './palabrasClaves';
 import { tiempoNotificacionSegundos } from './palabrasClaves';
 
@@ -29,7 +28,7 @@ class App extends React.Component {
 
     //Define las propiedades
     this.state = {
-      arrayObjeto: [...baraja.splice(0, numeroDeCartas)], puntosTotales: 0,
+      arrayObjeto: [...windowe.$cartasDisponibles], puntosTotales: 0,
       notficacion: undefined, buenaNotificacion: true, juegoAcabado: false,
       juegoEnMarcha: false, textoBotonControl: "Empezar", compuestosCreados: [],
     }
@@ -69,19 +68,19 @@ class App extends React.Component {
 
 
     //Elimina la 1ª casilla del array baraja
-    baraja.splice(0, 1);
+    window.$baraja.splice(0, 1);
 
-    this.setState({ arrayObjeto: [...window.$cartasDisponibles].concat(baraja[0]) });
+    this.setState({ arrayObjeto: [...window.$cartasDisponibles].concat(window.$baraja[0]) });
 
     //Dice que carta robar usada es igual a falso
     window.$cartaRobarUsada = false;
 
     //Definimos cual es la carta robada
 
-    window.$cartaRobada = baraja[0]
+    window.$cartaRobada = window.$baraja[0]
 
     //Devolvemos baraja [0]
-    return baraja[0];
+    return window.$baraja[0];
   }
 
   //Edita el estado conforme el imput y lo devuelve a configuración origianl
