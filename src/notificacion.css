@@ -1,0 +1,20 @@
+.Notificacion_incorrecta {
+    border-color: red;
+    background-color: rgba(245, 150, 150, 0.95);
+}
+
+.Notificacion_correcta {
+    border-color: rgb(22, 235, 22);
+    background-color: rgba(147, 250, 147, 0.815);
+}
+
+.notificacion {
+    display: inline-table;
+    padding: 30px;
+    text-align: center;
+    margin-left: 25%;
+    font-family: 'Nunito';
+    font-size: 20px;
+    border-width: 4px;
+    border-style: solid;
+}
