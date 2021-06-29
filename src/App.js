@@ -28,7 +28,7 @@ class App extends React.Component {
 
     //Define las propiedades
     this.state = {
-      arrayObjeto: [...windowe.$cartasDisponibles], puntosTotales: 0,
+      arrayObjeto: [...window.$cartasDisponibles], puntosTotales: 0,
       notficacion: undefined, buenaNotificacion: true, juegoAcabado: false,
       juegoEnMarcha: false, textoBotonControl: "Empezar", compuestosCreados: [],
     }
