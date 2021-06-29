@@ -23,8 +23,8 @@ function identificarSustanciasSimples(textoUsuario, elementosDisponibles, map) {
 
             //Se repite una vez por cada 
             for (var j = 0; j < elementosDisponibles[i].v.length; j++) {
-
-                if (elementosDisponibles[i].v[j] === -1 || elementosDisponibles[i].z === 8) {
+                /*Los que tienen valencia -a*/          /*El oxígeno */                       /*El nitrógeno*/
+                if (elementosDisponibles[i].v[j] === -1 || elementosDisponibles[i].z === 8 || elementosDisponibles[i].z === 7) {
 
                     //Se repite una vez por cada elemento del map
                     map.forEach(function (valor, key) {
