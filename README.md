@@ -1,20 +1,26 @@
 # FORMULACIÓN
 
+![](/home/javi/Desktop/Programacion/Web/Formulacion/Documentos/GitHub/Foto_Perfil/foto.png)
+
 ### Objetivos del proyecto:
 
 - [ ] Fomentar el aprendizaje de la formulación de forma entretenida
 - [ ] Aprender la escritura correcta en **Español** de los compuestos
-
-
 
 ### Descripción del proyecto:
 
 #### Herramientas:
 
   - Utilizando los lenguajes de html y JavaScript, y css para los formatear el texto
-  - Uso de la ID VScode (Visual Studio Code) para el desarollo
+
+  - Uso de la ID VScode (Visual Studio Code) para el desarrollo
+
   - Uso de Chrome o Chromium o firefox (depende de la situación) para ver la página web
+
   - Uso de las herramientas de las Dev Tools  (visibles al presionar Ctrl + Mayus + i o con clic derecho inspeccionar)
+
+  - La extensión de Git Hub
+
   - Uso de GitHub para gestionar las versiones del proyecto y tener copiado en Internet todo el trabajo
 
   - Framework
@@ -23,7 +29,7 @@
   
 - #### Funcionamiento
 
-  ​		Se trata de un juego para un jugador el cual consistirá en que el programa le mostrará al usuario hocho elementos. El programa se asegurándose de que entre estos siete elementos por lo menos exista una combinación posible de Óxidos o Hidruros o Sales. Cada uno de los elementos tendrá asignado una puntuación y al combinar los elementos se sumarán los puntos. La suma de estos puntos sera la puntuación que obtendrá el jugador en esa ronda. El número de rondas se determinara por el jugador al comenzar la partida. Se podrá robar, tipo solitario al robar una carta se tapara la anterior.
+  ​		Se trata de un juego para un jugador el cual consistirá en que el programa le mostrará al usuario ocho elementos. El programa se asegurándose de que entre estos siete elementos por lo menos exista una combinación posible de Óxidos o Hidruros o Sales. Cada uno de los elementos tendrá asignado una puntuación y al combinar los elementos se sumarán los puntos. La suma de estos puntos sera la puntuación que obtendrá el jugador en esa ronda. El número de rondas se determinara por el jugador al comenzar la partida. Se podrá robar, tipo solitario al robar una carta  tapara la anterior.
 
 ---
 
@@ -121,8 +127,7 @@
 - He creado el diseño de la tabla
 
 
-
-### DICIEMBRE
+### Diciembre
 
 **Miércoles 2**
 
@@ -269,17 +274,289 @@
 ## Febrero
 
 **Lunes 1**
+
 - He solucionado el error del día anterior
 
 
 **Martes 2 Informática**
-- He quitado el *-1* a la valencia del óxigeno
+- He quitado el *-1* a la valencia del óxígeno
+- He añadido un botón de volver a jugar
+
+**Lunes 8**
+
+- He añadido la excepción del agua
+
+**Martes 9**
+- He añadido la excepción del ozono
+- Me he dado cuenta de que hay un error en la función de calcular puntuación, solo vale para compuestos binarios y lo he correguido
+
+Llevo mucho tiempo sin programar por que he tenido que hacer el proyecto de informática, y también he tenido que aprender a formular las Sales Binararias
 
 
 
+**Miércoles 17 Clase de Física y  Química (Laura)**
+
+- Me he dado cuenta de muchos errores que tengo en el juego
+
+- [x] Los elementos si se puden se han de simplificar
+
+>~~Li<sub>2</sub>H<sub>2</sub>~~  NO → LiH Sí :happy:
+
+- [x] Las columnas de los Anfígenos y los Halógenos al combinarse con el hidrógneo siempre toman valencia |1| en caso de los Halógenos y |2| en el caso de los Anfígenos. Por lo tanto.esto genera un número limitado de posibles combinaciones
+
+    Halógenos
+    > HF
+    > HCl
+    > HBr
+    > HI
+
+    Anfígenos
+
+    >  H<sub>2</sub>S
+    >  H<sub>2</sub>Se
+
+
+- [x] Al robar una carta y realizar un compuesto sin la carta robada esta se duplica, aparece en la banca y en la pila de robar; pero solo se encuentra una vez repetida en el array de elementos disponibles
+
+- [x] Los Carbonoides (Sl, C), los nitrogenoides (N, P, As, Sb) y el Boro (B).Se utilizan con una única valencia en el caso de los Carbonoides (Si, C) solo se utilizara la valencia de | 4 | y en el caso de los nitrogenoides (N, P, As, Sb) y el boro (B) se utlizara la valencia de | 3 |. Esto genera un número limitado de combinaciones
+
+  Boro
+
+  >BH<sub>3</sub>
+
+  Carbonoides
+  
+  > CH<sub>4</sub>
+  > SiH<sub>4</sub>
+
+  Nitrogenoides
+  
+  > NH<sub>3</sub> [Amoniaco]
+  > PH<sub>3</sub> 
+  > AsH<sub>3</sub> 
+  > SbH<sub>3</sub> 
+
+**Jueves 18 Casa**
+
+- He creado una rama Errores
+
+- He solucionado 3 de los Errores
+
+**Viernes 19 Informática**
+- He solucionado el cuarto error 
+
+**Lunes 22**
+- He empezado a trabajar en las sales Binarias
+- He hecho una hoja de cálculo de los elementos en su forma de compuesto y he intentado exportala a json para leerla con javascript.
+- No he podido por un problema de las librerias del script de R que utilizo para exportar a json.
+- He instalado en mi ordenador las librerias que faltaban para pasar a json
+- He pasado a json el archivo de los Anfígenos y Halógenos en forma de compuesto
+
+**Durante este tiempo he estado mucho tiempo sin programar porque me he tenido que estudiar mucho para los examenes de la 2ª Evaluación y también he tenido que hacer el examen teorico de audacity, a parte de estudiar las preguntas para el examen**
+
+**Martes 23 Informática**
+- He organizado los archivos
+- He añado los json
+- He añadido la fución de pasar a un array todo el json
+- He acabado de crear todo lo anterior
+- Me he informado sobre otro tipo de excepciones
+
+  
+## Marzo
+
+**Lunes 1**
+
+- He intentado avanzar con la parte de añadir las sales binarias
+
+**Martes 2 Informática**
+- He acabado la función de buscar por SQ
+- He acabado de añadir a la funcion equeivalencias loa sarchivos con uro
 
 
 
+**Viernes 5 Informática**
 
-Javier Ribal del Río 3ºB Nº22 Informática				
+- He solucinado un error de hidruros
+- He continuado con las sales binarias
 
+**Viernes 5 Casa**
+- He acabado de añadir las sales binarias
+
+**Lunes 8**
+- He empezado a corregir lo de los errores entre Anfígenos y Halógenos
+
+**Martes 9 Casa**
+- He añadido un script que te devuelve el objeto del elemento que tiene ese nombre
+- He avanzado con los errores
+- He creado un script para comprobar si el orden es correcto: **Falta añadirlo al html**
+- He añadido una tabla periódica al sistema ade archivos
+
+**Miércoles 10 Casa**
+
+- He acabado la función de comprobar orden compuesto
+- He añadido al index la funcion de comprobar orden compuesto
+- He acabado las sales bianarias
+- He añadido la excepción de la sal común
+
+> NaCl Cloruro de sodio → sal común
+
+- He hecho revisión de errores
+- He hecho un *merge* a la rama principal
+
+**Hemos empezado con *OpenShot* en Informática**
+
+**Lunes 15**
+
+- He actualizado el Git Hub añadiéndole una imagen de perfil al proyecto
+
+**Jueves 18**
+- He añadido el script de las sustancias simples
+
+**Sabado 20**
+- He acabado las Sustancias Simples
+
+**Domingo 21**
+
+- He empezado con las Sales volátiles
+
+- He añadido lo siguientes elementos a la hoja de Anfígenos Halógenos (quiero renombrarla en un futuro).
+
+
+|Nombre Original| Nuevo Nombre | Simbolo químico   |
+|---------| --------- | ---- |
+| Silicio | Siliciuro | Si   |
+| Carbono | Carburo   | C    |
+| Nitrógeno | Nitruro   | N    |
+| Fósforo | Fosfuro   | P    |
+| Arsénico | Arseniuro | As   |
+| Boro| Boruro    | B    |
+
+- Falta convertirla a Json 
+
+**Lunes 22**
+- He pasado a Json la excel
+- He corregido errores de algunos archivos
+
+**Próximo Día**
+
+- [x] Revisar errores
+
+**Domingo 27**
+
+- He acabado las sales volátiles; ha excepción del boro que me da error
+
+**Lunes 29**
+
+- He encontrado información contradictoria sobre el: *Boro (B)*.
+
+  - Según la tabla periódica del colegio el boro tiene valencias: -3 y 3
+  - Según la web de las sales volátiles ([Enlace](https://www.formulacionquimica.com/sales-volatiles/)) el boro tiene valencias -3 y 3
+  - Según el juego de Laura el boro tiene valencia 3
+  - Según "Google" el boro tiene valencia 3
+- He empezado a renombrar códigos ya que el código de las sales binarias es el mismo que el de las sales vólatiles
+
+**Martes 30 Informática** 
+
+- [x] He de preguntarle a Román la valencia del Boro
+
+## Abril
+
+**Viernes 2**
+- He cambiado de hacer el codigo para Sales Volátiles
+- He añadido la valencia -3 al boro
+- Me han surgido problemas con el conversor de R.
+- He hecho un *apaño* provisional para el conversor
+- He añadido el archivo gitignore
+
+
+
+**Sábado 3**
+
+- He empezado a añadir las excepciones que me faltaban
+
+| Símbolo Químico | Nombre Alternativo (Nome. Tradicional) | Nombre Nomenclatura Sistematica |
+| --------------- | -------------------------------------- | ------------------------------- |
+| NH<sub>3</sub>  | Amoniaco                               | Trihiduro de dinitrógeno        |
+| CH<sub>4</sub>  | Metano                                 | Tetrahidruro de carbono         |
+
+**Domingo 4**
+
+- He acabado de añadir las excepciones que me faltaban
+- He aprendido a utilizar el firefox para programación lo cual me permite utilizar la consola de depuración en una nueva ventana.
+
+**Del Lunes 5 al viernes 9**
+
+- He creado con musescore el sonido de la pregunta correcta
+
+**Domingo 10**
+
+- He intentado reproducir un sonido en la web. Pero no he conseguido nada.
+
+**Martes 13**
+- He reproduciodo el sonido en javascript.
+- He empeado ha hacer el sonido r¡de respuesta incorrecta
+
+
+**Viernes 16 Informática**
+- He acabdo el sonido de incorrecto
+- He añadido al script de audio el sonido incorrecto
+
+**Sabado 17**
+- He añadido la música al proyecto
+- He empezado a trabajar en cambiar los puntos 
+- Me a surgido una duda sobre las valencias del flúor. Es -1 o -1 y 1
+- He reorganizado el sistema de archivos
+
+**Lunes 19**
+
+- He cambiado las puntuaciones de los elementos
+
+**Martes 20 Informática**
+
+- Le he enseñado a Román los nuevos puntos
+
+**Miércoles 21**
+
+- He preparado el archivo de los puntos para exportarlo a *.json*. Ya que da problemas con las formulas y he tenido que eliminar de la hoja de cálculo las columnas innecesarias. Para ello he hecho una copia y he suprimido todo lo innecesario. 
+- Como no puedo aplicar el script de R para pasar a json en mi ordenador porqué tiene instalado *manjaro* 
+
+**Jueves 22** 
+
+- He pasado a json la nueva hoja de cálculo
+- He acabado de cambiar los puntos
+
+## Verano
+
+## Junio
+
+**Miércoles 23**
+
+- He mejorado el conversor de R
+
+**Jueves 24**
+
+- He empezado a pasar a Node todo el proyecto
+
+**Viernes 26**
+- He continuado pasando el proyecto a Node
+
+**Sabado 27** 
+- He acabado con la parte de los imports
+- He aprendido a crear varibles globales
+- He editado el CSS
+
+<!-- **Próximo Día** -->
+- [x] Quitarle (otra vez) al oxígeno la valencia de -1
+- [x] Solucionar el error de al robar carta cambiar todas
+- [x] Editar el CSS de la notificación
+Javier Ribal del Río 3ºB Nº21 Informática	
+
+**Domingo 28**
+- He eliminado el mostrar.jsx por que ya no es necesario
+- He editado el css de la notificación
+
+**Lunes 29**
+
+- He solucionado el error que ocurria al robar 1 carta
+- He cambiado el formato del hidrógeno y del grupo 2
+- He solucionado el error de que el nitrógeno no salia en las substancias simples
