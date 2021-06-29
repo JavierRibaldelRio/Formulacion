@@ -64,7 +64,7 @@
 }
 
 .Grupo2 {
-    background-color: orangered;
+    background-color: orange;
 }
 
 .Metal_Trancision {
@@ -72,7 +72,7 @@
 }
 
 .Grupo13 {
-    background-color: #F7C0E4;
+    background-color: pink;
 }
 
 .Grupo14 {
@@ -91,6 +91,10 @@
 .Grupo17 {
     background-color: #4ce682;
     color: purple;
+}
+
+.Hidrogeno {
+    background-color: deeppink;
 }
 
 .filaElementos {

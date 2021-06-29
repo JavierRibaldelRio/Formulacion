@@ -558,4 +558,5 @@ Javier Ribal del Río 3ºB Nº21 Informática
 **Lunes 29**
 
 - He solucionado el error que ocurria al robar 1 carta
+- He cambiado el formato del hidrógeno y del grupo 2
 - He solucionado el error de que el nitrógeno no salia en las substancias simples

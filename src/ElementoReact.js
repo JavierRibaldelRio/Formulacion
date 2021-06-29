@@ -1,5 +1,7 @@
 import './elementos.css';
 
+
+
 var React = require('react');   //Activa REACt
 
 
@@ -24,6 +26,10 @@ class ElementoReact extends React.Component {
 
     render() {
 
+        //Almacenala clase de CSS
+
+        var clasesCss;
+
         //Hace lque las valencias seán iguales que las del objeto del elemento
         this.state.valencias = this.props.objeto.v;
 
@@ -35,13 +41,28 @@ class ElementoReact extends React.Component {
 
         }
 
+
+
+        //Si el númeor atomico de el elemento es =1
+        if (this.props.objeto.z === 1) {
+
+            //Su clade de css es hidrógeno
+            clasesCss = "Hidrogeno";
+
+        }
+        else {
+
+            clasesCss = this.props.objeto.tipo;
+
+        }
+
         //Lo que devuelve
         return (
 
 
             //Crea la tabla
 
-            <table className={"Tabla_Elementos " + this.props.objeto.tipo} >
+            <table className={"Tabla_Elementos " + clasesCss} >
 
                 <tbody >
 
