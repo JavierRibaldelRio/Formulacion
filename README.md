@@ -1,11 +1,11 @@
 # FORMULACIÓN
 
-![](/home/javi/Desktop/Programacion/Web/Formulacion/Documentos/GitHub/Foto_Perfil/foto.png)
+
 
 ### Objetivos del proyecto:
 
 - [ ] Fomentar el aprendizaje de la formulación de forma entretenida
-- [ ] Aprender la escritura correcta en **Español** de los compuestos
+- [ ] Aprender la escritura correcta en **Español** de los compuestos de la nomenclatura sistematica
 
 ### Descripción del proyecto:
 
@@ -15,7 +15,7 @@
 
   - Uso de la ID VScode (Visual Studio Code) para el desarrollo
 
-  - Uso de Chrome o Chromium o firefox (depende de la situación) para ver la página web
+  - Uso de Chrome o Chromium o Firefox -developer edition tanto como normal-  dependiendo de la situación para ver la página web y usar el *Debug*
 
   - Uso de las herramientas de las Dev Tools  (visibles al presionar Ctrl + Mayus + i o con clic derecho inspeccionar)
 
@@ -26,10 +26,16 @@
   - Framework
     - React
     - Node
+  - Npm
+    - create-react-app
+    - http-sever
+    - npm start
   
+- El sitio se aloga en Netlify: https://app.netlify.com/
+
 - #### Funcionamiento
 
-  ​		Se trata de un juego para un jugador el cual consistirá en que el programa le mostrará al usuario ocho elementos. El programa se asegurándose de que entre estos siete elementos por lo menos exista una combinación posible de Óxidos o Hidruros o Sales. Cada uno de los elementos tendrá asignado una puntuación y al combinar los elementos se sumarán los puntos. La suma de estos puntos sera la puntuación que obtendrá el jugador en esa ronda. El número de rondas se determinara por el jugador al comenzar la partida. Se podrá robar, tipo solitario al robar una carta  tapara la anterior.
+  ​		Se trata de un juego para un jugador el cual consistirá en que el programa le mostrará al usuario ocho elementos. El programa se asegurándose de que entre estos siete elementos por lo menos exista una combinación posible de Óxidos o Hidruros o Sales -binarias y volátiles-. Cada uno de los elementos tendrá asignado una puntuación y al combinar los elementos se sumarán los puntos. La suma de estos puntos sera la puntuación que obtendrá el jugador en esa ronda. El número de rondas se determinara por el jugador al comenzar la partida. Se podrá robar, tipo solitario al robar una carta tapara la anterior.
 
 ---
 
@@ -560,3 +566,8 @@ Javier Ribal del Río 3ºB Nº21 Informática
 - He solucionado el error que ocurria al robar 1 carta
 - He cambiado el formato del hidrógeno y del grupo 2
 - He solucionado el error de que el nitrógeno no salia en las substancias simples
+- He puesto icono a la web
+
+![](/home/javi/Programacion/Web/Formulacion/public/Fotografias/Icono/icono_web.png)
+
+- He puesto título a la web: "Formulación"
