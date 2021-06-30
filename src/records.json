@@ -1,0 +1,52 @@
+[
+    {
+        "nombre": "Pepe",
+        "puntos": 500,
+        "numeroDeCompuestos": 30
+    },
+    {
+        "nombre": "Pepa",
+        "puntos": 20,
+        "numeroDeCompuestos": 3
+    },
+    {
+        "nombre": "Andres",
+        "puntos": 6,
+        "numeroDeCompuestos": 10
+    },
+    {
+        "nombre": "dfa",
+        "puntos": 3,
+        "numeroDeCompuestos": 10
+    },
+    {
+        "nombre": "23",
+        "puntos": 53,
+        "numeroDeCompuestos": 10
+    },
+    {
+        "nombre": "Juan",
+        "puntos": 100,
+        "numeroDeCompuestos": 7
+    },
+    {
+        "nombre": "Joel",
+        "puntos": 65,
+        "numeroDeCompuestos": 7
+    },
+    {
+        "nombre": "Mario",
+        "puntos": 3,
+        "numeroDeCompuestos": 9
+    },
+    {
+        "nombre": "sdff",
+        "puntos": 876423456789323,
+        "numeroDeCompuestos": 8
+    },
+    {
+        "nombre": "dfasf dsfaf",
+        "puntos": 1234567890,
+        "numeroDeCompuestos": 0
+    }
+]

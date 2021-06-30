@@ -10,7 +10,8 @@ import Validacion from './Validar';
 import ElementoReact from './ElementoReact';
 import NotificacicionUsuario from './notificacion';
 import PilaRobar from './PilaDeRobar';
-
+import guardarPuntuacion from './guardarRecords';
+import records from './records.json'
 //Variables a Importar
 
 import numeroDeCartas from './palabrasClaves';
@@ -131,6 +132,9 @@ class App extends React.Component {
 
   //Lo que devolvera el componente APP
   render() {
+
+    //Pruebas 
+    guardarPuntuacion("Juan", 40, 4);
     //Sí el juego ha acabdo
     if (this.state.juegoAcabado === true) {
 
