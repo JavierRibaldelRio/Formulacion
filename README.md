@@ -571,3 +571,5 @@ Javier Ribal del Río 3ºB Nº21 Informática
 ![](/home/javi/Programacion/Web/Formulacion/public/Fotografias/Icono/icono_web.png)
 
 - He puesto título a la web: "Formulación"
+**Martes 30**
+- He avanzado con la parte de guardar los recors
