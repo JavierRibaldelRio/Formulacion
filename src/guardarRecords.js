@@ -9,6 +9,21 @@ const fs = require('fs');
 
 const numeroDePuntuacionesAGuardar = 10;
 
+//La función devuleve si ha podido entrar en la tabla de clasificación
+/**
+ * 0: No ha entrado
+ * 
+ * 1: El nombre esta repetido
+ * 
+ * 2: El nombre es muy corto minimo 4 caracteres
+ * 
+ * 3: El nombre es muy largo máximo 15 cáracteres
+ * 
+ * 4: El texto no es valido: no puede contener ni espacios ni simbolos
+ * 
+ * 5: Se ha ingresado correctamente
+ *
+ */
 
 function guardarPuntuacion(nombreUsuario, puntos, numeroDeCompuestos) {
 
@@ -31,7 +46,7 @@ function guardarPuntuacion(nombreUsuario, puntos, numeroDeCompuestos) {
 
     if (recorsActuales[recorsActuales.length - 1].puntos < puntos) {
         let objetoNuevo = {
-            nombre: nombreUsuario,
+            nombre: nombreUsuario.trim(),
 
             puntos: puntos,
 
@@ -42,6 +57,19 @@ function guardarPuntuacion(nombreUsuario, puntos, numeroDeCompuestos) {
             //Elimina la última del array
             recorsActuales.pop();
 
+
+            //Comprovar que no alla nadie con el mismo nombre
+
+            if (recorsActuales.find(function (puntuacion) {
+
+                return puntuacion.nombre.toLocaleLowerCase() === nombreUsuario.toLocaleLowerCase().trim();
+
+            })) {
+                console.log(recorsActuales);
+
+                return 1;
+            }
+
         }
 
         //Añade al array el nuvo elemento
@@ -51,7 +79,11 @@ function guardarPuntuacion(nombreUsuario, puntos, numeroDeCompuestos) {
         console.log(recorsActuales);
 
 
+        return 1;
+
     }
+
+    return 0;
 
 
 

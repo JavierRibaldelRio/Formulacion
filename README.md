@@ -572,4 +572,4 @@ Javier Ribal del Río 3ºB Nº21 Informática
 
 - He puesto título a la web: "Formulación"
 **Martes 30**
-- He avanzado con la parte de guardar los recors
+- He avanzado con la parte de guardar los records

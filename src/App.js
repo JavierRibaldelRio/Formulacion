@@ -134,7 +134,7 @@ class App extends React.Component {
   render() {
 
     //Pruebas 
-    guardarPuntuacion("Juan", 40, 4);
+    guardarPuntuacion("Joel", 40, 4);
     //Sí el juego ha acabdo
     if (this.state.juegoAcabado === true) {
 
