@@ -26,6 +26,7 @@ https://developer.mozilla.org/es/docs/Web/CSS/outline-style
 https://developer.mozilla.org/es/docs/Web/HTML/Elemento/ul 
 https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/floor
 https://stackoverflow.com/questions/47686345/playing-sound-in-react-js
+https://stackoverflow.com/questions/25726214/javascript-check-if-a-giving-string-contains-only-letters-or-digits/25726243
 
 #Añadir tipografía a css
 https://www.elblogdelseo.com/como-utilizar-cualquier-fuente-en-tu-web/

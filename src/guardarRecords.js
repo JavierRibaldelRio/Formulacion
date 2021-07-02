@@ -3,8 +3,7 @@ import records from "./records.json";
 //importa el archivo json
 //Se ocupa de poder crear el json
 
-const fs = require('fs');
-
+import fs from 'fs';
 // Almaciena el número de datos que ha de guardar
 
 const numeroDePuntuacionesAGuardar = 10;
@@ -15,23 +14,24 @@ const numeroDePuntuacionesAGuardar = 10;
  * 
  * 1: El nombre esta repetido
  * 
- * 2: El nombre es muy corto minimo 4 caracteres
+ * 2: El nombre es muy corto minimo 4 caracteres o muy largo máximo 15 cáracteres
  * 
- * 3: El nombre es muy largo máximo 15 cáracteres
+ * 3: El texto no es valido: no puede contener ni espacios ni simbolos
  * 
- * 4: El texto no es valido: no puede contener ni espacios ni simbolos
- * 
- * 5: Se ha ingresado correctamente
+ * 4: Se ha ingresado correctamente
  *
  */
 
 function guardarPuntuacion(nombreUsuario, puntos, numeroDeCompuestos) {
 
-    var recorsActuales = [...records];
+    var recordsActuales = [...records];
+
+    //Almacena lo que va devolver la función
+    var devolucion = 0;
 
     //ordena la matriz de objetos del json
 
-    recorsActuales.sort(function (a, b) {
+    recordsActuales.sort(function (a, b) {
         if (a.puntos > b.puntos) {
 
             return -1;
@@ -44,7 +44,7 @@ function guardarPuntuacion(nombreUsuario, puntos, numeroDeCompuestos) {
 
     //Comprueba si ha entrado en el ranking
 
-    if (recorsActuales[recorsActuales.length - 1].puntos < puntos) {
+    if (recordsActuales[recordsActuales.length - 1].puntos < puntos) {
         let objetoNuevo = {
             nombre: nombreUsuario.trim(),
 
@@ -53,45 +53,68 @@ function guardarPuntuacion(nombreUsuario, puntos, numeroDeCompuestos) {
             numeroDeCompuestos: numeroDeCompuestos
         }
 
-        if (numeroDePuntuacionesAGuardar <= recorsActuales.length) {
+        if (numeroDePuntuacionesAGuardar <= recordsActuales.length) {
             //Elimina la última del array
-            recorsActuales.pop();
+            recordsActuales.pop();
 
 
-            //Comprovar que no alla nadie con el mismo nombre
-
-            if (recorsActuales.find(function (puntuacion) {
-
-                return puntuacion.nombre.toLocaleLowerCase() === nombreUsuario.toLocaleLowerCase().trim();
-
-            })) {
-                console.log(recorsActuales);
-
-                return 1;
+            //comprobar que tenga la longitud minima y máxima
+            if (nombreUsuario.length < 4 || nombreUsuario.length > 15) {
+                devolucion = 2
             }
+            else {
 
+                //Comprueba que solo tiene números y letras
+
+                if (/^[0-9A-Za-z]*$/.test(nombreUsuario) === true) {
+
+                    //Compruba que no hay nadie con el mismo nombre en el ranking
+                    if (recordsActuales.find(function (puntuacion) {
+
+                        return puntuacion.nombre.toLocaleLowerCase() === nombreUsuario.toLocaleLowerCase().trim();
+
+                    })) {
+
+                        devolucion = 1;
+                    }
+                    else {
+
+                        let jsonRecordsActuales;
+
+                        //Lo añade a los records
+                        recordsActuales.push(objetoNuevo);
+
+                        //el valor que va a devolver
+
+                        devolucion = 4;
+
+                        //Guardar cambios en el json
+
+                        jsonRecordsActuales = JSON.stringify(recordsActuales);
+
+                        fs.writeFile('./records.json', jsonRecordsActuales, err => {
+                            if (err) {
+                                console.log('Error writing file', err)
+                            } else {
+                                console.log('Escrito correctamente')
+                            }
+                        })
+                    }
+                }
+
+                else {
+                    devolucion = 3;
+                }
+            }
         }
 
-        //Añade al array el nuvo elemento
+        console.log(devolucion);
 
-        recorsActuales.push(objetoNuevo);
-
-        console.log(recorsActuales);
-
-
-        return 1;
+        return devolucion;
 
     }
 
-    return 0;
-
-
-
-    console.log(recorsActuales)
-
+    return devolucion;
 }
 
-
-
 export default guardarPuntuacion;
-
