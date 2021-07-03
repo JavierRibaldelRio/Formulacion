@@ -3,7 +3,6 @@ import records from "./records.json";
 //importa el archivo json
 //Se ocupa de poder crear el json
 
-import fs from 'fs';
 // Almaciena el número de datos que ha de guardar
 
 const numeroDePuntuacionesAGuardar = 10;
@@ -92,13 +91,7 @@ function guardarPuntuacion(nombreUsuario, puntos, numeroDeCompuestos) {
 
                         jsonRecordsActuales = JSON.stringify(recordsActuales);
 
-                        fs.writeFile('./records.json', jsonRecordsActuales, err => {
-                            if (err) {
-                                console.log('Error writing file', err)
-                            } else {
-                                console.log('Escrito correctamente')
-                            }
-                        })
+
                     }
                 }
 

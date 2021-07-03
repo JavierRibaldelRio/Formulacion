@@ -12,10 +12,32 @@ import NotificacicionUsuario from './notificacion';
 import PilaRobar from './PilaDeRobar';
 import guardarPuntuacion from './guardarRecords';
 import records from './records.json'
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/auth';
+import 'firebase/analytics';
+
+
+
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useCollectionData } from 'react-firebase-hooks/firestore';
+
 //Variables a Importar
 
 import numeroDeCartas from './palabrasClaves';
 import { tiempoNotificacionSegundos } from './palabrasClaves';
+
+firebase.initializeApp({
+  //Tu confiuracion
+  apiKey: "AIzaSyCyd-HZ2KY-7tKJlYBDxG9czb4NSSfLkGw",
+  authDomain: "formulacion-b7458.firebaseapp.com",
+  projectId: "formulacion-b7458",
+  storageBucket: "formulacion-b7458.appspot.com",
+  messagingSenderId: "500082900995",
+  appId: "1:500082900995:web:43e37f5e4a3c0b5957ce36",
+  measurementId: "G-KN4BW0RZ2R"
+
+})
 
 
 
@@ -129,12 +151,25 @@ class App extends React.Component {
 
   }
 
+  //Se ocupa de firebase
+
+  Puntuaciones() {
+
+    var database = firebase.database();
+
+    firebase.database().ref('users/' + "Hola").set({
+      username: "mi",
+      email: "amor",
+    });
+
+  }
 
   //Lo que devolvera el componente APP
   render() {
 
     //Pruebas 
-    console.info(guardarPuntuacion("Hola", 700, 4));
+    //console.info(guardarPuntuacion("Hola", 700, 4));
+    this.Puntuaciones();
     //Sí el juego ha acabdo
     if (this.state.juegoAcabado === true) {
 
