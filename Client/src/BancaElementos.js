@@ -1,3 +1,16 @@
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ * NO USAR
+ * 
+ * 
+ * 
+ * 
+ */
+
 //Contenedor de el elemento banca 
 class Banca extends React.Component {
 

@@ -16,7 +16,7 @@ import PilaRobar from './PilaDeRobar';
 import numeroDeCartas from './palabrasClaves';
 import { tiempoNotificacionSegundos } from './palabrasClaves';
 
-
+require("./jquery-3.6.0");
 
 
 var React = require('react');   //Activa REACt
@@ -31,6 +31,7 @@ class App extends React.Component {
       arrayObjeto: [...window.$cartasDisponibles], puntosTotales: 0,
       notficacion: undefined, buenaNotificacion: true, juegoAcabado: false,
       juegoEnMarcha: false, textoBotonControl: "Empezar", compuestosCreados: [],
+      api: undefined,
     }
 
   }
@@ -128,11 +129,30 @@ class App extends React.Component {
 
   }
 
+  componentDidMount() {
+    var nombre = "Gran";
+
+    var puntos = 200;
+
+    var url = `http://localhost:3000/comprobar/?nick=${nombre}&puntos=${puntos}`;
+
+    $.getJSON(url, (records, status) => {
+
+      console.log(records);
+
+    });
+  }
+
 
   //Lo que devolvera el componente APP
   render() {
     //Sí el juego ha acabdo
     if (this.state.juegoAcabado === true) {
+
+      //API
+
+
+
 
       return (
 

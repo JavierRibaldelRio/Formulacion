@@ -13,9 +13,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/comprobar", (req, res) => {
 
-    let nick = req.body.nick;       //almacena el nombre
+    let nick = req.query.nick;       //almacena el nombre
 
-    let puntos = req.body.puntos;   //puntos
+    let puntos = req.query.puntos;   //puntos
 
     var nuevoRecord = new Record({ nick: nick, puntos: puntos });  //Cre el objeto de record
 
@@ -58,12 +58,20 @@ app.use("/comprobar", (req, res) => {
 
                             if (err) {
                                 res.type("html").send("Se a cometido un error" + err).status(500);
+                            } else {
+                                Record.find({}, (err, recordsGuardados) => {
+
+                                    if (err) {
+                                        res.type("html").status(500).send(`Se a producido un error: ${err}`);
+                                    }
+                                    else {
+
+                                        res.json(recordsGuardados);
+                                    }
+                                });
+
                             }
 
-                            else {
-
-                                res.status(200).type("html").send(`Se ha registrado los ${puntos} puntos de ${nick}`);
-                            }
                         });
 
 
@@ -72,13 +80,9 @@ app.use("/comprobar", (req, res) => {
 
 
 
+            } else {
+                res.json(todosLosRecords);
             }
-
-            else {
-
-                res.type("html").status(200).send("No has entrado en la tabla de calsificacion")
-            }
-
 
         }
     }).sort({ 'puntos': 1 });     //ordena por puntuacion
