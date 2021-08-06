@@ -65,6 +65,8 @@ app.use("/comprobar", (req, res) => {
                                         res.type("html").status(500).send(`Se a producido un error: ${err}`);
                                     }
                                     else {
+                                        //Permite el acceso a todas
+                                        res.setHeader('Access-Control-Allow-Origin', '*');
 
                                         res.json(recordsGuardados);
                                     }
@@ -81,6 +83,9 @@ app.use("/comprobar", (req, res) => {
 
 
             } else {
+
+                res.setHeader('Access-Control-Allow-Origin', '*');
+
                 res.json(todosLosRecords);
             }
 
@@ -90,6 +95,32 @@ app.use("/comprobar", (req, res) => {
 
 });
 
+//Traer records
+app.use("/fetchrecords", (req, res) => {
+
+    //Sacar todos
+    Record.find({}, (err, todos) => {
+
+        //Si jhay erro
+        if (err) {
+
+            //html : 500
+            res.type("html").status(500);
+
+            res.send(`Se ha producido un error: "${err}".`)
+
+        } else {
+
+            res.setHeader('Access-Control-Allow-Origin', '*');
+
+            res.json(todos);
+        }
+
+
+    })
+
+
+})
 app.use('/public', express.static('public'));
 
 

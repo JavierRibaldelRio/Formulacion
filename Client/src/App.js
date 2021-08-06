@@ -15,8 +15,8 @@ import PilaRobar from './PilaDeRobar';
 
 import numeroDeCartas from './palabrasClaves';
 import { tiempoNotificacionSegundos } from './palabrasClaves';
+import TablaRecords from './TablaRecords';
 
-require("./jquery-3.6.0");
 
 
 var React = require('react');   //Activa REACt
@@ -129,31 +129,29 @@ class App extends React.Component {
 
   }
 
+
   componentDidMount() {
-    var nombre = "Gran";
+    //API
 
-    var puntos = 200;
-
-    var url = `http://localhost:3000/comprobar/?nick=${nombre}&puntos=${puntos}`;
-
-    $.getJSON(url, (records, status) => {
-
-      console.log(records);
-
-    });
   }
-
 
   //Lo que devolvera el componente APP
   render() {
     //Sí el juego ha acabdo
     if (this.state.juegoAcabado === true) {
 
-      //API
 
+      // var nombre = "Posavsos";
 
+      // var puntos = 96155274334;
 
+      // var url = `http://localhost:3000/comprobar/?nick=${nombre}&puntos=${puntos}`;
 
+      // fetch(url).then(response => response.json()).then(data => console.log(data));
+
+      var recordsActuales;
+
+      fetch("http://localhost:3000/fetchrecords").then(response => response.json()).then(data => recordsActuales);
       return (
 
         <div>
@@ -163,11 +161,24 @@ class App extends React.Component {
 
             <ListaCompuestos lista={this.state.compuestosCreados}></ListaCompuestos>
 
-            <form className="Panel_Control">
+            {/* <form className="Panel_Control">
 
               <button className="Boton_Play_Pause Boton_Normal">Volver a Jugar</button>
 
+            </form> */}
+
+            <form>
+              Para guardar su puntuacción inserte su nombre:
+
+              <input type="name" minLength="4" maxLength="10"></input>
+
+              <br></br>
+
+              <input type="submit" value="Guardar Puntuacion" />
+
             </form>
+
+            <TablaRecords records={recordsActuales} />
 
 
           </div>
