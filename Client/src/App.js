@@ -32,6 +32,8 @@ class App extends React.Component {
       notficacion: undefined, buenaNotificacion: true, juegoAcabado: false,
       juegoEnMarcha: false, textoBotonControl: "Empezar", compuestosCreados: [],
       api: undefined,
+
+      todosLosRecords: undefined //Almacena todos los records que han sido desacargados desde la api
     }
 
   }
@@ -133,6 +135,10 @@ class App extends React.Component {
   componentDidMount() {
     //API
 
+
+    fetch("http://localhost:3000/fetchrecords").then(response => response.json()).then((data) => { console.log(data); this.setState({ todosLosRecords: data }); });
+
+
   }
 
   //Lo que devolvera el componente APP
@@ -151,7 +157,8 @@ class App extends React.Component {
 
       var recordsActuales;
 
-      fetch("http://localhost:3000/fetchrecords").then(response => response.json()).then(data => recordsActuales);
+
+      console.log(recordsActuales);
       return (
 
         <div>
@@ -178,7 +185,7 @@ class App extends React.Component {
 
             </form>
 
-            <TablaRecords records={recordsActuales} />
+            <TablaRecords records={this.state.todosLosRecords} />
 
 
           </div>

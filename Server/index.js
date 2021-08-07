@@ -11,6 +11,12 @@ app.use(express.urlencoded({ extended: true }));
 
 //Para usar la parte estatica
 
+//Ordena
+function ordenarArray(a, b) {
+    return a.puntos - b.puntos
+
+}
+
 app.use("/comprobar", (req, res) => {
 
     let nick = req.query.nick;       //almacena el nombre
@@ -34,10 +40,7 @@ app.use("/comprobar", (req, res) => {
 
 
             //Ordena por el numero
-            todosLosRecords.sort((a, b) => {
-
-                return a.puntos - b.puntos
-            })
+            todosLosRecords.sort(ordenarArray);
 
             console.log(todosLosRecords);
 
@@ -111,8 +114,14 @@ app.use("/fetchrecords", (req, res) => {
 
         } else {
 
+            //Permite el accesio desde culaquier origen
             res.setHeader('Access-Control-Allow-Origin', '*');
 
+            //Ordena los records
+
+            todos.sort(ordenarArray);
+
+            //los devuelve todos
             res.json(todos);
         }
 

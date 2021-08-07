@@ -10,23 +10,41 @@ class TablaRecords extends React.Component {
 
     render() {
 
+        //Crea una array que almacena el contenido de la tabla
+        var contenidoTabla = [];
+
+        //Copia records
+        var records = this.props.records;
+        //Se repite una vez por cada uno de los records
+        for (var i = 0; i < records.length; i++) {
+
+            //Añade el numero más uno para edivar que salga el número cero, los puntos y el nombr ede usuaroi
+            contenidoTabla.push(<FilaRecords n={i + 1} nick={records[i].nick} puntos={records[i].puntos} />);
+
+        }
 
 
 
         return (
 
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Nickname</th>
-                        <th>Puntos</th>
-                    </tr>
 
-                    {this.props.records.map((record) => { return <FilaRecords nick={record.nick} puntos={record.puntos} /> })}
+            <table id="Tabla_Records">
+                <tr>
+                    <th>POSICIÓN</th>
+                    <th>NICKNAME</th>
+                    <th>PUNTOS</th>
+                </tr>
 
-                </tbody>
+                {//Enseña todos los contenidos de la tabal
+
+                    contenidoTabla.map((v) => {
+                        return (v);
+                    })
+
+                }
 
             </table>
+
         )
 
 

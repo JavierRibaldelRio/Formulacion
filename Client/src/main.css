@@ -145,3 +145,26 @@ body {
     font-weight: normal;
     font-style: normal;
 }
+
+#Tabla_Records {
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: white;
+    border: solid 5px black;
+    border-collapse: collapse;
+}
+
+#Tabla_Records tr {}
+
+#Tabla_Records th {
+    font-size: 22px;
+    text-transform: capitalize;
+    border-bottom: black solid 5px;
+    padding: 20px;
+}
+
+#Tabla_Records td {
+    padding: 15px;
+    border-bottom: black solid 2px;
+}
