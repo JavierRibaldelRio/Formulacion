@@ -33,7 +33,9 @@ class App extends React.Component {
       juegoEnMarcha: false, textoBotonControl: "Empezar", compuestosCreados: [],
       api: undefined,
 
-      todosLosRecords: undefined //Almacena todos los records que han sido desacargados desde la api
+      todosLosRecords: undefined,   //Almacena todos los records que han sido desacargados desde la api
+
+      nombreUsuario: undefined       //Almacena el nnomvbre del usuario
     }
 
   }
@@ -87,10 +89,10 @@ class App extends React.Component {
   }
 
   //Edita el estado conforme el imput y lo devuelve a configuración origianl
-  notificar(nuevaNotificacion, nuevoEstado) {
+  notificar(nuevaNotificacion, bien) {
 
     //Añade al estado la notificación y si es buena o mal
-    this.setState({ notficacion: nuevaNotificacion, buenaNotificacion: nuevoEstado });
+    this.setState({ notficacion: nuevaNotificacion, buenaNotificacion: bien });
 
 
     //Pone un ocntador hacía atras
@@ -136,7 +138,37 @@ class App extends React.Component {
     //API
 
 
-    fetch("http://localhost:3000/fetchrecords").then(response => response.json()).then((data) => { console.log(data); this.setState({ todosLosRecords: data }); });
+    fetch("http://localhost:3000/fetchrecords").then(response => response.json()).then((data) => { this.setState({ todosLosRecords: data }); });
+
+
+  }
+
+  //Se ejecuta al enviar el formulario
+  enviarFormulario(e) {
+    e.preventDefault();
+
+    let nickNuevoRecord = this.state.nombreUsuario;
+
+    if (comprobarSiCoinciden(this.state.todosLosRecords) === true) {
+
+      this.notificar("Este nombre ya esta en uso", false);
+    }
+
+    //Comprueba que los nombres no coinciden
+
+
+    function comprobarSiCoinciden(arr) {
+      for (var i = 0; i < arr.length; i++) {
+
+        if (nickNuevoRecord === arr[i].nick) {
+
+          return true;
+
+        }
+
+      }
+    }
+
 
 
   }
@@ -146,19 +178,41 @@ class App extends React.Component {
     //Sí el juego ha acabdo
     if (this.state.juegoAcabado === true) {
 
+      var aMostrar = false;    //almacena si ha habiado un nuevo record
+
+      //Se ocupa de ver si entra en el podium
+
+      if (this.state.puntosTotales > this.state.todosLosRecords[this.state.todosLosRecords.length - 1].puntos) {
+
+        aMostrar =
+          <form onSubmit={this.enviarFormulario.bind(this)}>
+            Para guardar su puntuacción inserte su nombre:
+
+            <input type="name" pattern="[A-Za-z0-9_-]{4,10}" title="Solo letras y números" minLength="4" maxLength="10" onChange={(e) => { this.setState({ nombreUsuario: e.target.value.trim() }); }}></input>
+
+            <br></br>
+
+            <input type="submit" value="Guardar Puntuacion" />
+
+            <br />
+
+            <NotificacicionUsuario id="Notificacion_Final" texto={this.state.notficacion} tipo={this.state.buenaNotificacion} />
+
+          </form>;
+
+      }
+
+
 
       // var nombre = "Posavsos";
 
-      // var puntos = 96155274334;
+      // var puntos = 96155274334;hhhhhh
 
       // var url = `http://localhost:3000/comprobar/?nick=${nombre}&puntos=${puntos}`;
 
       // fetch(url).then(response => response.json()).then(data => console.log(data));
 
-      var recordsActuales;
 
-
-      console.log(recordsActuales);
       return (
 
         <div>
@@ -174,16 +228,11 @@ class App extends React.Component {
 
             </form> */}
 
-            <form>
-              Para guardar su puntuacción inserte su nombre:
+            { //Muestra lo que se a de mostrar
+              aMostrar}
 
-              <input type="name" minLength="4" maxLength="10"></input>
 
-              <br></br>
 
-              <input type="submit" value="Guardar Puntuacion" />
-
-            </form>
 
             <TablaRecords records={this.state.todosLosRecords} />
 
@@ -240,7 +289,10 @@ class App extends React.Component {
 
           </div>
 
-          <NotificacicionUsuario texto={this.state.notficacion} tipo={this.state.buenaNotificacion} ></NotificacicionUsuario>
+          <div id="Notificacion_Compuesto">
+
+            <NotificacicionUsuario texto={this.state.notficacion} tipo={this.state.buenaNotificacion} ></NotificacicionUsuario>
+          </div>
 
           <br /><br />
           <table className="banca">

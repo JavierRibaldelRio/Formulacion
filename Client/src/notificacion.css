@@ -11,10 +11,17 @@
 .notificacion {
     display: inline-table;
     padding: 30px;
-    text-align: center;
-    margin-left: 25%;
     font-family: 'Nunito';
     font-size: 20px;
     border-width: 4px;
     border-style: solid;
+}
+
+#Notificacion_Compuesto {
+    margin-left: 25%;
+    display: inline;
+}
+
+#Notificacion_Final {
+    margin: 30px;
 }

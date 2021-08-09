@@ -155,8 +155,6 @@ body {
     border-collapse: collapse;
 }
 
-#Tabla_Records tr {}
-
 #Tabla_Records th {
     font-size: 22px;
     text-transform: capitalize;

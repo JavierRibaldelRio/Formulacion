@@ -19,8 +19,8 @@ class TablaRecords extends React.Component {
         for (var i = 0; i < records.length; i++) {
 
             //Añade el numero más uno para edivar que salga el número cero, los puntos y el nombr ede usuaroi
-            contenidoTabla.push(<FilaRecords n={i + 1} nick={records[i].nick} puntos={records[i].puntos} />);
-
+            contenidoTabla.push(<FilaRecords key={i + records[i].nick} n={i + 1} nick={records[i].nick} puntos={records[i].puntos} />);
+            //Hay que darle un valor a el key para que react no confunada los elementos del DOM 
         }
 
 
@@ -29,20 +29,22 @@ class TablaRecords extends React.Component {
 
 
             <table id="Tabla_Records">
-                <tr>
-                    <th>POSICIÓN</th>
-                    <th>NICKNAME</th>
-                    <th>PUNTOS</th>
-                </tr>
 
-                {//Enseña todos los contenidos de la tabal
+                <tbody>
+                    <tr>
+                        <th>POSICIÓN</th>
+                        <th>NICKNAME</th>
+                        <th>PUNTOS</th>
+                    </tr>
 
-                    contenidoTabla.map((v) => {
-                        return (v);
-                    })
+                    {//Enseña todos los contenidos de la tabal
 
-                }
+                        contenidoTabla.map((v) => {
+                            return (v);
+                        })
 
+                    }
+                </tbody>
             </table>
 
         )

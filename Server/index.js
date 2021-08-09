@@ -13,6 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //Ordena
 function ordenarArray(a, b) {
+
     return a.puntos - b.puntos
 
 }
@@ -117,9 +118,9 @@ app.use("/fetchrecords", (req, res) => {
             //Permite el accesio desde culaquier origen
             res.setHeader('Access-Control-Allow-Origin', '*');
 
-            //Ordena los records
+            //Ordena los records de menor a mayor y despues invierte el orden
 
-            todos.sort(ordenarArray);
+            todos.sort(ordenarArray).reverse();;
 
             //los devuelve todos
             res.json(todos);
