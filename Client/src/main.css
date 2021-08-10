@@ -21,11 +21,11 @@ body {
 
 .Fin_Juego {
     background-color: rgb(127, 190, 0);
-    font-size: 45;
+    font-size: 30px;
     font-family: 'Nunito';
     font-style: bold;
     margin: 10%;
-    padding: 10;
+    padding: 10px;
     text-align: center;
     border: solid;
     border-radius: 20%;
@@ -34,11 +34,11 @@ body {
 /*Fin del Juego*/
 
 .Fin_Juego_Visualizar_Lista_Compuestos {
-    font-size: 20;
+    font-size: 20px;
     font-family: 'Nunito';
     font-style: bold;
-    margin: 2;
-    padding: 10;
+    margin: 2px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -49,6 +49,14 @@ body {
 .Fin_Juego_Div {
     justify-content: center;
     align-items: center;
+    background-color: rgb(127, 190, 0);
+    font-family: 'Nunito';
+    font-style: bold;
+    margin: 10%;
+    padding: 10px;
+    text-align: center;
+    border: solid;
+    border-radius: 20%;
 }
 
 /*Verfiicación*/
@@ -138,6 +146,7 @@ body {
     background-color: #91A4AA;
     padding: 5px;
     border-radius: 2.5%;
+    margin-top: 20px
 }
 
 @font-face {

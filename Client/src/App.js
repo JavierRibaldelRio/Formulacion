@@ -193,6 +193,8 @@ class App extends React.Component {
 
       var mostrarTabla = <p className="Mensaje_Error">Se a producido un error, por favor refresque la página</p>;  //Alamacenará la tabla en caso de que se muestre
 
+      var h1CompuestosCreados = <h1>Lista de Compuestos Generados</h1>;
+
       //Se ocupa de ver si entra en el podium
 
       //Comprueba que se han obtenido los datos en forma de arrya
@@ -224,17 +226,21 @@ class App extends React.Component {
 
       }
 
+      //Si se han creado 0 compuestos
+      if (this.state.compuestosCreados === 0) {
 
+        h1CompuestosCreados = undefined;  //Lo hace indefinido
+
+      }
 
 
       return (
 
         <div>
-          <div className="Fin_Juego_Div Fin_Juego"  >
+          <div className="Fin_Juego_Div"  >
             <p className="Fin_Juego">EL JUEGO SE HA ACABADO, HAS OBTENIDO UN TOTAL DE {this.state.puntosTotales} PUNTOS, Y FORMULADO {this.state.compuestosCreados.length} COMPUESTOS. </p>
             <br></br>
 
-            <h1>Lista de Compuestos Generados</h1>
 
             <ListaCompuestos id="Lista_Compuestos" lista={this.state.compuestosCreados}></ListaCompuestos>
 
