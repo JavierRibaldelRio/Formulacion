@@ -152,6 +152,19 @@ class App extends React.Component {
     if (comprobarSiCoinciden(this.state.todosLosRecords) === true) {
 
       this.notificar("Este nombre ya esta en uso", false);
+    } else {
+
+      var puntos = this.state.puntosTotales;
+
+      var nombre = this.state.nombreUsuario;
+
+      var url = `http://localhost:3000/comprobar/?nick=${nombre}&puntos=${puntos}`;
+
+      fetch(url).then(response => response.json()).then((data) => { this.setState({ todosLosRecords: data }) });
+
+      this.notificar("Has entrado en el ranking.", true);
+
+
     }
 
     //Comprueba que los nombres no coinciden
@@ -164,13 +177,11 @@ class App extends React.Component {
 
           return true;
 
+
         }
 
       }
     }
-
-
-
   }
 
   //Lo que devolvera el componente APP
@@ -178,39 +189,42 @@ class App extends React.Component {
     //Sí el juego ha acabdo
     if (this.state.juegoAcabado === true) {
 
-      var aMostrar = false;    //almacena si ha habiado un nuevo record
+      var aMostrar = undefined;    //almacena si ha habiado un nuevo record
+
+      var mostrarTabla = <p className="Mensaje_Error">Se a producido un error, por favor refresque la página</p>;  //Alamacenará la tabla en caso de que se muestre
 
       //Se ocupa de ver si entra en el podium
 
-      if (this.state.puntosTotales > this.state.todosLosRecords[this.state.todosLosRecords.length - 1].puntos) {
+      //Comprueba que se han obtenido los datos en forma de arrya
+      if (this.state.todosLosRecords !== undefined) {
 
-        aMostrar =
-          <form onSubmit={this.enviarFormulario.bind(this)}>
-            Para guardar su puntuacción inserte su nombre:
+        //renderiza la opción  de guardar nombre
+        if (this.state.puntosTotales > this.state.todosLosRecords[this.state.todosLosRecords.length - 1].puntos) {
 
-            <input type="name" pattern="[A-Za-z0-9_-]{4,10}" title="Solo letras y números" minLength="4" maxLength="10" onChange={(e) => { this.setState({ nombreUsuario: e.target.value.trim() }); }}></input>
+          aMostrar =
+            <form onSubmit={this.enviarFormulario.bind(this)}>
+              Para guardar su puntuacción inserte su nombre:
 
-            <br></br>
+              <input type="name" pattern="[A-Za-z0-9_-]{4,10}" title="Solo letras y números" minLength="4" maxLength="10" onChange={(e) => { this.setState({ nombreUsuario: e.target.value.trim() }); }}></input>
 
-            <input type="submit" value="Guardar Puntuacion" />
+              <br></br>
 
-            <br />
+              <input type="submit" value="Guardar Puntuacion" />
 
-            <NotificacicionUsuario id="Notificacion_Final" texto={this.state.notficacion} tipo={this.state.buenaNotificacion} />
+              <br />
 
-          </form>;
+
+            </form>;
+
+        }
+
+        //Añade la tabla ha la renderización
+
+        mostrarTabla = <TablaRecords records={this.state.todosLosRecords} />;
 
       }
 
 
-
-      // var nombre = "Posavsos";
-
-      // var puntos = 96155274334;hhhhhh
-
-      // var url = `http://localhost:3000/comprobar/?nick=${nombre}&puntos=${puntos}`;
-
-      // fetch(url).then(response => response.json()).then(data => console.log(data));
 
 
       return (
@@ -220,23 +234,29 @@ class App extends React.Component {
             <p className="Fin_Juego">EL JUEGO SE HA ACABADO, HAS OBTENIDO UN TOTAL DE {this.state.puntosTotales} PUNTOS, Y FORMULADO {this.state.compuestosCreados.length} COMPUESTOS. </p>
             <br></br>
 
-            <ListaCompuestos lista={this.state.compuestosCreados}></ListaCompuestos>
+            <h1>Lista de Compuestos Generados</h1>
 
-            {/* <form className="Panel_Control">
+            <ListaCompuestos id="Lista_Compuestos" lista={this.state.compuestosCreados}></ListaCompuestos>
 
-              <button className="Boton_Play_Pause Boton_Normal">Volver a Jugar</button>
 
-            </form> */}
 
             { //Muestra lo que se a de mostrar
               aMostrar}
 
+            <NotificacicionUsuario id="Notificacion_Final" texto={this.state.notficacion} tipo={this.state.buenaNotificacion} />
+
+            <hr />
 
 
+            <h1>Ranking</h1>
 
-            <TablaRecords records={this.state.todosLosRecords} />
+            {mostrarTabla}
 
+            <form className="Panel_Control">
 
+              <button className="Boton_Play_Pause Boton_Normal">Volver a Jugar</button>
+
+            </form>
           </div>
 
 

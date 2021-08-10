@@ -20,7 +20,7 @@ body {
 }
 
 .Fin_Juego {
-    background-color: #DAB001;
+    background-color: rgb(127, 190, 0);
     font-size: 45;
     font-family: 'Nunito';
     font-style: bold;
@@ -31,6 +31,8 @@ body {
     border-radius: 20%;
 }
 
+/*Fin del Juego*/
+
 .Fin_Juego_Visualizar_Lista_Compuestos {
     font-size: 20;
     font-family: 'Nunito';
@@ -40,8 +42,8 @@ body {
     text-align: center;
 }
 
-.Lista_Compuestos {
-    list-style-type: square;
+#Lista_Compuestos {
+    list-style-type: none;
 }
 
 .Fin_Juego_Div {
@@ -165,4 +167,13 @@ body {
 #Tabla_Records td {
     padding: 15px;
     border-bottom: black solid 2px;
+}
+
+.Mensaje_Error {
+    color: red;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 20px;
+    padding: 110px;
 }
