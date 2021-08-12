@@ -35,7 +35,11 @@ class App extends React.Component {
 
       todosLosRecords: undefined,   //Almacena todos los records que han sido desacargados desde la api
 
-      nombreUsuario: undefined       //Almacena el nnomvbre del usuario
+      nombreUsuario: undefined,       //Almacena el nnomvbre del usuario
+
+      mejorRecord: undefined,     //Almacena el mejor record
+
+      puntuacionGuardada: false     //Almacena si la puntuación ha sido guardada
     }
 
   }
@@ -133,12 +137,12 @@ class App extends React.Component {
 
   }
 
-
+  //Pide los records
   componentDidMount() {
     //API
 
 
-    fetch("http://localhost:3000/fetchrecords").then(response => response.json()).then((data) => { this.setState({ todosLosRecords: data }); });
+    fetch("http://localhost:3000/fetchrecords").then(response => response.json()).then((data) => { this.setState({ todosLosRecords: data, mejorRecord: data[0].puntos }); });
 
 
   }
@@ -152,17 +156,27 @@ class App extends React.Component {
     if (comprobarSiCoinciden(this.state.todosLosRecords) === true) {
 
       this.notificar("Este nombre ya esta en uso", false);
-    } else {
+    } else if (this.state.puntuacionGuardada === false) {
 
       var puntos = this.state.puntosTotales;
 
       var nombre = this.state.nombreUsuario;
 
-      var url = `http://localhost:3000/comprobar/?nick=${nombre}&puntos=${puntos}`;
+      let compuestos = this.state.compuestosCreados.length;
 
-      fetch(url).then(response => response.json()).then((data) => { this.setState({ todosLosRecords: data }) });
+      var url = `http://localhost:3000/comprobar/?nick=${nombre}&puntos=${puntos}&compuestos=${compuestos}`;
+
+      fetch(url).then(response => response.json()).then((data) => {
+        this.setState({ todosLosRecords: data }); if (data === undefined) {
+          alert("Se ha producido un error, por favor refresque la página")
+        }
+      });
 
       this.notificar("Has entrado en el ranking.", true);
+
+      //Se asegura de que
+
+      this.setState({ puntuacionGuardada: true })
 
 
     }
@@ -195,6 +209,13 @@ class App extends React.Component {
 
       var h1CompuestosCreados = <h1>Lista de Compuestos Generados</h1>;
 
+      //Si se han creado 0 compuestos
+      if (this.state.compuestosCreados.length === 0) {
+
+        h1CompuestosCreados = undefined;  //Lo hace indefinido
+
+      }
+
       //Se ocupa de ver si entra en el podium
 
       //Comprueba que se han obtenido los datos en forma de arrya
@@ -204,14 +225,16 @@ class App extends React.Component {
         if (this.state.puntosTotales > this.state.todosLosRecords[this.state.todosLosRecords.length - 1].puntos) {
 
           aMostrar =
-            <form onSubmit={this.enviarFormulario.bind(this)}>
-              Para guardar su puntuacción inserte su nombre:
+            <form id="Formulario_Record" onSubmit={this.enviarFormulario.bind(this)}>
+              Inserte su nombre para guardar su puntuación:
 
-              <input type="name" pattern="[A-Za-z0-9_-]{4,10}" title="Solo letras y números" minLength="4" maxLength="10" onChange={(e) => { this.setState({ nombreUsuario: e.target.value.trim() }); }}></input>
+              <input type="name" pattern="[A-Za-z0-9_-]{4,10}" title="Solo letras y números" minLength="4" maxLength="10" placeholder="SuNombre" disabled={this.state.puntuacionGuardada} onChange={(e) => { this.setState({ nombreUsuario: e.target.value.trim() }); }} required></input>
 
               <br></br>
 
-              <input type="submit" value="Guardar Puntuacion" />
+              <hr></hr>
+
+              <button className="Boton_Normal" type="submit" disabled={this.state.puntuacionGuardada}>Guardar Puntuación</button>
 
               <br />
 
@@ -226,12 +249,6 @@ class App extends React.Component {
 
       }
 
-      //Si se han creado 0 compuestos
-      if (this.state.compuestosCreados === 0) {
-
-        h1CompuestosCreados = undefined;  //Lo hace indefinido
-
-      }
 
 
       return (
@@ -240,6 +257,8 @@ class App extends React.Component {
           <div className="Fin_Juego_Div"  >
             <p className="Fin_Juego">EL JUEGO SE HA ACABADO, HAS OBTENIDO UN TOTAL DE {this.state.puntosTotales} PUNTOS, Y FORMULADO {this.state.compuestosCreados.length} COMPUESTOS. </p>
             <br></br>
+
+            {h1CompuestosCreados}
 
 
             <ListaCompuestos id="Lista_Compuestos" lista={this.state.compuestosCreados}></ListaCompuestos>
@@ -306,6 +325,13 @@ class App extends React.Component {
                 <tr>
                   <td>
                     <Marcador texto="Compuestos Creados" puntuacion={this.state.compuestosCreados.length} />
+                  </td>
+
+                </tr>
+
+                <tr>
+                  <td>
+                    <Marcador texto="Record" puntuacion={this.state.mejorRecord} />
                   </td>
 
                 </tr>

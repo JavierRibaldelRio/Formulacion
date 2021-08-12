@@ -46,6 +46,10 @@ body {
     list-style-type: none;
 }
 
+.Li_Compuesto_Lista:first-letter {
+    text-transform: capitalize;
+}
+
 .Fin_Juego_Div {
     justify-content: center;
     align-items: center;
@@ -185,4 +189,26 @@ body {
     font-weight: bolder;
     margin: 20px;
     padding: 110px;
+}
+
+/*Formulario*/
+
+#Formulario_Record {
+    border: rgb(63, 0, 190) solid 2px;
+    background-color: rgb(140, 95, 255);
+    padding: 20px;
+    margin: 10px 25% 20px 25%;
+    border-radius: 0.75%
+}
+
+#Formulario_Record input {
+    border: solid black 2px;
+    margin: 2%;
+    text-align: center;
+}
+
+#Formulario_Record button {
+    color: white;
+    background-color: rgb(224, 24, 24);
+    border-color: red;
 }

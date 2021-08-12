@@ -6,7 +6,9 @@ var Schema = mongoose.Schema;
 var recordsEsquema = new Schema({
     nick: { type: String, required: true, uniqued: true },
 
-    puntos: { type: Number, required: true }
+    puntos: { type: Number, required: true },
+
+    compuestosGenerados: { type: Number, required: true }
 })
 
 module.exports = mongoose.model('Record', recordsEsquema);

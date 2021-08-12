@@ -16,6 +16,8 @@ class FilaRecords extends React.Component {
             <td>{this.props.nick}</td>
 
             <td>{this.props.puntos}</td>
+
+            <td>{this.props.compuestos}</td>
         </tr>)
     }
 }

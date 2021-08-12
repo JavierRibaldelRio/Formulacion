@@ -24,7 +24,9 @@ app.use("/comprobar", (req, res) => {
 
     let puntos = req.query.puntos;   //puntos
 
-    var nuevoRecord = new Record({ nick: nick, puntos: puntos });  //Cre el objeto de record
+    let compuestosGenerados = req.query.compuestos;
+
+    var nuevoRecord = new Record({ nick: nick, puntos: puntos, compuestosGenerados: compuestosGenerados });  //Cre el objeto de record
 
     console.log(nuevoRecord);
 
@@ -72,7 +74,7 @@ app.use("/comprobar", (req, res) => {
                                         //Permite el acceso a todas
                                         res.setHeader('Access-Control-Allow-Origin', '*');
 
-                                        res.json(recordsGuardados);
+                                        res.json(recordsGuardados.sort(ordenarArray).reverse());
                                     }
                                 });
 
