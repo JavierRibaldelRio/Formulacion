@@ -1,5 +1,3 @@
-import { exp } from "prelude-ls";
-
 //Se le pasa un mapa de puntos y devuelve le número de puntos que se obtieneen al realizar ese compuesto
 function calcularPuntuacion(mapaPuntos) {
 

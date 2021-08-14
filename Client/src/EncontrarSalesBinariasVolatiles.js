@@ -26,7 +26,7 @@ function comprobarSalesBinariasVolatiles(textoUsuario, mapaElementos, elementosD
             //Zona de mirar si tiene el orden correcto de la z
 
 
-            function comprobarSiEsCorrecto(texto) {
+            function comprobarSiEsCorrecto(texto, a) {
 
                 //Guarda el nommbre del compuesto en forma de matriz de palabras
                 var textoPartido = [];
@@ -58,7 +58,7 @@ function comprobarSalesBinariasVolatiles(textoUsuario, mapaElementos, elementosD
 
                     //Almacena el primer elemento
 
-                    var primerElmento = comprobarSiHayElementoPorNombre(nombresEquivalentes(noMetales[i].nuevoNombreElemento.toLowerCase()), elementosDisponibles);
+                    var primerElmento = comprobarSiHayElementoPorNombre(nombresEquivalentes(noMetales[a].nuevoNombreElemento.toLowerCase()), elementosDisponibles);
 
                 }
 
@@ -68,7 +68,7 @@ function comprobarSalesBinariasVolatiles(textoUsuario, mapaElementos, elementosD
             }
 
             //Cmprueba si es correcto el orden del texto del usuario
-            if (comprobarSiEsCorrecto(textoUsuario) === false) {
+            if (comprobarSiEsCorrecto(textoUsuario, i) === false) {
                 return false;
             }
             //Deveulve el resultado

@@ -17,7 +17,7 @@ function identificarSustanciasSimples(textoUsuario, elementosDisponibles, map) {
     textoUsuario = textoUsuario.toLowerCase();
 
     //Comprueba con todos el elementos
-    for (var i = 0; i < elementosDisponibles.length; i++) {
+    for (let i = 0; i < elementosDisponibles.length; i++) {
 
         if (elementosDisponibles[i].nombre.toLowerCase() === textoUsuario) {
 
@@ -25,17 +25,18 @@ function identificarSustanciasSimples(textoUsuario, elementosDisponibles, map) {
             for (var j = 0; j < elementosDisponibles[i].v.length; j++) {
                 /*Los que tienen valencia -a*/          /*El oxígeno */                       /*El nitrógeno*/
                 if (elementosDisponibles[i].v[j] === -1 || elementosDisponibles[i].z === 8 || elementosDisponibles[i].z === 7) {
-
+                    var salida  //Alamacena los datos de resultado función
                     //Se repite una vez por cada elemento del map
                     map.forEach(function (valor, key) {
-
                         if (key.nombre.toLowerCase() === elementosDisponibles[i].nombre.toLowerCase()) {
 
                             if (valor >= 2) {
-                                resultadoFuncion = elementosDisponibles[i];
+                                salida = elementosDisponibles[i];
                             }
                         }
                     });
+
+                    resultadoFuncion = salida;
 
                 }
 

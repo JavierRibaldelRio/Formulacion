@@ -13,7 +13,7 @@ import PilaRobar from './PilaDeRobar';
 
 //Variables a Importar
 
-import numeroDeCartas from './palabrasClaves';
+
 import { tiempoNotificacionSegundos } from './palabrasClaves';
 import TablaRecords from './TablaRecords';
 

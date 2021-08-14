@@ -21,9 +21,6 @@ import comprobarSalesBinariasVolatiles from './EncontrarSalesBinariasVolatiles';
 //Funcion que comprueva si es posible crear este compuesto
 function comprobarCompuesto(elementos, compuesto) {
 
-    //Error que sacara por pantalla
-    const errorCompuesto = "Este compuesto no se puede crear";
-
     //Cromprovar si compuesto no es un texto
     if (typeof compuesto != "string") {
 
@@ -136,7 +133,6 @@ function comprobarCompuesto(elementos, compuesto) {
 
             }
 
-            return false;
         }
     }
 
@@ -158,7 +154,7 @@ function comprobarCompuesto(elementos, compuesto) {
             if (i < elementos.length - 1) {
 
                 //repetira esto hasta que el elemento cambie
-                while (i < elementos.length - 1 && elementoOriginal.sq == elementos[1 + i].sq) {
+                while (i < elementos.length - 1 && elementoOriginal.sq === elementos[1 + i].sq) {
 
                     i++;
 
@@ -206,203 +202,197 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
     if (posibleTexto(primeraPalabra) && posibleTexto(segundaPalabra) && posibleNumero(prefijoPrimeraPalabra) && posibleNumero(prefijoSegundaPalabra)) {
 
         //Se asegura de que la suma de los dos prefijos es menor que al número total de prefijos
-        if (prefijoPrimeraPalabra + prefijoSegundaPalabra <= numeroDePrefijos) {
 
-            //Eliminar los Nitrogenoides el carbonoide
+        //Eliminar los Nitrogenoides el carbonoide
 
 
-            //Asegurarse de que el compuesto esta simplificado al máximo
-            if (prefijoPrimeraPalabra > 1 && prefijoSegundaPalabra > 1) {
+        //Asegurarse de que el compuesto esta simplificado al máximo
+        if (prefijoPrimeraPalabra > 1 && prefijoSegundaPalabra > 1) {
 
-                //Almacena el valor maximo del número de oxidación
+            //Almacena el valor maximo del número de oxidación
 
-                var max, min;
+            var max, min;
 
-                //Almacena el resultado de la división de max/min
+            //Almacena el resultado de la división de max/min
 
-                let division;
+            let division;
 
-                //Si el mayor es primero
-                if (prefijoPrimeraPalabra > prefijoSegundaPalabra) {
+            //Si el mayor es primero
+            if (prefijoPrimeraPalabra > prefijoSegundaPalabra) {
 
-                    max = prefijoPrimeraPalabra;
+                max = prefijoPrimeraPalabra;
 
-                    min = prefijoSegundaPalabra;
+                min = prefijoSegundaPalabra;
 
-                }
-                //sino
-                else {
-                    max = prefijoSegundaPalabra;
+            }
+            //sino
+            else {
+                max = prefijoSegundaPalabra;
 
-                    min = prefijoPrimeraPalabra;
-
-                }
-
-                //Divide el máximo entre el mínimo
-                division = max / min;
-
-                console.log("funciona correctamente");
-
-                console.info(division);
-
-                //Si el valor de la division es igual a la prate entera de la división
-                //Es decir comprueba si es entero o decimal
-
-                if (division === Math.floor(division)/*Math.floor() saca la parte entera de la coma*/) {
-
-                    return false;
-
-                }
-
+                min = prefijoPrimeraPalabra;
 
             }
 
-            //Se asegura de que los compuestos estan
-            if (comprobarSiEstanLosCompuestos(primeraPalabra, prefijoPrimeraPalabra, mapa) && comprobarSiEstanLosCompuestos(segundaPalabra, prefijoSegundaPalabra, mapa)) {
+            //Divide el máximo entre el mínimo
+            division = max / min;
 
-                //Almaceno lo que se va ha devolver
-                var devol;
+            console.log("funciona correctamente");
 
-                //Array de objetos que almacena los objetos utilizados para este compuesto
-                var arrayCompuesto = crearArrayCompuesto(); //Crea un array corresponde al compuesto
+            console.info(division);
 
-                if (arrayCompuesto[0].nombre.toLocaleLowerCase() === hidrogeno) {
+            //Si el valor de la division es igual a la prate entera de la división
+            //Es decir comprueba si es entero o decimal
 
-                    console.log("CArbonoides,Nitrogenoides");
+            if (division === Math.floor(division)/*Math.floor() saca la parte entera de la coma*/) {
 
-                    if (arrayCompuesto[1].grupo === 15) {
+                return false;
 
-                        if (prefijoPrimeraPalabra != 3) {
-                            return false;
-                        }
+            }
 
-                    } else if (arrayCompuesto[1].nombre.toLocaleLowerCase() === carbono) {
 
-                        if (prefijoPrimeraPalabra != 4) {
-                            return false;
-                        }
+        }
 
-                    }
+        //Se asegura de que los compuestos estan
+        if (comprobarSiEstanLosCompuestos(primeraPalabra, prefijoPrimeraPalabra, mapa) && comprobarSiEstanLosCompuestos(segundaPalabra, prefijoSegundaPalabra, mapa)) {
 
-                }
+            //Almaceno lo que se va ha devolver
+            var devol;
 
-                //Devolver el valor de neutro
-                const devolver = neutro();
+            //Array de objetos que almacena los objetos utilizados para este compuesto
+            var arrayCompuesto = crearArrayCompuesto(); //Crea un array corresponde al compuesto
 
-                if (devolver === true) {
-                    //Calcula puntaución, la cual requiere un mapa de el compuesto, para eso utilizo la función de crearMapaCompuesto la cual pide un array de elemen
-                    devol = calcularPuntuacion(crearMapaCompuestoPuntuacion(arrayCompuesto, [prefijoPrimeraPalabra, prefijoSegundaPalabra]));
+            if (arrayCompuesto[0].nombre.toLocaleLowerCase() === hidrogeno) {
 
-                }
+                console.log("CArbonoides,Nitrogenoides");
 
-                else {
-                    devol = false;
-                }
+                if (arrayCompuesto[1].grupo === 15) {
 
-                return devol;
-
-                //funcion que dice si da neutro (0) o estable
-
-                function neutro() {
-
-                    var valencias1, valencias2;
-
-                    //Crea el array de valencias sumadas de cada elemento
-                    valencias1 = operar(arrayCompuesto[0].v, prefijoPrimeraPalabra);
-
-                    valencias2 = operar(arrayCompuesto[1].v, prefijoSegundaPalabra);
-
-                    //Comprueva si la suma de los arrays de valencias es neutro
-                    if (sumar(valencias1, valencias2)) {
-
-                        return true;
-
-                    } else {
-
-                        return -1;
-                    }
-
-                    //Suma todas las casillas de todos los arrays
-
-                    function sumar(array1, array2) {
-
-                        //Coge la casilla indicada del array
-                        for (var i = 0; i < array1.length; i++) {
-
-                            //Coge la casilla indicada del 2º array
-                            for (var j = 0; j < array2.length; j++) {
-
-                                //Si la suma de los arrays es o deveulve true por que es neutro
-                                if ((array1[i] + array2[j]) === 0) {
-
-                                    return true;
-                                }
-                            }
-                        }
-
-                        //Si no devuelve true devulve false
+                    if (prefijoPrimeraPalabra !== 3) {
                         return false;
                     }
 
-                    //Multiplica las valencias por el numero de repeticiones del elmetneo
-                    function operar(valencias, repeticiones) {
+                } else if (arrayCompuesto[1].nombre.toLocaleLowerCase() === carbono) {
 
-                        var arrayVuelta = [];   //El array que devolveras
-
-                        // Se ejecuta una ve por cada casilla del array
-                        for (var i = 0; i < valencias.length; i++) {
-
-                            //Multiplica la casilla de la valencia por las repeticiones y la añade al array
-                            arrayVuelta.push(valencias[i] * repeticiones);
-
-                        }
-
-                        return arrayVuelta;     //Multiplica el array
-
-                    }
-                }
-
-                //Función que estrae los datos necesarios
-                function crearArrayCompuesto() {
-
-                    var arrayCompuesto = [];    //Crea el a el array
-
-                    //Se ejecuta una vez por cada elemento del array
-                    mapa.forEach(function (valor, key) {
-
-                        anadir(primeraPalabra, key);
-
-                    });
-
-                    //Se ejecuta una vez por cada elemento del array
-
-                    mapa.forEach(function (valor, key) {
-
-                        anadir(segundaPalabra, key);
-
-                    });
-
-                    //Añade el elemento al array
-                    function anadir(palabra, key) {
-                        //Si es igual lo añade
-                        if (key.nombre.toLocaleLowerCase() === palabra) {
-
-                            arrayCompuesto.push(key);   //Añade al array la palabra
-
-                        }
+                    if (prefijoPrimeraPalabra !== 4) {
+                        return false;
                     }
 
-                    return arrayCompuesto;  // Devuelve el array
                 }
 
             }
 
+            //Devolver el valor de neutro
+            const devolver = neutro();
+
+            if (devolver === true) {
+                //Calcula puntaución, la cual requiere un mapa de el compuesto, para eso utilizo la función de crearMapaCompuesto la cual pide un array de elemen
+                devol = calcularPuntuacion(crearMapaCompuestoPuntuacion(arrayCompuesto, [prefijoPrimeraPalabra, prefijoSegundaPalabra]));
+
+            }
+
+            else {
+                devol = false;
+            }
+
+            return devol;
+
+            //funcion que dice si da neutro (0) o estable
+
+            function neutro() {
+
+                var valencias1, valencias2;
+
+                //Crea el array de valencias sumadas de cada elemento
+                valencias1 = operar(arrayCompuesto[0].v, prefijoPrimeraPalabra);
+
+                valencias2 = operar(arrayCompuesto[1].v, prefijoSegundaPalabra);
+
+                //Comprueva si la suma de los arrays de valencias es neutro
+                if (sumar(valencias1, valencias2)) {
+
+                    return true;
+
+                } else {
+
+                    return -1;
+                }
+
+                //Suma todas las casillas de todos los arrays
+
+                function sumar(array1, array2) {
+
+                    //Coge la casilla indicada del array
+                    for (var i = 0; i < array1.length; i++) {
+
+                        //Coge la casilla indicada del 2º array
+                        for (var j = 0; j < array2.length; j++) {
+
+                            //Si la suma de los arrays es o deveulve true por que es neutro
+                            if ((array1[i] + array2[j]) === 0) {
+
+                                return true;
+                            }
+                        }
+                    }
+
+                    //Si no devuelve true devulve false
+                    return false;
+                }
+
+                //Multiplica las valencias por el numero de repeticiones del elmetneo
+                function operar(valencias, repeticiones) {
+
+                    var arrayVuelta = [];   //El array que devolveras
+
+                    // Se ejecuta una ve por cada casilla del array
+                    for (var i = 0; i < valencias.length; i++) {
+
+                        //Multiplica la casilla de la valencia por las repeticiones y la añade al array
+                        arrayVuelta.push(valencias[i] * repeticiones);
+
+                    }
+
+                    return arrayVuelta;     //Multiplica el array
+
+                }
+            }
+
+            //Función que estrae los datos necesarios
+            function crearArrayCompuesto() {
+
+                var arrayCompuesto = [];    //Crea el a el array
+
+                //Se ejecuta una vez por cada elemento del array
+                mapa.forEach(function (valor, key) {
+
+                    anadir(primeraPalabra, key);
+
+                });
+
+                //Se ejecuta una vez por cada elemento del array
+
+                mapa.forEach(function (valor, key) {
+
+                    anadir(segundaPalabra, key);
+
+                });
+
+                //Añade el elemento al array
+                function anadir(palabra, key) {
+                    //Si es igual lo añade
+                    if (key.nombre.toLocaleLowerCase() === palabra) {
+
+                        arrayCompuesto.push(key);   //Añade al array la palabra
+
+                    }
+                }
+
+                return arrayCompuesto;  // Devuelve el array
+            }
+
         }
 
-        //Error
-        else {
-            return -1;
-        }
+
 
         //Error    
     }

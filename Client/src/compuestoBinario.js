@@ -9,15 +9,11 @@ function comprobarCompuestoBinario(compuestoBinarioABuscar, compuesto, mapElemen
 
     //Comprobar si el compuesto tiene las suficientes letras para valorarse
 
-    if (compuesto.trim().split(" ").length != 3) {
+    if (compuesto.trim().split(" ").length !== 3) {
 
         return false;
 
     }
-
-    // console.log("Incluye hidruro");
-
-    var binarioIncorrecto = true;   //para comprobar si hay que avisar al usuario de un error
 
     var primerPrefijo = prefijos[1];
     //Como el monoóxido lleva solo f
@@ -49,7 +45,7 @@ function comprobarCompuestoBinario(compuestoBinarioABuscar, compuesto, mapElemen
     } else {
 
         //Se ejecuta una vez por cada prefijo
-        for (var i = 2; i < numeroDePrefijos; i++) {
+        for (var i = 2; i < (numeroDePrefijos + 1); i++) {
 
             //Comprueba con que prefijos coinciden con el prefijo
             if (compuesto.startsWith(prefijos[i] + compuestoBinarioABuscar)) {
@@ -80,8 +76,6 @@ function comprobarCompuestoBinario(compuestoBinarioABuscar, compuesto, mapElemen
 
     //Lo que se tiene que ejecutar si es un hidruro
     function ejecucionBinario(numero) {
-
-        binarioIncorrecto = false;  // Para marcar que no ahí error
 
         var sal = averiguarCompuestoBinario(compuesto, mapElementos, numero, compuestoBinarioABuscar, elementos);
 

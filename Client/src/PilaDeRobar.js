@@ -47,7 +47,7 @@ class PilaRobar extends React.Component {
                             <td></td>
 
                             <td>
-                                <input disabled={!this.props.jugando} type="image" className="Foto_Robar" src="Fotografias/PatronCartas/patroncarta.png" height="180" width="160" onClick={this.robar.bind(this)}></input>
+                                <input disabled={!this.props.jugando} type="image" className="Foto_Robar" src="Fotografias/PatronCartas/patroncarta.png" height="180" width="160" onClick={this.robar.bind(this)} alt="Pulse aqui para robar"></input>
 
                             </td>
 
@@ -69,7 +69,7 @@ class PilaRobar extends React.Component {
                                 </td>
 
                                 <td>
-                                    <input type="image" className="Foto_Robar" src="Fotografias/PatronCartas/patroncarta.png" height="180" width="160" onClick={this.robar.bind(this)}></input>
+                                    <input type="image" className="Foto_Robar" src="Fotografias/PatronCartas/patroncarta.png" height="180" width="160" alt="Pulse aqui para robar" onClick={this.robar.bind(this)}></input>
 
                                 </td>
                                 <td>

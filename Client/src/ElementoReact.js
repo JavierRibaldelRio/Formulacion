@@ -12,12 +12,7 @@ class ElementoReact extends React.Component {
     //constructor
 
     constructor(props) {
-
         super(props);
-
-        //Coge las valencias del objeto
-        this.state = { valencias: this.props.objeto.v };
-
     }
 
 
@@ -30,18 +25,16 @@ class ElementoReact extends React.Component {
 
         var clasesCss;
 
-        //Hace lque las valencias seán iguales que las del objeto del elemento
-        this.state.valencias = this.props.objeto.v;
+        var valen = [...this.props.objeto.v].toString();
+
 
         //Se ejecuta una vez por cada valencia
-        for (var i = 0; i < this.state.valencias.length; i++) {
+        for (var i = 0; i < valen.length; i++) {
 
             //Remplaza las comas por en espacio
-            this.state.valencias = this.state.valencias.toString().replace(",", " ");
+            valen = valen.replace(",", " ");
 
         }
-
-
 
         //Si el númeor atomico de el elemento es =1
         if (this.props.objeto.z === 1) {
@@ -86,7 +79,7 @@ class ElementoReact extends React.Component {
                         {/* Contenedor de Valencias */}
                         <td className="Valencias">
 
-                            {this.state.valencias}
+                            {valen}
 
                         </td>
 
