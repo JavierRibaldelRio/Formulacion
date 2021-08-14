@@ -15,7 +15,7 @@ function calcularPuntuacion(mapaPuntos) {
 
 
     });
-    return salida;
+    return salida;  //Devuelve la salida
 
 }
 
