@@ -148,6 +148,7 @@ function averiguarCompuestoBinario(texto, mapa, prefijoBinario1, primerCompuesto
 
             }
 
+            //Para asegurar que no es un hidruro no metalico
             if (key.grupo > 15 && hidruro === primerCompuesto) {
                 return false;
             }
