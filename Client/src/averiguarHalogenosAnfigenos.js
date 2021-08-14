@@ -41,6 +41,7 @@ function averiguarHalogenosYAnfigenos(texto, mapa, prefijoHidrogeno, elementosDi
                 elemento1 = "azufre";
 
                 break;
+
         }
     }
 

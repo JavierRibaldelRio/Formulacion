@@ -16,9 +16,6 @@ var jsonDatosElementos = JSON.parse(jsonElementos);
 
 var arrayClases = pasarJsonAClases(); //Array que contiene todas las clases
 
-var puntos; //Almacena el número
-
-var numeroElementosACoger = 8;
 
 //Baraja barajada
 window.$baraja = shuffle(crearBarajaOrdenada(arrayClases));
@@ -124,10 +121,5 @@ function crearBarajaOrdenada(elementos) {
     return array;   //Devolver Array de aleatorios
 }
 
-//Crear Aleatorio se le pasan el minimo y el máximo
-function random(min, max) {
 
-    return Math.floor((Math.random() * (max - min + 1)) + min); //Devuelve el numero aleatorio
-
-}
 export { noMetales, arrayClases };

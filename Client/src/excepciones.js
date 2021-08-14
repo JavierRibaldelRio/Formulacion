@@ -65,6 +65,10 @@ function identificarCompuestosExcepcionales(compuesto, mapaElementos, elementos)
 
             break;
 
+        default:
+            formulable = false;
+            break;
+
 
     }
 

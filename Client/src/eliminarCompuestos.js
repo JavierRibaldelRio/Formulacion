@@ -3,8 +3,6 @@
 
 function descartarCartasUsadas(mapaCompuesto, elementosEnBanca) {
 
-    var totalDeCartasUsadas;    //VAriable que almacena la suma de valores
-
     var arrayValores = [];   //Matriz que almacena todos los valores
 
     //El valor es el numero de repeticiones y la clave el elemento
@@ -20,7 +18,7 @@ function descartarCartasUsadas(mapaCompuesto, elementosEnBanca) {
 
                 //Comprovar si carta robado no esta definida
 
-                if (window.$cartaRobada != undefined) {
+                if (window.$cartaRobada !== undefined) {
 
                     if (elementosEnBanca[i + 1] === undefined) {
                         window.$cartaRobarUsada = true;
@@ -28,7 +26,7 @@ function descartarCartasUsadas(mapaCompuesto, elementosEnBanca) {
                     }
 
                     //Si el nombre de la carta robada es igual a la clave   
-                    else if (window.$cartaRobada.nombre.toLocaleLowerCase() === clave && elementosEnBanca[i + 1].nombre.toLocaleLowerCase() != clave) {
+                    else if (window.$cartaRobada.nombre.toLocaleLowerCase() === clave && elementosEnBanca[i + 1].nombre.toLocaleLowerCase() !== clave) {
                         window.$cartaRobarUsada = true;
 
                     }
@@ -41,8 +39,6 @@ function descartarCartasUsadas(mapaCompuesto, elementosEnBanca) {
         }
 
     });
-
-    totalDeCartasUsadas = sumarArray(arrayValores);
 
     window.$cartasDisponibles = elementosEnBanca;
 
@@ -82,21 +78,5 @@ function descartarCartasUsadas(mapaCompuesto, elementosEnBanca) {
 
 }
 
-//Funcion sumar un array
-
-function sumarArray(arr) {
-
-
-    var suma;
-
-    for (var i = 0; i < arr.length; i++) {
-
-        suma = + arr[i]
-
-    }
-
-    return suma;
-
-}
 
 export default descartarCartasUsadas;

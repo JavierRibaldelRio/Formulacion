@@ -10,7 +10,7 @@ class ListaCompuestos extends React.Component {
 
     render() {
 
-        var arrayEtiquetasCompuestos = new Array();
+        var arrayEtiquetasCompuestos = [];
 
         var listaCompuestos = this.props.lista;   //Copia el array de compuestos generados
 

@@ -13,7 +13,7 @@ class NotificacicionUsuario extends React.Component {
 
 
 
-        if (this.props.texto != undefined) {
+        if (this.props.texto !== undefined) {
             //Le quita los espacios del principio
             const texto = this.props.texto.trim();
 
