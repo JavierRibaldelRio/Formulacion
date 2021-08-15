@@ -9,6 +9,7 @@ app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({ extended: true }));
 
+
 //Para usar la parte estatica
 
 //Ordena
@@ -28,7 +29,6 @@ app.use("/comprobar", (req, res) => {
 
     var nuevoRecord = new Record({ nick: nick, puntos: puntos, compuestosGenerados: compuestosGenerados });  //Cre el objeto de record
 
-    console.log(nuevoRecord);
 
     //Busca a todas las personas
     Record.find({}, (err, todosLosRecords) => {
@@ -44,8 +44,6 @@ app.use("/comprobar", (req, res) => {
 
             //Ordena por el numero
             todosLosRecords.sort(ordenarArray);
-
-            console.log(todosLosRecords);
 
             //Comprueba si el nuvo record supera al ultimo
 
@@ -104,9 +102,9 @@ app.use("/comprobar", (req, res) => {
 //Traer records
 app.use("/fetchrecords", (req, res) => {
 
+
     //Sacar todos
     Record.find({}, (err, todos) => {
-
         //Si jhay erro
         if (err) {
 
@@ -134,7 +132,10 @@ app.use("/fetchrecords", (req, res) => {
 
 })
 
+app.use('/public', express.static('files'));
 
-app.listen(3000, () => {
-    console.log('Listening on port 3000');
+var puerto = 3000;
+
+app.listen(puerto, () => {
+    console.log('Listening on port ' + puerto);
 });
