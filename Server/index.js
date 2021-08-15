@@ -105,11 +105,8 @@ app.use("/comprobar", (req, res) => {
 app.use("/fetchrecords", (req, res) => {
 
 
-    console.log(process.env.MONGO_DB_USERNAME);
-
     //Sacar todos
     Record.find({}, (err, todos) => {
-
         //Si jhay erro
         if (err) {
 
