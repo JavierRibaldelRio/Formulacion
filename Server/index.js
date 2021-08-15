@@ -104,6 +104,9 @@ app.use("/comprobar", (req, res) => {
 //Traer records
 app.use("/fetchrecords", (req, res) => {
 
+
+    console.log(process.env.MONGO_DB_USERNAME);
+
     //Sacar todos
     Record.find({}, (err, todos) => {
 
@@ -133,6 +136,8 @@ app.use("/fetchrecords", (req, res) => {
 
 
 })
+
+app.use('/public', express.static('files'));
 
 
 app.listen(3000, () => {
