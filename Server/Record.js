@@ -1,6 +1,6 @@
 var mongoose = require('mongoose'); //Importa la libreria de Mongo
 
-mongoose.connect(`mongodb+srv://${process.env.MONGO_DB_USERNAME}:${process.env.MONGO_DB_PASSWORD}@cluster0.x1t0q.mongodb.net/formulacion?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(`mongodb+srv://Javier:Lavanda@cluster0.x1t0q.mongodb.net/formulacion?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 var Schema = mongoose.Schema;
 
 var recordsEsquema = new Schema({
