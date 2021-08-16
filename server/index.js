@@ -135,8 +135,8 @@ app.use("/fetchrecords", (req, res) => {
 
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
-var puerto = 3001;
+var PORT = process.env.PORT || 3001;
 
-app.listen(puerto, () => {
-    console.log('Listening on port ' + puerto);
+app.listen(PORT, () => {
+    console.log('Listening on port ' + PORT);
 });
