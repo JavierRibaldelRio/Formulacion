@@ -16,9 +16,11 @@ app.use(express.urlencoded({ extended: true }));
 //Ordena
 function ordenarArray(a, b) {
 
-    return a.puntos - b.puntos
+    return a.puntos - b.puntos;
 
 }
+app.use("/reglas", express.static('./server/reglas'));
+
 
 app.use("/comprobar", (req, res) => {
 
@@ -131,12 +133,20 @@ app.use("/fetchrecords", (req, res) => {
     })
 
 
-})
+});
 
-app.use(express.static(path.resolve(__dirname, '../client/build')));
+//La parte de las normas
+
+
+app.use("/", express.static(path.resolve(__dirname, '../client/build')));
 
 var PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
     console.log('Listening on port ' + PORT);
 });
+
+//Para renderizar la página404
+app.use((req, res) => {
+    res.send("Hola")
+})
