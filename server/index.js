@@ -148,5 +148,5 @@ app.listen(PORT, () => {
 
 //Para renderizar la página404
 app.use((req, res) => {
-    res.send("Hola")
+    res.status(404).type('html').sendFile(path.resolve(__dirname, 'views/404.html'));
 })
