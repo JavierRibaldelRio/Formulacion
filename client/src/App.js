@@ -79,8 +79,6 @@ class App extends React.Component {
     //Elimina la 1ª casilla del array baraja
     window.$baraja.splice(0, 1);
 
-    this.setState({ arrayObjeto: [...window.$cartasDisponibles].concat(window.$baraja[0]) });
-
     //Dice que carta robar usada es igual a falso
     window.$cartaRobarUsada = false;
 
