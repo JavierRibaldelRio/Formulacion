@@ -9,32 +9,27 @@ class PilaRobar extends React.Component {
 
     constructor(props) {
         super(props)
-        this.state = { cartaARobar: undefined, mazosRestantes: 2, contador: 0 };
+        this.state = { cartaARobar: undefined, mazosRestantes: 1 };
     }
 
     //Función que se ejecuta al robar
     robar() {
 
         //Si hay más cartas en la banca y hay más repeticiones
-        if (this.state.contador < window.$baraja.length && this.state.mazosRestantes > 0) {
+        if (window.$baraja.length <= 8) {
 
-            this.setState({ cartaARobar: this.props.robarUnaCarta(this.state.cartaARobar) });
-
-            this.setState({ contador: this.state.contador + 1 });
+            this.props.terminarJuego();
 
         }
-        //Si no cambias el mazo
-        else if (this.state.contador >= window.$baraja.length && this.state.mazosRestantes >= 0) {
+        else {
+            this.setState({ cartaARobar: this.props.robarUnaCarta(this.state.cartaARobar) });
 
-
-            this.setState({ mazosRestantes: this.state.mazosRestantes - 1, contador: 0, cartaARobar: undefined })
-
-        } else {
-            this.props.terminarJuego();
         }
     }
 
     render() {
+
+        var cartasRestantes = window.$baraja.length;
 
 
         if (this.state.cartaARobar === undefined || window.$cartaRobarUsada === true) {
@@ -51,7 +46,7 @@ class PilaRobar extends React.Component {
 
                             </td>
 
-                            <td><Marcador texto="Repartos restantes" puntuacion={this.state.mazosRestantes} /> </td>
+                            <td><Marcador texto="Cartas restantes" puntuacion={(cartasRestantes - 8)} /> </td>
                         </tr>
                     </tbody>
                 </table>
@@ -74,7 +69,7 @@ class PilaRobar extends React.Component {
                                 </td>
                                 <td>
 
-                                    <Marcador texto="Repartos restantes" puntuacion={this.state.mazosRestantes} />
+                                    <Marcador texto="Cartas restantes" puntuacion={(cartasRestantes - 8)} />
 
                                 </td>
 

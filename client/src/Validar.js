@@ -26,9 +26,10 @@ class Validacion extends React.Component {
     }
 
     //Ejecutar la función de pasarcompuesto
-    pasarDatosFuncionCompuesto() {
+    pasarDatosFuncionCompuesto(e) {
+        e.preventDefault();
 
-        //Almacena en forma de variable las propiedades
+        document.getElementById("veri").reset();        //Almacena en forma de variable las propiedades
         var elementosDisponiblesOrdenados = [...this.props.elementosDisponibles]
 
         //Ordena
@@ -99,26 +100,20 @@ class Validacion extends React.Component {
                         </td>
 
                     </tr>
-
                     <tr>
                         <td>
-                            <input onChange={this.cambiarTexto.bind(this)} />
+                            <form id="veri" onSubmit={this.pasarDatosFuncionCompuesto.bind(this)}>
 
+                                <input onChange={this.cambiarTexto.bind(this)} />
+                                <br></br>
+
+
+                                {/*Boton */}
+                                <button type="submit" disabled={!this.props.jugando} className="Boton_Verificacion Boton_Normal" >Validar</button>
+
+                            </form>
                         </td>
-
                     </tr>
-
-                    <tr>
-
-                        <td>
-                            {/*Boton */}
-                            <button disabled={!this.props.jugando} className="Boton_Verificacion Boton_Normal" onClick={this.pasarDatosFuncionCompuesto.bind(this)}>Validar</button>
-
-                        </td>
-
-
-                    </tr>
-
                 </tbody>
             </table>
         )
