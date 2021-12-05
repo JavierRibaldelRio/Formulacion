@@ -415,7 +415,7 @@ class App extends React.Component {
 
                   {botonAcabar}
 
-                  <a class="Boton_Normal Boton_Play_Pause" href="/reglas">Reglas</a>
+                  <a className="Boton_Normal Boton_Play_Pause" href="/reglas">Reglas</a>
                 </td>
 
               </tr>
