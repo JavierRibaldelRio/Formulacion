@@ -90,7 +90,7 @@ function pasarJsonAClases() {
                 jsonDatosElementos[i].puntos,                           //Coge del elemento i los grupos y se la pasa al objeto
                 jsonDatosElementos[i].grupo,                            //Coge del elemento i el grupo y se la pasa al objeto
                 jsonDatosElementos[i].tipo,
-                jsonDatosElementos[i].metal                             //Coge del  
+                jsonDatosElementos[i].Metal                             //Coge del  
 
             );
 
