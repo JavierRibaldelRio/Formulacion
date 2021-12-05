@@ -2,4 +2,6 @@
 
 elementos.xlsx
 
-elementos.json
+*.json
+
+*.xlsx
