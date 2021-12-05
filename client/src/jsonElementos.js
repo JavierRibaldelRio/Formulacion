@@ -28,12 +28,12 @@ var jsonElementos = `[
         "z": 1,
         "nombre": "Hidrógeno",
         "sq": "H",
-        "v": "-1,1",
+        "v": "-1,1",1
         "repeticion": 28,
         "puntos": 5,
         "grupo": 1,
         "tipo": "Grupo1",
-        "Metal": true
+        "Metal": false
     },
     {
         "z": 3,
