@@ -25,3 +25,9 @@ yarn-error.log*
 .directory
 
 /.vscode
+
+.Rproj.user
+
+client/public/ConversorR/*.xlsx
+
+client/public/ConversorR/*.json
