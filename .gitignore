@@ -27,4 +27,4 @@ yarn-error.log*
 elementos.xlsx
 
 **/ConversorR/*.xlsx
-client/node_modules/.cache/.eslintcache
+.eslintcache
