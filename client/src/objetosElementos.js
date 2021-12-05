@@ -1,5 +1,5 @@
 //Definir el objeto de elemento
-function Elemento(z, nombre, sq, v, repeticion, puntos, grupo, tipo) {
+function Elemento(z, nombre, sq, v, repeticion, puntos, grupo, tipo, metal) {
 
     //Constructor
 
@@ -18,6 +18,8 @@ function Elemento(z, nombre, sq, v, repeticion, puntos, grupo, tipo) {
     this.grupo = grupo;     //Columna en la tabla periódica
 
     this.tipo = tipo;   //El tipo de color...
+
+    this.metal = metal; //INdica si es un metal
 
 }
 
