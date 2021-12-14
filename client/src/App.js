@@ -74,6 +74,7 @@ class App extends React.Component {
 
   //roba una carta
   robarCarta(cartaARobar) {
+    //Si la ultima es distinta a indefinda
 
 
     //Elimina la 1ª casilla del array baraja
@@ -85,6 +86,9 @@ class App extends React.Component {
     //Definimos cual es la carta robada
 
     window.$cartaRobada = window.$baraja[0]
+
+    //Añade la carta a robar a elementos disponibles
+    this.setState({ arrayObjeto: this.state.arrayObjeto.concat(window.$cartaRobada) });
 
     //Devolvemos baraja [0]
     return window.$baraja[0];
