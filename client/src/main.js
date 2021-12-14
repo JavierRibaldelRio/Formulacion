@@ -89,7 +89,8 @@ function pasarJsonAClases() {
                 jsonDatosElementos[i].repeticion,                       //Coge del elemento i la repetición y se la pasa al objeto
                 jsonDatosElementos[i].puntos,                           //Coge del elemento i los grupos y se la pasa al objeto
                 jsonDatosElementos[i].grupo,                            //Coge del elemento i el grupo y se la pasa al objeto
-                jsonDatosElementos[i].tipo
+                jsonDatosElementos[i].tipo,
+                jsonDatosElementos[i].Metal                             //Coge del  
 
             );
 
