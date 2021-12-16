@@ -1,12 +1,15 @@
 
 //Función que elimina las cartas usadas
 
-function descartarCartasUsadas(mapaCompuesto, elementosEnBanca) {
+
+function descartarCartasUsadas(mapaCompuesto /*Forma del compuesto el map*/,
+    elementosEnBanca /*Elementos que hay en total*/) {
 
     var arrayValores = [];   //Matriz que almacena todos los valores
 
     //El valor es el numero de repeticiones y la clave el elemento
     mapaCompuesto.forEach(function (valor, clave) {
+
 
         arrayValores.push(valor);
 
@@ -14,7 +17,7 @@ function descartarCartasUsadas(mapaCompuesto, elementosEnBanca) {
 
             if (clave === elementosEnBanca[i].nombre.toLocaleLowerCase()) {
 
-                elementosEnBanca.splice(i, valor);
+                elementosEnBanca.splice(i, valor);  //Corta las cartas necesarias
 
                 //Comprovar si carta robado no esta definida
 
@@ -55,7 +58,7 @@ function descartarCartasUsadas(mapaCompuesto, elementosEnBanca) {
 
             //Eliminar la segunda carta de la baraja
 
-            //Prdena
+            //Ordenalas crtas disponibles
             window.$cartasDisponibles.sort(function (a, b) {
                 if (a.z > b.z) {
                     return 1;
@@ -67,8 +70,6 @@ function descartarCartasUsadas(mapaCompuesto, elementosEnBanca) {
                     return 0;
                 }
             });
-
-            console.log(window.$cartaRobarUsada);
 
         }
 

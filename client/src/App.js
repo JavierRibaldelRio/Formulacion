@@ -28,7 +28,8 @@ class App extends React.Component {
 
     //Define las propiedades
     this.state = {
-      arrayObjeto: [...window.$cartasDisponibles], puntosTotales: 0,
+      arrayObjeto: [...window.$cartasDisponibles],  //Todas las cartas que hay disponibles
+      puntosTotales: 0,
       notficacion: undefined, buenaNotificacion: true, juegoAcabado: false,
       juegoEnMarcha: false, textoBotonControl: "Empezar", compuestosCreados: [],
       api: undefined,
@@ -73,25 +74,34 @@ class App extends React.Component {
   }
 
   //roba una carta
-  robarCarta(cartaARobar) {
-    //Si la ultima es distinta a indefinda
+  robarCarta() {
 
 
-    //Elimina la 1ª casilla del array baraja
-    window.$baraja.splice(0, 1);
+    var copiaArrayObjeto = [...this.state.arrayObjeto];   //Copuamos el array objeto en copia dle array objeto
+    //si en la baraja hay más de 8 cartas quitamos la última
+    if (this.state.arrayObjeto.length > 8) {
+
+
+      copiaArrayObjeto.pop();   //Quitamos la última carta de la copia de arrya objeto
+
+    }
+
+    //Pasa la primera carta de la baraja a carta robada
+    window.$cartaRobada = window.$baraja.shift();
+
+    //Añade la carta robada a la copia de objeto
+
+    copiaArrayObjeto.push(window.$cartaRobada);
 
     //Dice que carta robar usada es igual a falso
     window.$cartaRobarUsada = false;
 
     //Definimos cual es la carta robada
 
-    window.$cartaRobada = window.$baraja[0]
 
-    //Añade la carta a robar a elementos disponibles
-    this.setState({ arrayObjeto: this.state.arrayObjeto.concat(window.$cartaRobada) });
+    //Transforma la barraja total en la copia
+    this.setState({ arrayObjeto: copiaArrayObjeto });
 
-    //Devolvemos baraja [0]
-    return window.$baraja[0];
   }
 
   //Edita el estado conforme el imput y lo devuelve a configuración origianl
