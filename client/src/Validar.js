@@ -76,7 +76,10 @@ class Validacion extends React.Component {
 
         }
 
-        if (window.$baraja.lenght < 8) {
+        //Saca el número de caratas restantes real, se le resta  porque al acabar el juego tienen que quedarte menos de ocho cartas
+        let cartasRestantes = window.$baraja.length - 8;
+
+        if (cartasRestantes < 0) {
             this.props.acabar();
         }
     }

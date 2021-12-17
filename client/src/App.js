@@ -325,7 +325,7 @@ class App extends React.Component {
 
           <div aria-disabled="true" className="Panel_Control">
 
-            <Validacion jugando={this.state.juegoEnMarcha} funcionAlPulsar={this.actualizarEstado.bind(this)} funcionNotificar={this.notificar.bind(this)} elementosDisponibles={this.state.arrayObjeto}></Validacion>
+            <Validacion jugando={this.state.juegoEnMarcha} funcionAlPulsar={this.actualizarEstado.bind(this)} funcionNotificar={this.notificar.bind(this)} elementosDisponibles={this.state.arrayObjeto} acabar={this.terminar.bind(this)}></Validacion>
             <table className="Tabla_Marca">
               <tbody>
                 <tr>
