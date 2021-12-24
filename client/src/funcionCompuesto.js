@@ -14,6 +14,7 @@ import averiguarHalogenosYAnfigenos from './averiguarHalogenosAnfigenos';
 import { numeroDePrefijos } from './palabrasClaves';
 import { crearMapaCompuestoPuntuacion } from './calcularPuntos';
 import comprobarSalesBinariasVolatiles from './EncontrarSalesBinariasVolatiles';
+import identificarPeroxido from './Peroxido.js';
 
 
 
@@ -112,9 +113,21 @@ function comprobarCompuesto(elementos, compuesto) {
         }
 
         else if (compuesto.includes(oxido) && buscarElementoEnMapa(mapElementos, "O")) {
+            //Almacena la regex de el peróxido
 
-            return comprobarCompuestoBinario(oxido, compuesto, mapElementos, elementos);
+            let regPeroxido = /peróxido de \w+/
 
+            if (regPeroxido.test(compuesto)) {
+
+
+                identificarPeroxido(compuesto, elementos);
+
+            }
+            else {
+
+                //En caso de que se a un óxido
+                return comprobarCompuestoBinario(oxido, compuesto, mapElementos, elementos);
+            }
         }
 
         //Parte de sales binarias
