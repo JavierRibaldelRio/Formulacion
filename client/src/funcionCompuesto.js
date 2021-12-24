@@ -294,7 +294,7 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
                 devol = false;
             }
 
-            return devol;
+            return devol;   ////Devuelve la puntuación
 
             //funcion que dice si da neutro (0) o estable
 

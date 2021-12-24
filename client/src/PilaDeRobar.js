@@ -9,7 +9,6 @@ class PilaRobar extends React.Component {
 
     constructor(props) {
         super(props)
-        this.state = { cartaARobar: undefined, mazosRestantes: 1 };
     }
 
     //Función que se ejecuta al robar
@@ -22,7 +21,8 @@ class PilaRobar extends React.Component {
 
         }
         else {
-            this.setState({ cartaARobar: this.props.robarUnaCarta(this.state.cartaARobar) });
+
+            this.props.robarUnaCarta();
 
         }
     }
@@ -32,7 +32,7 @@ class PilaRobar extends React.Component {
         var cartasRestantes = window.$baraja.length;
 
 
-        if (this.state.cartaARobar === undefined || window.$cartaRobarUsada === true) {
+        if (window.$cartaRobada === undefined || window.$cartaRobarUsada === true) {
 
             return (
                 <table>
@@ -60,7 +60,7 @@ class PilaRobar extends React.Component {
                         <tbody>
                             <tr>
                                 <td>
-                                    <ElementoReact objeto={this.state.cartaARobar} />
+                                    <ElementoReact objeto={window.$cartaRobada} />
                                 </td>
 
                                 <td>
