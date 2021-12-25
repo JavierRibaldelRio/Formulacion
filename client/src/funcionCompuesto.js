@@ -120,7 +120,7 @@ function comprobarCompuesto(elementos, compuesto) {
             if (regPeroxido.test(compuesto)) {
 
 
-                identificarPeroxido(compuesto, elementos);
+                identificarPeroxido(compuesto, elementos, mapElementos);
 
             }
             else {
@@ -209,7 +209,7 @@ function encontrarPrefijo(particula) {
 
 //Funcion para saber si el usuario tiene los elementos necesarios para poder crear el compuesto
 /*Hidrogeno*/   /*1*/                   /*Litio*/       /*1*/
-function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra, segundaPalabra, prefijoSegundaPalabra, mapa) {
+function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra, segundaPalabra, prefijoSegundaPalabra, mapa, calcularPuntosObtenidos = true) {
 
     //Mirar si tiene los formatos correctos (2 textos y 2 números)
     if (posibleTexto(primeraPalabra) && posibleTexto(segundaPalabra) && posibleNumero(prefijoPrimeraPalabra) && posibleNumero(prefijoSegundaPalabra)) {
@@ -297,9 +297,22 @@ function comprobarSiPuedeGenerarCompuestos(primeraPalabra, prefijoPrimeraPalabra
             //Devolver el valor de neutro
             const devolver = neutro();
 
+            //Si devolver es neutro
             if (devolver === true) {
-                //Calcula puntaución, la cual requiere un mapa de el compuesto, para eso utilizo la función de crearMapaCompuesto la cual pide un array de elemen
-                devol = calcularPuntuacion(crearMapaCompuestoPuntuacion(arrayCompuesto, [prefijoPrimeraPalabra, prefijoSegundaPalabra]));
+
+                //Y calcularPuntuacionObtenida es igual a true
+
+                if (calcularPuntosObtenidos === true) {
+
+                    //Calcula puntaución, la cual requiere un mapa de el compuesto, para eso utilizo la función de crearMapaCompuesto la cual pide un array de elemen
+
+                    devol = calcularPuntuacion(crearMapaCompuestoPuntuacion(arrayCompuesto, [prefijoPrimeraPalabra, prefijoSegundaPalabra]));
+
+                }
+
+                else {
+                    devol = true;
+                }
 
             }
 

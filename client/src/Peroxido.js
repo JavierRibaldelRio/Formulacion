@@ -1,9 +1,13 @@
 import descartarCartasUsadas from "./eliminarCompuestos";
 import calcularPuntuacion from "./calcularPuntos";
 import crearMapaCompuesto from "./crearMapaCompuesto";
-import { prefijos } from "./palabrasClaves";
+import { prefijos, oxido } from "./palabrasClaves";
+import extraerPrefijos from "./extraerPrefijo";
+import { comprobarSiPuedeGenerarCompuestos } from './funcionCompuesto';
+import nombresEquivalentes from "./EquivalenciasNombres";
+
 //Identifica el peróxido y procede en caso de que sea correcto
-function identificarPeroxido(compuesto, banca) {
+function identificarPeroxido(compuesto, banca, mapa) {
 
     console.log(compuesto, banca);
 
@@ -14,6 +18,10 @@ function identificarPeroxido(compuesto, banca) {
     var numeroOxigenos;  //Almacena el número de oxígenos necesario
 
     var metal;      //almacena el objeto del metal
+
+    var prefijoMetal;   //Almacena el predijo del metal
+
+    var numeroDeMetales;    //Almacena el número de repeticiones de este metal
 
     //Si no tiene prefijo  o es mono
     if (compuesto.startsWith(peroxido) || compuesto.startsWith(prefijos[1])) {
@@ -40,25 +48,57 @@ function identificarPeroxido(compuesto, banca) {
         }
     }
 
-    //Hasta aguí tenemos el On Xx
-
     //Averigua cual es el siguiernte otro elemento
-    for (var i = 0; i < banca.length; i++) {
 
-        //Encuentra el elemento de dentro 
-        if (compuestoSeparado[2].endsWith(banca[i].nombre.toLowerCase())) {
+    metal = extraerPrefijos(compuestoSeparado[2]);
+    /* for (var i = 0; i < banca.length; i++) {
+
+    //     //Encuentra el elemento de dentro 
+    //     if (compuestoSeparado[2].endsWith(banca[i].nombre.toLowerCase())) {
 
 
-            metal = banca[i];
+    //         metal = banca[i];
 
-            i = banca.length + 2;
+    //         i = banca.length + 2;
 
+    //     }
+
+    // }
+    console.log("No metal: " + metal + "Número de oxígenos: " + numeroOxigenos);*/
+
+    //Averigua el subíndice del segundo elemento
+
+    //Almacena el prefijo
+
+    prefijoMetal = compuestoSeparado[2].split(metal);
+
+    //Si no tiene prefijo
+    if (prefijoMetal[0] === "") {
+
+        numeroDeMetales = 1;
+    }
+    //en caso de que tenga prefijo
+    else {
+        for (var i = 1; i < prefijos.length; i++) {
+
+            if (prefijoMetal[0] === prefijos[i]) {
+
+
+                numeroDeMetales = i;
+            }
+
+
+        }
+
+        if (prefijoMetal === undefined) {
+            return false
         }
 
     }
 
 
-
+    //Comprueba si se puede 
+    console.log(comprobarSiPuedeGenerarCompuestos(nombresEquivalentes(oxido), numeroOxigenos / 2, metal, numeroDeMetales, mapa, false));
     // descartarCartasUsadas()
 
     // return calcularPuntuacion()
