@@ -110,10 +110,6 @@ function identificarPeroxido(compuesto, banca, mapa) {
         //Crea un mapa del compuesto
         let mapPeroxido = crearMapaCompuesto(arrayCompuesto, arrayRepeticiones);
 
-        //Elimina las cartas usadas
-
-        descartarCartasUsadas(mapPeroxido, banca);
-
 
 
         //Prepara el mapa de la puntuaciçón
@@ -136,9 +132,18 @@ function identificarPeroxido(compuesto, banca, mapa) {
                 elemento1 = valor;
             }
 
+        });
 
+        //Comprueba que el elemento es un metal y que no es hidrógeno
+        if (elemento2.metal === false && elemento2.z !== 1) {
+            return false;
 
-        })
+        }
+
+        //Elimina las cartas usadas
+
+        descartarCartasUsadas(mapPeroxido, banca);
+
 
 
 
