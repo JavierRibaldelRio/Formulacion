@@ -1,5 +1,5 @@
 import descartarCartasUsadas from "./eliminarCompuestos";
-import calcularPuntuacion from "./calcularPuntos";
+import calcularPuntuacion, { crearMapaCompuestoPuntuacion } from "./calcularPuntos";
 import crearMapaCompuesto from "./crearMapaCompuesto";
 import { prefijos, oxido } from "./palabrasClaves";
 import extraerPrefijos from "./extraerPrefijo";
@@ -97,8 +97,58 @@ function identificarPeroxido(compuesto, banca, mapa) {
     }
 
 
-    //Comprueba si se puede 
-    console.log(comprobarSiPuedeGenerarCompuestos(nombresEquivalentes(oxido), numeroOxigenos / 2, metal, numeroDeMetales, mapa, false));
+    //Si el compuesto es estable
+    if (comprobarSiPuedeGenerarCompuestos(nombresEquivalentes(oxido), numeroOxigenos / 2, metal, numeroDeMetales, mapa, false) === true) {
+
+        //Crea un array del compuesto, almacena todos los elementos necesarios para hacer el compuesto
+
+        let arrayCompuesto = [nombresEquivalentes(oxido), metal];
+
+        //Almacena el número de repeticiones de cada elemento
+        let arrayRepeticiones = [numeroOxigenos, numeroDeMetales];
+
+        //Crea un mapa del compuesto
+        let mapPeroxido = crearMapaCompuesto(arrayCompuesto, arrayRepeticiones);
+
+        //Elimina las cartas usadas
+
+        descartarCartasUsadas(mapPeroxido, banca);
+
+
+
+        //Prepara el mapa de la puntuaciçón
+
+        var elemento1;  //El elemento es el número 1
+
+        var elemento2;  //El elemento número 2
+
+        //Descubre cuales son los elementos necesario para hacer el compuesto
+        mapa.forEach((key, valor) => {
+
+
+            if (valor.nombre.toLowerCase() === metal.toLowerCase()) {
+
+                elemento2 = valor;
+            }
+
+            if (valor.nombre.toLowerCase() === nombresEquivalentes(oxido).toLowerCase()) {
+
+                elemento1 = valor;
+            }
+
+
+
+        })
+
+
+
+        //Devuelve la puntuación
+        return calcularPuntuacion(crearMapaCompuestoPuntuacion([elemento1, elemento2], arrayRepeticiones));
+    }
+
+    else {
+        return false;
+    }
     // descartarCartasUsadas()
 
     // return calcularPuntuacion()

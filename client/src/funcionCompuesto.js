@@ -120,7 +120,7 @@ function comprobarCompuesto(elementos, compuesto) {
             if (regPeroxido.test(compuesto)) {
 
 
-                identificarPeroxido(compuesto, elementos, mapElementos);
+                return identificarPeroxido(compuesto, elementos, mapElementos);
 
             }
             else {
