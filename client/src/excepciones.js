@@ -2,12 +2,13 @@
 import comprobarCompuestoBinario from "./compuestoBinario";
 import { crearMapaCompuestoPuntuacion } from "./calcularPuntos";
 import calcularPuntuacion from "./calcularPuntos";
+import comprobarCompuesto from "./funcionCompuesto";
 
 import descartarCartasUsadas from "./eliminarCompuestos";
 import crearMapaCompuesto from "./crearMapaCompuesto";
 import comprobarSalesBinariasVolatiles from "./EncontrarSalesBinariasVolatiles";
 
-import { oxido, hidruro, sal, metanoSistematico, amoniacoSistematico, aguaSistematica } from './palabrasClaves';
+import { oxido, hidruro, sal, metanoSistematico, amoniacoSistematico, aguaSistematica, aguaOxigenadaSistematica } from './palabrasClaves';
 
 
 function identificarCompuestosExcepcionales(compuesto, mapaElementos, elementos) {
@@ -64,6 +65,13 @@ function identificarCompuestosExcepcionales(compuesto, mapaElementos, elementos)
             formulable = comprobarSalesBinariasVolatiles(sal, mapaElementos, elementos);
 
             break;
+
+        case "agua oxigenada":
+
+            formulable = comprobarCompuesto(elementos, aguaOxigenadaSistematica);
+
+            break;
+
 
         default:
             formulable = false;

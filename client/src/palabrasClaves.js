@@ -55,7 +55,9 @@ const amoniacoSistematico = "trihidruro de nitrógeno";
 
 const metanoSistematico = "tetrahidruro de carbono";
 
+//Almacena el  agua oxigenada en sistematica 
+const aguaOxigenadaSistematica = "peróxido de dihidrógeno"
+
 export default numeroDeCartas;
 
-export { tiempoNotificacionSegundos };
-export { carbono, hidrogeno, sulfuro, prefijos, oxido, numeroDePrefijos, hidruro, sal, metanoSistematico, amoniacoSistematico, aguaSistematica, sufijo16Y17 };
+export { tiempoNotificacionSegundos, carbono, hidrogeno, sulfuro, prefijos, oxido, numeroDePrefijos, hidruro, sal, metanoSistematico, amoniacoSistematico, aguaOxigenadaSistematica, aguaSistematica, sufijo16Y17 };
