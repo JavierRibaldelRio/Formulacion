@@ -1,3 +1,43 @@
+// Import the functions you need from the SDKs you need
+
+const { initializeApp } = require("firebase/app");
+
+
+// TODO: Add SDKs for Firebase products that you want to use
+
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+
+// Your web app's Firebase configuration
+
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+const firebaseConfig = {
+
+    apiKey: "AIzaSyCTxv9-ZVICV1BTB7xfI90nCqkdXBO4xuA",
+
+    authDomain: "formulacio-inorganica.firebaseapp.com",
+
+    projectId: "formulacio-inorganica",
+
+    storageBucket: "formulacio-inorganica.appspot.com",
+
+    messagingSenderId: "581043181971",
+
+    appId: "1:581043181971:web:a07822a4915cf646f4b066",
+
+    measurementId: "G-VJ5J9NMWW3"
+
+};
+
+
+
+// Initialize Firebase
+
+const appFire = initializeApp(firebaseConfig);
+
+
+
 var express = require('express');
 const path = require('path');
 var app = express();
@@ -105,9 +145,10 @@ app.use("/comprobar", (req, res) => {
 //Traer records
 app.use("/fetchrecords", (req, res) => {
 
+    console.log("HOla")
 
     //Sacar todos
-    Record.find({}, (err, todos) => {
+    Record.find({}, (err, data) => {
         //Si jhay erro
         if (err) {
 
@@ -123,10 +164,12 @@ app.use("/fetchrecords", (req, res) => {
 
             //Ordena los records de menor a mayor y despues invierte el orden
 
-            todos.sort(ordenarArray).reverse();;
+            data.sort(ordenarArray).reverse();;
 
             //los devuelve todos
-            res.json(todos);
+            res.json(data);
+
+            console.log(data);
         }
 
 
