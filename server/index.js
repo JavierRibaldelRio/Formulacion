@@ -105,9 +105,10 @@ app.use("/comprobar", (req, res) => {
 //Traer records
 app.use("/fetchrecords", (req, res) => {
 
+    console.log("HOla")
 
     //Sacar todos
-    Record.find({}, (err, todos) => {
+    Record.find({}, (err, data) => {
         //Si jhay erro
         if (err) {
 
@@ -123,10 +124,12 @@ app.use("/fetchrecords", (req, res) => {
 
             //Ordena los records de menor a mayor y despues invierte el orden
 
-            todos.sort(ordenarArray).reverse();;
+            data.sort(ordenarArray).reverse();;
 
             //los devuelve todos
-            res.json(todos);
+            res.json(data);
+
+            console.log(data);
         }
 
 

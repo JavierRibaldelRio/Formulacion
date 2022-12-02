@@ -2,9 +2,7 @@ var mongoose = require('mongoose'); //Importa la libreria de Mongo
 
 require('dotenv').config();
 
-
-
-console.log('URI :>> ', URI);
+const URI = process.env.MONGO_DB_URI;  //Almacena el URI
 
 mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 var Schema = mongoose.Schema;
