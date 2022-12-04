@@ -32,7 +32,7 @@
     - npm start
   
 - El sitio se aloga en Netlify: https://app.netlify.com/
-
+d
 - #### Funcionamiento
 
   ​		Se trata de un juego para un jugador el cual consistirá en que el programa le mostrará al usuario ocho elementos. El programa se asegurándose de que entre estos siete elementos por lo menos exista una combinación posible de Óxidos o Hidruros o Sales -binarias y volátiles-. Cada uno de los elementos tendrá asignado una puntuación y al combinar los elementos se sumarán los puntos. La suma de estos puntos sera la puntuación que obtendrá el jugador en esa ronda. El número de rondas se determinara por el jugador al comenzar la partida. Se podrá robar, tipo solitario al robar una carta tapara la anterior.
