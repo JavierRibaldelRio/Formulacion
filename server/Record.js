@@ -4,6 +4,8 @@ require('dotenv').config();
 
 const URI = process.env.MONGO_DB_URI;  //Almacena el URI
 
+console.log(URI);
+
 mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 var Schema = mongoose.Schema;
 
