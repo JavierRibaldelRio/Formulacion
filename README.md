@@ -2,6 +2,7 @@
 
 It is a card game to encourage the correct writing of the inorganic chemistry  formulation in Spanish of the formulation in Spanish
 
+**Link:** [https://formulation-game.onrender.com/](https://formulation-game.onrender.com/)
 
 
 ## Getting Started
@@ -48,7 +49,7 @@ $ npm install
 $ npm start
 ```
 
-​	Or if you prefer you can use nodemon
+​	Or if you prefer you can use *nodemon*
 
 ```bash
 $ nodemon
@@ -70,7 +71,7 @@ $ npm run build
 ## Built With
 
 * [React](https://react.dev/) - The web framework used
-* [Express](https://maven.apache.org/) -  Backend servers
+* [Express](https://expressjs.com/) -  Backend servers
 
 ## Authors
 
